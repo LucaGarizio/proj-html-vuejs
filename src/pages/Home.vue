@@ -9,20 +9,26 @@ export default {
     <section></section>
 
     <!-- luca -->
-
+    <!-- sezione get started -->
     <section class="my-3">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
-                <div class="l col-4 px-5 text-center">
-                    <h2 class="fs-1 mb-3">
-                        I coach and mentor visual artists, like you, to Create
-                        Like you Mean It
-
+                <div class="l col-4 text-center">
+                    <img
+                        class="pb-2"
+                        src="../assets/images/artist-quote-icon.png"
+                        alt=""
+                    />
+                    <h2 class="fs-1 line-height pb-3">
+                        I coach and mentor <br />
+                        visual artists,like <br />
+                        you, to Create Like <br />
+                        you Mean It
                         <h4>Martin Garrix</h4>
                     </h2>
                 </div>
-                <div class="l col-5 offset-1">
-                    <p>
+                <div class="l col-4 offset-2 pt-5">
+                    <p class="">
                         As a coach and mentor, my ultimate goal is to motivate
                         visual artists toward inspired action. I help you get
                         you back on track to being the productive, creative,
@@ -39,8 +45,11 @@ export default {
             </div>
         </div>
     </section>
+    <!-- sezione video youtube -->
     <section class="my-3"></section>
+    <!-- sezione slider -->
     <section class="my-3"></section>
+    <!-- sezione card shop-->
     <section class="my-3"></section>
 
     <!-- dome -->
