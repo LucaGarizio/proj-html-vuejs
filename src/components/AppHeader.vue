@@ -17,17 +17,20 @@ export default {
     <!-- ale -->
     <header>
         CIAONE PROVA PUSH
-    <ul>
-        <li>
-            <Router-Link :to="{ name: 'home' }">Home</Router-Link>
-        </li>
-        <li>
-            <Router-Link :to="{ name: 'about-us' }">About Us</Router-Link>
-        </li>
-        <li>
-            <Router-Link :to="{ name: 'contact' }">Contact</Router-Link>
-        </li>
-    </ul>
+        <button class="btn-orange">Get Ticket</button>
+        <button class="btn-light-orange">Get Ticket</button>
+        <button class="btn-green">Get Ticket</button>
+        <ul>
+            <li>
+                <Router-Link :to="{ name: 'home' }">Home</Router-Link>
+            </li>
+            <li>
+                <Router-Link :to="{ name: 'about-us' }">About Us</Router-Link>
+            </li>
+            <li>
+                <Router-Link :to="{ name: 'contact' }">Contact</Router-Link>
+            </li>
+        </ul>
     </header>
 </template>
 
