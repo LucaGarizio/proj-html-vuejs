@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-@mixin buttons ($type: 'orange') {
-    border-radius: 100px;
-
-    
-=======
 // inclusioni variables per utilizzare colori principali pagina
 @use '../styles/partials/variables' as *;
 
@@ -15,7 +9,6 @@
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
->>>>>>> origin/main
 }
 
 // Stile per il primo pulsante
