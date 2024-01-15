@@ -15,6 +15,8 @@ export default {
 
 <template>
     <!-- ale -->
+    <header>
+        CIAONE PROVA PUSH
     <ul>
         <li>
             <Router-Link :to="{ name: 'home' }">Home</Router-Link>
@@ -26,6 +28,7 @@ export default {
             <Router-Link :to="{ name: 'contact' }">Contact</Router-Link>
         </li>
     </ul>
+    </header>
 </template>
 
 <style lang="scss" scoped>
