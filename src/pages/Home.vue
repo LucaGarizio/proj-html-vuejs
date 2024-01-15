@@ -52,6 +52,7 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+<<<<<<< HEAD
 // STILI ALE
 
 // STILI LUCA
@@ -66,4 +67,10 @@ export default {
 }
 
 // STILI DOME
+=======
+
+.cursiveRossela{
+    font-family: $secondary-font;
+}
+>>>>>>> origin/main
 </style>
