@@ -46,7 +46,32 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="my-3"></section>
+    <section class="my-3">
+        <div class="container-fluid mt-5">
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <div
+                        class="container-img mt-5 position-relative-for-youtube-player"
+                    >
+                        <a href="">
+                            <img
+                                src="../assets/images/artist-video-poster.jpg"
+                                alt="artist-video-poster"
+                            />
+                        </a>
+                        <div class="youtube-icon">
+                            <a href="#">
+                                <img
+                                    src="../assets/images/icon-youtube-play.png"
+                                    alt="youtube icon play"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- sezione slider -->
     <section class="my-3"></section>
     <!-- sezione card shop-->
@@ -64,14 +89,24 @@ export default {
 // STILI ALE
 
 // STILI LUCA
-.my,
-.container {
-    border: 1px solid black;
-}
 
 .l,
 .col-4 {
     border: 1px solid black;
+}
+
+// sezione youtube video
+.position-relative-bg-image {
+    position: relative;
+}
+.position-relative-for-youtube-player {
+    position: relative;
+    .youtube-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 // STILI DOME
