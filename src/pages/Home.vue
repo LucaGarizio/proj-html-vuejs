@@ -1,12 +1,12 @@
 <script>
 export default {
     name: 'AppHome',
-
     data() {
         return {
             // DATA LUCA
             // DATA CAROSELLO
-
+            currentIndex: 0,
+            itemsPerPage: 3,
             testimonialCards: [
                 {
                     title: "It's a choice of quality for people with special needs",
@@ -221,10 +221,47 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="section-margin slider-bg-color"></section>
+    <section class="section-margin slider-bg-color">
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="cursive">Testimonials</h2>
+                    <h3>Why do people love me?</h3>
+                </div>
+            </div>
+            <div class="row border">
+                <div
+                    class="col-4"
+                    v-for="(testimonial, i) in testimonialCards"
+                    :key="i"
+                >
+                    <div class="card p-4" style="width: 23rem">
+                        <h4 class="mb-3">{{ testimonial.title }}</h4>
+                        <p>{{ testimonial.paragraph }}</p>
+                        <div class="info">
+                            <img
+                                class="shrink"
+                                :src="testimonial.info[0].img"
+                                alt=""
+                            />
+                            <h4 class="mt-4">{{ testimonial.info[0].name }}</h4>
+                            <span>{{ testimonial.info[0].role }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-1 d-flex">
+                    <div class="carousel-controls">
+                        <span class="slide-control"></span>
+                        <span class="slide-control"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- sezione card shop-->
     <section class="section-margin">
-        <img src="" alt="" />
         <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-12 text-center">
@@ -508,10 +545,13 @@ export default {
                         alt=""
                     />
 
-                    <p class="text-white" id="p-newsletter">
-                        New Sletter To Get in Touch
-                    </p>
-                    <div>
+                    <div class="col-3" id="div-newsletter">
+                        <p class="text-white" id="p-newsletter">
+                            New Sletter To Get in Touch
+                        </p>
+                    </div>
+
+                    <div class="col-6">
                         <input
                             type="email"
                             class="form-control"
@@ -537,21 +577,8 @@ export default {
 // STILI ALE
 .presentation {
     position: relative;
-    z-index: 800;
     height: 700px;
     background-color: #fbf9f6;
-}
-
-.HelloImMartin {
-    position: absolute;
-    z-index: 4;
-}
-
-.Martin {
-    position: absolute;
-    z-index: 3;
-    left: 65%;
-    top: 30%;
 }
 // STILI LUCA
 
@@ -599,9 +626,18 @@ export default {
 
 // SEZIONE CAROSELLO
 
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.slide-control {
+    font-size: 24px;
+}
 .shrink {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 .next {
@@ -634,6 +670,7 @@ export default {
 
 .container-fluid {
     width: 95%;
+    margin-top: 35px;
 }
 .card-body-centrale {
     position: absolute;
@@ -670,5 +707,34 @@ export default {
 #container-newsletter {
     background-color: #244186;
     width: 100%;
+    position: relative;
+}
+
+#exampleFormControlInput1 {
+    background-color: rgba(36, 65, 134, 0);
+    border: none; /* Rimuovi i bordi */
+    border-radius: 0;
+    outline: none; /* Rimuovi l'outline al focus */
+    box-shadow: none; /* Rimuovi l'ombra al focus */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.459);
+    width: 45%;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+}
+.form-control::placeholder {
+    color: white; /* Colore del testo del placeholder */
+}
+
+#div-newsletter {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
 }
 </style>
