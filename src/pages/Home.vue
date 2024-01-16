@@ -125,12 +125,25 @@ export default {
     <section
         class="presentation col-12 d-flex align-items-center justify-content-center"
     >
-        <div class="">
+        <div>
+            <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
+        </div>
+        <div>
+            <img
+                src="../assets/images/artist-hero-image-02-232x300.jpg"
+                alt=""
+            />
+        </div>
+
+        <div class="col-5">
             <h1 class="cursive fs-1 text-center">Hello, I'm Martin</h1>
             <p class="fw-bolder text-center fs-1">
                 Artist Coaching And Mentoring <br />
                 Might Be for You
             </p>
+        </div>
+
+        <div class="container-fluid">
             <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
         </div>
     </section>
@@ -474,13 +487,9 @@ export default {
                             </div>
                             <div class="col-md-4">
                                 <img
-                                   
                                     src="../assets/images/artist-event-01-250x300.jpg"
-                                   
                                     class="card-img-top"
-                                   
                                     alt="..."
-                                /
                                 />
                             </div>
                         </div>
@@ -527,6 +536,7 @@ export default {
 
 // STILI ALE
 .presentation {
+    position: relative;
     height: 700px;
     background-color: #fbf9f6;
 }
