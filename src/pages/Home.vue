@@ -1,9 +1,6 @@
 <script>
 export default {
     name: 'AppHome',
-    data() {
-        return {}
-    },
 }
 </script>
 <template>
@@ -13,7 +10,7 @@ export default {
 
     <!-- luca -->
     <!-- sezione get started -->
-    <section class="border">
+    <section class="my-3">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -27,7 +24,7 @@ export default {
                         visual artists,like <br />
                         you, to Create Like <br />
                         you Mean It
-                        <h4 class="cursive">Martin Garrix</h4>
+                        <h4 class="cursiv">Martin Garrix</h4>
                     </h2>
                 </div>
                 <div class="l col-4 offset-2 pt-5">
@@ -49,7 +46,7 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="border">
+    <section class="">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
@@ -83,60 +80,82 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="border">
-        <div class="container-fluid">
-            <div class="row mb-4">
-                <div class="col-12 text-center">
-                    <h2 class="cursive">Testimonial</h2>
-                    <h3>Why do people love me?</h3>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="my-3"></section>
     <!-- sezione card shop-->
-    <section class="border"></section>
+    <section class="my-3"></section>
 
     <!-- dome -->
-    <section>
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-12 text-center">
-                    <h2 class="cursive">Artist coaching</h2>
-                    <h3>Latest Online Courses</h3>
-                </div>
+    <section class="my-3">
+        <div>
+            <div class="text-center mt-5">
+                <!-- La classe "text-center" allinea il testo al centro -->
+                <h2>Article and Tips</h2>
+                <h3>Latest From The Blog</h3>
             </div>
+        </div>
+
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-3">
-                    <div class="card" style="width: 18rem">
-                        <img
-                            src="../assets/images/artist-hero-image-02.jpg"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                Card subtitle
-                            </h6>
-                            <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card's
-                                content.
-                            </p>
-                            <a href="#" class="card-link"
-                                ><i class="fa-regular fa-file-lines"></i> 4
-                                Lessons</a
-                            >
-                            <a href="#" class="card-link"
-                                ><i class="fa-regular fa-user"></i> 50
-                                Students</a
-                            >
+                <div class="col-12">
+                    <div class="row justify-content-around">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img
+                                    src="../assets/images/artist-blog-03-480x356.jpeg"
+                                    class="card-img-top"
+                                    alt="Immagine 1"
+                                />
+                                <div class="card-body">
+                                    <p class="card-text">ARTIST</p>
+                                    <h4>
+                                        Brush Strokes Energize Trees in
+                                        Paintings
+                                    </h4>
+                                    <p>May 15, 2020</p>
+                                    <p>2,157 Views</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="card">
+                                <img
+                                    src="../assets/images/artist-blog-02-500x680.jpg"
+                                    class="card-img-top"
+                                    alt="Immagine 2"
+                                />
+                                <div class="card-body-centrale">
+                                    <p class="card-text">Artist</p>
+                                    <h4 class="title-center">
+                                        Connection Between Self-Portraits and
+                                        Idantity
+                                    </h4>
+                                    <p>May 15, 2020</p>
+                                    <p>2,167 Views</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img
+                                    src="../assets/images/artist-blog-01-480x356.jpg"
+                                    class="card-img-top"
+                                    alt="Immagine 3"
+                                />
+                                <div class="card-body">
+                                    <p class="card-text">ARTIST</p>
+                                    <h4>
+                                        Pocket-Sized Notebooks Hold Minature
+                                        Paintings
+                                    </h4>
+                                    <p>May 15, 2020</p>
+                                    <p>2,020 Views</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
-                <div class="col-3"></div>
             </div>
         </div>
     </section>
@@ -150,13 +169,19 @@ export default {
 // STILI ALE
 
 // STILI LUCA
-section {
-    margin: 100px 0;
-}
 
-.cursive {
+.cursiv {
     font-family: $secondary-font;
     color: $secondary-text-color;
+    font-size: 40px;
+}
+
+section {
+    margin: 50px 0;
+}
+.l,
+.col-4 {
+    border: 1px solid black;
 }
 
 // sezione youtube video
