@@ -5,6 +5,10 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 // regole generali
+
+body {
+    font-family: $main-font;
+}
 * {
     margin: 0;
     padding: 0;
