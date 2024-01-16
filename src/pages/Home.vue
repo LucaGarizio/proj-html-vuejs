@@ -1,6 +1,69 @@
 <script>
 export default {
     name: 'AppHome',
+    data() {
+        return {
+            // data sezione shop
+            cards: [
+                {
+                    img: 'src/assets/images/artist-course-08-480x480.jpg',
+                    price: '$18.00',
+                    title: 'The Acrylic Painting Accademy',
+                    lessons: '4 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-07-480x480.jpg',
+                    price: '$21.00',
+                    title: 'Drawing and Shading: Complete Course',
+                    lessons: '14 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-06-480x480.jpg',
+                    price: '$19.00',
+                    title: 'The Color Theory for Digital Artist',
+                    lessons: '7 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-05-480x480.jpg',
+                    price: '$35.00',
+                    title: 'Ultimate Guide to Digital Sketching for Beginner',
+                    lessons: '14 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-04-480x480.jpg',
+                    price: '$19.00',
+                    title: 'Portrait Drawing The Smart Way',
+                    lessons: '2 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-03-480x480.jpg',
+                    price: '$19.00',
+                    title: 'Mastering Watercolor Painting from Beginner',
+                    lessons: '9 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-02-480x480.jpg',
+                    price: '$25.00',
+                    title: 'The Art & Science of Drawing',
+                    lessons: '4 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-01-480x480.jpg',
+                    price: '$22.00',
+                    title: 'The Colored Pencil Drawing Course',
+                    lessons: '6 Lessons',
+                    student: '50 Students',
+                },
+            ],
+        }
+    },
 }
 </script>
 <template>
@@ -83,7 +146,7 @@ export default {
     <section class="my-3"></section>
     <!-- sezione card shop-->
     <section>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="cursive">Artist coaching</h2>
@@ -91,37 +154,47 @@ export default {
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
-                    <div class="card" style="width: 18rem">
+                <div
+                    class="col-3 my-3 d-flex justify-content-center"
+                    v-for="card in cards"
+                >
+                    <div
+                        class="card mb-5 border-0"
+                        style="width: 21rem; height: 30rem; max-width: 100%"
+                    >
                         <img
-                            src="../assets/images/artist-hero-image-02.jpg"
-                            class="card-img-top"
+                            :src="card.img"
+                            class="card-img-top mb-2 rounded-0"
                             alt="..."
                         />
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                Card subtitle
-                            </h6>
-                            <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card's
-                                content.
-                            </p>
-                            <a href="#" class="card-link"
-                                ><i class="fa-regular fa-file-lines"></i> 4
-                                Lessons</a
+                            <h5 class="card-title mb-3">{{ card.price }}</h5>
+
+                            <h4 class="card-text mb-3">
+                                {{ card.title }}
+                            </h4>
+                            <span class="card-link"
+                                ><i class="fa-regular fa-file-lines"></i>
+                                {{ card.lessons }}</span
                             >
-                            <a href="#" class="card-link"
-                                ><i class="fa-regular fa-user"></i> 50
-                                Students</a
+                            <span class="card-link"
+                                ><i class="fa-regular fa-user"></i>
+                                {{ card.student }}</span
                             >
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn-light-orange">
+                        View all Courses <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
+
     <!-- dome -->
     <section class="my-3">
         <div>
@@ -284,7 +357,7 @@ section {
     border: 1px solid black;
 }
 
-// sezione youtube video
+// SEZIONE YOUTUBE VIDEO
 
 .pos-relative {
     position: relative;
@@ -315,6 +388,7 @@ section {
     right: -4%;
     z-index: -1;
 }
+// SEZIONE SHOP
 
 // STILI DOME
 .card-body-centrale {
