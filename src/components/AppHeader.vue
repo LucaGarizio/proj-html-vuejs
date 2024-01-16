@@ -21,35 +21,28 @@ export default {
             src="../assets/images/dark-logo.png"
             alt=""
         />
-        <div class="btn-group">
+        <div class="dropdown">
             <button
+                class="btn dropdown-toggle"
                 type="button"
-                class="btn btn-danger dropdown-toggle"
+                id="navbarDropdown"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
             >
-                Action
+                <Router-Link class="dropdown-item" :to="{ name: 'home' }"
+                    >Home</Router-Link
+                >
             </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <Router-Link class="dropdown-item" :to="{ name: 'about-us' }"
+                    >About Us</Router-Link
+                >
+                <Router-Link class="dropdown-item" :to="{ name: 'contact' }"
+                    >Contact</Router-Link
+                >
             </div>
         </div>
-        <ul>
-            <li>
-                <Router-Link :to="{ name: 'home' }">Home</Router-Link>
-            </li>
-            <li>
-                <Router-Link :to="{ name: 'about-us' }">About Us</Router-Link>
-            </li>
-            <li>
-                <Router-Link :to="{ name: 'contact' }">Contact</Router-Link>
-            </li>
-        </ul>
     </header>
 </template>
 
