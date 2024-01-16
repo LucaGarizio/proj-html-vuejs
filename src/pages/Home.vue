@@ -294,12 +294,12 @@ export default {
             <div class="row">
                     <!-- Card 1 -->
                 <div class="col-md-6">
-                    <div class="card">
+                    <div class="card h-100">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-blog-01-480x356.jpg" class="img-fluid rounded-start" alt="...">
+                                <img src="../assets/images/artist-event-04-250x300.jpg" class="card-img-top" alt="...">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
                                     <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
                                     <h5 class="card-title">Storytelling Workshop</h5>
@@ -313,9 +313,9 @@ export default {
                     <div class="card">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-blog-01-480x356.jpg" class="img-fluid rounded-start" alt="...">
+                                <img src="../assets/images/artist-event-03-250x300.jpg" class="card-img-top" alt="...">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
                                     <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
                                     <h5 class="card-title">Storytelling Workshop</h5>
@@ -416,5 +416,11 @@ section {
 .span-orange:hover {
     border-bottom: 1px solid;
     
+}
+
+#descrizione-col8{
+    align-items: center;
+    display: flex;
+    padding-left: 50px;
 }
 </style>
