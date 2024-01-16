@@ -125,17 +125,17 @@ export default {
     <section
         class="presentation col-12 d-flex align-items-center justify-content-center"
     >
-        <div>
+        <div class="">
             <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
         </div>
-        <div>
+        <div class="colorsImg">
             <img
                 src="../assets/images/artist-hero-image-02-232x300.jpg"
                 alt=""
             />
         </div>
 
-        <div class="col-5">
+        <div class="col-5 HelloImMartin">
             <h1 class="cursive fs-1 text-center">Hello, I'm Martin</h1>
             <p class="fw-bolder text-center fs-1">
                 Artist Coaching And Mentoring <br />
@@ -143,7 +143,7 @@ export default {
             </p>
         </div>
 
-        <div class="container-fluid">
+        <div class="container-fluid Martin">
             <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
         </div>
     </section>
@@ -537,8 +537,21 @@ export default {
 // STILI ALE
 .presentation {
     position: relative;
+    z-index: 800;
     height: 700px;
     background-color: #fbf9f6;
+}
+
+.HelloImMartin {
+    position: absolute;
+    z-index: 4;
+}
+
+.Martin {
+    position: absolute;
+    z-index: 3;
+    left: 65%;
+    top: 30%;
 }
 // STILI LUCA
 

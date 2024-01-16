@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 
-import * as bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css' // Import Bootstrap styles
+import 'bootstrap' // Import Bootstrap JavaScript (optional)
 
 import { router } from './router'
 

@@ -2,7 +2,6 @@
 import Home from '../pages/Home.vue'
 import AboutUs from '../pages/AboutUs.vue'
 import Contact from '../pages/Contact.vue'
-
 export default {
     // data() {
     //     return {
@@ -40,7 +39,9 @@ export default {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
+                    <Router-Link
+                        class="dropdown-item dropdown-toggle"
+                        :to="{ name: 'home' }"
                         >Home</Router-Link
                     >
                 </button>
