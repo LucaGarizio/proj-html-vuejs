@@ -372,15 +372,30 @@ export default {
     <section>
 
         <div class="container-fluid" id="container-newsletter">
-            <div class="row">
+            <div class="row" id="row-newsletter">
                 <div class="col d-flex justify-content-between">
-                    <img src="../assets/images/artist-shape-color-paint-top-left.png" alt="">
-                                    <!-- Spazio vuoto -->
-                    <div style="width: 20px;"></div>
+                    <img src="../assets/images/artist-shape-color-paint-top-left.png"  alt="">
+
+                        
+                        <p class="text-white" id="p-newsletter">New Sletter To Get in Touch</p>
+                        <div>
+                            
+                            <input type="email" class="form-control"  id="exampleFormControlInput1" placeholder="Your e-mail">
+                        </div>
+                    
+                    
                     <img src="../assets/images/artist-shape-color-paint-bottom-right.png" alt="">
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+        
+
 
     </section>
 </template>
@@ -457,8 +472,9 @@ section {
     font-size: 40px;
 }
 
+
 .card-img-top:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: 1.5s;
 }
 
@@ -481,5 +497,27 @@ section {
 #container-newsletter {
     background-color: #244186;
     width:100%;
+    position: relative;
 }
+
+#exampleFormControlInput1 {
+    background-color: #244186;
+    border: none; /* Rimuovi i bordi */
+    border-radius: 0; 
+    outline: none; /* Rimuovi l'outline al focus */
+    box-shadow: none; /* Rimuovi l'ombra al focus */
+    border-bottom: 3px solid white;
+}
+.form-control::placeholder {
+    color: white; /* Colore del testo del placeholder */
+}
+
+
+
+
+
+// #p-newsletter{
+//     position: absolute;
+    
+// }
 </style>
