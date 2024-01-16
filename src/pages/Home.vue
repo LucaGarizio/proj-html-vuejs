@@ -127,7 +127,7 @@ export default {
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
-                <h2 class="cursiv">Article and Tips</h2>
+                <h2 class="cursive">Article and Tips</h2>
                 <h3>Latest From The Blog</h3>
             </div>
         </div>
@@ -196,8 +196,70 @@ export default {
                 </div>
             </div>
         </div>
+
+        <div>
+            <div class="text-center mt-5">
+                <!-- La classe "text-center" allinea il testo al centro -->
+                <span>Get into details now? </span>
+                <a href=""><span class="span-orange">View all posts</span></a>
+            </div>
+        </div>
+
     </section>
-    <section></section>
+
+
+    <section>
+        <div>
+            <div class="text-center mt-5">
+                <!-- La classe "text-center" allinea il testo al centro -->
+                <h2 class="cursive">Upcoming Event</h2>
+                <h3>Let's Work Together</h3>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                    <!-- Card 1 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="../assets/images/artist-blog-01-480x356.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
+                                    <h5 class="card-title">Storytelling Workshop</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Texas,US</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="../assets/images/artist-blog-01-480x356.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
+                                    <h5 class="card-title">Storytelling Workshop</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Texas,US</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+            </div>
+        </div>
+
+
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -270,5 +332,15 @@ section {
 .card-img-top:hover {
     transform: scale(1.1);
     transition: 1.5s;
+}
+
+.span-orange{
+    color: $tertiary-color;
+     position: relative;
+}
+
+.span-orange:hover {
+    border-bottom: 1px solid;
+    
 }
 </style>
