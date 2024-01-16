@@ -24,7 +24,7 @@ export default {
                         visual artists,like <br />
                         you, to Create Like <br />
                         you Mean It
-                        <h4>Martin Garrix</h4>
+                        <h4 class="cursiv">Martin Garrix</h4>
                     </h2>
                 </div>
                 <div class="l col-4 offset-2 pt-5">
@@ -40,7 +40,7 @@ export default {
                         As an artist and an educator for nearly 30 years, I
                         understand what it takes to create.
                     </p>
-                    <button>Get started today</button>
+                    <button class="btn-light-orange">Get started today</button>
                 </div>
             </div>
         </div>
@@ -96,6 +96,12 @@ export default {
 // STILI ALE
 
 // STILI LUCA
+
+.cursiv {
+    font-family: $secondary-font;
+    color: $secondary-text-color;
+    font-size: 40px;
+}
 
 section {
     margin: 50px 0;
