@@ -8,57 +8,7 @@ export default {
     //     return {
     //         navbuttons: [
     //             {
-    //                 :
-
-    //             },
-    //             {
-    //                 img: 'src/assets/images/artist-course-07-480x480.jpg',
-    //                 price: '$21.00',
-    //                 title: 'Drawing and Shading: Complete Course',
-    //                 lessons: '14 Lessons',
-    //                 student: '50 Students',
-    //             },
-    //             {
-    //                 img: 'src/assets/images/artist-course-06-480x480.jpg',
-    //                 price: '$19.00',
-    //                 title: 'The Color Theory for Digital Artist',
-    //                 lessons: '7 Lessons',
-    //                 student: '50 Students',
-    //             },
-    //             {
-    //                 img: 'src/assets/images/artist-course-05-480x480.jpg',
-    //                 price: '$35.00',
-    //                 title: 'Ultimate Guide to Digital Sketching for Beginner',
-    //                 lessons: '14 Lessons',
-    //                 student: '50 Students',
-    //             },
-    //             {
-    //                 img: 'src/assets/images/artist-course-04-480x480.jpg',
-    //                 price: '$19.00',
-    //                 title: 'Portrait Drawing The Smart Way',
-    //                 lessons: '2 Lessons',
-    //                 student: '50 Students',
-    //             },
-    //             {
-    //                 img: 'src/assets/images/artist-course-03-480x480.jpg',
-    //                 price: '$19.00',
-    //                 title: 'Mastering Watercolor Painting from Beginner',
-    //                 lessons: '9 Lessons',
-    //                 student: '50 Students',
-    //             },
-    //             {
-    //                 img: 'src/assets/images/artist-course-02-480x480.jpg',
-    //                 price: '$25.00',
-    //                 title: 'The Art & Science of Drawing',
-    //                 lessons: '4 Lessons',
-    //                 student: '50 Students',
-    //             },
-    //             {
-    //                 img: 'src/assets/images/artist-course-01-480x480.jpg',
-    //                 price: '$22.00',
-    //                 title: 'The Colored Pencil Drawing Course',
-    //                 lessons: '6 Lessons',
-    //                 student: '50 Students',
+    //                 textmenu: ,
     //             },
     //         ],
     //     }
@@ -75,14 +25,14 @@ export default {
 <template>
     <!-- ale -->
     <header class="container-fluid d-flex justify-content-between p-3">
-        <div class="col-4">
+        <div class="col-3">
             <img
                 class="img-fluid max-logo"
                 src="../assets/images/dark-logo.png"
                 alt=""
             />
         </div>
-        <div class="col-4">
+        <div class="col-6 d-flex justify-content-between">
             <div class="dropdown">
                 <button
                     class="btn dropdown-toggle"
@@ -95,19 +45,242 @@ export default {
                     >
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                        <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"
-                            >Something else here</a
-                        >
-                    </li>
+                    <div class="col-2">
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                    </div>
+                    <div class="col-2">
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                    </div>
+                    <div class="m-3">
+                        <img
+                            class="img"
+                            src="../assets/images/DropDownHomeImg.jpg"
+                            alt=""
+                        />
+                    </div>
+                </ul>
+            </div>
+
+            <!-- PAGES  -->
+            <div class="dropdown">
+                <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    Pages
+                </button>
+                <ul class="dropdown-menu">
+                    <div class="col-2">
+                        <li>
+                            <Router-Link
+                                class="dropdown-item"
+                                :to="{ name: 'home' }"
+                                >Home</Router-Link
+                            >
+                        </li>
+                        <li>
+                            <Router-Link
+                                class="dropdown-item"
+                                :to="{ name: 'about-us' }"
+                                >About Us</Router-Link
+                            >
+                        </li>
+                        <li>
+                            <Router-Link
+                                class="dropdown-item"
+                                :to="{ name: 'contact' }"
+                                >Contact</Router-Link
+                            >
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <!-- Courses -->
+            <div class="dropdown">
+                <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
+                        >Courses</Router-Link
+                    >
+                </button>
+                <ul class="dropdown-menu">
+                    <div class="col-2">
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
+                        >Features</Router-Link
+                    >
+                </button>
+                <ul class="dropdown-menu">
+                    <div class="col-2">
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
+                        >Blog</Router-Link
+                    >
+                </button>
+                <ul class="dropdown-menu">
+                    <div class="col-2">
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
+                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
+                        >Shop</Router-Link
+                    >
+                </button>
+                <ul class="dropdown-menu">
+                    <div class="col-2">
+                        <li>
+                            <a class="dropdown-item" href="#"
+                                >MaxCoach Education</a
+                            >
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Course Portal</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Multimedia</a>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
-        <div class="container col-4">
+        <div class="container col-3">
             <div class="container fluid d-flex justify-content-end">
                 <a href="#">
                     <i class="fa-brands fa-twitter p-2" style="color: #696969">
