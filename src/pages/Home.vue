@@ -4,14 +4,15 @@ export default {
 
     data() {
         return {
+            items: ['Slide 1', 'Slide 2', 'Slide 3'],
             // DATA LUCA
             // DATA CAROSELLO
-
+            currentIndex: 0,
             testimonialCards: [
                 {
                     title: "It's a choice of quality for people with special needs",
                     paragraph:
-                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine.MaxCoach guys just got me.",
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
                     info: [
                         {
                             img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
@@ -118,6 +119,27 @@ export default {
             ],
         }
     },
+
+    methods: {
+        goToSlide(index) {
+            this.currentIndex = index
+
+            this.updateCarousel()
+        },
+        updateCarousel() {
+            const carousel = this.$refs.carousel
+            const numCards = this.testimonialCards.length
+
+            carousel.style.transition = 'transform 0.5s ease-in-out'
+            carousel.style.transform = `translateX(-${
+                this.currentIndex * (45 / numCards)
+            }%)`
+        },
+    },
+
+    mounted() {
+        this.initializeCarousel()
+    },
 }
 </script>
 <template>
@@ -177,30 +199,32 @@ export default {
     <section class="section-margin">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
-                <div class="col pos-relative">
-                    <img
-                        class="youtube-video"
-                        src="../assets/images/artist-video-poster.jpg"
-                        alt="anteprima"
-                    />
-                    <div class="img-box-overlay">
+                <div class="col-4 pos-relative">
+                    <div class="card">
                         <img
-                            class="animated-bg-top-image"
-                            src="../assets/images/maxcoach-shape-12-100x100.png"
-                            alt=""
+                            class="youtube-video"
+                            src="../assets/images/artist-video-poster.jpg"
+                            alt="anteprima"
                         />
-                        <img
-                            class="animated-bg-bottom-image"
-                            src="../assets/images/maxcoach-shape-12-100x100.png"
-                            alt=""
-                        />
-                        <div class="overlay">
-                            <a href="#">
-                                <img
-                                    src="../assets/images/icon-youtube-play.png"
-                                    alt="youtube icon play"
-                                />
-                            </a>
+                        <div class="img-box-overlay">
+                            <img
+                                class="animated-bg-top-image"
+                                src="../assets/images/maxcoach-shape-12-100x100.png"
+                                alt=""
+                            />
+                            <img
+                                class="animated-bg-bottom-image"
+                                src="../assets/images/maxcoach-shape-12-100x100.png"
+                                alt=""
+                            />
+                            <div class="overlay">
+                                <a href="#">
+                                    <img
+                                        src="../assets/images/icon-youtube-play.png"
+                                        alt="youtube icon play"
+                                    />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -208,7 +232,64 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="section-margin slider-bg-color"></section>
+    <section class="section-margin slider-bg-color">
+        <div class="container-fluid">
+            <div class="row m-5">
+                <div class="text-center">
+                    <h2 class="cursive">Testimonials</h2>
+                    <h3>Why do people love me?</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="carousel-container">
+                    <div class="carousel" ref="carousel">
+                        <div
+                            v-for="(card, index) in testimonialCards"
+                            :key="index"
+                            class="carousel-col d-flex justify-content-between p-4 mx-1"
+                        >
+                            <div class="card carousel-card border-0 p-5">
+                                <div class="text">
+                                    <h5 class="mb-4">{{ card.title }}</h5>
+                                    <p class="mt-3">
+                                        {{ card.paragraph }}
+                                    </p>
+                                    <div class="d-flex my-5">
+                                        <div class="container-img">
+                                            <img
+                                                class="shrink"
+                                                :src="card.info[0].img"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="info">
+                                            <h6 class="ms-4">
+                                                {{ card.info[0].name }}
+                                            </h6>
+                                            <span class="ms-4">{{
+                                                card.info[0].role
+                                            }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="bullets"
+                        class="d-flex justify-content-center my-5"
+                    >
+                        <div
+                            v-for="(card, index) in testimonialCards"
+                            :key="index"
+                            class="bullet"
+                            @click="goToSlide(index)"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- sezione card shop-->
     <section class="section-margin">
         <img src="" alt="" />
@@ -253,7 +334,7 @@ export default {
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <button class="btn-light-orange">
+                    <button class="btn-light-orange mt-5">
                         View all Courses <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -474,13 +555,9 @@ export default {
                             </div>
                             <div class="col-md-4">
                                 <img
-                                   
                                     src="../assets/images/artist-event-01-250x300.jpg"
-                                   
                                     class="card-img-top"
-                                   
                                     alt="..."
-                                /
                                 />
                             </div>
                         </div>
@@ -500,7 +577,7 @@ export default {
                     />
 
                     <p class="text-white" id="p-newsletter">
-                        New Sletter To Get in Touch
+                        New letter To Get in Touch
                     </p>
                     <div>
                         <input
@@ -530,6 +607,7 @@ export default {
     height: 700px;
     background-color: #fbf9f6;
 }
+
 // STILI LUCA
 
 .cursive {
@@ -577,28 +655,34 @@ export default {
 // SEZIONE CAROSELLO
 
 .shrink {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
-.next {
-    display: flex;
-    justify-content: center;
+.carousel-container {
+    overflow: hidden;
+    width: 90%;
     margin: 0 auto;
+    position: relative;
 }
 
-.slide-next {
-    width: 9px;
-    height: 9px;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-col {
+    flex: 0 0 calc(100% / 3);
+    height: 27rem;
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
     border-radius: 50%;
-    background-color: grey;
-    margin: 50px 10px;
+    margin: 0 5px;
     cursor: pointer;
-    &:hover {
-        width: 10px;
-        height: 10px;
-        background-color: black;
-    }
 }
 
 .slider-bg-color {
@@ -610,7 +694,7 @@ export default {
 // STILI DOME
 
 .container-fluid {
-    width: 95%;
+    // width: 95%;
 }
 .card-body-centrale {
     position: absolute;
