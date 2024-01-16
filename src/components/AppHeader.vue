@@ -39,95 +39,105 @@ export default {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    <Router-Link
-                        class="dropdown-item dropdown-toggle"
-                        :to="{ name: 'home' }"
-                        >Home</Router-Link
-                    >
+                    Home
                 </button>
-                <ul class="dropdown-menu">
-                    <div class="col-2">
-                        <li>
-                            <a class="dropdown-item" href="#"
-                                >MaxCoach Education</a
-                            >
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Course Portal</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Multimedia</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"
-                                >MaxCoach Education</a
-                            >
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Course Portal</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Multimedia</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"
-                                >MaxCoach Education</a
-                            >
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Course Portal</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Multimedia</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Multimedia</a>
-                        </li>
-                    </div>
-                    <div class="col-2">
-                        <li>
-                            <a class="dropdown-item" href="#"
-                                >MaxCoach Education</a
-                            >
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Course Portal</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Multimedia</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"
-                                >MaxCoach Education</a
-                            >
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Course Portal</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Multimedia</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"
-                                >MaxCoach Education</a
-                            >
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Course Portal</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Multimedia</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Multimedia</a>
-                        </li>
-                    </div>
-                    <div class="m-3">
-                        <img
-                            class="img"
-                            src="../assets/images/DropDownHomeImg.jpg"
-                            alt=""
-                        />
+                <ul class="dropdown-menu large-menu">
+                    <div class="row p-4">
+                        <div class="col-3">
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >MaxCoach Education</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Course Portal</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Multimedia</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >MaxCoach Education</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Course Portal</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Multimedia</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >MaxCoach Education</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Course Portal</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Multimedia</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Multimedia</a>
+                            </li>
+                        </div>
+                        <div class="col-3">
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >MaxCoach Education</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Course Portal</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Multimedia</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >MaxCoach Education</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Course Portal</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Multimedia</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >MaxCoach Education</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Course Portal</a
+                                >
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Multimedia</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Multimedia</a>
+                            </li>
+                        </div>
+                        <div class="col-6">
+                            <img
+                                class="img-fluid"
+                                src="../assets/images/DropDownHomeImg.jpg"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </ul>
             </div>
@@ -180,7 +190,7 @@ export default {
                         >Courses</Router-Link
                     >
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu large-menu">
                     <div class="col-2">
                         <li>
                             <a class="dropdown-item" href="#"
@@ -313,13 +323,12 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+.large-menu {
+    width: 80vw;
+}
 .max-logo {
     height: 25px;
     width: 150px;
-}
-
-ul {
-    display: flex;
 }
 </style>
 
