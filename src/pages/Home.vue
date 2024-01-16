@@ -158,10 +158,13 @@ export default {
                     class="col-3 my-3 d-flex justify-content-center"
                     v-for="card in cards"
                 >
-                    <div class="card mb-5" style="width: 21rem; height: 30rem">
+                    <div
+                        class="card mb-5 border-0"
+                        style="width: 21rem; height: 30rem; max-width: 100%"
+                    >
                         <img
                             :src="card.img"
-                            class="card-img-top mb-2"
+                            class="card-img-top mb-2 rounded-0"
                             alt="..."
                         />
                         <div class="card-body">
@@ -325,10 +328,6 @@ section {
 }
 // SEZIONE SHOP
 
-.card {
-    border: none;
-    border-radius: 0;
-}
 // STILI DOME
 .card-body-centrale {
     position: absolute;
