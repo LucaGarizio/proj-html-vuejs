@@ -7,8 +7,7 @@ export default {
             // DATA LUCA
             // DATA CAROSELLO
             currentIndex: 0,
-            currentIndex: 0,
-            itemsPerPage: 3,
+
             testimonialCards: [
                 {
                     title: "It's a choice of quality for people with special needs",
@@ -131,15 +130,16 @@ export default {
             const carousel = this.$refs.carousel
             const numCards = this.testimonialCards.length
 
+            // Imposta la transizione per scorrimento fluido
             carousel.style.transition = 'transform 0.5s ease-in-out'
-            carousel.style.transform = `translateX(-${
-                this.currentIndex * (45 / numCards)
-            }%)`
-        },
-    },
 
-    mounted() {
-        this.initializeCarousel()
+            // Calcola la percentuale di traslazione in base all'indice corrente e al numero totale di carte
+            const percentualeTraslazione =
+                -1 * (this.currentIndex * (45 / numCards))
+
+            // Applica la traslazione utilizzando la proprietà di trasformazione
+            carousel.style.transform = `translateX(${percentualeTraslazione}%)`
+        },
     },
 }
 </script>
@@ -320,7 +320,7 @@ export default {
                 >
                     <div
                         class="card mb-5 border-0"
-                        style="width: 21rem; height: 30rem; max-width: 100%"
+                        style="width: 21rem; height: 30rem"
                     >
                         <img
                             :src="card.img"
@@ -715,7 +715,7 @@ export default {
     background-color: #faf8f6;
 }
 
-// SEZIONE SHOP
+// SEZIONE STILI SHOP
 
 // STILI DOME
 
@@ -723,12 +723,11 @@ export default {
     width: 95%;
     margin-top: 35px;
 }
-#article-tips{
-    background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),url(../assets/images/maxcoach-shape-12.png);
+#article-tips {
+    background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
+        url(../assets/images/maxcoach-shape-12.png);
     background-repeat: no-repeat;
 }
-    
-    
 
 .card-body-centrale {
     position: absolute;
