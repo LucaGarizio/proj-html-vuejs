@@ -82,8 +82,46 @@ export default {
     <!-- sezione slider -->
     <section class="my-3"></section>
     <!-- sezione card shop-->
-    <section class="my-3"></section>
-
+    <section>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="cursive">Artist coaching</h2>
+                    <h3>Latest Online Courses</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card" style="width: 18rem">
+                        <img
+                            src="../assets/images/artist-hero-image-02.jpg"
+                            class="card-img-top"
+                            alt="..."
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Card subtitle
+                            </h6>
+                            <p class="card-text">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                            <a href="#" class="card-link"
+                                ><i class="fa-regular fa-file-lines"></i> 4
+                                Lessons</a
+                            >
+                            <a href="#" class="card-link"
+                                ><i class="fa-regular fa-user"></i> 50
+                                Students</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- dome -->
     <section class="my-3">
         <div>
@@ -170,7 +208,7 @@ export default {
 
 // STILI LUCA
 
-.cursiv {
+.cursive {
     font-family: $secondary-font;
     color: $secondary-text-color;
     font-size: 40px;
