@@ -1,12 +1,12 @@
 <script>
 export default {
     name: 'AppHome',
+
     data() {
         return {
             // DATA LUCA
             // DATA CAROSELLO
-            currentIndex: 0,
-            itemsPerPage: 3,
+
             testimonialCards: [
                 {
                     title: "It's a choice of quality for people with special needs",
@@ -122,7 +122,31 @@ export default {
 </script>
 <template>
     <!-- SEZIONI ALE -->
-    <section></section>
+    <section
+        class="presentation col-12 d-flex align-items-center justify-content-center"
+    >
+        <div>
+            <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
+        </div>
+        <div>
+            <img
+                src="../assets/images/artist-hero-image-02-232x300.jpg"
+                alt=""
+            />
+        </div>
+
+        <div class="col-5">
+            <h1 class="cursive fs-1 text-center">Hello, I'm Martin</h1>
+            <p class="fw-bolder text-center fs-1">
+                Artist Coaching And Mentoring <br />
+                Might Be for You
+            </p>
+        </div>
+
+        <div class="container-fluid">
+            <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
+        </div>
+    </section>
     <section></section>
 
     <!-- SEZIONI LUCA -->
@@ -197,47 +221,10 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="section-margin slider-bg-color">
-        <div class="container-fluid">
-            <div class="row mb-4">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="cursive">Testimonials</h2>
-                    <h3>Why do people love me?</h3>
-                </div>
-            </div>
-            <div class="row border">
-                <div
-                    class="col-4"
-                    v-for="(testimonial, i) in testimonialCards"
-                    :key="i"
-                >
-                    <div class="card p-4" style="width: 23rem">
-                        <h4 class="mb-3">{{ testimonial.title }}</h4>
-                        <p>{{ testimonial.paragraph }}</p>
-                        <div class="info">
-                            <img
-                                class="shrink"
-                                :src="testimonial.info[0].img"
-                                alt=""
-                            />
-                            <h4 class="mt-4">{{ testimonial.info[0].name }}</h4>
-                            <span>{{ testimonial.info[0].role }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-1 d-flex">
-                    <div class="carousel-controls">
-                        <span class="slide-control"></span>
-                        <span class="slide-control"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="section-margin slider-bg-color"></section>
     <!-- sezione card shop-->
     <section class="section-margin">
+        <img src="" alt="" />
         <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-12 text-center">
@@ -369,9 +356,7 @@ export default {
                 <a href=""><span class="span-orange">View all posts</span></a>
             </div>
         </div>
-
     </section>
-
 
     <section>
         <div>
@@ -384,18 +369,32 @@ export default {
 
         <div class="container-fluid">
             <div class="row mt-5">
-                    <!-- Card 1 -->
+                <!-- Card 1 -->
                 <div class="col-md-6">
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-event-04-250x300.jpg" class="card-img-top" alt="...">
+                                <img
+                                    src="../assets/images/artist-event-04-250x300.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
                             </div>
                             <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
-                                    <h5 class="card-title">Storytelling Workshop</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Texas,US</small></p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >APR 22,2021</small
+                                        >
+                                    </p>
+                                    <h5 class="card-title">
+                                        Storytelling Workshop
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >Texas,US</small
+                                        >
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -406,18 +405,32 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-event-03-250x300.jpg" class="card-img-top" alt="...">
+                                <img
+                                    src="../assets/images/artist-event-03-250x300.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
                             </div>
                             <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
-                                    <h5 class="card-title">Storytelling Workshop</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Texas,US</small></p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >APR 22,2021</small
+                                        >
+                                    </p>
+                                    <h5 class="card-title">
+                                        Storytelling Workshop
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >Texas,US</small
+                                        >
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
 
             <div class="row mt-5">
@@ -426,13 +439,27 @@ export default {
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary">NOV 23,2020</small></p>
-                                    <h5 class="card-title">Interntional Art Fair 2020</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Hamburg, Germany</small></p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >NOV 23,2020</small
+                                        >
+                                    </p>
+                                    <h5 class="card-title">
+                                        Interntional Art Fair 2020
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >Hamburg, Germany</small
+                                        >
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-event-02-250x300.jpg" class="card-img-top" alt="...">
+                                <img
+                                    src="../assets/images/artist-event-02-250x300.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
                             </div>
                         </div>
                     </div>
@@ -443,54 +470,63 @@ export default {
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary">DEC 15,2020</small></p>
-                                    <h5 class="card-title">Street Perfomance: Call of Artist</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Illinois,US</small></p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >DEC 15,2020</small
+                                        >
+                                    </p>
+                                    <h5 class="card-title">
+                                        Street Perfomance: Call of Artist
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >Illinois,US</small
+                                        >
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-event-01-250x300.jpg" class="card-img-top" alt="...">
+                                <img
+                                    src="../assets/images/artist-event-01-250x300.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
     </section>
 
     <section>
-
         <div class="container-fluid" id="container-newsletter">
             <div class="row" id="row-newsletter">
                 <div class="col d-flex justify-content-between">
-                    <img src="../assets/images/artist-shape-color-paint-top-left.png"  alt="">
+                    <img
+                        src="../assets/images/artist-shape-color-paint-top-left.png"
+                        alt=""
+                    />
 
-                    <div class="col-3" id="div-newsletter">
-                        <p class="text-white" id="p-newsletter">New Sletter To Get in Touch</p>
+                    <p class="text-white" id="p-newsletter">
+                        New Sletter To Get in Touch
+                    </p>
+                    <div>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Your e-mail"
+                        />
                     </div>
-                        
-                        
-                     <div class="col-6">
-                         <input type="email" class="form-control"  id="exampleFormControlInput1" placeholder="Your e-mail">
-                    </div>
-                    
-                    
-                    <img src="../assets/images/artist-shape-color-paint-bottom-right.png" alt="">
+
+                    <img
+                        src="../assets/images/artist-shape-color-paint-bottom-right.png"
+                        alt=""
+                    />
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-        
-
-
     </section>
 </template>
 
@@ -499,7 +535,11 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 // STILI ALE
-
+.presentation {
+    position: relative;
+    height: 700px;
+    background-color: #fbf9f6;
+}
 // STILI LUCA
 
 .cursive {
@@ -546,18 +586,9 @@ export default {
 
 // SEZIONE CAROSELLO
 
-.carousel-controls {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.slide-control {
-    font-size: 24px;
-}
 .shrink {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 .next {
@@ -588,7 +619,7 @@ export default {
 
 // STILI DOME
 
-.container-fluid{
+.container-fluid {
     width: 95%;
     margin-top: 35px;
 }
@@ -604,23 +635,21 @@ export default {
     font-size: 40px;
 }
 
-
 .card-img-top:hover {
     transform: scale(1.2);
     transition: 1.5s;
 }
 
-.span-orange{
+.span-orange {
     color: $tertiary-color;
-     position: relative;
+    position: relative;
 }
 
 .span-orange:hover {
     border-bottom: 1px solid;
-    
 }
 
-#descrizione-col8{
+#descrizione-col8 {
     align-items: center;
     display: flex;
     padding-left: 50px;
@@ -628,37 +657,6 @@ export default {
 
 #container-newsletter {
     background-color: #244186;
-    width:100%;
-    position: relative;
+    width: 100%;
 }
-
-#exampleFormControlInput1 {
-    background-color: rgba(36, 65, 134, 0.0); 
-    border: none; /* Rimuovi i bordi */
-    border-radius: 0; 
-    outline: none; /* Rimuovi l'outline al focus */
-    box-shadow: none; /* Rimuovi l'ombra al focus */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.459);
-    width: 45%;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    color: white;
-    font-size: 25px;
-}
-.form-control::placeholder {
-    color: white; /* Colore del testo del placeholder */
-}
-
-#div-newsletter{
-    display: flex;
-    align-items: center;
-    text-align: right;
-    position: absolute;
-    top: 20%;
-    left:7%;
-    font-size: 40px;
-    font-family: 'Playfair Display', serif;
-}
-
 </style>
