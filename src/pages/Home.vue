@@ -197,7 +197,7 @@ export default {
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
-                <h2>Article and Tips</h2>
+                <h2 class="cursiv">Article and Tips</h2>
                 <h3>Latest From The Blog</h3>
             </div>
         </div>
