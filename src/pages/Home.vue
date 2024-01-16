@@ -468,12 +468,14 @@ export default {
                 <div class="col d-flex justify-content-between">
                     <img src="../assets/images/artist-shape-color-paint-top-left.png"  alt="">
 
-                        
+                    <div class="col-3" id="div-newsletter">
                         <p class="text-white" id="p-newsletter">New Sletter To Get in Touch</p>
-                        <div>
-                            
-                            <input type="email" class="form-control"  id="exampleFormControlInput1" placeholder="Your e-mail">
-                        </div>
+                    </div>
+                        
+                        
+                     <div class="col-6">
+                         <input type="email" class="form-control"  id="exampleFormControlInput1" placeholder="Your e-mail">
+                    </div>
                     
                     
                     <img src="../assets/images/artist-shape-color-paint-bottom-right.png" alt="">
@@ -588,6 +590,7 @@ export default {
 
 .container-fluid{
     width: 95%;
+    margin-top: 35px;
 }
 .card-body-centrale {
     position: absolute;
@@ -630,23 +633,32 @@ export default {
 }
 
 #exampleFormControlInput1 {
-    background-color: #244186;
+    background-color: rgba(36, 65, 134, 0.0); 
     border: none; /* Rimuovi i bordi */
     border-radius: 0; 
     outline: none; /* Rimuovi l'outline al focus */
     box-shadow: none; /* Rimuovi l'ombra al focus */
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.459);
+    width: 45%;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    font-size: 25px;
 }
 .form-control::placeholder {
     color: white; /* Colore del testo del placeholder */
 }
 
+#div-newsletter{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    position: absolute;
+    top: 20%;
+    left:7%;
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+}
 
-
-
-
-// #p-newsletter{
-//     position: absolute;
-    
-// }
 </style>
