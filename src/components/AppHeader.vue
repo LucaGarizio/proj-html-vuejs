@@ -16,7 +16,6 @@ export default {
 <template>
     <!-- ale -->
     <header>
-        <button class="btn-orange">Get Ticket</button>
         <ul>
             <li>
                 <Router-Link :to="{ name: 'home' }">Home</Router-Link>
