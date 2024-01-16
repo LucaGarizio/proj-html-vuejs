@@ -46,20 +46,27 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="my-3">
-        <div class="container-fluid mt-5">
-            <div class="row justify-content-center">
-                <div class="col text-center">
-                    <div
-                        class="container-img mt-5 position-relative-for-youtube-player"
-                    >
-                        <a href="">
-                            <img
-                                src="../assets/images/artist-video-poster.jpg"
-                                alt="artist-video-poster"
-                            />
-                        </a>
-                        <div class="youtube-icon">
+    <section class="">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="row">
+                <div class="col pos-relative">
+                    <img
+                        class="youtube-video"
+                        src="../assets/images/artist-video-poster.jpg"
+                        alt="anteprima"
+                    />
+                    <div class="img-box-overlay">
+                        <img
+                            class="animated-bg-top-image"
+                            src="../assets/images/maxcoach-shape-12-100x100.png"
+                            alt=""
+                        />
+                        <img
+                            class="animated-bg-bottom-image"
+                            src="../assets/images/maxcoach-shape-12-100x100.png"
+                            alt=""
+                        />
+                        <div class="overlay">
                             <a href="#">
                                 <img
                                     src="../assets/images/icon-youtube-play.png"
@@ -90,23 +97,44 @@ export default {
 
 // STILI LUCA
 
+section {
+    margin: 50px 0;
+}
 .l,
 .col-4 {
     border: 1px solid black;
 }
 
 // sezione youtube video
-.position-relative-bg-image {
+
+.pos-relative {
     position: relative;
-}
-.position-relative-for-youtube-player {
-    position: relative;
-    .youtube-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    width: 100%;
+    .youtube-video {
+        z-index: 1;
     }
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.animated-bg-top-image {
+    position: absolute;
+    top: 0%;
+    left: -4%;
+    z-index: -1;
+}
+
+.animated-bg-bottom-image {
+    position: absolute;
+    bottom: -5%;
+    right: -4%;
+    z-index: -1;
 }
 
 // STILI DOME

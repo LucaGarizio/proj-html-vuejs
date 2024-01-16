@@ -20,6 +20,7 @@ export default {
         <button class="btn-orange">Get Ticket</button>
         <button class="btn-light-orange">Get Ticket</button>
         <button class="btn-green">Get Ticket</button>
+        
         <ul>
             <li>
                 <Router-Link :to="{ name: 'home' }">Home</Router-Link>
