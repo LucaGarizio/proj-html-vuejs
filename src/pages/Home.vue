@@ -97,65 +97,6 @@ export default {
     <section class="border"></section>
 
     <!-- dome -->
-<<<<<<< HEAD
-    <section class="my-3">
-        <div>
-    
-            <div class="text-center mt-5">
-                <!-- La classe "text-center" allinea il testo al centro -->
-                <h2>Article and Tips</h2>
-                <h3>Latest From The Blog</h3>
-            </div>
-
-        </div>
-
-        <div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <div class="row justify-content-around">
-
-        <div class="col-md-3">
-          <div class="card">
-            <img src="../assets/images/artist-blog-03-480x356.jpeg" class="card-img-top" alt="Immagine 1">
-            <div class="card-body">
-              <p class="card-text">ARTIST </p>
-              <h4>Brush Strokes Energize Trees in Paintings</h4>
-              <p>May 15, 2020</p>
-              <p>2,157 Views</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-5">
-          <div class="card">
-            <img src="../assets/images/artist-blog-02-500x680.jpg" class="card-img-top"  alt="Immagine 2">
-            <div class="card-body-centrale">
-              <p class="card-text">Artist</p>
-              <h4 class="title-center">Connection Between Self-Portraits and Idantity</h4>
-              <p>May 15, 2020</p>
-              <p>2,167 Views</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="card">
-            <img src="../assets/images/artist-blog-01-480x356.jpg" class="card-img-top" alt="Immagine 3">
-            <div class="card-body">
-                <p class="card-text">ARTIST </p>
-              <h4>Pocket-Sized Notebooks Hold Minature Paintings</h4>
-              <p>May 15, 2020</p>
-              <p>2,020 Views</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-=======
     <section>
         <div class="container">
             <div class="row mb-4">
@@ -198,7 +139,6 @@ export default {
                 <div class="col-3"></div>
             </div>
         </div>
->>>>>>> b80b0dcf0ecb56257a528f472f1566628282dc4b
     </section>
     <section></section>
 </template>
@@ -252,7 +192,7 @@ section {
 }
 
 // STILI DOME
-.card-body-centrale{
+.card-body-centrale {
     position: absolute;
     top: 80%;
     left: 50%;
@@ -260,11 +200,11 @@ section {
     z-index: 1;
     color: white;
 }
-.title-center{
-    font-size:40px;
+.title-center {
+    font-size: 40px;
 }
 
-.card-img-top:hover{
+.card-img-top:hover {
     transform: scale(1.1);
     transition: 1.5s;
 }
