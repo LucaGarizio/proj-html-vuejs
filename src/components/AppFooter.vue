@@ -6,7 +6,7 @@ export default {
 
 <template>
     <!-- dome -->
-    <div>ciao sono il footer</div>
+    <!-- <div>ciao sono il footer</div> -->
 </template>
 
 <style lang="scss" scoped>
