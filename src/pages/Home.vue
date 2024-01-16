@@ -3,11 +3,9 @@ export default {
     name: 'AppHome',
     data() {
         return {
-            items: ['Slide 1', 'Slide 2', 'Slide 3'],
             // DATA LUCA
             // DATA CAROSELLO
             currentIndex: 0,
-
             testimonialCards: [
                 {
                     title: "It's a choice of quality for people with special needs",
@@ -120,25 +118,27 @@ export default {
         }
     },
 
-    methods: {
-        goToSlide(index) {
-            this.currentIndex = index
-
-            this.updateCarousel()
-        },
-        updateCarousel() {
-            const carousel = this.$refs.carousel
-            const numCards = this.testimonialCards.length
-
-            // Imposta la transizione per scorrimento fluido
-            carousel.style.transition = 'transform 0.5s ease-in-out'
-
-            // Calcola la percentuale di traslazione in base all'indice corrente e al numero totale di carte
+    computed: {
+        // Metodo calcolato per definire lo stile del carosello in base all'indice corrente
+        carouselStyle() {
+            // Calcola la percentuale della dimensione di cui si deve spostare lo slide al cambio di card
+            // Moltiplicalo per -1, per invertire la direzione della traslazione
             const percentualeTraslazione =
-                -1 * (this.currentIndex * (45 / numCards))
-
-            // Applica la traslazione utilizzando la proprietà di trasformazione
-            carousel.style.transform = `translateX(${percentualeTraslazione}%)`
+                -1 *
+                (this.currentIndex *
+                    (33.333 / (this.testimonialCards.length - 1)))
+            // Restituzione di un oggetto con le proprietà di stile
+            return {
+                transition: 'transform 0.5s ease-in-out',
+                transform: `translateX(${percentualeTraslazione}%)`,
+            }
+        },
+    },
+    methods: {
+        // Metodo per passare a una determinata slide
+        goToSlide(index) {
+            // Imposta l'indice corrente al valore specificato
+            this.currentIndex = index
         },
     },
 }
@@ -254,52 +254,48 @@ export default {
                     <h3>Why do people love me?</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="carousel-container">
-                    <div class="carousel" ref="carousel">
-                        <div
-                            v-for="(card, index) in testimonialCards"
-                            :key="index"
-                            class="carousel-col d-flex justify-content-between p-4 mx-1"
-                        >
-                            <div class="card carousel-card border-0 p-5">
-                                <div class="text">
-                                    <h5 class="mb-4">{{ card.title }}</h5>
-                                    <p class="mt-3">
-                                        {{ card.paragraph }}
-                                    </p>
-                                    <div class="d-flex my-5">
-                                        <div class="container-img">
-                                            <img
-                                                class="shrink"
-                                                :src="card.info[0].img"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="info">
-                                            <h6 class="ms-4">
-                                                {{ card.info[0].name }}
-                                            </h6>
-                                            <span class="ms-4">{{
-                                                card.info[0].role
-                                            }}</span>
-                                        </div>
+
+            <div class="carousel-container">
+                <div class="carousel" :style="carouselStyle">
+                    <div
+                        v-for="(card, index) in testimonialCards"
+                        :key="index"
+                        class="carousel-col d-flex justify-content-between p-4 mx-1"
+                    >
+                        <!-- Tuo contenuto del carousel qui -->
+                        <div class="card carousel-card border-0 p-5">
+                            <div class="text">
+                                <h5 class="mb-4">{{ card.title }}</h5>
+                                <p class="mt-3">{{ card.paragraph }}</p>
+                                <div class="d-flex my-5">
+                                    <div class="container-img">
+                                        <img
+                                            class="shrink"
+                                            :src="card.info[0].img"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <h6 class="ms-4">
+                                            {{ card.info[0].name }}
+                                        </h6>
+                                        <span class="ms-4">{{
+                                            card.info[0].role
+                                        }}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- Bullet navigation -->
+                <div id="bullets" class="d-flex justify-content-center my-5">
                     <div
-                        id="bullets"
-                        class="d-flex justify-content-center my-5"
-                    >
-                        <div
-                            v-for="(card, index) in testimonialCards"
-                            :key="index"
-                            class="bullet"
-                            @click="goToSlide(index)"
-                        ></div>
-                    </div>
+                        v-for="(card, index) in testimonialCards"
+                        :key="index"
+                        class="bullet"
+                        @click="goToSlide(index)"
+                    ></div>
                 </div>
             </div>
         </div>
