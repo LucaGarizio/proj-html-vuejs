@@ -3,8 +3,62 @@ export default {
     name: 'AppHome',
     data() {
         return {
-            // data sezione shop
-            cards: [
+            // DATA LUCA
+            // DATA CAROSELLO
+            currentIndex: 0,
+            itemsPerPage: 3,
+            testimonialCards: [
+                {
+                    title: "It's a choice of quality for people with special needs",
+                    paragraph:
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine.MaxCoach guys just got me.",
+                    info: [
+                        {
+                            img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
+                            name: 'Florence Themes',
+                            role: '/ Multimedia Admin',
+                        },
+                    ],
+                },
+                {
+                    title: 'High level of efficiency and scientific teaching methods',
+                    paragraph:
+                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from syllabus. Great study portal for people like me.',
+                    info: [
+                        {
+                            img: '../src/assets/images/artist-testimonial-avatar-04.jpg',
+                            name: 'Mina Hollace',
+                            role: '/ Freelancer',
+                        },
+                    ],
+                },
+                {
+                    title: 'Professional team of specialists and passionate mentors at reach',
+                    paragraph:
+                        'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
+                    info: [
+                        {
+                            img: '../src/assets/images/artist-testimonial-avatar-01.jpg',
+                            name: 'Madley Pondor',
+                            role: '/ IT Specialist',
+                        },
+                    ],
+                },
+                {
+                    title: 'The MaxCoach team works really hard to ensure high quality',
+                    paragraph:
+                        'I am happy of lessons and subjects. They reflect a scientific investigation into effective methods to be adopted for learners of all levels.',
+                    info: [
+                        {
+                            img: '../src/assets/images/artist-testimonial-avatar-03.jpg',
+                            name: 'Luvic Dubble',
+                            role: '/ Private Tutor',
+                        },
+                    ],
+                },
+            ],
+            // DATA SEZIONE SHOP
+            cardShop: [
                 {
                     img: 'src/assets/images/artist-course-08-480x480.jpg',
                     price: '$18.00',
@@ -67,13 +121,13 @@ export default {
 }
 </script>
 <template>
-    <!-- ale -->
+    <!-- SEZIONI ALE -->
     <section></section>
     <section></section>
 
-    <!-- luca -->
+    <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
-    <section class="my-3">
+    <section class="section-margin">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -87,7 +141,7 @@ export default {
                         visual artists,like <br />
                         you, to Create Like <br />
                         you Mean It
-                        <h4 class="cursiv">Martin Garrix</h4>
+                        <h4 class="cursive">Martin Garrix</h4>
                     </h2>
                 </div>
                 <div class="l col-4 offset-2 pt-5">
@@ -109,7 +163,7 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="">
+    <section class="section-margin">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
@@ -143,9 +197,47 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="my-3"></section>
+    <section class="section-margin slider-bg-color">
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="cursive">Testimonials</h2>
+                    <h3>Why do people love me?</h3>
+                </div>
+            </div>
+            <div class="row border">
+                <div
+                    class="col-4"
+                    v-for="(testimonial, i) in testimonialCards"
+                    :key="i"
+                >
+                    <div class="card p-4" style="width: 23rem">
+                        <h4 class="mb-3">{{ testimonial.title }}</h4>
+                        <p>{{ testimonial.paragraph }}</p>
+                        <div class="info">
+                            <img
+                                class="shrink"
+                                :src="testimonial.info[0].img"
+                                alt=""
+                            />
+                            <h4 class="mt-4">{{ testimonial.info[0].name }}</h4>
+                            <span>{{ testimonial.info[0].role }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-1 d-flex">
+                    <div class="carousel-controls">
+                        <span class="slide-control"></span>
+                        <span class="slide-control"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- sezione card shop-->
-    <section>
+    <section class="section-margin">
         <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-12 text-center">
@@ -156,7 +248,7 @@ export default {
             <div class="row">
                 <div
                     class="col-3 my-3 d-flex justify-content-center"
-                    v-for="card in cards"
+                    v-for="card in cardShop"
                 >
                     <div
                         class="card mb-5 border-0"
@@ -195,7 +287,7 @@ export default {
         </div>
     </section>
 
-    <!-- dome -->
+    <!-- SEZIONI DOME -->
     <section class="my-3">
         <div>
             <div class="text-center mt-5">
@@ -210,7 +302,7 @@ export default {
                 <div class="col-12">
                     <div class="row justify-content-around">
                         <div class="col-md-3">
-                            <div class="card">
+                            <div class="card border-0">
                                 <img
                                     src="../assets/images/artist-blog-03-480x356.jpeg"
                                     class="card-img-top"
@@ -229,7 +321,7 @@ export default {
                         </div>
 
                         <div class="col-md-5">
-                            <div class="card">
+                            <div class="card border-0">
                                 <img
                                     src="../assets/images/artist-blog-02-500x680.jpg"
                                     class="card-img-top"
@@ -248,7 +340,7 @@ export default {
                         </div>
 
                         <div class="col-md-3">
-                            <div class="card">
+                            <div class="card border-0">
                                 <img
                                     src="../assets/images/artist-blog-01-480x356.jpg"
                                     class="card-img-top"
@@ -291,10 +383,10 @@ export default {
         </div>
 
         <div class="container-fluid">
-            <div class="row">
+            <div class="row mt-5">
                     <!-- Card 1 -->
                 <div class="col-md-6">
-                    <div class="card h-100">
+                    <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img src="../assets/images/artist-event-04-250x300.jpg" class="card-img-top" alt="...">
@@ -309,8 +401,9 @@ export default {
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6">
-                    <div class="card">
+                    <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img src="../assets/images/artist-event-03-250x300.jpg" class="card-img-top" alt="...">
@@ -324,13 +417,62 @@ export default {
                             </div>
                         </div>
                     </div>
+                </div> 
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="card border-0">
+                        <div class="row no-gutters">
+                            <div class="col-md-8" id="descrizione-col8">
+                                <div class="card-body">
+                                    <p class="card-text"><small class="text-body-secondary">NOV 23,2020</small></p>
+                                    <h5 class="card-title">Interntional Art Fair 2020</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Hamburg, Germany</small></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../assets/images/artist-event-02-250x300.jpg" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="col-md-6">
+                    <div class="card border-0">
+                        <div class="row no-gutters">
+                            <div class="col-md-8" id="descrizione-col8">
+                                <div class="card-body">
+                                    <p class="card-text"><small class="text-body-secondary">DEC 15,2020</small></p>
+                                    <h5 class="card-title">Street Perfomance: Call of Artist</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Illinois,US</small></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../assets/images/artist-event-01-250x300.jpg" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                
             </div>
         </div>
 
+
+    </section>
+
+    <section>
+
+        <div class="container-fluid" id="container-newsletter">
+            <div class="row">
+                <div class="col d-flex justify-content-between">
+                    <img src="../assets/images/artist-shape-color-paint-top-left.png" alt="">
+                                    <!-- Spazio vuoto -->
+                    <div style="width: 20px;"></div>
+                    <img src="../assets/images/artist-shape-color-paint-bottom-right.png" alt="">
+                </div>
+            </div>
+        </div>
 
     </section>
 </template>
@@ -349,12 +491,8 @@ export default {
     font-size: 40px;
 }
 
-section {
-    margin: 50px 0;
-}
-.l,
-.col-4 {
-    border: 1px solid black;
+.section-margin {
+    margin: 100px 0;
 }
 
 // SEZIONE YOUTUBE VIDEO
@@ -388,9 +526,54 @@ section {
     right: -4%;
     z-index: -1;
 }
+
+// SEZIONE CAROSELLO
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.slide-control {
+    font-size: 24px;
+}
+.shrink {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.next {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.slide-next {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 50px 10px;
+    cursor: pointer;
+    &:hover {
+        width: 10px;
+        height: 10px;
+        background-color: black;
+    }
+}
+
+.slider-bg-color {
+    background-color: #faf8f6;
+}
+
 // SEZIONE SHOP
 
 // STILI DOME
+
+.container-fluid{
+    width: 95%;
+}
 .card-body-centrale {
     position: absolute;
     top: 80%;
@@ -422,5 +605,10 @@ section {
     align-items: center;
     display: flex;
     padding-left: 50px;
+}
+
+#container-newsletter {
+    background-color: #244186;
+    width:100%;
 }
 </style>
