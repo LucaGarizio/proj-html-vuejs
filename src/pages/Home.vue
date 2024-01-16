@@ -1,13 +1,14 @@
 <script>
 export default {
     name: 'AppHome',
-
     data() {
         return {
             items: ['Slide 1', 'Slide 2', 'Slide 3'],
             // DATA LUCA
             // DATA CAROSELLO
             currentIndex: 0,
+            currentIndex: 0,
+            itemsPerPage: 3,
             testimonialCards: [
                 {
                     title: "It's a choice of quality for people with special needs",
@@ -148,11 +149,24 @@ export default {
         class="presentation col-12 d-flex align-items-center justify-content-center"
     >
         <div class="">
+            <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
+        </div>
+        <div class="colorsImg">
+            <img
+                src="../assets/images/artist-hero-image-02-232x300.jpg"
+                alt=""
+            />
+        </div>
+
+        <div class="col-5 HelloImMartin">
             <h1 class="cursive fs-1 text-center">Hello, I'm Martin</h1>
             <p class="fw-bolder text-center fs-1">
                 Artist Coaching And Mentoring <br />
                 Might Be for You
             </p>
+        </div>
+
+        <div class="container-fluid Martin">
             <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
         </div>
     </section>
@@ -292,7 +306,6 @@ export default {
     </section>
     <!-- sezione card shop-->
     <section class="section-margin">
-        <img src="" alt="" />
         <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-12 text-center">
@@ -352,7 +365,7 @@ export default {
             </div>
         </div>
 
-        <div class="container-fluid">
+        <div class="container-fluid" id="article-tips">
             <div class="row">
                 <div class="col-12">
                     <div class="row justify-content-around">
@@ -576,10 +589,13 @@ export default {
                         alt=""
                     />
 
-                    <p class="text-white" id="p-newsletter">
-                        New letter To Get in Touch
-                    </p>
-                    <div>
+                    <div class="col-3" id="div-newsletter">
+                        <p class="text-white" id="p-newsletter">
+                            New Sletter To Get in Touch
+                        </p>
+                    </div>
+
+                    <div class="col-6">
                         <input
                             type="email"
                             class="form-control"
@@ -604,6 +620,7 @@ export default {
 
 // STILI ALE
 .presentation {
+    position: relative;
     height: 700px;
     background-color: #fbf9f6;
 }
@@ -654,6 +671,15 @@ export default {
 
 // SEZIONE CAROSELLO
 
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.slide-control {
+    font-size: 24px;
+}
 .shrink {
     width: 70px;
     height: 70px;
@@ -694,8 +720,16 @@ export default {
 // STILI DOME
 
 .container-fluid {
-    // width: 95%;
+    width: 95%;
+    margin-top: 35px;
 }
+#article-tips{
+    background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),url(../assets/images/maxcoach-shape-12.png);
+    background-repeat: no-repeat;
+}
+    
+    
+
 .card-body-centrale {
     position: absolute;
     top: 80%;
@@ -709,8 +743,8 @@ export default {
 }
 
 .card-img-top:hover {
-    transform: scale(1.2);
-    transition: 1.5s;
+    transform: scale(1.1);
+    transition: 1.7s;
 }
 
 .span-orange {
@@ -731,5 +765,34 @@ export default {
 #container-newsletter {
     background-color: #244186;
     width: 100%;
+    position: relative;
+}
+
+#exampleFormControlInput1 {
+    background-color: rgba(36, 65, 134, 0);
+    border: none; /* Rimuovi i bordi */
+    border-radius: 0;
+    outline: none; /* Rimuovi l'outline al focus */
+    box-shadow: none; /* Rimuovi l'ombra al focus */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.733);
+    width: 45%;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+}
+.form-control::placeholder {
+    color: white; /* Colore del testo del placeholder */
+}
+
+#div-newsletter {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
 }
 </style>
