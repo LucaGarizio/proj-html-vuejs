@@ -292,7 +292,7 @@ export default {
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
-                <h2 class="cursiv">Article and Tips</h2>
+                <h2 class="cursive">Article and Tips</h2>
                 <h3>Latest From The Blog</h3>
             </div>
         </div>
@@ -302,7 +302,7 @@ export default {
                 <div class="col-12">
                     <div class="row justify-content-around">
                         <div class="col-md-3">
-                            <div class="card">
+                            <div class="card border-0">
                                 <img
                                     src="../assets/images/artist-blog-03-480x356.jpeg"
                                     class="card-img-top"
@@ -321,7 +321,7 @@ export default {
                         </div>
 
                         <div class="col-md-5">
-                            <div class="card">
+                            <div class="card border-0">
                                 <img
                                     src="../assets/images/artist-blog-02-500x680.jpg"
                                     class="card-img-top"
@@ -340,7 +340,7 @@ export default {
                         </div>
 
                         <div class="col-md-3">
-                            <div class="card">
+                            <div class="card border-0">
                                 <img
                                     src="../assets/images/artist-blog-01-480x356.jpg"
                                     class="card-img-top"
@@ -361,8 +361,120 @@ export default {
                 </div>
             </div>
         </div>
+
+        <div>
+            <div class="text-center mt-5">
+                <!-- La classe "text-center" allinea il testo al centro -->
+                <span>Get into details now? </span>
+                <a href=""><span class="span-orange">View all posts</span></a>
+            </div>
+        </div>
+
     </section>
-    <section></section>
+
+
+    <section>
+        <div>
+            <div class="text-center mt-5">
+                <!-- La classe "text-center" allinea il testo al centro -->
+                <h2 class="cursive">Upcoming Event</h2>
+                <h3>Let's Work Together</h3>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row mt-5">
+                    <!-- Card 1 -->
+                <div class="col-md-6">
+                    <div class="card border-0">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="../assets/images/artist-event-04-250x300.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="col-md-8" id="descrizione-col8">
+                                <div class="card-body">
+                                    <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
+                                    <h5 class="card-title">Storytelling Workshop</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Texas,US</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="../assets/images/artist-event-03-250x300.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="col-md-8" id="descrizione-col8">
+                                <div class="card-body">
+                                    <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
+                                    <h5 class="card-title">Storytelling Workshop</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Texas,US</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="card border-0">
+                        <div class="row no-gutters">
+                            <div class="col-md-8" id="descrizione-col8">
+                                <div class="card-body">
+                                    <p class="card-text"><small class="text-body-secondary">NOV 23,2020</small></p>
+                                    <h5 class="card-title">Interntional Art Fair 2020</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Hamburg, Germany</small></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../assets/images/artist-event-02-250x300.jpg" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0">
+                        <div class="row no-gutters">
+                            <div class="col-md-8" id="descrizione-col8">
+                                <div class="card-body">
+                                    <p class="card-text"><small class="text-body-secondary">DEC 15,2020</small></p>
+                                    <h5 class="card-title">Street Perfomance: Call of Artist</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Illinois,US</small></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../assets/images/artist-event-01-250x300.jpg" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section>
+
+        <div class="container-fluid" id="container-newsletter">
+            <div class="row">
+                <div class="col d-flex justify-content-between">
+                    <img src="../assets/images/artist-shape-color-paint-top-left.png" alt="">
+                                    <!-- Spazio vuoto -->
+                    <div style="width: 20px;"></div>
+                    <img src="../assets/images/artist-shape-color-paint-bottom-right.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -458,6 +570,10 @@ export default {
 // SEZIONE SHOP
 
 // STILI DOME
+
+.container-fluid{
+    width: 95%;
+}
 .card-body-centrale {
     position: absolute;
     top: 80%;
@@ -473,5 +589,26 @@ export default {
 .card-img-top:hover {
     transform: scale(1.1);
     transition: 1.5s;
+}
+
+.span-orange{
+    color: $tertiary-color;
+     position: relative;
+}
+
+.span-orange:hover {
+    border-bottom: 1px solid;
+    
+}
+
+#descrizione-col8{
+    align-items: center;
+    display: flex;
+    padding-left: 50px;
+}
+
+#container-newsletter {
+    background-color: #244186;
+    width:100%;
 }
 </style>
