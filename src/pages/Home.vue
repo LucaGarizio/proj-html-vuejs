@@ -297,7 +297,7 @@ export default {
             </div>
         </div>
 
-        <div class="container-fluid">
+        <div class="container-fluid" id="article-tips">
             <div class="row">
                 <div class="col-12">
                     <div class="row justify-content-around">
@@ -592,6 +592,13 @@ export default {
     width: 95%;
     margin-top: 35px;
 }
+#article-tips{
+    background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),url(../assets/images/maxcoach-shape-12.png);
+    background-repeat: no-repeat;
+}
+    
+    
+
 .card-body-centrale {
     position: absolute;
     top: 80%;
@@ -606,8 +613,8 @@ export default {
 
 
 .card-img-top:hover {
-    transform: scale(1.2);
-    transition: 1.5s;
+    transform: scale(1.1);
+    transition: 1.7s;
 }
 
 .span-orange{
@@ -638,7 +645,7 @@ export default {
     border-radius: 0; 
     outline: none; /* Rimuovi l'outline al focus */
     box-shadow: none; /* Rimuovi l'ombra al focus */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.459);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.733);
     width: 45%;
     position: absolute;
     top: 40%;
