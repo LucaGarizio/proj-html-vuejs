@@ -122,7 +122,18 @@ export default {
 </script>
 <template>
     <!-- SEZIONI ALE -->
-    <section></section>
+    <section
+        class="presentation col-12 d-flex align-items-center justify-content-center"
+    >
+        <div class="">
+            <h1 class="cursive fs-1 text-center">Hello, I'm Martin</h1>
+            <p class="fw-bolder text-center fs-1">
+                Artist Coaching And Mentoring <br />
+                Might Be for You
+            </p>
+            <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
+        </div>
+    </section>
     <section></section>
 
     <!-- SEZIONI LUCA -->
@@ -463,9 +474,13 @@ export default {
                             </div>
                             <div class="col-md-4">
                                 <img
+                                   
                                     src="../assets/images/artist-event-01-250x300.jpg"
+                                   
                                     class="card-img-top"
+                                   
                                     alt="..."
+                                /
                                 />
                             </div>
                         </div>
@@ -477,14 +492,25 @@ export default {
 
     <section>
         <div class="container-fluid" id="container-newsletter">
-            <div class="row">
+            <div class="row" id="row-newsletter">
                 <div class="col d-flex justify-content-between">
                     <img
                         src="../assets/images/artist-shape-color-paint-top-left.png"
                         alt=""
                     />
-                    <!-- Spazio vuoto -->
-                    <div style="width: 20px"></div>
+
+                    <p class="text-white" id="p-newsletter">
+                        New Sletter To Get in Touch
+                    </p>
+                    <div>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Your e-mail"
+                        />
+                    </div>
+
                     <img
                         src="../assets/images/artist-shape-color-paint-bottom-right.png"
                         alt=""
@@ -500,7 +526,10 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 // STILI ALE
-
+.presentation {
+    height: 700px;
+    background-color: #fbf9f6;
+}
 // STILI LUCA
 
 .cursive {
@@ -596,7 +625,7 @@ export default {
 }
 
 .card-img-top:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: 1.5s;
 }
 
