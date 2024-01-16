@@ -1,12 +1,12 @@
 <script>
 export default {
     name: 'AppHome',
+
     data() {
         return {
             // DATA LUCA
             // DATA CAROSELLO
-            currentIndex: 0,
-            itemsPerPage: 3,
+
             testimonialCards: [
                 {
                     title: "It's a choice of quality for people with special needs",
@@ -197,47 +197,10 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="section-margin slider-bg-color">
-        <div class="container-fluid">
-            <div class="row mb-4">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="cursive">Testimonials</h2>
-                    <h3>Why do people love me?</h3>
-                </div>
-            </div>
-            <div class="row border">
-                <div
-                    class="col-4"
-                    v-for="(testimonial, i) in testimonialCards"
-                    :key="i"
-                >
-                    <div class="card p-4" style="width: 23rem">
-                        <h4 class="mb-3">{{ testimonial.title }}</h4>
-                        <p>{{ testimonial.paragraph }}</p>
-                        <div class="info">
-                            <img
-                                class="shrink"
-                                :src="testimonial.info[0].img"
-                                alt=""
-                            />
-                            <h4 class="mt-4">{{ testimonial.info[0].name }}</h4>
-                            <span>{{ testimonial.info[0].role }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-1 d-flex">
-                    <div class="carousel-controls">
-                        <span class="slide-control"></span>
-                        <span class="slide-control"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="section-margin slider-bg-color"></section>
     <!-- sezione card shop-->
     <section class="section-margin">
+        <img src="" alt="" />
         <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-12 text-center">
@@ -369,9 +332,7 @@ export default {
                 <a href=""><span class="span-orange">View all posts</span></a>
             </div>
         </div>
-
     </section>
-
 
     <section>
         <div>
@@ -384,18 +345,32 @@ export default {
 
         <div class="container-fluid">
             <div class="row mt-5">
-                    <!-- Card 1 -->
+                <!-- Card 1 -->
                 <div class="col-md-6">
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-event-04-250x300.jpg" class="card-img-top" alt="...">
+                                <img
+                                    src="../assets/images/artist-event-04-250x300.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
                             </div>
                             <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
-                                    <h5 class="card-title">Storytelling Workshop</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Texas,US</small></p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >APR 22,2021</small
+                                        >
+                                    </p>
+                                    <h5 class="card-title">
+                                        Storytelling Workshop
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >Texas,US</small
+                                        >
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -406,18 +381,32 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-event-03-250x300.jpg" class="card-img-top" alt="...">
+                                <img
+                                    src="../assets/images/artist-event-03-250x300.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
                             </div>
                             <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary">APR 22,2021</small></p>
-                                    <h5 class="card-title">Storytelling Workshop</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Texas,US</small></p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >APR 22,2021</small
+                                        >
+                                    </p>
+                                    <h5 class="card-title">
+                                        Storytelling Workshop
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >Texas,US</small
+                                        >
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
 
             <div class="row mt-5">
@@ -426,13 +415,27 @@ export default {
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary">NOV 23,2020</small></p>
-                                    <h5 class="card-title">Interntional Art Fair 2020</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Hamburg, Germany</small></p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >NOV 23,2020</small
+                                        >
+                                    </p>
+                                    <h5 class="card-title">
+                                        Interntional Art Fair 2020
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >Hamburg, Germany</small
+                                        >
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-event-02-250x300.jpg" class="card-img-top" alt="...">
+                                <img
+                                    src="../assets/images/artist-event-02-250x300.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
                             </div>
                         </div>
                     </div>
@@ -443,37 +446,52 @@ export default {
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
                                 <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary">DEC 15,2020</small></p>
-                                    <h5 class="card-title">Street Perfomance: Call of Artist</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Illinois,US</small></p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >DEC 15,2020</small
+                                        >
+                                    </p>
+                                    <h5 class="card-title">
+                                        Street Perfomance: Call of Artist
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary"
+                                            >Illinois,US</small
+                                        >
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <img src="../assets/images/artist-event-01-250x300.jpg" class="card-img-top" alt="...">
+                                <img
+                                    src="../assets/images/artist-event-01-250x300.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
     </section>
 
     <section>
-
         <div class="container-fluid" id="container-newsletter">
             <div class="row">
                 <div class="col d-flex justify-content-between">
-                    <img src="../assets/images/artist-shape-color-paint-top-left.png" alt="">
-                                    <!-- Spazio vuoto -->
-                    <div style="width: 20px;"></div>
-                    <img src="../assets/images/artist-shape-color-paint-bottom-right.png" alt="">
+                    <img
+                        src="../assets/images/artist-shape-color-paint-top-left.png"
+                        alt=""
+                    />
+                    <!-- Spazio vuoto -->
+                    <div style="width: 20px"></div>
+                    <img
+                        src="../assets/images/artist-shape-color-paint-bottom-right.png"
+                        alt=""
+                    />
                 </div>
             </div>
         </div>
-
     </section>
 </template>
 
@@ -529,18 +547,9 @@ export default {
 
 // SEZIONE CAROSELLO
 
-.carousel-controls {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.slide-control {
-    font-size: 24px;
-}
 .shrink {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 .next {
@@ -571,7 +580,7 @@ export default {
 
 // STILI DOME
 
-.container-fluid{
+.container-fluid {
     width: 95%;
 }
 .card-body-centrale {
@@ -591,17 +600,16 @@ export default {
     transition: 1.5s;
 }
 
-.span-orange{
+.span-orange {
     color: $tertiary-color;
-     position: relative;
+    position: relative;
 }
 
 .span-orange:hover {
     border-bottom: 1px solid;
-    
 }
 
-#descrizione-col8{
+#descrizione-col8 {
     align-items: center;
     display: flex;
     padding-left: 50px;
@@ -609,6 +617,6 @@ export default {
 
 #container-newsletter {
     background-color: #244186;
-    width:100%;
+    width: 100%;
 }
 </style>
