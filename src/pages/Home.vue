@@ -96,61 +96,52 @@ export default {
 
         </div>
 
-        <div class="container">
-  
+        <div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="row justify-content-around">
 
-            <div class="row">
-            <!-- Utilizza una row Bootstrap per organizzare le card -->
-
-                <div class="col-md-4">
-                <!-- La classe "col-md-4" indica che la colonna occupa 4 unità su 12 su schermi di dimensioni medie e superiori -->
-                    <div class="card">
-                        <!-- Aggiungi la classe "card" per creare una card Bootstrap -->
-
-                        <img src="" class="card-img-top" alt="Immagine 1">
-                        <!-- La classe "card-img-top" allinea l'immagine nella parte superiore della card -->
-
-                        <div class="card-body">
-                        <!-- Aggiungi la classe "card-body" per il corpo della card -->
-
-                        <p class="card-text">Contenuto Card 1</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                <!-- La classe "col-md-8" indica che la colonna occupa 8 unità su 12 su schermi di dimensioni medie e superiori -->
-                    <div class="card">
-                        <!-- Aggiungi la classe "card" per creare una card Bootstrap -->
-
-                        <img src="" class="card-img-top" alt="Immagine 2">
-                        <!-- La classe "card-img-top" allinea l'immagine nella parte superiore della card -->
-
-                        <div class="card-body">
-                        <!-- Aggiungi la classe "card-body" per il corpo della card -->
-
-                        <p class="card-text">Contenuto Card Centrale</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                <!-- La classe "col-md-4" indica che la colonna occupa 4 unità su 12 su schermi di dimensioni medie e superiori -->
-                    <div class="card">
-                        <!-- Aggiungi la classe "card" per creare una card Bootstrap -->
-
-                        <img src="" class="card-img-top" alt="Immagine 3">
-                        <!-- La classe "card-img-top" allinea l'immagine nella parte superiore della card -->
-
-                        <div class="card-body">
-                        <!-- Aggiungi la classe "card-body" per il corpo della card -->
-
-                        <p class="card-text">Contenuto Card 3</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="../assets/images/artist-blog-03-480x356.jpeg" class="card-img-top" alt="Immagine 1">
+            <div class="card-body">
+              <p class="card-text">ARTIST </p>
+              <h4>Brush Strokes Energize Trees in Paintings</h4>
+              <p>May 15, 2020</p>
+              <p>2,157 Views</p>
             </div>
+          </div>
         </div>
+
+        <div class="col-md-5">
+          <div class="card">
+            <img src="../assets/images/artist-blog-02-500x680.jpg" class="card-img-top"  alt="Immagine 2">
+            <div class="card-body-centrale">
+              <p class="card-text">Artist</p>
+              <h4 class="title-center">Connection Between Self-Portraits and Idantity</h4>
+              <p>May 15, 2020</p>
+              <p>2,167 Views</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <img src="../assets/images/artist-blog-01-480x356.jpg" class="card-img-top" alt="Immagine 3">
+            <div class="card-body">
+                <p class="card-text">ARTIST </p>
+              <h4>Pocket-Sized Notebooks Hold Minature Paintings</h4>
+              <p>May 15, 2020</p>
+              <p>2,020 Views</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
     </section>
     <section></section>
 </template>
@@ -210,5 +201,20 @@ section {
 }
 
 // STILI DOME
+.card-body-centrale{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+}
+.title-center{
+    font-size:40px;
+}
 
+.card-img-top:hover{
+    transform: scale(1.1);
+    transition: 1.5s;
+}
 </style>
