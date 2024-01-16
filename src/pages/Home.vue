@@ -525,14 +525,25 @@ export default {
 
     <section>
         <div class="container-fluid" id="container-newsletter">
-            <div class="row">
+            <div class="row" id="row-newsletter">
                 <div class="col d-flex justify-content-between">
                     <img
                         src="../assets/images/artist-shape-color-paint-top-left.png"
                         alt=""
                     />
-                    <!-- Spazio vuoto -->
-                    <div style="width: 20px"></div>
+
+                    <p class="text-white" id="p-newsletter">
+                        New Sletter To Get in Touch
+                    </p>
+                    <div>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Your e-mail"
+                        />
+                    </div>
+
                     <img
                         src="../assets/images/artist-shape-color-paint-bottom-right.png"
                         alt=""
@@ -656,7 +667,7 @@ export default {
 }
 
 .card-img-top:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: 1.5s;
 }
 
