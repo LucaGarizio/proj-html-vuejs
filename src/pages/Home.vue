@@ -1,6 +1,9 @@
 <script>
 export default {
     name: 'AppHome',
+    data() {
+        return {}
+    },
 }
 </script>
 <template>
@@ -10,7 +13,7 @@ export default {
 
     <!-- luca -->
     <!-- sezione get started -->
-    <section class="my-3">
+    <section class="border">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -24,7 +27,7 @@ export default {
                         visual artists,like <br />
                         you, to Create Like <br />
                         you Mean It
-                        <h4 class="cursiv">Martin Garrix</h4>
+                        <h4 class="cursive">Martin Garrix</h4>
                     </h2>
                 </div>
                 <div class="l col-4 offset-2 pt-5">
@@ -46,7 +49,7 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="">
+    <section class="border">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
@@ -80,11 +83,21 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="my-3"></section>
+    <section class="border">
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="cursive">Testimonial</h2>
+                    <h3>Why do people love me?</h3>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- sezione card shop-->
-    <section class="my-3"></section>
+    <section class="border"></section>
 
     <!-- dome -->
+<<<<<<< HEAD
     <section class="my-3">
         <div>
     
@@ -142,6 +155,50 @@ export default {
   </div>
 </div>
 
+=======
+    <section>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="cursive">Artist coaching</h2>
+                    <h3>Latest Online Courses</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card" style="width: 18rem">
+                        <img
+                            src="../assets/images/artist-hero-image-02.jpg"
+                            class="card-img-top"
+                            alt="..."
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Card subtitle
+                            </h6>
+                            <p class="card-text">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                            <a href="#" class="card-link"
+                                ><i class="fa-regular fa-file-lines"></i> 4
+                                Lessons</a
+                            >
+                            <a href="#" class="card-link"
+                                ><i class="fa-regular fa-user"></i> 50
+                                Students</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+>>>>>>> b80b0dcf0ecb56257a528f472f1566628282dc4b
     </section>
     <section></section>
 </template>
@@ -153,19 +210,13 @@ export default {
 // STILI ALE
 
 // STILI LUCA
+section {
+    margin: 100px 0;
+}
 
-.cursiv {
+.cursive {
     font-family: $secondary-font;
     color: $secondary-text-color;
-    font-size: 40px;
-}
-
-section {
-    margin: 50px 0;
-}
-.l,
-.col-4 {
-    border: 1px solid black;
 }
 
 // sezione youtube video
