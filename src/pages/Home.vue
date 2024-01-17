@@ -324,7 +324,7 @@ export default {
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
-    <section class="section-margin-bottom">
+    <section class="section-margin-bottom margin-top">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -360,10 +360,10 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="" id="youtube-section">
+    <section class="section-margin" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
-                <div class="col-4 pos-relative">
+                <div class="col pos-relative">
                     <div class="circle">
                         <div class="inner-circle"></div>
                     </div>
@@ -376,6 +376,11 @@ export default {
 
                         <div class="img-box-overlay">
                             <img
+                                class="dittoBlue-section-youtube"
+                                src="../assets/images/DittoShapeBlue.svg"
+                                alt=""
+                            />
+                            <img
                                 class="animated-bg-top-image"
                                 src="../assets/images/maxcoach-shape-12-100x100.png"
                                 alt=""
@@ -386,26 +391,24 @@ export default {
                                 alt=""
                             />
                             <div class="overlay">
-                                <a href="#">
-                                    <img
-                                        src="../assets/images/icon-youtube-play.png"
-                                        alt="youtube icon play"
-                                    />
-                                </a>
+                                <img
+                                    src="../assets/images/icon-youtube-play.png"
+                                    alt="youtube icon play"
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="wave-container">
+            <img class="onde" src="../assets/images/wave.svg" alt="" />
+        </div>
     </section>
     <!-- sezione slider -->
-    <div class="wave-container">
-        <img class="onde" src="../assets/images/wave.svg" alt="" />
-    </div>
     <section class="slider-bg-color" id="carousel">
-        <div class="container-fluid">
-            <div class="row m-5">
+        <div class="container-fluid my-0">
+            <div class="row">
                 <div class="text-center">
                     <h2 class="cursive">Testimonials</h2>
                     <h3>Why do people love me?</h3>
@@ -486,11 +489,11 @@ export default {
                             alt="..."
                         />
                         <div class="card-body">
-                            <h5 class="card-title mb-3">{{ card.price }}</h5>
+                            <h5 class="card-title mb-3">
+                                {{ card.price }}
+                            </h5>
 
-                            <h4 class="card-text mb-3">
-                                {{ card.title }}
-                            </h4>
+                            <h4 class="card-text mb-3">{{ card.title }}</h4>
                             <span class="card-link"
                                 ><i class="fa-regular fa-file-lines"></i>
                                 {{ card.lessons }}</span
@@ -506,7 +509,8 @@ export default {
             <div class="row">
                 <div class="col text-center">
                     <button class="btn-light-orange mt-5">
-                        View all Courses <i class="fa-solid fa-arrow-right"></i>
+                        View all Courses
+                        <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
@@ -540,8 +544,20 @@ export default {
                                         Brush Strokes Energize Trees in
                                         Paintings
                                     </h4>
-                                    <p class="text-body-secondary"><i class="fa-regular fa-calendar" style="color: #969696;"></i> May 15, 2020</p>
-                                    <p class="text-body-secondary"><i class="fa-solid fa-eye" style="color:#969696"></i> 2,157 Views</p>
+                                    <p class="text-body-secondary">
+                                        <i
+                                            class="fa-regular fa-calendar"
+                                            style="color: #969696"
+                                        ></i>
+                                        May 15, 2020
+                                    </p>
+                                    <p class="text-body-secondary">
+                                        <i
+                                            class="fa-solid fa-eye"
+                                            style="color: #969696"
+                                        ></i>
+                                        2,157 Views
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -559,10 +575,21 @@ export default {
                                         Connection Between Self-Portraits and
                                         Idantity
                                     </h4>
-                                    
-                                    <span><i class="fa-regular fa-calendar" style="color: #ffffff;"></i> May 15, 2020</span>
-                                    <span><i class="fa-solid fa-eye" style="color:#ffffff" ></i> 2,167 Views</span>
-                                   
+
+                                    <span
+                                        ><i
+                                            class="fa-regular fa-calendar"
+                                            style="color: #ffffff"
+                                        ></i>
+                                        May 15, 2020</span
+                                    >
+                                    <span
+                                        ><i
+                                            class="fa-solid fa-eye"
+                                            style="color: #ffffff"
+                                        ></i>
+                                        2,167 Views</span
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -580,8 +607,20 @@ export default {
                                         Pocket-Sized Notebooks Hold Minature
                                         Paintings
                                     </h4>
-                                    <p class="text-body-secondary"><i class="fa-regular fa-calendar" style="color: #969696;"></i> May 15, 2020</p>
-                                    <p class="text-body-secondary"><i class="fa-solid fa-eye" style="color:#969696"></i> 2,020 Views</p>
+                                    <p class="text-body-secondary">
+                                        <i
+                                            class="fa-regular fa-calendar"
+                                            style="color: #969696"
+                                        ></i>
+                                        May 15, 2020
+                                    </p>
+                                    <p class="text-body-secondary">
+                                        <i
+                                            class="fa-solid fa-eye"
+                                            style="color: #969696"
+                                        ></i>
+                                        2,020 Views
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -692,7 +731,10 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
-                                <div class="card-body" style="text-align: right">
+                                <div
+                                    class="card-body"
+                                    style="text-align: right"
+                                >
                                     <p class="card-text">
                                         <small class="text-body-secondary"
                                             >NOV 23,2020</small
@@ -726,7 +768,10 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
-                                <div class="card-body" style="text-align: right;">
+                                <div
+                                    class="card-body"
+                                    style="text-align: right"
+                                >
                                     <p class="card-text">
                                         <small class="text-body-secondary"
                                             >DEC 15,2020</small
@@ -949,74 +994,73 @@ export default {
 }
 
 .section-margin {
-    margin: 200px 0;
+    margin: 100px 0 0;
+}
+
+.margin-top {
+    margin-top: 150px;
+}
+.section-margin-bottom {
+    margin-bottom: 200px;
 }
 
 // SEZIONE YOUTUBE VIDEO
-#youtube-section {
-    .pos-relative {
-        position: relative;
-        width: 100%;
-        .youtube-video {
-            z-index: 1;
-        }
-        .circle {
-            position: absolute;
-            top: 10%;
-            left: 105%;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background-color: #ecc5ab;
-            .inner-circle {
-                width: 75px;
-                height: 75px;
-                border-radius: 50%;
-                background-color: white;
-            }
-        }
 
-        .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 5;
-        }
-
-        .animated-bg-top-image {
-            width: 180px;
-            position: absolute;
-            top: -5%;
-            left: -6%;
-            z-index: -1;
-        }
-
-        .animated-bg-bottom-image {
-            width: 180px;
-            position: absolute;
-            bottom: -10%;
-            right: -7%;
-            z-index: -1;
-        }
-        .dittoBlue-section-youtube {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            top: -13%;
-            left: -10%;
-            z-index: -2;
-        }
-        .onde {
-            position: absolute;
-            z-index: -5;
-            bottom: 0;
-            right: 50%;
-        }
+.pos-relative {
+    position: relative;
+}
+.youtube-video {
+    z-index: 1;
+}
+.circle {
+    position: absolute;
+    top: 10%;
+    left: 105%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ecc5ab;
+    .inner-circle {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: white;
     }
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.animated-bg-top-image {
+    width: 180px;
+    position: absolute;
+    top: -5%;
+    left: -6%;
+    z-index: -1;
+}
+
+.animated-bg-bottom-image {
+    width: 180px;
+    position: absolute;
+    bottom: -10%;
+    right: -7%;
+    z-index: -1;
+}
+.dittoBlue-section-youtube {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: -13%;
+    left: -10%;
+    z-index: -2;
 }
 
 // SEZIONE CAROSELLO

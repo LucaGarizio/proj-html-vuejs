@@ -1,6 +1,44 @@
 <script>
 export default {
     name: 'AboutUs',
+    data() {
+        return {
+            testimonialCards: [
+                {
+                    img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-02.jpg',
+                    rate: '5',
+                    name: 'Mina Hollace',
+                    role: '/ Freelancer',
+                    paragraph:
+                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.',
+                },
+                {
+                    img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-04.jpg',
+                    rate: '5',
+                    name: 'Florence Themes',
+                    role: '/ Multimedia Admin',
+                    paragraph:
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                },
+                {
+                    img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-03.jpg',
+                    rate: '5',
+                    name: 'Florence Themes',
+                    role: '/ Multimedia Admin',
+                    paragraph:
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                },
+                {
+                    img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
+                    rate: '5',
+                    name: 'Florence Themes',
+                    role: '/ Multimedia Admin',
+                    paragraph:
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                },
+            ],
+        }
+    },
 }
 </script>
 <template>
@@ -187,16 +225,16 @@ export default {
                     <h6>finished sessions</h6>
                 </div>
                 <div class="col-3">
-                    <h2>1.926</h2>
-                    <h6>finished sessions</h6>
+                    <h2>3.092 +</h2>
+                    <h6>Online Enrollment</h6>
                 </div>
                 <div class="col-3">
-                    <h2>1.926</h2>
-                    <h6>finished sessions</h6>
+                    <h2>200</h2>
+                    <h6>Subjects Taught</h6>
                 </div>
                 <div class="col-3">
-                    <h2>1.926</h2>
-                    <h6>finished sessions</h6>
+                    <h2>100%</h2>
+                    <h6>Satisfaction Rate</h6>
                 </div>
             </div>
         </div>
