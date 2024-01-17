@@ -213,27 +213,37 @@ export default {
             </div>
         </div>
     </section>
-    <section
-        class="coaching bg-white col-12 d-flex p-5 my-5 justify-content-center"
-    >
-        <div class="col-5 HelloImMartin">
-            <h1 class="cursive fs-2 fw-bold text-center">Artist coaching</h1>
-            <p class="fw-bolder text-center fw-bold fs-2">
-                I understand what it takes to create. <br />
-                I can help you with
-            </p>
-            <div class="d-flex justify-content-center">
-                <div class="fw-bold">Online Courses</div>
-                <div>One to One</div>
-                <div>Anywhere</div>
-                <div>On time</div>
+    <section class="col-12">
+        <div class="coaching bg-white col-12 d-flex p-5 justify-content-center">
+            <div class="col-5 HelloImMartin">
+                <h1 class="cursive fs-2 fw-bold text-center">
+                    Artist coaching
+                </h1>
+                <p class="fw-bolder text-center fw-bold fs-2">
+                    I understand what it takes to create. <br />
+                    I can help you with
+                </p>
+            </div>
+        </div>
+        <div class="d-flex col-12 justify-content-between">
+            <div class="fw-bold d-flex justify-content-center col-3">
+                Online Courses
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                One to One
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                Anywhere
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                On time
             </div>
         </div>
     </section>
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
-    <section class="section-margin">
+    <section class="section-margin-bottom">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -272,7 +282,7 @@ export default {
     <section class="section-margin" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
-                <div class="col-4 pos-relative">
+                <div class="col pos-relative">
                     <div class="circle">
                         <div class="inner-circle"></div>
                     </div>
@@ -314,11 +324,14 @@ export default {
                 </div>
             </div>
         </div>
+        <div class="wave-container">
+            <img class="onde" src="../assets/images/wave.svg" alt="" />
+        </div>
     </section>
     <!-- sezione slider -->
-    <section class="section-margin slider-bg-color">
-        <div class="container-fluid">
-            <div class="row m-5">
+    <section class="slider-bg-color" id="carousel">
+        <div class="container-fluid my-0">
+            <div class="row">
                 <div class="text-center">
                     <h2 class="cursive">Testimonials</h2>
                     <h3>Why do people love me?</h3>
@@ -371,8 +384,8 @@ export default {
         </div>
     </section>
     <!-- sezione card shop-->
-    <section class="section-margin">
-        <div class="container-fluid">
+    <section class="section-margin mb-5">
+        <div class="container-fluid pos-relative">
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="cursive">Artist coaching</h2>
@@ -380,6 +393,11 @@ export default {
                 </div>
             </div>
             <div class="row">
+                <img
+                    class="tear"
+                    src="../assets/images/artist-shape-01.png"
+                    alt=""
+                />
                 <div
                     class="col-3 my-3 d-flex justify-content-center"
                     v-for="card in cardShop"
@@ -503,7 +521,14 @@ export default {
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <span>Get into details now? </span>
-                <a href=""><span class="span-orange" style="font-weight: 700">View all posts <i class="fa-solid fa-arrow-right" style="color: #ff6600;"></i></span></a>
+                <a href=""
+                    ><span class="span-orange" style="font-weight: 700"
+                        >View all posts
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            style="color: #ff6600"
+                        ></i></span
+                ></a>
             </div>
         </div>
     </section>
@@ -677,15 +702,12 @@ export default {
                     </div>
 
                     <div class="col-6">
-                        
                         <input
                             type="email"
                             class="form-control"
                             id="exampleFormControlInput1"
                             placeholder="Your e-mail"
-                            
                         />
-                    
                     </div>
 
                     <img
@@ -801,68 +823,70 @@ export default {
 }
 
 .section-margin {
-    margin: 200px 0;
+    margin: 100px 0 0;
+}
+
+.section-margin-bottom {
+    margin-bottom: 200px;
 }
 
 // SEZIONE YOUTUBE VIDEO
-#youtube-section {
-    .pos-relative {
-        position: relative;
-        width: 100%;
-        .youtube-video {
-            z-index: 1;
-        }
-        .circle {
-            position: absolute;
-            top: 10%;
-            left: 105%;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background-color: #ecc5ab;
-            .inner-circle {
-                width: 75px;
-                height: 75px;
-                border-radius: 50%;
-                background-color: white;
-            }
-        }
 
-        .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 5;
-        }
-
-        .animated-bg-top-image {
-            width: 180px;
-            position: absolute;
-            top: -5%;
-            left: -6%;
-            z-index: -1;
-        }
-
-        .animated-bg-bottom-image {
-            width: 180px;
-            position: absolute;
-            bottom: -10%;
-            right: -7%;
-            z-index: -1;
-        }
-        .dittoBlue-section-youtube {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            top: -13%;
-            left: -10%;
-            z-index: -2;
-        }
+.pos-relative {
+    position: relative;
+}
+.youtube-video {
+    z-index: 1;
+}
+.circle {
+    position: absolute;
+    top: 10%;
+    left: 105%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ecc5ab;
+    .inner-circle {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: white;
     }
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.animated-bg-top-image {
+    width: 180px;
+    position: absolute;
+    top: -5%;
+    left: -6%;
+    z-index: -1;
+}
+
+.animated-bg-bottom-image {
+    width: 180px;
+    position: absolute;
+    bottom: -10%;
+    right: -7%;
+    z-index: -1;
+}
+.dittoBlue-section-youtube {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: -13%;
+    left: -10%;
+    z-index: -2;
 }
 
 // SEZIONE CAROSELLO
@@ -913,12 +937,19 @@ export default {
 
 // SEZIONE STILI SHOP
 
+.tear {
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 40%;
+    left: -15%;
+}
+
 // STILI DOME
-#section1-dome{
-    background-color:#F5F7FA;
-    padding-top:20px;
-    padding-bottom:40px;
-    position: relative;
+#section1-dome {
+    background-color: #f5f7fa;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 .container-fluid {
     width: 95%;
@@ -928,7 +959,6 @@ export default {
     background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
         url(../assets/images/maxcoach-shape-12.png);
     background-repeat: no-repeat;
-    
 }
 
 .card-body-centrale {
@@ -945,13 +975,12 @@ export default {
 }
 
 .h4-artist {
-    cursor:pointer;
-    
+    cursor: pointer;
 }
 
-.h4-artist:hover{
+.h4-artist:hover {
     color: #ff6600;
-    transition: 1.0s;
+    transition: 1s;
 }
 .card-img-top:hover {
     transform: scale(1.1);
@@ -973,8 +1002,8 @@ export default {
     padding-left: 50px;
 }
 
-.card-title{
-    cursor:pointer;
+.card-title {
+    cursor: pointer;
 }
 
 #container-newsletter {
