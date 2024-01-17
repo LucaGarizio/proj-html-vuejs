@@ -213,20 +213,30 @@ export default {
             </div>
         </div>
     </section>
-    <section
-        class="coaching bg-white col-12 d-flex p-5 my-5 justify-content-center"
-    >
-        <div class="col-5 HelloImMartin">
-            <h1 class="cursive fs-2 fw-bold text-center">Artist coaching</h1>
-            <p class="fw-bolder text-center fw-bold fs-2">
-                I understand what it takes to create. <br />
-                I can help you with
-            </p>
-            <div class="d-flex justify-content-center">
-                <div class="fw-bold">Online Courses</div>
-                <div>One to One</div>
-                <div>Anywhere</div>
-                <div>On time</div>
+    <section class="col-12">
+        <div class="coaching bg-white col-12 d-flex p-5 justify-content-center">
+            <div class="col-5 HelloImMartin">
+                <h1 class="cursive fs-2 fw-bold text-center">
+                    Artist coaching
+                </h1>
+                <p class="fw-bolder text-center fw-bold fs-2">
+                    I understand what it takes to create. <br />
+                    I can help you with
+                </p>
+            </div>
+        </div>
+        <div class="d-flex col-12 justify-content-between">
+            <div class="fw-bold d-flex justify-content-center col-3">
+                Online Courses
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                One to One
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                Anywhere
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                On time
             </div>
         </div>
     </section>
@@ -489,7 +499,14 @@ export default {
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <span>Get into details now? </span>
-                <a href=""><span class="span-orange" style="font-weight: 700">View all posts <i class="fa-solid fa-arrow-right" style="color: #ff6600;"></i></span></a>
+                <a href=""
+                    ><span class="span-orange" style="font-weight: 700"
+                        >View all posts
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            style="color: #ff6600"
+                        ></i></span
+                ></a>
             </div>
         </div>
     </section>
@@ -668,9 +685,7 @@ export default {
                             class="form-control"
                             id="exampleFormControlInput1"
                             placeholder="Your e-mail"
-                            
                         />
-                    
                     </div>
 
                     <img
@@ -870,10 +885,10 @@ export default {
 // SEZIONE STILI SHOP
 
 // STILI DOME
-#section1-dome{
-    background-color:#F5F7FA;
-    padding-top:20px;
-    padding-bottom:40px;
+#section1-dome {
+    background-color: #f5f7fa;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 .container-fluid {
     width: 95%;
@@ -883,7 +898,6 @@ export default {
     background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
         url(../assets/images/maxcoach-shape-12.png);
     background-repeat: no-repeat;
-    
 }
 
 .card-body-centrale {
