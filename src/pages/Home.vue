@@ -488,7 +488,7 @@ export default {
                                     </h4>
                                     
                                     <span><i class="fa-regular fa-calendar" style="color: #ffffff;"></i> May 15, 2020</span>
-                                    <span><i class="fa-solid fa-eye" style="color:#ffffff" ></i> 2,167 Views</span>
+                                    <span><i class="fa-solid fa-eye" style="color:#ffffff; padding-left: 20px;" ></i> 2,167 Views</span>
                                    
                                 </div>
                             </div>

@@ -62,6 +62,10 @@ export default {
             </div>
         </div>
     </footer>
+    <div class="text-center mt-5 mb-5">
+        
+			<span>© 2020 Maxcoach. All Rights Reserved</span>
+    </div>
 </template>
 
 <style lang="scss" scoped>
