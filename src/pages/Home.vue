@@ -854,7 +854,7 @@ export default {
 .LineRider {
     position: absolute;
     height: 400px;
-    width: 100vw;
+    width: 95%;
     left: 0;
     top: 15%;
     z-index: 4;
@@ -862,7 +862,7 @@ export default {
 .CerchioRigato {
     position: absolute;
     height: 200px;
-    left: 90%;
+    left: 80%;
     top: 25%;
     z-index: 3;
     transform: scaley(-1);
