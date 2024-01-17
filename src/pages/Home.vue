@@ -6,12 +6,11 @@ export default {
             // DATA LUCA
             // DATA CAROSELLO
             currentIndex: 0,
-            itemsPerPage: 3,
             testimonialCards: [
                 {
                     title: "It's a choice of quality for people with special needs",
                     paragraph:
-                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine.MaxCoach guys just got me.",
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
                     info: [
                         {
                             img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
@@ -118,6 +117,30 @@ export default {
             ],
         }
     },
+
+    computed: {
+        // Metodo calcolato per definire lo stile del carosello in base all'indice corrente
+        carouselStyle() {
+            // Calcola la percentuale della dimensione di cui si deve spostare lo slide al cambio di card
+            // Moltiplicalo per -1, per invertire la direzione della traslazione
+            const percentualeTraslazione =
+                -1 *
+                (this.currentIndex *
+                    (33.333 / (this.testimonialCards.length - 1)))
+            // Restituzione di un oggetto con le proprietà di stile
+            return {
+                transition: 'transform 0.5s ease-in-out',
+                transform: `translateX(${percentualeTraslazione}%)`,
+            }
+        },
+    },
+    methods: {
+        // Metodo per passare a una determinata slide
+        goToSlide(index) {
+            // Imposta l'indice corrente al valore specificato
+            this.currentIndex = index
+        },
+    },
 }
 </script>
 <template>
@@ -222,30 +245,32 @@ export default {
     <section class="section-margin">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
-                <div class="col pos-relative">
-                    <img
-                        class="youtube-video"
-                        src="../assets/images/artist-video-poster.jpg"
-                        alt="anteprima"
-                    />
-                    <div class="img-box-overlay">
+                <div class="col-4 pos-relative">
+                    <div class="card">
                         <img
-                            class="animated-bg-top-image"
-                            src="../assets/images/maxcoach-shape-12-100x100.png"
-                            alt=""
+                            class="youtube-video"
+                            src="../assets/images/artist-video-poster.jpg"
+                            alt="anteprima"
                         />
-                        <img
-                            class="animated-bg-bottom-image"
-                            src="../assets/images/maxcoach-shape-12-100x100.png"
-                            alt=""
-                        />
-                        <div class="overlay">
-                            <a href="#">
-                                <img
-                                    src="../assets/images/icon-youtube-play.png"
-                                    alt="youtube icon play"
-                                />
-                            </a>
+                        <div class="img-box-overlay">
+                            <img
+                                class="animated-bg-top-image"
+                                src="../assets/images/maxcoach-shape-12-100x100.png"
+                                alt=""
+                            />
+                            <img
+                                class="animated-bg-bottom-image"
+                                src="../assets/images/maxcoach-shape-12-100x100.png"
+                                alt=""
+                            />
+                            <div class="overlay">
+                                <a href="#">
+                                    <img
+                                        src="../assets/images/icon-youtube-play.png"
+                                        alt="youtube icon play"
+                                    />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -255,39 +280,54 @@ export default {
     <!-- sezione slider -->
     <section class="section-margin slider-bg-color">
         <div class="container-fluid">
-            <div class="row mb-4">
-                <div class="col-12 text-center mb-5">
+            <div class="row m-5">
+                <div class="text-center">
                     <h2 class="cursive">Testimonials</h2>
                     <h3>Why do people love me?</h3>
                 </div>
             </div>
-            <div class="row border">
-                <div
-                    class="col-4"
-                    v-for="(testimonial, i) in testimonialCards"
-                    :key="i"
-                >
-                    <div class="card p-4" style="width: 23rem">
-                        <h4 class="mb-3">{{ testimonial.title }}</h4>
-                        <p>{{ testimonial.paragraph }}</p>
-                        <div class="info">
-                            <img
-                                class="shrink"
-                                :src="testimonial.info[0].img"
-                                alt=""
-                            />
-                            <h4 class="mt-4">{{ testimonial.info[0].name }}</h4>
-                            <span>{{ testimonial.info[0].role }}</span>
+
+            <div class="carousel-container">
+                <div class="carousel" :style="carouselStyle">
+                    <div
+                        v-for="(card, index) in testimonialCards"
+                        :key="index"
+                        class="carousel-col d-flex justify-content-between p-4 mx-1"
+                    >
+                        <!-- Tuo contenuto del carousel qui -->
+                        <div class="card carousel-card border-0 p-5">
+                            <div class="text">
+                                <h5 class="mb-4">{{ card.title }}</h5>
+                                <p class="mt-3">{{ card.paragraph }}</p>
+                                <div class="d-flex my-5">
+                                    <div class="container-img">
+                                        <img
+                                            class="shrink"
+                                            :src="card.info[0].img"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <h6 class="ms-4">
+                                            {{ card.info[0].name }}
+                                        </h6>
+                                        <span class="ms-4">{{
+                                            card.info[0].role
+                                        }}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-1 d-flex">
-                    <div class="carousel-controls">
-                        <span class="slide-control"></span>
-                        <span class="slide-control"></span>
-                    </div>
+                <!-- Bullet navigation -->
+                <div id="bullets" class="d-flex justify-content-center my-5">
+                    <div
+                        v-for="(card, index) in testimonialCards"
+                        :key="index"
+                        class="bullet"
+                        @click="goToSlide(index)"
+                    ></div>
                 </div>
             </div>
         </div>
@@ -308,7 +348,7 @@ export default {
                 >
                     <div
                         class="card mb-5 border-0"
-                        style="width: 21rem; height: 30rem; max-width: 100%"
+                        style="width: 21rem; height: 30rem"
                     >
                         <img
                             :src="card.img"
@@ -335,7 +375,7 @@ export default {
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <button class="btn-light-orange">
+                    <button class="btn-light-orange mt-5">
                         View all Courses <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -677,6 +717,7 @@ export default {
     height: 700px;
     background-color: #fbf9f6;
 }
+
 // STILI LUCA
 
 .cursive {
@@ -737,31 +778,37 @@ export default {
     height: 70px;
     border-radius: 50%;
 }
-.next {
-    display: flex;
-    justify-content: center;
+.carousel-container {
+    overflow: hidden;
+    width: 90%;
     margin: 0 auto;
+    position: relative;
 }
 
-.slide-next {
-    width: 9px;
-    height: 9px;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-col {
+    flex: 0 0 calc(100% / 3);
+    height: 27rem;
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
     border-radius: 50%;
-    background-color: grey;
-    margin: 50px 10px;
+    margin: 0 5px;
     cursor: pointer;
-    &:hover {
-        width: 10px;
-        height: 10px;
-        background-color: black;
-    }
 }
 
 .slider-bg-color {
     background-color: #faf8f6;
 }
 
-// SEZIONE SHOP
+// SEZIONE STILI SHOP
 
 // STILI DOME
 

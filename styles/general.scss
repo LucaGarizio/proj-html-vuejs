@@ -5,14 +5,14 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 // regole generali
-
-body {
-    font-family: $main-font;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: $main-font;
 }
 
 ul {
