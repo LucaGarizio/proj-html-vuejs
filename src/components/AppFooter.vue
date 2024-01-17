@@ -10,7 +10,7 @@ export default {
     <footer class="container-fluid" id="container-footer">
         <div class="row">
             <div class="col-4 p-0">
-                <ul>
+             <ul>
                     <li><h5>Address</h5></li>
                     <li>
                         <span>392 NE 191st St #87934 Miami, FL 33179-3899</span>
@@ -22,6 +22,12 @@ export default {
                         >
                     </li>
                     <li><a href="">support@maxcoach.com</a></li>
+                </ul>
+                <ul>
+                    <li class="social"><a href=""><i class="fa-brands fa-square-facebook" style="font-size: 25px;"></i></a></li>
+                    <li class="social"><a href=""><i class="fa-brands fa-twitter" style="font-size: 25px;"></i></a></li>
+                    <li class="social"><a href=""><i class="fa-brands fa-instagram" style="font-size: 25px;"></i></a></li>
+                    <li class="social"><a href=""><i class="fa-brands fa-linkedin" style="font-size: 25px;"></i></a></li>
                 </ul>
             </div>
             <div class="col-2">
@@ -76,5 +82,14 @@ export default {
 a,
 span {
     color: #6f6f6f;
+    font-size: 14px;
+}
+a:hover{
+    color: #ff6600;
+    transition: 0.5s;
+}
+.social{
+    display: inline-block;
+    padding-left: 25px;
 }
 </style>
