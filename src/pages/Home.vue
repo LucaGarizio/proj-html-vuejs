@@ -213,20 +213,30 @@ export default {
             </div>
         </div>
     </section>
-    <section
-        class="coaching bg-white col-12 d-flex p-5 my-5 justify-content-center"
-    >
-        <div class="col-5 HelloImMartin">
-            <h1 class="cursive fs-2 fw-bold text-center">Artist coaching</h1>
-            <p class="fw-bolder text-center fw-bold fs-2">
-                I understand what it takes to create. <br />
-                I can help you with
-            </p>
-            <div class="d-flex justify-content-center">
-                <div class="fw-bold">Online Courses</div>
-                <div>One to One</div>
-                <div>Anywhere</div>
-                <div>On time</div>
+    <section class="col-12">
+        <div class="coaching bg-white col-12 d-flex p-5 justify-content-center">
+            <div class="col-5 HelloImMartin">
+                <h1 class="cursive fs-2 fw-bold text-center">
+                    Artist coaching
+                </h1>
+                <p class="fw-bolder text-center fw-bold fs-2">
+                    I understand what it takes to create. <br />
+                    I can help you with
+                </p>
+            </div>
+        </div>
+        <div class="d-flex col-12 justify-content-between">
+            <div class="fw-bold d-flex justify-content-center col-3">
+                Online Courses
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                One to One
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                Anywhere
+            </div>
+            <div class="fw-bold d-flex justify-content-center col-3">
+                On time
             </div>
         </div>
     </section>
