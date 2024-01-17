@@ -191,7 +191,7 @@ export default {
             <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
         </div>
 
-        <div class="container-fluid Martin">
+        <div class="Martin">
             <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
         </div>
 
