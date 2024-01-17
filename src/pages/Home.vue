@@ -406,7 +406,7 @@ export default {
     </section>
 
     <!-- SEZIONI DOME -->
-    <section class="my-3">
+    <section class="my-3" id="section1-dome">
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -484,7 +484,7 @@ export default {
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <span>Get into details now? </span>
-                <a href=""><span class="span-orange">View all posts</span></a>
+                <a href=""><span class="span-orange" style="font-weight: 700">View all posts <i class="fa-solid fa-arrow-right" style="color: #ff6600;"></i></span></a>
             </div>
         </div>
     </section>
@@ -663,7 +663,9 @@ export default {
                             class="form-control"
                             id="exampleFormControlInput1"
                             placeholder="Your e-mail"
+                            
                         />
+                    
                     </div>
 
                     <img
@@ -863,7 +865,11 @@ export default {
 // SEZIONE STILI SHOP
 
 // STILI DOME
-
+#section1-dome{
+    background-color:#F5F7FA;
+    padding-top:20px;
+    padding-bottom:40px;
+}
 .container-fluid {
     width: 95%;
     margin-top: 35px;
@@ -872,6 +878,7 @@ export default {
     background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
         url(../assets/images/maxcoach-shape-12.png);
     background-repeat: no-repeat;
+    
 }
 
 .card-body-centrale {
@@ -927,6 +934,8 @@ export default {
 }
 .form-control::placeholder {
     color: white; /* Colore del testo del placeholder */
+    font-size: 24px;
+    font-weight: 300;
 }
 
 #div-newsletter {
