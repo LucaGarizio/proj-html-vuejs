@@ -201,6 +201,19 @@ export default {
             </div>
         </div>
     </section>
+    <section id="newletters">
+        <div class="container-fluid">
+            <div class="row padding-y justify-content-center">
+                <div class="col-8 text-center">
+                    <h2>Sign up for our Newsletters</h2>
+                    <p>
+                        Enter your email address to register to our newsletter
+                        subscription delivered on a regular basis!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
