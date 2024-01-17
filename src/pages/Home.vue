@@ -428,7 +428,7 @@ export default {
                                 />
                                 <div class="card-body">
                                     <p class="card-text">ARTIST</p>
-                                    <h4>
+                                    <h4 class="h4-artist">
                                         Brush Strokes Energize Trees in
                                         Paintings
                                     </h4>
@@ -466,7 +466,7 @@ export default {
                                 />
                                 <div class="card-body">
                                     <p class="card-text">ARTIST</p>
-                                    <h4>
+                                    <h4 class="h4-artist">
                                         Pocket-Sized Notebooks Hold Minature
                                         Paintings
                                     </h4>
@@ -658,6 +658,7 @@ export default {
                     </div>
 
                     <div class="col-6">
+                        
                         <input
                             type="email"
                             class="form-control"
@@ -893,6 +894,15 @@ export default {
     font-size: 40px;
 }
 
+.h4-artist {
+    cursor:pointer;
+    
+}
+
+.h4-artist:hover{
+    color: #ff6600;
+    transition: 1.0s;
+}
 .card-img-top:hover {
     transform: scale(1.1);
     transition: 1.7s;
@@ -911,6 +921,10 @@ export default {
     align-items: center;
     display: flex;
     padding-left: 50px;
+}
+
+.card-title{
+    cursor:pointer;
 }
 
 #container-newsletter {
