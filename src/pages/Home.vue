@@ -243,7 +243,7 @@ export default {
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
-    <section class="section-margin">
+    <section class="">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -279,10 +279,13 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="section-margin">
+    <section class="" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col-4 pos-relative">
+                    <div class="circle">
+                        <div class="inner-circle"></div>
+                    </div>
                     <div class="card">
                         <img
                             class="youtube-video"
@@ -290,6 +293,11 @@ export default {
                             alt="anteprima"
                         />
                         <div class="img-box-overlay">
+                            <img
+                                class="dittoBlue-section-youtube"
+                                src="../assets/images/DittoShapeBlue.svg"
+                                alt=""
+                            />
                             <img
                                 class="animated-bg-top-image"
                                 src="../assets/images/maxcoach-shape-12-100x100.png"
@@ -301,7 +309,10 @@ export default {
                                 alt=""
                             />
                             <div class="overlay">
-                                <a href="#">
+                                <a
+                                    href="https://www.youtube.com/watch?v=ElFJ1qc"
+                                    alt="icon-youtube-play"
+                                >
                                     <img
                                         src="../assets/images/icon-youtube-play.png"
                                         alt="youtube icon play"
@@ -315,7 +326,10 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="section-margin slider-bg-color">
+    <div class="wave-container">
+        <img class="onde" src="../assets/images/wave.svg" alt="" />
+    </div>
+    <section class="slider-bg-color" id="carousel">
         <div class="container-fluid">
             <div class="row m-5">
                 <div class="text-center">
@@ -443,7 +457,7 @@ export default {
                                 />
                                 <div class="card-body">
                                     <p class="card-text">ARTIST</p>
-                                    <h4>
+                                    <h4 class="h4-artist">
                                         Brush Strokes Energize Trees in
                                         Paintings
                                     </h4>
@@ -481,7 +495,7 @@ export default {
                                 />
                                 <div class="card-body">
                                     <p class="card-text">ARTIST</p>
-                                    <h4>
+                                    <h4 class="h4-artist">
                                         Pocket-Sized Notebooks Hold Minature
                                         Paintings
                                     </h4>
@@ -675,11 +689,12 @@ export default {
 
                     <div class="col-3" id="div-newsletter">
                         <p class="text-white" id="p-newsletter">
-                            New Sletter To Get in Touch
+                            Newsletter To Get in Touch
                         </p>
                     </div>
 
                     <div class="col-6">
+                        
                         <input
                             type="email"
                             class="form-control"
@@ -801,39 +816,74 @@ export default {
 }
 
 .section-margin {
-    margin: 100px 0;
+    margin: 200px 0;
 }
 
 // SEZIONE YOUTUBE VIDEO
+#youtube-section {
+    .pos-relative {
+        position: relative;
+        width: 100%;
+        .youtube-video {
+            z-index: 1;
+        }
+        .circle {
+            position: absolute;
+            top: 10%;
+            left: 105%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #ecc5ab;
+            .inner-circle {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                background-color: white;
+            }
+        }
 
-.pos-relative {
-    position: relative;
-    width: 100%;
-    .youtube-video {
-        z-index: 1;
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+
+        .animated-bg-top-image {
+            width: 180px;
+            position: absolute;
+            top: -5%;
+            left: -6%;
+            z-index: -1;
+        }
+
+        .animated-bg-bottom-image {
+            width: 180px;
+            position: absolute;
+            bottom: -10%;
+            right: -7%;
+            z-index: -1;
+        }
+        .dittoBlue-section-youtube {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            top: -13%;
+            left: -10%;
+            z-index: -2;
+        }
+        .onde {
+            position: absolute;
+            z-index: -5;
+            bottom: 0;
+            right: 50%;
+        }
     }
-}
-
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.animated-bg-top-image {
-    position: absolute;
-    top: 0%;
-    left: -4%;
-    z-index: -1;
-}
-
-.animated-bg-bottom-image {
-    position: absolute;
-    bottom: -5%;
-    right: -4%;
-    z-index: -1;
 }
 
 // SEZIONE CAROSELLO
@@ -912,6 +962,15 @@ export default {
     font-size: 40px;
 }
 
+.h4-artist {
+    cursor:pointer;
+    
+}
+
+.h4-artist:hover{
+    color: #ff6600;
+    transition: 1.0s;
+}
 .card-img-top:hover {
     transform: scale(1.1);
     transition: 1.7s;
@@ -930,6 +989,10 @@ export default {
     align-items: center;
     display: flex;
     padding-left: 50px;
+}
+
+.card-title{
+    cursor:pointer;
 }
 
 #container-newsletter {
