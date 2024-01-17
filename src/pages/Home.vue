@@ -125,9 +125,41 @@ export default {
     <section
         class="presentation col-12 d-flex align-items-center justify-content-center"
     >
-        <div class="">
+        <div class="DittoShape">
+            <img
+                class="MaledettoSvg"
+                src="../assets/images/Orange-Ditto-Shape.svg"
+                alt=""
+            />
+        </div>
+
+        <div class="DittoShapeBlue">
+            <img src="../assets/images/DittoShape.jpg" alt="" />
+        </div>
+
+        <div class="IHaveADream">
+            <img
+                src="../assets/images/artist-hero-image-03-204x300.png"
+                alt=""
+            />
+        </div>
+
+        <div class="ComeLeFoglie">
+            <img src="../assets/images/artist-shape-04-127x300.png" alt="" />
+        </div>
+
+        <div class="ArtAttack">
+            <img src="../assets/images/artist-shape-05-300x198.png" alt="" />
+        </div>
+
+        <div class="PuntiniSpastici">
+            <img src="../assets/images/maxcoach-shape-12-150x150.png" alt="" />
+        </div>
+
+        <div class="YouStupidMonkey">
             <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
         </div>
+
         <div class="colorsImg">
             <img
                 src="../assets/images/artist-hero-image-02-232x300.jpg"
@@ -575,6 +607,71 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 // STILI ALE
+.MaledettoSvg {
+    height: 150px;
+}
+
+.DittoShapeBlue {
+    position: absolute;
+    z-index: 12;
+    top: 30%;
+    left: 30%;
+}
+.IHaveADream {
+    position: absolute;
+    z-index: 12;
+    top: 50%;
+    left: 30%;
+}
+
+.ComeLeFoglie {
+    position: absolute;
+    z-index: 11;
+    top: 10%;
+    left: 80%;
+}
+.ArtAttack {
+    position: absolute;
+    z-index: 11;
+    top: 71%;
+    left: 70%;
+}
+
+.DittoShape {
+    position: absolute;
+    z-index: 12;
+    top: 65%;
+    left: 60%;
+}
+.PuntiniSpastici {
+    position: absolute;
+    z-index: 12;
+    top: 75%;
+    left: 65%;
+}
+.colorsImg {
+    position: absolute;
+    z-index: 12;
+    top: 30%;
+    left: 20%;
+}
+
+.YouStupidMonkey {
+    position: absolute;
+    z-index: 13;
+    top: 50%;
+    left: 10%;
+}
+.HelloImMartin {
+    position: absolute;
+    z-index: 15;
+}
+.Martin {
+    position: absolute;
+    z-index: 14;
+    top: 25%;
+    left: 65%;
+}
 .presentation {
     position: relative;
     height: 700px;
@@ -672,12 +769,11 @@ export default {
     width: 95%;
     margin-top: 35px;
 }
-#article-tips{
-    background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),url(../assets/images/maxcoach-shape-12.png);
+#article-tips {
+    background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
+        url(../assets/images/maxcoach-shape-12.png);
     background-repeat: no-repeat;
 }
-    
-    
 
 .card-body-centrale {
     position: absolute;
