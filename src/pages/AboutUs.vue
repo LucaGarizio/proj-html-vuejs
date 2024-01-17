@@ -210,6 +210,14 @@ export default {
                         Enter your email address to register to our newsletter
                         subscription delivered on a regular basis!
                     </p>
+                    <!-- InputEmail-->
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter you email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">@example.com</span>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div id="form" class="d-flex justify-content-center">
                     <div class="col-4 d-flex">
@@ -371,4 +379,21 @@ export default {
         border-top-left-radius: 0;
     }
 }
+
+// stili inputEmail
+.input-group{
+    // width: 70%;
+    height: 50px;
+}
+.input-group:active{
+    border: 1px solid #20ad96;
+}
+.input-group-text{
+    background-color:  #20AD96;
+}
+
+.input-group-text:hover {
+    background-color: #3F3A64;
+}
+
 </style>

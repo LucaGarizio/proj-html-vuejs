@@ -201,6 +201,11 @@ export default {
                 alt=""
             />
         </div>
+        <img
+            class="ArtistShape1"
+            src="../assets/images/artist-shape-01-600x577.png"
+            alt=""
+        />
 
         <div class="col-5 HelloImMartin">
             <h1 class="cursive fw-bold fs-1 text-center">Hello, I'm Martin</h1>
@@ -213,32 +218,108 @@ export default {
             </div>
         </div>
     </section>
-    <section class="col-12">
-        <div class="coaching bg-white col-12 d-flex p-5 justify-content-center">
-            <div class="col-5 HelloImMartin">
-                <h1 class="cursive fs-2 fw-bold text-center">
-                    Artist coaching
-                </h1>
-                <p class="fw-bolder text-center fw-bold fs-2">
-                    I understand what it takes to create. <br />
-                    I can help you with
-                </p>
+    <section class="col-12 positioningClass d-flex justify-content-center p-1">
+        <div class="wrapperPos">
+            <div class="coaching col-12 d-flex p-5 justify-content-center">
+                <div class="col-5 HelloImMartin">
+                    <h1 class="cursive fs-2 fw-bold text-center">
+                        Artist coaching
+                    </h1>
+                    <p class="fw-bolder text-center fw-bold fs-2">
+                        I understand what it takes to create. <br />
+                        I can help you with
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex col-12 justify-content-between">
+                <div class="col-3 p-3">
+                    <div class="container">
+                        <img
+                            class="resizeImg"
+                            src="../assets/images/artist-box-image-01.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h5>On time</h5>
+                        <p class="fs-6">
+                            Punctuality is our top priority because it's an
+                            essential criteria to assess a program quality.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3 p-5">
+                    <div class="container">
+                        <img
+                            class="resizeImg"
+                            src="../assets/images/artist-box-image-02.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h5>On time</h5>
+                        <p class="fs-6">
+                            Punctuality is our top priority because it's an
+                            essential criteria to assess a program quality.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3 p-3">
+                    <div class="container">
+                        <img
+                            class="resizeImg"
+                            src="../assets/images/artist-box-image-03.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h5>On time</h5>
+                        <p class="fs-6">
+                            Punctuality is our top priority because it's an
+                            essential criteria to assess a program quality.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3 p-5">
+                    <div class="container">
+                        <img
+                            class="resizeImg"
+                            src="../assets/images/artist-box-image-04.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h5>On time</h5>
+                        <p class="fs-6">
+                            Punctuality is our top priority because it's an
+                            essential criteria to assess a program quality.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="d-flex col-12 justify-content-between">
-            <div class="fw-bold d-flex justify-content-center col-3">
-                Online Courses
-            </div>
-            <div class="fw-bold d-flex justify-content-center col-3">
-                One to One
-            </div>
-            <div class="fw-bold d-flex justify-content-center col-3">
-                Anywhere
-            </div>
-            <div class="fw-bold d-flex justify-content-center col-3">
-                On time
-            </div>
+        <div class="DittoShapeOG">
+            <img
+                class="MaledettoSvgParte3"
+                src="../assets/images/DittoShapeOG.svg"
+                alt=""
+            />
         </div>
+        <img
+            class="ArtistShape"
+            src="../assets/images/artist-shape-01-600x577.png"
+            alt=""
+        />
+        <img
+            class="CerchioRigato"
+            src="../assets/images/maxcoach-shape-13.png"
+            alt=""
+        />
+        <img
+            class="LineRider"
+            src="../assets/images/maxcoach-shape-14.png"
+            alt=""
+        />
     </section>
 
     <!-- SEZIONI LUCA -->
@@ -279,10 +360,10 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="section-margin" id="youtube-section">
+    <section class="" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
-                <div class="col pos-relative">
+                <div class="col-4 pos-relative">
                     <div class="circle">
                         <div class="inner-circle"></div>
                     </div>
@@ -295,11 +376,6 @@ export default {
 
                         <div class="img-box-overlay">
                             <img
-                                class="dittoBlue-section-youtube"
-                                src="../assets/images/DittoShapeBlue.svg"
-                                alt=""
-                            />
-                            <img
                                 class="animated-bg-top-image"
                                 src="../assets/images/maxcoach-shape-12-100x100.png"
                                 alt=""
@@ -310,24 +386,26 @@ export default {
                                 alt=""
                             />
                             <div class="overlay">
-                                <img
-                                    src="../assets/images/icon-youtube-play.png"
-                                    alt="youtube icon play"
-                                />
+                                <a href="#">
+                                    <img
+                                        src="../assets/images/icon-youtube-play.png"
+                                        alt="youtube icon play"
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="wave-container">
-            <img class="onde" src="../assets/images/wave.svg" alt="" />
-        </div>
     </section>
     <!-- sezione slider -->
+    <div class="wave-container">
+        <img class="onde" src="../assets/images/wave.svg" alt="" />
+    </div>
     <section class="slider-bg-color" id="carousel">
-        <div class="container-fluid my-0">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row m-5">
                 <div class="text-center">
                     <h2 class="cursive">Testimonials</h2>
                     <h3>Why do people love me?</h3>
@@ -462,8 +540,8 @@ export default {
                                         Brush Strokes Energize Trees in
                                         Paintings
                                     </h4>
-                                    <p>May 15, 2020</p>
-                                    <p>2,157 Views</p>
+                                    <p class="text-body-secondary"><i class="fa-regular fa-calendar" style="color: #969696;"></i> May 15, 2020</p>
+                                    <p class="text-body-secondary"><i class="fa-solid fa-eye" style="color:#969696"></i> 2,157 Views</p>
                                 </div>
                             </div>
                         </div>
@@ -481,8 +559,10 @@ export default {
                                         Connection Between Self-Portraits and
                                         Idantity
                                     </h4>
-                                    <p>May 15, 2020</p>
-                                    <p>2,167 Views</p>
+                                    
+                                    <span><i class="fa-regular fa-calendar" style="color: #ffffff;"></i> May 15, 2020</span>
+                                    <span><i class="fa-solid fa-eye" style="color:#ffffff" ></i> 2,167 Views</span>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -500,8 +580,8 @@ export default {
                                         Pocket-Sized Notebooks Hold Minature
                                         Paintings
                                     </h4>
-                                    <p>May 15, 2020</p>
-                                    <p>2,020 Views</p>
+                                    <p class="text-body-secondary"><i class="fa-regular fa-calendar" style="color: #969696;"></i> May 15, 2020</p>
+                                    <p class="text-body-secondary"><i class="fa-solid fa-eye" style="color:#969696"></i> 2,020 Views</p>
                                 </div>
                             </div>
                         </div>
@@ -612,7 +692,7 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
-                                <div class="card-body">
+                                <div class="card-body" style="text-align: right">
                                     <p class="card-text">
                                         <small class="text-body-secondary"
                                             >NOV 23,2020</small
@@ -646,7 +726,7 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
-                                <div class="card-body">
+                                <div class="card-body" style="text-align: right;">
                                     <p class="card-text">
                                         <small class="text-body-secondary"
                                             >DEC 15,2020</small
@@ -690,7 +770,7 @@ export default {
 
                     <div class="col-3" id="div-newsletter">
                         <p class="text-white" id="p-newsletter">
-                            Newsletter To Get in Touch
+                            New Sletter To Get in Touch
                         </p>
                     </div>
 
@@ -718,6 +798,56 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 // STILI ALE
+
+.ArtistShape1 {
+    position: absolute;
+    height: 600px;
+    left: 55%;
+    top: 5%;
+    z-index: 13;
+}
+.LineRider {
+    position: absolute;
+    height: 400px;
+    width: 100vw;
+    left: 0;
+    top: 15%;
+    z-index: 4;
+}
+.CerchioRigato {
+    position: absolute;
+    height: 200px;
+    left: 90%;
+    top: 25%;
+    z-index: 3;
+    transform: scaley(-1);
+}
+.ArtistShape {
+    position: absolute;
+    height: 400px;
+    left: 0;
+    top: 25%;
+    z-index: 2;
+    transform: scaley(-1);
+}
+.wrapperPos {
+    position: absolute;
+    z-index: 400;
+}
+.positioningClass {
+    position: relative;
+    height: 500px;
+}
+.MaledettoSvgParte3 {
+    height: 350px;
+}
+.DittoShapeOG {
+    position: absolute;
+    z-index: 3;
+    top: 35%;
+    left: 65%;
+}
+
 .MaledettoSvg {
     height: 150px;
 }
@@ -797,14 +927,17 @@ export default {
     left: 65%;
 }
 .coaching {
-    position: relative;
-    height: 500px;
-    background-color: #fbf9f6;
+    height: 250px;
 }
 .presentation {
     position: relative;
     height: 700px;
     background-color: #fbf9f6;
+}
+
+.resizeImg {
+    height: 115px;
+    padding: 10px;
 }
 
 // STILI LUCA
@@ -816,70 +949,74 @@ export default {
 }
 
 .section-margin {
-    margin: 100px 0 0;
-}
-
-.section-margin-bottom {
-    margin-bottom: 200px;
+    margin: 200px 0;
 }
 
 // SEZIONE YOUTUBE VIDEO
+#youtube-section {
+    .pos-relative {
+        position: relative;
+        width: 100%;
+        .youtube-video {
+            z-index: 1;
+        }
+        .circle {
+            position: absolute;
+            top: 10%;
+            left: 105%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #ecc5ab;
+            .inner-circle {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                background-color: white;
+            }
+        }
 
-.pos-relative {
-    position: relative;
-}
-.youtube-video {
-    z-index: 1;
-}
-.circle {
-    position: absolute;
-    top: 10%;
-    left: 105%;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #ecc5ab;
-    .inner-circle {
-        width: 75px;
-        height: 75px;
-        border-radius: 50%;
-        background-color: white;
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+
+        .animated-bg-top-image {
+            width: 180px;
+            position: absolute;
+            top: -5%;
+            left: -6%;
+            z-index: -1;
+        }
+
+        .animated-bg-bottom-image {
+            width: 180px;
+            position: absolute;
+            bottom: -10%;
+            right: -7%;
+            z-index: -1;
+        }
+        .dittoBlue-section-youtube {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            top: -13%;
+            left: -10%;
+            z-index: -2;
+        }
+        .onde {
+            position: absolute;
+            z-index: -5;
+            bottom: 0;
+            right: 50%;
+        }
     }
-}
-
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-}
-
-.animated-bg-top-image {
-    width: 180px;
-    position: absolute;
-    top: -5%;
-    left: -6%;
-    z-index: -1;
-}
-
-.animated-bg-bottom-image {
-    width: 180px;
-    position: absolute;
-    bottom: -10%;
-    right: -7%;
-    z-index: -1;
-}
-.dittoBlue-section-youtube {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    top: -13%;
-    left: -10%;
-    z-index: -2;
 }
 
 // SEZIONE CAROSELLO
