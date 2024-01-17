@@ -211,6 +211,18 @@ export default {
                         subscription delivered on a regular basis!
                     </p>
                 </div>
+                <div id="form" class="d-flex justify-content-center">
+                    <div class="col-4 d-flex">
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="inputEmail3"
+                            placeholder="Email *"
+                        />
+
+                        <button type="submit" class="btn-green">Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -336,7 +348,7 @@ export default {
     z-index: -2;
 }
 
-// sezione stili
+// sezione number
 #numbers {
     background-color: #f5f7fa;
     h6 {
@@ -344,6 +356,19 @@ export default {
     }
     h2 {
         color: #20ad96;
+    }
+}
+
+// sezione newletter
+
+#newletters {
+    input {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .btn-green {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
     }
 }
 </style>
