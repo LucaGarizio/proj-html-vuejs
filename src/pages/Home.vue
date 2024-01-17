@@ -148,9 +148,53 @@ export default {
     <section
         class="presentation col-12 d-flex align-items-center justify-content-center"
     >
-        <div class="">
+        <div class="DittoShape">
+            <img
+                class="MaledettoSvg"
+                src="../assets/images/Orange-Ditto-Shape.svg"
+                alt=""
+            />
+        </div>
+
+        <div class="DittoShapeBlue">
+            <img
+                class="MaledettoSvgButInBlue"
+                src="../assets/images/DittoShapeBlue.svg"
+                alt=""
+            />
+        </div>
+
+        <div class="PuntiniSpasticiLunghi">
+            <img src="../assets/images/artist-shape-03.png" alt="" />
+        </div>
+
+        <div class="IHaveADream">
+            <img
+                src="../assets/images/artist-hero-image-03-204x300.png"
+                alt=""
+            />
+        </div>
+
+        <div class="ComeLeFoglie">
+            <img src="../assets/images/artist-shape-04-127x300.png" alt="" />
+        </div>
+
+        <div class="ArtAttack">
+            <img src="../assets/images/artist-shape-05-300x198.png" alt="" />
+        </div>
+
+        <div class="PuntiniSpastici">
+            <img src="../assets/images/maxcoach-shape-12-150x150.png" alt="" />
+        </div>
+
+        <div class="YouStupidMonkey">
             <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
         </div>
+
+        <div class="container-fluid Martin">
+            <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
+        </div>
+
         <div class="colorsImg">
             <img
                 src="../assets/images/artist-hero-image-02-232x300.jpg"
@@ -159,18 +203,28 @@ export default {
         </div>
 
         <div class="col-5 HelloImMartin">
-            <h1 class="cursive fs-1 text-center">Hello, I'm Martin</h1>
-            <p class="fw-bolder text-center fs-1">
+            <h1 class="cursive fw-bold fs-1 text-center">Hello, I'm Martin</h1>
+            <p class="fw-bolder text-center fw-bold fs-1">
                 Artist Coaching And Mentoring <br />
                 Might Be for You
             </p>
-        </div>
-
-        <div class="container-fluid Martin">
-            <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
+            <div class="d-flex justify-content-center">
+                <button class="btn-orange fs-6">Get Started Today</button>
+            </div>
         </div>
     </section>
-    <section></section>
+    <section
+        class="coaching bg-white col-12 d-flex p-5 my-5 justify-content-center"
+    >
+        <div class="col-5 HelloImMartin">
+            <h1 class="cursive fs-2 fw-bold text-center">Artist coaching</h1>
+            <p class="fw-bolder text-center fw-bold fs-2">
+                I understand what it takes to create. <br />
+                I can help you with
+            </p>
+            <div class="d-flex justify-content-center"></div>
+        </div>
+    </section>
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
@@ -627,6 +681,89 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 // STILI ALE
+.MaledettoSvg {
+    height: 150px;
+}
+
+.MaledettoSvgButInBlue {
+    height: 500px;
+    width: 400px;
+}
+
+.DittoShapeBlue {
+    position: absolute;
+    z-index: 12;
+    top: 30%;
+    left: 0;
+    transform: scaley(-1);
+}
+
+.PuntiniSpasticiLunghi {
+    position: absolute;
+    z-index: 12;
+    top: 20%;
+    left: 1%;
+}
+.IHaveADream {
+    position: absolute;
+    z-index: 12;
+    top: 50%;
+    left: 25%;
+}
+
+.ComeLeFoglie {
+    position: absolute;
+    z-index: 11;
+    top: 10%;
+    left: 80%;
+}
+.ArtAttack {
+    position: absolute;
+    z-index: 11;
+    top: 71%;
+    left: 70%;
+}
+
+.DittoShape {
+    position: absolute;
+    z-index: 12;
+    top: 65%;
+    left: 60%;
+}
+.PuntiniSpastici {
+    position: absolute;
+    z-index: 12;
+    top: 75%;
+    left: 65%;
+}
+.colorsImg {
+    position: absolute;
+    z-index: 12;
+    top: 30%;
+    left: 20%;
+}
+
+.YouStupidMonkey {
+    position: absolute;
+    z-index: 13;
+    top: 50%;
+    left: 10%;
+}
+.HelloImMartin {
+    position: absolute;
+    z-index: 15;
+}
+.Martin {
+    position: absolute;
+    z-index: 14;
+    top: 25%;
+    left: 65%;
+}
+.coaching {
+    position: relative;
+    height: 500px;
+    background-color: #fbf9f6;
+}
 .presentation {
     position: relative;
     height: 700px;
