@@ -201,6 +201,11 @@ export default {
                 alt=""
             />
         </div>
+        <img
+            class="ArtistShape1"
+            src="../assets/images/artist-shape-01-600x577.png"
+            alt=""
+        />
 
         <div class="col-5 HelloImMartin">
             <h1 class="cursive fw-bold fs-1 text-center">Hello, I'm Martin</h1>
@@ -213,7 +218,7 @@ export default {
             </div>
         </div>
     </section>
-    <section class="col-12 positioningClass d-flex justify-content-center">
+    <section class="col-12 positioningClass d-flex justify-content-center p-1">
         <div class="wrapperPos">
             <div class="coaching col-12 d-flex p-5 justify-content-center">
                 <div class="col-5 HelloImMartin">
@@ -834,6 +839,13 @@ export default {
 
 // STILI ALE
 
+.ArtistShape1 {
+    position: absolute;
+    height: 600px;
+    left: 55%;
+    top: 5%;
+    z-index: 13;
+}
 .LineRider {
     position: absolute;
     height: 400px;
@@ -853,6 +865,7 @@ export default {
 .ArtistShape {
     position: absolute;
     height: 400px;
+    left: 0;
     top: 25%;
     z-index: 2;
     transform: scaley(-1);
@@ -866,12 +879,12 @@ export default {
     height: 500px;
 }
 .MaledettoSvgParte3 {
-    height: 400px;
+    height: 350px;
 }
 .DittoShapeOG {
     position: absolute;
     z-index: 3;
-    top: 40%;
+    top: 35%;
     left: 65%;
 }
 
@@ -959,6 +972,7 @@ export default {
 .presentation {
     position: relative;
     height: 700px;
+    background-color: #fbf9f6;
 }
 
 .resizeImg {
