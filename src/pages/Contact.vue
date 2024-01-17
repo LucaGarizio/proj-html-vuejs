@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <!-- luca -->
+    <!-- LUCA -->
     <section id="info">
         <div class="container my-5">
             <div class="row d-flex justify-content-center">
