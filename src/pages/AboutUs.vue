@@ -7,7 +7,7 @@ export default {
             testimonialCards: [
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-02.jpg',
-                    rate: '',
+
                     name: 'Mina Hollace',
                     role: '/ Freelancer',
                     paragraph:
@@ -15,7 +15,7 @@ export default {
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-04.jpg',
-                    rate: '',
+
                     name: ' Madley Pondor',
                     role: '/ IT Specialist',
                     paragraph:
@@ -23,7 +23,7 @@ export default {
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-01.jpg',
-                    rate: '',
+
                     name: 'Florence Themes',
                     role: '/ Multimedia Admin',
                     paragraph:
@@ -31,7 +31,7 @@ export default {
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-03.jpg',
-                    rate: '',
+
                     name: 'Luvic Dubble',
                     role: '/ Privare Tutor',
                     paragraph:
@@ -39,7 +39,7 @@ export default {
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-02.jpg',
-                    rate: '',
+
                     name: 'Mina Hollace',
                     role: '/ Freelancer',
                     paragraph:
@@ -47,7 +47,7 @@ export default {
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-04.jpg',
-                    rate: '',
+
                     name: ' Madley Pondor',
                     role: '/ IT Specialist',
                     paragraph:
@@ -246,12 +246,9 @@ export default {
                                             'fa-solid',
                                             'fa-star',
 
-                                            star <= card.rate
-                                                ? 'fa-star-colored'
-                                                : '',
+                                            star ? 'fa-star-colored' : '',
                                         ]"
                                     ></i>
-                                    {{ card.rate }}
                                 </div>
                                 <h5 class="p-2 mt-2">{{ card.name }}</h5>
                                 <span>{{ card.role }}</span>
@@ -539,7 +536,7 @@ h2 {
 }
 
 .fa-star-colored {
-    color: yellow !important;
+    color: #ffbb00;
 }
 
 // sezione number
