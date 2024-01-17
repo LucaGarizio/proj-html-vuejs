@@ -233,7 +233,7 @@ export default {
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
-    <section class="section-margin">
+    <section class="">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -269,7 +269,7 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="section-margin" id="youtube-section">
+    <section class="" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col-4 pos-relative">
@@ -316,7 +316,10 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="section-margin slider-bg-color">
+    <div class="wave-container">
+        <img class="onde" src="../assets/images/wave.svg" alt="" />
+    </div>
+    <section class="slider-bg-color" id="carousel">
         <div class="container-fluid">
             <div class="row m-5">
                 <div class="text-center">
@@ -500,7 +503,14 @@ export default {
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <span>Get into details now? </span>
-                <a href=""><span class="span-orange" style="font-weight: 700">View all posts <i class="fa-solid fa-arrow-right" style="color: #ff6600;"></i></span></a>
+                <a href=""
+                    ><span class="span-orange" style="font-weight: 700"
+                        >View all posts
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            style="color: #ff6600"
+                        ></i></span
+                ></a>
             </div>
         </div>
     </section>
@@ -679,9 +689,7 @@ export default {
                             class="form-control"
                             id="exampleFormControlInput1"
                             placeholder="Your e-mail"
-                            
                         />
-                    
                     </div>
 
                     <img
@@ -858,6 +866,12 @@ export default {
             left: -10%;
             z-index: -2;
         }
+        .onde {
+            position: absolute;
+            z-index: -5;
+            bottom: 0;
+            right: 50%;
+        }
     }
 }
 
@@ -910,10 +924,10 @@ export default {
 // SEZIONE STILI SHOP
 
 // STILI DOME
-#section1-dome{
-    background-color:#F5F7FA;
-    padding-top:20px;
-    padding-bottom:40px;
+#section1-dome {
+    background-color: #f5f7fa;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 .container-fluid {
     width: 95%;
@@ -923,7 +937,6 @@ export default {
     background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
         url(../assets/images/maxcoach-shape-12.png);
     background-repeat: no-repeat;
-    
 }
 
 .card-body-centrale {
