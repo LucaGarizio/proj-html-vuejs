@@ -319,7 +319,7 @@ export default {
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
-    <section class="section-margin">
+    <section class="section-margin-bottom">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -355,10 +355,13 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="section-margin">
+    <section class="" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col-4 pos-relative">
+                    <div class="circle">
+                        <div class="inner-circle"></div>
+                    </div>
                     <div class="card">
                         <img
                             class="youtube-video"
@@ -391,7 +394,10 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <section class="section-margin slider-bg-color">
+    <div class="wave-container">
+        <img class="onde" src="../assets/images/wave.svg" alt="" />
+    </div>
+    <section class="slider-bg-color" id="carousel">
         <div class="container-fluid">
             <div class="row m-5">
                 <div class="text-center">
@@ -446,8 +452,8 @@ export default {
         </div>
     </section>
     <!-- sezione card shop-->
-    <section class="section-margin">
-        <div class="container-fluid">
+    <section class="section-margin mb-5">
+        <div class="container-fluid pos-relative">
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="cursive">Artist coaching</h2>
@@ -455,6 +461,11 @@ export default {
                 </div>
             </div>
             <div class="row">
+                <img
+                    class="tear"
+                    src="../assets/images/artist-shape-01.png"
+                    alt=""
+                />
                 <div
                     class="col-3 my-3 d-flex justify-content-center"
                     v-for="card in cardShop"
@@ -519,12 +530,24 @@ export default {
                                 />
                                 <div class="card-body">
                                     <p class="card-text">ARTIST</p>
-                                    <h4>
+                                    <h4 class="h4-artist">
                                         Brush Strokes Energize Trees in
                                         Paintings
                                     </h4>
-                                    <p>May 15, 2020</p>
-                                    <p>2,157 Views</p>
+                                    <p class="text-body-secondary">
+                                        <i
+                                            class="fa-regular fa-calendar"
+                                            style="color: #969696"
+                                        ></i>
+                                        May 15, 2020
+                                    </p>
+                                    <p class="text-body-secondary">
+                                        <i
+                                            class="fa-solid fa-eye"
+                                            style="color: #969696"
+                                        ></i>
+                                        2,157 Views
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -542,8 +565,21 @@ export default {
                                         Connection Between Self-Portraits and
                                         Idantity
                                     </h4>
-                                    <p>May 15, 2020</p>
-                                    <p>2,167 Views</p>
+
+                                    <span
+                                        ><i
+                                            class="fa-regular fa-calendar"
+                                            style="color: #ffffff"
+                                        ></i>
+                                        May 15, 2020</span
+                                    >
+                                    <span
+                                        ><i
+                                            class="fa-solid fa-eye"
+                                            style="color: #ffffff"
+                                        ></i>
+                                        2,167 Views</span
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -557,12 +593,24 @@ export default {
                                 />
                                 <div class="card-body">
                                     <p class="card-text">ARTIST</p>
-                                    <h4>
+                                    <h4 class="h4-artist">
                                         Pocket-Sized Notebooks Hold Minature
                                         Paintings
                                     </h4>
-                                    <p>May 15, 2020</p>
-                                    <p>2,020 Views</p>
+                                    <p class="text-body-secondary">
+                                        <i
+                                            class="fa-regular fa-calendar"
+                                            style="color: #969696"
+                                        ></i>
+                                        May 15, 2020
+                                    </p>
+                                    <p class="text-body-secondary">
+                                        <i
+                                            class="fa-solid fa-eye"
+                                            style="color: #969696"
+                                        ></i>
+                                        2,020 Views
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -673,7 +721,10 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
-                                <div class="card-body">
+                                <div
+                                    class="card-body"
+                                    style="text-align: right"
+                                >
                                     <p class="card-text">
                                         <small class="text-body-secondary"
                                             >NOV 23,2020</small
@@ -707,7 +758,10 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
-                                <div class="card-body">
+                                <div
+                                    class="card-body"
+                                    style="text-align: right"
+                                >
                                     <p class="card-text">
                                         <small class="text-body-secondary"
                                             >DEC 15,2020</small
@@ -921,39 +975,74 @@ export default {
 }
 
 .section-margin {
-    margin: 100px 0;
+    margin: 200px 0;
 }
 
 // SEZIONE YOUTUBE VIDEO
+#youtube-section {
+    .pos-relative {
+        position: relative;
+        width: 100%;
+        .youtube-video {
+            z-index: 1;
+        }
+        .circle {
+            position: absolute;
+            top: 10%;
+            left: 105%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #ecc5ab;
+            .inner-circle {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                background-color: white;
+            }
+        }
 
-.pos-relative {
-    position: relative;
-    width: 100%;
-    .youtube-video {
-        z-index: 1;
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+
+        .animated-bg-top-image {
+            width: 180px;
+            position: absolute;
+            top: -5%;
+            left: -6%;
+            z-index: -1;
+        }
+
+        .animated-bg-bottom-image {
+            width: 180px;
+            position: absolute;
+            bottom: -10%;
+            right: -7%;
+            z-index: -1;
+        }
+        .dittoBlue-section-youtube {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            top: -13%;
+            left: -10%;
+            z-index: -2;
+        }
+        .onde {
+            position: absolute;
+            z-index: -5;
+            bottom: 0;
+            right: 50%;
+        }
     }
-}
-
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.animated-bg-top-image {
-    position: absolute;
-    top: 0%;
-    left: -4%;
-    z-index: -1;
-}
-
-.animated-bg-bottom-image {
-    position: absolute;
-    bottom: -5%;
-    right: -4%;
-    z-index: -1;
 }
 
 // SEZIONE CAROSELLO
@@ -1004,6 +1093,14 @@ export default {
 
 // SEZIONE STILI SHOP
 
+.tear {
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 40%;
+    left: -15%;
+}
+
 // STILI DOME
 #section1-dome {
     background-color: #f5f7fa;
@@ -1027,11 +1124,20 @@ export default {
     transform: translate(-50%, -50%);
     z-index: 1;
     color: white;
+    width: 80%;
 }
 .title-center {
     font-size: 40px;
 }
 
+.h4-artist {
+    cursor: pointer;
+}
+
+.h4-artist:hover {
+    color: #ff6600;
+    transition: 1s;
+}
 .card-img-top:hover {
     transform: scale(1.1);
     transition: 1.7s;
@@ -1050,6 +1156,10 @@ export default {
     align-items: center;
     display: flex;
     padding-left: 50px;
+}
+
+.card-title {
+    cursor: pointer;
 }
 
 #container-newsletter {
