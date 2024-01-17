@@ -9,7 +9,7 @@ export default {
         <div class="container my-5">
             <div class="row d-flex justify-content-center">
                 <div class="col-7">
-                    <h2 class="text-center">
+                    <h2 class="mb-4 text-center">
                         For more information about our courses, get in touch
                         with MaxCoach via contacs
                     </h2>
@@ -67,7 +67,7 @@ export default {
     <section id="form">
         <div class="container mb-5">
             <div class="row justify-content-center mb-5">
-                <div class="col-6">
+                <div class="col-5">
                     <h2 class="text-center">
                         Fill out this form for booking a consultan advising
                         session.
@@ -115,9 +115,9 @@ export default {
                     ></textarea>
                 </div>
 
-                <div class="col-10 text-center mt-3">
+                <div class="col-10 text-center mt-4">
                     <button type="submit" class="btn btn-success">
-                        Sign in
+                        Submit
                     </button>
                 </div>
             </form>
@@ -129,9 +129,35 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+section {
+    margin: 100px;
+}
 #info {
     h6 {
         font-weight: normal;
+    }
+}
+
+#form {
+    input,
+    textarea {
+        background-color: #f5f5f5;
+        padding: 10px;
+    }
+    input::placeholder,
+    textarea::placeholder {
+        color: #959595;
+    }
+
+    .btn {
+        padding: 17px 70px;
+        background-color: #20ad96;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: #3f3a64;
+            transition: 0.5s;
+        }
     }
 }
 </style>
