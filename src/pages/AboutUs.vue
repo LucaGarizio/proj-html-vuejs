@@ -105,7 +105,7 @@ export default {
                         <div class="img-box-overlay">
                             <img
                                 class="dittoBlue-section-youtube"
-                                src="../assets/images/DittoShapeBlue.svg"
+                                src="../assets/images/Orange-Ditto-Shape.svg"
                                 alt=""
                             />
                             <img
@@ -115,7 +115,7 @@ export default {
                             />
                             <img
                                 class="animated-bg-bottom-image"
-                                src="../assets/images/maxcoach-shape-12-100x100.png"
+                                src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/maxcoach-shape-07.png"
                                 alt=""
                             />
                             <div class="overlay">
@@ -135,7 +135,72 @@ export default {
             </div>
         </div>
     </section>
-    <section id="carousel">ciao</section>
+    <section id="carousel" class="padding-y"></section>
+    <section id="sponsor">
+        <div class="container padding-y">
+            <div class="row justify-content-center text-center">
+                <div class="col">
+                    <img
+                        src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/client-logo-01.png"
+                        alt=""
+                    />
+                </div>
+                <div class="col">
+                    <img
+                        src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/client-logo-02.png"
+                        alt=""
+                    />
+                </div>
+                <div class="col">
+                    <img
+                        src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/client-logo-03.png"
+                        alt=""
+                    />
+                </div>
+                <div class="col">
+                    <img
+                        src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/client-logo-04.png"
+                        alt=""
+                    />
+                </div>
+                <div class="col">
+                    <img
+                        src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/client-logo-05.png"
+                        alt=""
+                    />
+                </div>
+                <div class="col">
+                    <img
+                        src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/client-logo-06.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="numbers" class="padding-y">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h2>1.926</h2>
+                    <h6>finished sessions</h6>
+                </div>
+                <div class="col-3">
+                    <h2>1.926</h2>
+                    <h6>finished sessions</h6>
+                </div>
+                <div class="col-3">
+                    <h2>1.926</h2>
+                    <h6>finished sessions</h6>
+                </div>
+                <div class="col-3">
+                    <h2>1.926</h2>
+                    <h6>finished sessions</h6>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -177,6 +242,14 @@ export default {
 
 .margin-top {
     margin-top: 100px !important;
+}
+
+.margin-bottom {
+    padding-bottom: 100px;
+}
+
+.padding-y {
+    padding: 100px 0;
 }
 
 .fa-flag,
@@ -248,5 +321,16 @@ export default {
     top: -13%;
     left: -10%;
     z-index: -2;
+}
+
+// sezione stili
+#numbers {
+    background-color: #f5f7fa;
+    h6 {
+        text-transform: uppercase;
+    }
+    h2 {
+        color: #20ad96;
+    }
 }
 </style>
