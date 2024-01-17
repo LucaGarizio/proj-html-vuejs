@@ -222,7 +222,12 @@ export default {
                 I understand what it takes to create. <br />
                 I can help you with
             </p>
-            <div class="d-flex justify-content-center"></div>
+            <div class="d-flex justify-content-center">
+                <div class="fw-bold">Online Courses</div>
+                <div>One to One</div>
+                <div>Anywhere</div>
+                <div>On time</div>
+            </div>
         </div>
     </section>
 
