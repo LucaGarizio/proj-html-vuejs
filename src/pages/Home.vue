@@ -213,37 +213,113 @@ export default {
             </div>
         </div>
     </section>
-    <section class="col-12">
-        <div class="coaching bg-white col-12 d-flex p-5 justify-content-center">
-            <div class="col-5 HelloImMartin">
-                <h1 class="cursive fs-2 fw-bold text-center">
-                    Artist coaching
-                </h1>
-                <p class="fw-bolder text-center fw-bold fs-2">
-                    I understand what it takes to create. <br />
-                    I can help you with
-                </p>
+    <section class="col-12 positioningClass d-flex justify-content-center">
+        <div class="wrapperPos">
+            <div class="coaching col-12 d-flex p-5 justify-content-center">
+                <div class="col-5 HelloImMartin">
+                    <h1 class="cursive fs-2 fw-bold text-center">
+                        Artist coaching
+                    </h1>
+                    <p class="fw-bolder text-center fw-bold fs-2">
+                        I understand what it takes to create. <br />
+                        I can help you with
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex col-12 justify-content-between">
+                <div class="col-3 p-3">
+                    <div class="container">
+                        <img
+                            class="resizeImg"
+                            src="../assets/images/artist-box-image-01.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h5>On time</h5>
+                        <p class="fs-6">
+                            Punctuality is our top priority because it's an
+                            essential criteria to assess a program quality.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3 p-5">
+                    <div class="container">
+                        <img
+                            class="resizeImg"
+                            src="../assets/images/artist-box-image-02.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h5>On time</h5>
+                        <p class="fs-6">
+                            Punctuality is our top priority because it's an
+                            essential criteria to assess a program quality.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3 p-3">
+                    <div class="container">
+                        <img
+                            class="resizeImg"
+                            src="../assets/images/artist-box-image-03.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h5>On time</h5>
+                        <p class="fs-6">
+                            Punctuality is our top priority because it's an
+                            essential criteria to assess a program quality.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3 p-5">
+                    <div class="container">
+                        <img
+                            class="resizeImg"
+                            src="../assets/images/artist-box-image-04.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h5>On time</h5>
+                        <p class="fs-6">
+                            Punctuality is our top priority because it's an
+                            essential criteria to assess a program quality.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="d-flex col-12 justify-content-between">
-            <div class="fw-bold d-flex justify-content-center col-3">
-                Online Courses
-            </div>
-            <div class="fw-bold d-flex justify-content-center col-3">
-                One to One
-            </div>
-            <div class="fw-bold d-flex justify-content-center col-3">
-                Anywhere
-            </div>
-            <div class="fw-bold d-flex justify-content-center col-3">
-                On time
-            </div>
+        <div class="DittoShapeOG">
+            <img
+                class="MaledettoSvgParte3"
+                src="../assets/images/DittoShapeOG.svg"
+                alt=""
+            />
         </div>
+        <img
+            class="ArtistShape"
+            src="../assets/images/artist-shape-01-600x577.png"
+            alt=""
+        />
+        <img
+            class="CerchioRigato"
+            src="../assets/images/maxcoach-shape-13.png"
+            alt=""
+        />
+        <img
+            class="LineRider"
+            src="../assets/images/maxcoach-shape-14.png"
+            alt=""
+        />
     </section>
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
-    <section class="">
+    <section class="section-margin">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -279,13 +355,10 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="" id="youtube-section">
+    <section class="section-margin">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col-4 pos-relative">
-                    <div class="circle">
-                        <div class="inner-circle"></div>
-                    </div>
                     <div class="card">
                         <img
                             class="youtube-video"
@@ -293,11 +366,6 @@ export default {
                             alt="anteprima"
                         />
                         <div class="img-box-overlay">
-                            <img
-                                class="dittoBlue-section-youtube"
-                                src="../assets/images/DittoShapeBlue.svg"
-                                alt=""
-                            />
                             <img
                                 class="animated-bg-top-image"
                                 src="../assets/images/maxcoach-shape-12-100x100.png"
@@ -309,10 +377,7 @@ export default {
                                 alt=""
                             />
                             <div class="overlay">
-                                <a
-                                    href="https://www.youtube.com/watch?v=ElFJ1qc"
-                                    alt="icon-youtube-play"
-                                >
+                                <a href="#">
                                     <img
                                         src="../assets/images/icon-youtube-play.png"
                                         alt="youtube icon play"
@@ -326,10 +391,7 @@ export default {
         </div>
     </section>
     <!-- sezione slider -->
-    <div class="wave-container">
-        <img class="onde" src="../assets/images/wave.svg" alt="" />
-    </div>
-    <section class="slider-bg-color" id="carousel">
+    <section class="section-margin slider-bg-color">
         <div class="container-fluid">
             <div class="row m-5">
                 <div class="text-center">
@@ -457,7 +519,7 @@ export default {
                                 />
                                 <div class="card-body">
                                     <p class="card-text">ARTIST</p>
-                                    <h4 class="h4-artist">
+                                    <h4>
                                         Brush Strokes Energize Trees in
                                         Paintings
                                     </h4>
@@ -495,7 +557,7 @@ export default {
                                 />
                                 <div class="card-body">
                                     <p class="card-text">ARTIST</p>
-                                    <h4 class="h4-artist">
+                                    <h4>
                                         Pocket-Sized Notebooks Hold Minature
                                         Paintings
                                     </h4>
@@ -689,12 +751,11 @@ export default {
 
                     <div class="col-3" id="div-newsletter">
                         <p class="text-white" id="p-newsletter">
-                            Newsletter To Get in Touch
+                            New Sletter To Get in Touch
                         </p>
                     </div>
 
                     <div class="col-6">
-                        
                         <input
                             type="email"
                             class="form-control"
@@ -718,6 +779,48 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 // STILI ALE
+
+.LineRider {
+    position: absolute;
+    height: 400px;
+    width: 100vw;
+    left: 0;
+    top: 15%;
+    z-index: 4;
+}
+.CerchioRigato {
+    position: absolute;
+    height: 200px;
+    left: 90%;
+    top: 25%;
+    z-index: 3;
+    transform: scaley(-1);
+}
+.ArtistShape {
+    position: absolute;
+    height: 400px;
+    top: 25%;
+    z-index: 2;
+    transform: scaley(-1);
+}
+.wrapperPos {
+    position: absolute;
+    z-index: 400;
+}
+.positioningClass {
+    position: relative;
+    height: 500px;
+}
+.MaledettoSvgParte3 {
+    height: 400px;
+}
+.DittoShapeOG {
+    position: absolute;
+    z-index: 3;
+    top: 40%;
+    left: 65%;
+}
+
 .MaledettoSvg {
     height: 150px;
 }
@@ -797,14 +900,16 @@ export default {
     left: 65%;
 }
 .coaching {
-    position: relative;
-    height: 500px;
-    background-color: #fbf9f6;
+    height: 250px;
 }
 .presentation {
     position: relative;
     height: 700px;
-    background-color: #fbf9f6;
+}
+
+.resizeImg {
+    height: 115px;
+    padding: 10px;
 }
 
 // STILI LUCA
@@ -816,74 +921,39 @@ export default {
 }
 
 .section-margin {
-    margin: 200px 0;
+    margin: 100px 0;
 }
 
 // SEZIONE YOUTUBE VIDEO
-#youtube-section {
-    .pos-relative {
-        position: relative;
-        width: 100%;
-        .youtube-video {
-            z-index: 1;
-        }
-        .circle {
-            position: absolute;
-            top: 10%;
-            left: 105%;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background-color: #ecc5ab;
-            .inner-circle {
-                width: 75px;
-                height: 75px;
-                border-radius: 50%;
-                background-color: white;
-            }
-        }
 
-        .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 5;
-        }
-
-        .animated-bg-top-image {
-            width: 180px;
-            position: absolute;
-            top: -5%;
-            left: -6%;
-            z-index: -1;
-        }
-
-        .animated-bg-bottom-image {
-            width: 180px;
-            position: absolute;
-            bottom: -10%;
-            right: -7%;
-            z-index: -1;
-        }
-        .dittoBlue-section-youtube {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            top: -13%;
-            left: -10%;
-            z-index: -2;
-        }
-        .onde {
-            position: absolute;
-            z-index: -5;
-            bottom: 0;
-            right: 50%;
-        }
+.pos-relative {
+    position: relative;
+    width: 100%;
+    .youtube-video {
+        z-index: 1;
     }
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.animated-bg-top-image {
+    position: absolute;
+    top: 0%;
+    left: -4%;
+    z-index: -1;
+}
+
+.animated-bg-bottom-image {
+    position: absolute;
+    bottom: -5%;
+    right: -4%;
+    z-index: -1;
 }
 
 // SEZIONE CAROSELLO
@@ -962,15 +1032,6 @@ export default {
     font-size: 40px;
 }
 
-.h4-artist {
-    cursor:pointer;
-    
-}
-
-.h4-artist:hover{
-    color: #ff6600;
-    transition: 1.0s;
-}
 .card-img-top:hover {
     transform: scale(1.1);
     transition: 1.7s;
@@ -989,10 +1050,6 @@ export default {
     align-items: center;
     display: flex;
     padding-left: 50px;
-}
-
-.card-title{
-    cursor:pointer;
 }
 
 #container-newsletter {
