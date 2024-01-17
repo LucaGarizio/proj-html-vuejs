@@ -373,6 +373,7 @@ export default {
                             src="../assets/images/artist-video-poster.jpg"
                             alt="anteprima"
                         />
+
                         <div class="img-box-overlay">
                             <img
                                 class="animated-bg-top-image"
@@ -539,20 +540,8 @@ export default {
                                         Brush Strokes Energize Trees in
                                         Paintings
                                     </h4>
-                                    <p class="text-body-secondary">
-                                        <i
-                                            class="fa-regular fa-calendar"
-                                            style="color: #969696"
-                                        ></i>
-                                        May 15, 2020
-                                    </p>
-                                    <p class="text-body-secondary">
-                                        <i
-                                            class="fa-solid fa-eye"
-                                            style="color: #969696"
-                                        ></i>
-                                        2,157 Views
-                                    </p>
+                                    <p class="text-body-secondary"><i class="fa-regular fa-calendar" style="color: #969696;"></i> May 15, 2020</p>
+                                    <p class="text-body-secondary"><i class="fa-solid fa-eye" style="color:#969696"></i> 2,157 Views</p>
                                 </div>
                             </div>
                         </div>
@@ -570,21 +559,10 @@ export default {
                                         Connection Between Self-Portraits and
                                         Idantity
                                     </h4>
-
-                                    <span
-                                        ><i
-                                            class="fa-regular fa-calendar"
-                                            style="color: #ffffff"
-                                        ></i>
-                                        May 15, 2020</span
-                                    >
-                                    <span
-                                        ><i
-                                            class="fa-solid fa-eye"
-                                            style="color: #ffffff"
-                                        ></i>
-                                        2,167 Views</span
-                                    >
+                                    
+                                    <span><i class="fa-regular fa-calendar" style="color: #ffffff;"></i> May 15, 2020</span>
+                                    <span><i class="fa-solid fa-eye" style="color:#ffffff" ></i> 2,167 Views</span>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -602,20 +580,8 @@ export default {
                                         Pocket-Sized Notebooks Hold Minature
                                         Paintings
                                     </h4>
-                                    <p class="text-body-secondary">
-                                        <i
-                                            class="fa-regular fa-calendar"
-                                            style="color: #969696"
-                                        ></i>
-                                        May 15, 2020
-                                    </p>
-                                    <p class="text-body-secondary">
-                                        <i
-                                            class="fa-solid fa-eye"
-                                            style="color: #969696"
-                                        ></i>
-                                        2,020 Views
-                                    </p>
+                                    <p class="text-body-secondary"><i class="fa-regular fa-calendar" style="color: #969696;"></i> May 15, 2020</p>
+                                    <p class="text-body-secondary"><i class="fa-solid fa-eye" style="color:#969696"></i> 2,020 Views</p>
                                 </div>
                             </div>
                         </div>
@@ -726,10 +692,7 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
-                                <div
-                                    class="card-body"
-                                    style="text-align: right"
-                                >
+                                <div class="card-body" style="text-align: right">
                                     <p class="card-text">
                                         <small class="text-body-secondary"
                                             >NOV 23,2020</small
@@ -763,10 +726,7 @@ export default {
                     <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-8" id="descrizione-col8">
-                                <div
-                                    class="card-body"
-                                    style="text-align: right"
-                                >
+                                <div class="card-body" style="text-align: right;">
                                     <p class="card-text">
                                         <small class="text-body-secondary"
                                             >DEC 15,2020</small
@@ -1138,7 +1098,6 @@ export default {
     transform: translate(-50%, -50%);
     z-index: 1;
     color: white;
-    width: 80%;
 }
 .title-center {
     font-size: 40px;

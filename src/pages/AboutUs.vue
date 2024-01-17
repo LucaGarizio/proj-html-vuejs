@@ -204,20 +204,26 @@ export default {
     <section id="newletters">
         <div class="container-fluid">
             <div class="row padding-y justify-content-center">
-                <div class="col-8 text-center">
-                    <h2>Sign up for our Newsletters</h2>
+                <div class="col-4 text-center">
+                    <h2 class="mb-4">
+                        Sign up for our <span>Newsletters</span>
+                    </h2>
                     <p>
                         Enter your email address to register to our newsletter
                         subscription delivered on a regular basis!
                     </p>
-                    <!-- InputEmail-->
-                    <div class="col-7 mx-auto">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Enter you email" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <span class="btn-green" id="basic-addon2">Subscribe</span>
-                        </div>
+                </div>
+                <div id="form" class="d-flex justify-content-center mt-5">
+                    <div class="col-4 d-flex">
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="inputEmail3"
+                            placeholder="Email *"
+                        />
+
+                        <button type="submit" class="btn-green">Submit</button>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -344,7 +350,7 @@ export default {
     z-index: -2;
 }
 
-// sezione stili
+// sezione number
 #numbers {
     background-color: #f5f7fa;
     h6 {
@@ -355,13 +361,21 @@ export default {
     }
 }
 
-// stili inputEmail
-.input-group{
-    // width: 70%;
-    height: 50px;
-}
-.input-group:active{
-    border: 1px solid #20ad96;
-}
+// sezione newletter
 
+#newletters {
+    input {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        background-color: #f5f5f5;
+    }
+    span {
+        color: #20ad96;
+        font-weight: lighter;
+    }
+    .btn-green {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
 </style>
