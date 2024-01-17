@@ -55,6 +55,30 @@ export default {
                         },
                     ],
                 },
+                {
+                    title: "It's a choice of quality for people with special needs",
+                    paragraph:
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                    info: [
+                        {
+                            img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
+                            name: 'Florence Themes',
+                            role: '/ Multimedia Admin',
+                        },
+                    ],
+                },
+                {
+                    title: 'High level of efficiency and scientific teaching methods',
+                    paragraph:
+                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from syllabus. Great study portal for people like me.',
+                    info: [
+                        {
+                            img: '../src/assets/images/artist-testimonial-avatar-04.jpg',
+                            name: 'Mina Hollace',
+                            role: '/ Freelancer',
+                        },
+                    ],
+                },
             ],
             // DATA SEZIONE SHOP
             cardShop: [
@@ -125,8 +149,7 @@ export default {
             // Moltiplicalo per -1, per invertire la direzione della traslazione
             const percentualeTraslazione =
                 -1 *
-                (this.currentIndex *
-                    (33.333 / (this.testimonialCards.length - 1)))
+                (this.currentIndex * (170 / (this.testimonialCards.length - 1)))
             // Restituzione di un oggetto con le proprietà di stile
             return {
                 transition: 'transform 0.5s ease-in-out',
@@ -451,7 +474,7 @@ export default {
                 <!-- Bullet navigation -->
                 <div id="bullets" class="d-flex justify-content-center my-5">
                     <div
-                        v-for="(card, index) in testimonialCards"
+                        v-for="(bullet, index) in 4"
                         :key="index"
                         class="bullet"
                         @click="goToSlide(index)"
