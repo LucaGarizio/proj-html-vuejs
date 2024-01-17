@@ -3,10 +3,11 @@ export default {
     name: 'AboutUs',
     data() {
         return {
+            currentIndex: 0,
             testimonialCards: [
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-02.jpg',
-                    rate: '5',
+                    rate: '',
                     name: 'Mina Hollace',
                     role: '/ Freelancer',
                     paragraph:
@@ -14,7 +15,15 @@ export default {
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-04.jpg',
-                    rate: '5',
+                    rate: '',
+                    name: ' Madley Pondor',
+                    role: '/ IT Specialist',
+                    paragraph:
+                        'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
+                },
+                {
+                    img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-01.jpg',
+                    rate: '',
                     name: 'Florence Themes',
                     role: '/ Multimedia Admin',
                     paragraph:
@@ -22,22 +31,52 @@ export default {
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-03.jpg',
-                    rate: '5',
-                    name: 'Florence Themes',
-                    role: '/ Multimedia Admin',
+                    rate: '',
+                    name: 'Luvic Dubble',
+                    role: '/ Privare Tutor',
                     paragraph:
-                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                        'I am happy of lessons and subjects. They reflect a scientific investigation into effective methods to be adopted for learners of all levels.',
                 },
                 {
-                    img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
-                    rate: '5',
-                    name: 'Florence Themes',
-                    role: '/ Multimedia Admin',
+                    img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-02.jpg',
+                    rate: '',
+                    name: 'Mina Hollace',
+                    role: '/ Freelancer',
                     paragraph:
-                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.',
+                },
+                {
+                    img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-04.jpg',
+                    rate: '',
+                    name: ' Madley Pondor',
+                    role: '/ IT Specialist',
+                    paragraph:
+                        'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
                 },
             ],
         }
+    },
+    computed: {
+        // Metodo calcolato per definire lo stile del carosello in base all'indice corrente
+        carouselStyle() {
+            // Calcola la percentuale della dimensione di cui si deve spostare lo slide al cambio di card
+            // Moltiplicalo per -1, per invertire la direzione della traslazione
+            const translationPercentage =
+                -1 *
+                (this.currentIndex * (250 / (this.testimonialCards.length - 1)))
+            // Restituzione di un oggetto con le proprietà di stile
+            return {
+                transition: 'transform 0.5s ease-in-out',
+                transform: `translateX(${translationPercentage}%)`,
+            }
+        },
+    },
+    methods: {
+        // Metodo per passare a una determinata slide
+        goToSlide(index) {
+            // Imposta l'indice corrente al valore specificato
+            this.currentIndex = index
+        },
     },
 }
 </script>
@@ -173,9 +212,70 @@ export default {
             </div>
         </div>
     </section>
-    <section id="carousel" class="padding-y"></section>
-    <section id="sponsor">
-        <div class="container padding-y">
+    <section class="margin-top pt-5" id="carousel">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col-4">
+                    <h6 class="text-center">
+                        equip yourself with the power of education
+                    </h6>
+                    <h2 class="mb-4 text-center">
+                        Learn the secrets to <span>Life Success</span> , these
+                        people have got the key.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel" :style="carouselStyle">
+                    <div
+                        v-for="card in testimonialCards"
+                        :key="card.name"
+                        class="carousel-col mx-2"
+                    >
+                        <div class="card carousel-card border p-4">
+                            <div class="info d-flex align-items-center">
+                                <img
+                                    class="shrink me-3"
+                                    :src="card.img"
+                                    alt=""
+                                />
+                                <div class="me-1" v-for="star in 5">
+                                    <i
+                                        :class="[
+                                            'fa-solid',
+                                            'fa-star',
+
+                                            star <= card.rate
+                                                ? 'fa-star-colored'
+                                                : '',
+                                        ]"
+                                    ></i>
+                                    {{ card.rate }}
+                                </div>
+                                <h5 class="p-2 mt-2">{{ card.name }}</h5>
+                                <span>{{ card.role }}</span>
+                            </div>
+                            <div class="text">
+                                <p class="mt-3">{{ card.paragraph }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bullet navigation -->
+                <div id="bullets" class="d-flex justify-content-center my-5">
+                    <div
+                        v-for="(bullet, index) in 4"
+                        :key="index"
+                        class="bullet"
+                        @click="goToSlide(index)"
+                    ></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sponsor" class="my-5">
+        <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col">
                     <img
@@ -272,19 +372,19 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+h6 {
+    color: #b1afc0;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #3f3a64;
+    span {
+        color: #20ad96;
+    }
+}
 #about {
     background-color: #f6f6f6;
-    h6 {
-        color: #b1afc0;
-        text-transform: uppercase;
-    }
-
-    h2 {
-        color: #3f3a64;
-        span {
-            color: #20ad96;
-        }
-    }
 
     .col-3 {
         .card {
@@ -388,6 +488,60 @@ export default {
     z-index: -2;
 }
 
+// SEZIONE CAROSELLO
+#carousel {
+}
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.slide-control {
+    font-size: 24px;
+}
+.shrink {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.carousel-container {
+    overflow: hidden;
+    width: 90%; /* Aggiorna la larghezza a 100% */
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-col {
+    flex: 0 0 49%; /* Ora ogni colonna avrà il 50% della larghezza */
+}
+
+.carousel-card {
+    width: 95%;
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-bg-color {
+    background-color: #faf8f6;
+}
+
+.fa-star-colored {
+    color: yellow !important;
+}
+
 // sezione number
 #numbers {
     background-color: #f5f7fa;
@@ -400,16 +554,16 @@ export default {
 }
 
 // sezione newletter
+span {
+    color: #20ad96;
+    font-weight: lighter;
+}
 
 #newletters {
     input {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
         background-color: #f5f5f5;
-    }
-    span {
-        color: #20ad96;
-        font-weight: lighter;
     }
     .btn-green {
         border-bottom-left-radius: 0;
