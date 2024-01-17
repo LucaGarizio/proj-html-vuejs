@@ -469,7 +469,10 @@ export default {
                                     </h5>
                                     <p class="card-text">
                                         <small class="text-body-secondary"
-                                            >Texas,US</small
+                                            ><i
+                                                class="fa-solid fa-location-dot"
+                                            ></i>
+                                            Texas,US</small
                                         >
                                     </p>
                                 </div>
@@ -500,7 +503,10 @@ export default {
                                     </h5>
                                     <p class="card-text">
                                         <small class="text-body-secondary"
-                                            >Texas,US</small
+                                            ><i
+                                                class="fa-solid fa-location-dot"
+                                            ></i>
+                                            Texas,US</small
                                         >
                                     </p>
                                 </div>
@@ -526,7 +532,10 @@ export default {
                                     </h5>
                                     <p class="card-text">
                                         <small class="text-body-secondary"
-                                            >Hamburg, Germany</small
+                                            ><i
+                                                class="fa-solid fa-location-dot"
+                                            ></i>
+                                            Hamburg, Germany</small
                                         >
                                     </p>
                                 </div>
@@ -557,7 +566,10 @@ export default {
                                     </h5>
                                     <p class="card-text">
                                         <small class="text-body-secondary"
-                                            >Illinois,US</small
+                                            ><i
+                                                class="fa-solid fa-location-dot"
+                                            ></i>
+                                            Illinois,US</small
                                         >
                                     </p>
                                 </div>
