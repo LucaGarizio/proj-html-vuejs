@@ -157,7 +157,15 @@ export default {
         </div>
 
         <div class="DittoShapeBlue">
-            <img src="../assets/images/DittoShape.jpg" alt="" />
+            <img
+                class="MaledettoSvgButInBlue"
+                src="../assets/images/DittoShapeBlue.svg"
+                alt=""
+            />
+        </div>
+
+        <div class="PuntiniSpasticiLunghi">
+            <img src="../assets/images/artist-shape-03.png" alt="" />
         </div>
 
         <div class="IHaveADream">
@@ -183,6 +191,10 @@ export default {
             <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
         </div>
 
+        <div class="container-fluid Martin">
+            <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
+        </div>
+
         <div class="colorsImg">
             <img
                 src="../assets/images/artist-hero-image-02-232x300.jpg"
@@ -191,18 +203,28 @@ export default {
         </div>
 
         <div class="col-5 HelloImMartin">
-            <h1 class="cursive fs-1 text-center">Hello, I'm Martin</h1>
-            <p class="fw-bolder text-center fs-1">
+            <h1 class="cursive fw-bold fs-1 text-center">Hello, I'm Martin</h1>
+            <p class="fw-bolder text-center fw-bold fs-1">
                 Artist Coaching And Mentoring <br />
                 Might Be for You
             </p>
-        </div>
-
-        <div class="container-fluid Martin">
-            <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
+            <div class="d-flex justify-content-center">
+                <button class="btn-orange fs-6">Get Started Today</button>
+            </div>
         </div>
     </section>
-    <section></section>
+    <section
+        class="coaching bg-white col-12 d-flex p-5 my-5 justify-content-center"
+    >
+        <div class="col-5 HelloImMartin">
+            <h1 class="cursive fs-2 fw-bold text-center">Artist coaching</h1>
+            <p class="fw-bolder text-center fw-bold fs-2">
+                I understand what it takes to create. <br />
+                I can help you with
+            </p>
+            <div class="d-flex justify-content-center"></div>
+        </div>
+    </section>
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
@@ -651,17 +673,30 @@ export default {
     height: 150px;
 }
 
+.MaledettoSvgButInBlue {
+    height: 500px;
+    width: 400px;
+}
+
 .DittoShapeBlue {
     position: absolute;
     z-index: 12;
     top: 30%;
-    left: 30%;
+    left: 0;
+    transform: scaley(-1);
+}
+
+.PuntiniSpasticiLunghi {
+    position: absolute;
+    z-index: 12;
+    top: 20%;
+    left: 1%;
 }
 .IHaveADream {
     position: absolute;
     z-index: 12;
     top: 50%;
-    left: 30%;
+    left: 25%;
 }
 
 .ComeLeFoglie {
@@ -711,6 +746,11 @@ export default {
     z-index: 14;
     top: 25%;
     left: 65%;
+}
+.coaching {
+    position: relative;
+    height: 500px;
+    background-color: #fbf9f6;
 }
 .presentation {
     position: relative;
