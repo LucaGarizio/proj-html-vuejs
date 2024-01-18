@@ -3,15 +3,6 @@ import Home from '../pages/Home.vue'
 import AboutUs from '../pages/AboutUs.vue'
 import Contact from '../pages/Contact.vue'
 export default {
-    // data() {
-    //     return {
-    //         navbuttons: [
-    //             {
-    //                 textmenu: ,
-    //             },
-    //         ],
-    //     }
-    // },
     name: 'AppHeader ',
     components: {
         Home,
@@ -23,15 +14,15 @@ export default {
 
 <template>
     <!-- ale -->
-    <header class="container-fluid d-flex justify-content-between p-3">
-        <div class="col-3">
+    <header class="container-fluid d-flex justify-content-evenly px-5 py-3">
+        <div class="col-3 px-5">
             <img
                 class="img-fluid max-logo"
                 src="../assets/images/dark-logo.png"
                 alt=""
             />
         </div>
-        <div class="col-6 d-flex justify-content-between">
+        <div class="col-6 d-flex justify-content-evenly">
             <div class="dropdown">
                 <button
                     class="btn dropdown-toggle fw-bold no-border"
@@ -283,7 +274,7 @@ export default {
                 </ul>
             </div>
         </div>
-        <div class="container col-3">
+        <div class="container col-3 px-5">
             <div class="container fluid d-flex justify-content-end">
                 <a href="#">
                     <i class="fa-brands fa-twitter p-2" style="color: #696969">
