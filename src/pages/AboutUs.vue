@@ -95,7 +95,7 @@ export default {
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="col-3" id="card-learning">
                     <div class="card text-center" style="width: 18rem">
                         <i class="fa-regular fa-flag"></i>
                         <div class="card-body">
@@ -393,6 +393,11 @@ h2 {
         }
     }
 }
+
+// .col-3:hover {
+//     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+// }
+
 .padding-y {
     padding: 100px 0 100px;
 }
