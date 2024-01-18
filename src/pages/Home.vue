@@ -4,8 +4,11 @@ export default {
     data() {
         return {
             // DATA LUCA
-            // DATA CAROSELLO
+            // variabile chatbox
+            visibility: false,
+            // variabile per ritorno a inizio pagina
             isScrolled: false,
+            // DATA CAROSELLO
             currentIndex: 0,
             testimonialCards: [
                 {
@@ -151,6 +154,10 @@ export default {
         handleScroll() {
             // Verifica se l'utente sta scorrendo la pagina
             this.isScrolled = window.scrollY > 0
+        },
+        toggleChatbox() {
+            // Inverte lo stato di visibilità della chatbox
+            this.visibility = !this.visibility
         },
     },
     computed: {
@@ -394,12 +401,49 @@ export default {
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
+    <div class="chatbox text-white" v-show="visibility">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 bg text-center">
+                    <button>
+                        <i class="fa-regular fa-comments"></i
+                        ><span class="ms-2">Chat</span>
+                    </button>
+                    <div class="logo">
+                        <img
+                            class="m-2"
+                            src="https://image.crisp.chat/process/thumbnail/?url=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Ffdb6b692b0ed5000%2Flogothememoveblack_1cwmqwn.png&width=240&height=240&1629251277523"
+                            alt=""
+                        />
+                        <img
+                            src="https://image.crisp.chat/process/thumbnail/?url=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Ffdb6b692b0ed5000%2Flogothememoveblack_1cwmqwn.png&width=240&height=240&1629251277523"
+                            alt=""
+                        />
+                        <h6>Questions? Chat with us</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="chat-display"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="chatkeyboard">
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="move-to-top" v-show="isScrolled">
         <a href="#jumbotron">
             <i class="fa-solid fa-arrow-up-long"></i>
         </a>
     </div>
-    <div class="costumer-service">
+    <div class="costumer-service" @click="toggleChatbox">
         <i class="fa-solid fa-message"></i>
     </div>
     <section class="margin-top margin-bottom">
@@ -936,6 +980,36 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+.chatbox {
+    border: 1px solid black;
+    width: 350px;
+    height: 500px;
+
+    position: fixed;
+    z-index: 500;
+    right: 2%;
+    bottom: 14%;
+    background-color: white;
+    .container-fluid {
+        .bg {
+            background-color: #1766dc;
+            padding: 10px 0;
+            button {
+                border: none;
+                border-radius: 30px;
+                background-color: #0051c8;
+                color: white;
+                width: 100px;
+                padding: 5px 0;
+            }
+        }
+    }
+
+    img {
+        width: 30px;
+        border-radius: 50%;
+    }
+}
 // STILI ALE
 
 #jumbotron {
@@ -1111,6 +1185,7 @@ export default {
 }
 
 // STILI LUCA
+
 .move-to-top {
     display: none;
     background-color: #ef6f31;
