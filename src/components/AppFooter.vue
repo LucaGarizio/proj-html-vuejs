@@ -5,11 +5,10 @@ export default {
 </script>
 
 <template>
-    
-    <footer class="container-fluid p-5" id="container-footer">
+    <footer class="container" id="container-footer">
         <div class="row">
             <div class="col-4 p-0">
-             <ul>
+                <ul>
                     <li><h5>Address</h5></li>
                     <li>
                         <span>392 NE 191st St #87934 Miami, FL 33179-3899</span>
@@ -17,15 +16,44 @@ export default {
                     <li>
                         <span
                             >+1 (305) 547-9909 (9am - 5pm EST,Monday -
-                            Friday)</span>
+                            Friday)</span
+                        >
                     </li>
                     <li><a href="">support@maxcoach.com</a></li>
                 </ul>
                 <ul>
-                    <li class="social"><a href=""><i class="fa-brands fa-square-facebook" style="font-size: 25px;"></i></a></li>
-                    <li class="social"><a href=""><i class="fa-brands fa-twitter" style="font-size: 25px;"></i></a></li>
-                    <li class="social"><a href=""><i class="fa-brands fa-instagram" style="font-size: 25px;"></i></a></li>
-                    <li class="social"><a href=""><i class="fa-brands fa-linkedin" style="font-size: 25px;"></i></a></li>
+                    <li class="social">
+                        <a href=""
+                            ><i
+                                class="fa-brands fa-square-facebook"
+                                style="font-size: 25px"
+                            ></i
+                        ></a>
+                    </li>
+                    <li class="social">
+                        <a href=""
+                            ><i
+                                class="fa-brands fa-twitter"
+                                style="font-size: 25px"
+                            ></i
+                        ></a>
+                    </li>
+                    <li class="social">
+                        <a href=""
+                            ><i
+                                class="fa-brands fa-instagram"
+                                style="font-size: 25px"
+                            ></i
+                        ></a>
+                    </li>
+                    <li class="social">
+                        <a href=""
+                            ><i
+                                class="fa-brands fa-linkedin"
+                                style="font-size: 25px"
+                            ></i
+                        ></a>
+                    </li>
                 </ul>
             </div>
             <div class="col-2">
@@ -61,8 +89,7 @@ export default {
         </div>
     </footer>
     <div class="text-center mt-5 mb-5">
-        
-			<span>© 2020 Maxcoach. All Rights Reserved</span>
+        <span>© 2020 Maxcoach. All Rights Reserved</span>
     </div>
 </template>
 
@@ -72,7 +99,7 @@ export default {
 
 #container-footer {
     // min-height: 350px;
-    align-items: center;
+    // align-items: center;
     li {
         margin: 15px 0;
     }
@@ -86,11 +113,11 @@ span {
     color: #6f6f6f;
     font-size: 14px;
 }
-a:hover{
+a:hover {
     color: #ff6600;
     transition: 0.5s;
 }
-.social{
+.social {
     display: inline-block;
     padding-left: 25px;
 }
