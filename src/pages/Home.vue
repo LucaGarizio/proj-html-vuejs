@@ -547,16 +547,16 @@ export default {
                 <h3>Latest From The Blog</h3>
             </div>
         </div>
-            <!-- <div>
-                <img src="../assets/images/maxcoach-shape-14-1536x343.png" 
-                class="lineaOrange-section-cards" 
-                alt="">
-            </div> -->
+           
         <div class="container-fluid" id="article-tips">
             <div>
                 <img src="../assets/images/maxcoach-shape-12-orange.png" 
                 class="dittoBlue-section-cards" 
                 alt="">
+            </div>
+            <div>
+                <img src="../assets/images/DittoShapeBlue.svg" 
+                class="dittoShapeBlue-section-cards" alt="">
             </div>
             <div>
                 <img src="../" alt="">
@@ -1261,6 +1261,12 @@ export default {
     height: 200px;
     top: -7%;
     left: 19%;
+}
+.dittoShapeBlue-section-cards {
+    position: absolute;
+    width: 20%;
+    left: 60%;
+    top: 70%;
 }
 .lineaOrange-section-cards{
     color: red;
