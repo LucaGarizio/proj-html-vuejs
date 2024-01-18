@@ -271,8 +271,8 @@ export default {
     </section>
     <section class="col-12 positioningClass d-flex justify-content-center p-1">
         <div class="wrapperPos">
-            <div class="coaching col-12 d-flex p-5 justify-content-center">
-                <div class="col-5 HelloImMartin">
+            <div class="col-12 d-flex p-5 justify-content-center">
+                <div class="col-5 m-3">
                     <h1 class="cursive fs-2 fw-bold text-center">
                         Artist coaching
                     </h1>
@@ -1057,9 +1057,6 @@ export default {
     z-index: 14;
     top: 25%;
     left: 65%;
-}
-.coaching {
-    height: 250px;
 }
 
 .rotating-image-left,
