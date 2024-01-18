@@ -269,108 +269,120 @@ export default {
             </div>
         </div>
     </section>
-    <section class="col-12 positioningClass d-flex justify-content-center p-1">
-        <div class="wrapperPos">
-            <div class="coaching col-12 d-flex p-5 justify-content-center">
-                <div class="col-5">
-                    <h1 class="cursive fs-2 fw-bold text-center">
-                        Artist coaching
-                    </h1>
-                    <p class="fw-bolder text-center fw-bold fs-2">
-                        I understand what it takes to create. <br />
-                        I can help you with
-                    </p>
-                </div>
-            </div>
-            <div class="d-flex col-12 justify-content-between">
-                <div class="col-3 p-3">
-                    <div class="container">
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 positioningClass d-flex p-2">
+                    <div class="wrapperPos">
+                        <div
+                            class="coaching col-12 d-flex p-5 justify-content-center"
+                        >
+                            <div class="col-6">
+                                <h1 class="cursive fs-2 fw-bold text-center">
+                                    Artist coaching
+                                </h1>
+                                <p class="fw-bolder text-center fw-bold fs-2">
+                                    I understand what it takes to create. <br />
+                                    I can help you with
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex col-12 justify-content-between">
+                            <div class="col-3 p-3">
+                                <div class="container">
+                                    <img
+                                        class="resizeImg"
+                                        src="../assets/images/artist-box-image-01.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h5>On time</h5>
+                                    <p class="fs-6">
+                                        Punctuality is our top priority because
+                                        it's an essential criteria to assess a
+                                        program quality.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-5">
+                                <div class="container">
+                                    <img
+                                        class="resizeImg"
+                                        src="../assets/images/artist-box-image-02.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h5>On time</h5>
+                                    <p class="fs-6">
+                                        Punctuality is our top priority because
+                                        it's an essential criteria to assess a
+                                        program quality.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="container">
+                                    <img
+                                        class="resizeImg"
+                                        src="../assets/images/artist-box-image-03.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h5>On time</h5>
+                                    <p class="fs-6">
+                                        Punctuality is our top priority because
+                                        it's an essential criteria to assess a
+                                        program quality.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-5">
+                                <div class="container">
+                                    <img
+                                        class="resizeImg"
+                                        src="../assets/images/artist-box-image-04.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h5>On time</h5>
+                                    <p class="fs-6">
+                                        Punctuality is our top priority because
+                                        it's an essential criteria to assess a
+                                        program quality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DittoShapeOG">
                         <img
-                            class="resizeImg"
-                            src="../assets/images/artist-box-image-01.png"
+                            class="MaledettoSvgParte3"
+                            src="../assets/images/DittoShapeOG.svg"
                             alt=""
                         />
                     </div>
-                    <div>
-                        <h5>On time</h5>
-                        <p class="fs-6">
-                            Punctuality is our top priority because it's an
-                            essential criteria to assess a program quality.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-3 p-5">
-                    <div class="container">
-                        <img
-                            class="resizeImg"
-                            src="../assets/images/artist-box-image-02.png"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <h5>On time</h5>
-                        <p class="fs-6">
-                            Punctuality is our top priority because it's an
-                            essential criteria to assess a program quality.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-3 p-3">
-                    <div class="container">
-                        <img
-                            class="resizeImg"
-                            src="../assets/images/artist-box-image-03.png"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <h5>On time</h5>
-                        <p class="fs-6">
-                            Punctuality is our top priority because it's an
-                            essential criteria to assess a program quality.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-3 p-5">
-                    <div class="container">
-                        <img
-                            class="resizeImg"
-                            src="../assets/images/artist-box-image-04.png"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <h5>On time</h5>
-                        <p class="fs-6">
-                            Punctuality is our top priority because it's an
-                            essential criteria to assess a program quality.
-                        </p>
-                    </div>
+                    <img
+                        class="ArtistShape"
+                        src="../assets/images/artist-shape-01-600x577.png"
+                        alt=""
+                    />
+                    <img
+                        class="cerchioRigato"
+                        src="../assets/images/maxcoach-shape-13.png"
+                        alt=""
+                    />
+                    <img
+                        class="LineRider"
+                        src="../assets/images/maxcoach-shape-14.png"
+                        alt=""
+                    />
                 </div>
             </div>
         </div>
-        <div class="DittoShapeOG">
-            <img
-                class="MaledettoSvgParte3"
-                src="../assets/images/DittoShapeOG.svg"
-                alt=""
-            />
-        </div>
-        <img
-            class="ArtistShape"
-            src="../assets/images/artist-shape-01-600x577.png"
-            alt=""
-        />
-        <img
-            class="CerchioRigato"
-            src="../assets/images/maxcoach-shape-13.png"
-            alt=""
-        />
-        <img
-            class="LineRider"
-            src="../assets/images/maxcoach-shape-14.png"
-            alt=""
-        />
     </section>
 
     <!-- SEZIONI LUCA -->
@@ -949,19 +961,19 @@ export default {
     top: 15%;
     z-index: 4;
 }
-.CerchioRigato {
+.cerchioRigato {
     position: absolute;
     height: 200px;
-    left: 80%;
-    top: 25%;
+    right: -10%;
+    top: 35%;
     z-index: 3;
     transform: scaley(-1);
 }
 .ArtistShape {
     position: absolute;
-    height: 400px;
-    left: 0;
-    top: 25%;
+    height: 550px;
+    left: -12%;
+    top: 17%;
     z-index: 2;
     transform: scaley(-1);
 }
@@ -1061,9 +1073,6 @@ export default {
     z-index: 14;
     top: 25%;
     left: 65%;
-}
-.coaching {
-    height: 250px;
 }
 
 .rotating-image-left,
