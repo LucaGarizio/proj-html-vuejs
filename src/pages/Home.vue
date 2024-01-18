@@ -142,8 +142,16 @@ export default {
             ],
         }
     },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll)
+    methods: {
+        // Metodo per passare a una determinata slide
+        goToSlide(index) {
+            // Imposta l'indice corrente al valore specificato
+            this.currentIndex = index
+        },
+        handleScroll() {
+            // Verifica se l'utente sta scorrendo la pagina
+            this.isScrolled = window.scrollY > 0
+        },
     },
     computed: {
         // Metodo calcolato per definire lo stile del carosello in base all'indice corrente
@@ -160,16 +168,8 @@ export default {
             }
         },
     },
-    methods: {
-        // Metodo per passare a una determinata slide
-        goToSlide(index) {
-            // Imposta l'indice corrente al valore specificato
-            this.currentIndex = index
-        },
-        handleScroll() {
-            // Verifica se l'utente sta scorrendo la pagina
-            this.isScrolled = window.scrollY > 0
-        },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll)
     },
 }
 </script>
@@ -1125,6 +1125,7 @@ export default {
     z-index: 10;
     right: 2%;
     bottom: 14%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     a {
         scroll-behavior: smooth;
     }

@@ -9,6 +9,7 @@ export default {
             latestNumberCol3: 0,
             latestNumberCol4: 0,
             currentIndex: 0,
+            isScrolled: false,
             testimonialCards: [
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-02.jpg',
@@ -124,6 +125,10 @@ export default {
                 }, i * 100)
             }
         },
+        handleScroll() {
+            // Verifica se l'utente sta scorrendo la pagina
+            this.isScrolled = window.scrollY > 0
+        },
     },
 
     mounted() {
@@ -132,14 +137,18 @@ export default {
         this.loadNumberCol2()
         this.loadNumberCol3()
         this.loadNumberCol4()
+        window.addEventListener('scroll', this.handleScroll)
     },
 }
 </script>
 <template>
-    <div class="move-to-top">
+    <div class="move-to-top" v-show="isScrolled">
         <a href="#about">
             <i class="fa-solid fa-arrow-up-long"></i>
         </a>
+    </div>
+    <div class="costumer-service">
+        <i class="fa-solid fa-message"></i>
     </div>
     <section class="padding-y" id="about">
         <div class="container">
@@ -445,6 +454,7 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 .move-to-top {
+    display: none;
     background-color: #20ad96;
     width: 40px;
     height: 40px;
@@ -456,7 +466,9 @@ export default {
     position: fixed;
     z-index: 10;
     right: 2%;
-    bottom: 10%;
+    bottom: 14%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     a {
         scroll-behavior: smooth;
     }
@@ -478,6 +490,27 @@ export default {
             opacity: 1;
         }
     }
+}
+
+.costumer-service {
+    background-color: #1972f5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 30px;
+    position: fixed;
+    z-index: 10;
+    right: 2%;
+    bottom: 4%;
+}
+.fa-message {
+    color: white;
+    font-size: 25px;
+    padding: 20px;
+    transform: rotate(-17deg);
 }
 h6 {
     color: #b1afc0;
@@ -557,7 +590,7 @@ h2 {
         transform: translateX(-40px) translateY(-30px);
     }
     .col:hover .rotating-image-right {
-        transform: translateX(-100px) translateY(-50px);
+        transform: translateX(100px) translateY(70px);
     }
     .col:hover .rotating-image-top-right {
         transform: translateX(40px) translateY(-50px);
@@ -587,7 +620,7 @@ h2 {
 .circle {
     position: absolute;
     top: 4%;
-    left: 105%;
+    left: 100%;
     width: 100px;
     height: 100px;
     display: flex;
