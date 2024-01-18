@@ -543,8 +543,6 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
-
-     
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -684,7 +682,7 @@ export default {
             <div class="row mt-5">
                 <!-- Card 1 -->
                 <div class="col-md-6">
-                    <div class="card border-0" >
+                    <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img
@@ -888,7 +886,7 @@ export default {
 .CerchioRigato {
     position: absolute;
     height: 200px;
-    left: 80 %;
+    left: 80%;
     top: 25%;
     z-index: 3;
     transform: scaley(-1);
@@ -1149,7 +1147,7 @@ export default {
     left: -15%;
 }
 
-// STILI DOME 
+// STILI DOME
 // Sezione 1 CARD
 #section1-dome {
     background-color: #f5f7fa;
@@ -1169,7 +1167,6 @@ export default {
 #card-img1 {
     display: flex;
     align-items: center;
-    
 }
 #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1253,8 +1250,4 @@ export default {
     font-size: 40px;
     font-family: 'Playfair Display', serif;
 }
-
-
-
-
 </style>
