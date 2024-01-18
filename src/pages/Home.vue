@@ -152,7 +152,7 @@ export default {
                 (this.currentIndex * (170 / (this.testimonialCards.length - 1)))
             // Restituzione di un oggetto con le proprietà di stile
             return {
-                transition: 'transform 0.5s ease-in-out',
+                transition: 'transform 0.8s ease-in-out',
                 transform: `translateX(${percentualeTraslazione}%)`,
             }
         },
@@ -715,14 +715,18 @@ export default {
     </section>
 
     <section class="pb-5">
-        
-        
-
         <div class="container" id="section-upcoming">
-
             <div>
-                <img src="../assets/images/maxcoach-shape-13.png" class="maxcoach-section-upcoming" alt="">
-                <img src="../assets/images/maxcoach-shape-05-150x150.png" class="maxcoach-shape-section-upcoming" alt="">
+                <img
+                    src="../assets/images/maxcoach-shape-13.png"
+                    class="maxcoach-section-upcoming"
+                    alt=""
+                />
+                <img
+                    src="../assets/images/maxcoach-shape-05-150x150.png"
+                    class="maxcoach-shape-section-upcoming"
+                    alt=""
+                />
             </div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -1400,37 +1404,34 @@ export default {
     border-bottom: 1px solid;
 }
 // sezione UpComing
-.container{
+.container {
     position: relative;
 }
 
-.maxcoach-section-upcoming{
+.maxcoach-section-upcoming {
     position: absolute;
     top: 35%;
     left: 87%;
-    z-index:2;
+    z-index: 2;
 
     transition: transform 1s;
 }
-.maxcoach-shape-section-upcoming{
+.maxcoach-shape-section-upcoming {
     position: absolute;
     top: 0%;
     right: 92%;
 
     transition: transform 1s;
-
 }
-.container:hover{
-  .maxcoach-section-upcoming{
-    transform: translateX(40px) translateY(-40px);
-  }
+.container:hover {
+    .maxcoach-section-upcoming {
+        transform: translateX(40px) translateY(-40px);
+    }
 
-  .maxcoach-shape-section-upcoming{
-    transform: translateX(40px) translateY(-40px);
-  }
+    .maxcoach-shape-section-upcoming {
+        transform: translateX(40px) translateY(-40px);
+    }
 }
-
-
 
 #descrizione-col8 {
     align-items: center;

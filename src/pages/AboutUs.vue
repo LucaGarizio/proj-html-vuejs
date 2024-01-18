@@ -66,7 +66,7 @@ export default {
                 (this.currentIndex * (250 / (this.testimonialCards.length - 1)))
             // Restituzione di un oggetto con le proprietà di stile
             return {
-                transition: 'transform 0.5s ease-in-out',
+                transition: 'transform 1s ease-in-out',
                 transform: `translateX(${translationPercentage}%)`,
             }
         },
@@ -98,9 +98,9 @@ export default {
                 <div class="col-3" id="card-learning">
                     <div class="card text-center" style="width: 18rem">
                         <i class="fa-regular fa-flag"></i>
-                        <div class="card-body">
+                        <div class="card-body mt-3">
                             <h5 class="card-title">Life Mentoring</h5>
-                            <p class="card-text">
+                            <p class="card-text pb-3">
                                 Get some soul healing and guidance for your
                                 feature career and vocational directions
                             </p>
@@ -114,9 +114,9 @@ export default {
                 <div class="col-3">
                     <div class="card text-center" style="width: 18rem">
                         <i class="fa-solid fa-gear"></i>
-                        <div class="card-body">
+                        <div class="card-body mt-3">
                             <h5 class="card-title">Self Development</h5>
-                            <p class="card-text">
+                            <p class="card-text pb-3">
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -131,9 +131,9 @@ export default {
                 <div class="col-3">
                     <div class="card text-center" style="width: 18rem">
                         <i class="fa-regular fa-life-ring"></i>
-                        <div class="card-body">
+                        <div class="card-body mt-3">
                             <h5 class="card-title">Ask Consultancy</h5>
-                            <p class="card-text">
+                            <p class="card-text pb-3">
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -148,9 +148,9 @@ export default {
                 <div class="col-3">
                     <div class="card text-center" style="width: 18rem">
                         <i class="fa-solid fa-display"></i>
-                        <div class="card-body">
+                        <div class="card-body mt-3">
                             <h5 class="card-title">Remote Learning</h5>
-                            <p class="card-text">
+                            <p class="card-text pb-3">
                                 Some quick example text to build on the card
                                 title and make up the bulk of the card's
                                 content.
@@ -461,7 +461,7 @@ h2 {
         transform: translateX(-40px) translateY(-30px);
     }
     .col:hover .rotating-image-right {
-        transform: translateX(-60px) translateY(-50px);
+        transform: translateX(-100px) translateY(-50px);
     }
     .col:hover .rotating-image-top-right {
         transform: translateX(40px) translateY(-50px);
@@ -547,7 +547,9 @@ h2 {
     justify-content: space-between;
     cursor: pointer;
 }
-
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
+}
 .slide-control {
     font-size: 24px;
 }
