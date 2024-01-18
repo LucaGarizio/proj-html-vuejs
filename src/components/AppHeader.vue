@@ -145,7 +145,7 @@ export default {
             <!-- PAGES  -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle no-border fw-bold"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -181,7 +181,7 @@ export default {
             <!-- Courses -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle no-border fw-bold"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -207,7 +207,7 @@ export default {
             <!-- features  -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle no-border fw-bold"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"

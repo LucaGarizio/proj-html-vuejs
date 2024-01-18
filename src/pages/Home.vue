@@ -579,7 +579,6 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
-       
         <div class="container-fluid" id="article-tips">
             <div class="text-center mt-5 mb-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -1310,33 +1309,36 @@ export default {
     .container-fluid {
         width: 90%;
         margin-top: 35px;
-        margin-bottom:35px;
+        margin-bottom: 35px;
         position: relative;
         overflow: hidden;
-    
-    
-        .col-md-5:hover .dittoBlue-section-cards{
+
+        .col-md-5:hover .dittoBlue-section-cards {
             transform: translate(-20%, -20%);
         }
-        .col-md-5:hover .dittoShape-section-cards{
+        .col-md-5:hover .dittoShape-section-cards {
             transform: translate(-20%, -20%);
         }
 
-.dittoBlue-section-cards {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 15%;
-    left: 19%;
-    transition: transform 0.3s ease-in-out;
+        .dittoBlue-section-cards {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 15%;
+            left: 19%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .dittoShape-section-cards{
+            position: absolute;
+            width: 20%;
+            transition: transform 0.3s ease-in-out;
+            top: 70%;
+            left: 60%;
+        }
+    }
+
 }
-.dittoShape-section-cards{
-    position: absolute;
-    width: 20%;
-    transition: transform 0.3s ease-in-out;
-    top: 70%;
-    left: 60%;
-}
+
 #card-img1 {
     display: flex;
     align-items: center;
