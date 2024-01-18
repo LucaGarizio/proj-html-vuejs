@@ -1236,9 +1236,10 @@ export default {
     margin-top: 35px;
 }
 #article-tips {
-    background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
-        url(../assets/images/maxcoach-shape-12.png);
-    background-repeat: no-repeat;
+    // background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
+    //     url(../assets/images/maxcoach-shape-12.png);
+    // background-repeat: no-repeat;
+    position: relative;
 }
 
 #card-img1 {

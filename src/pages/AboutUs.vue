@@ -385,6 +385,7 @@ h2 {
             background-color: #f6f6f6;
             &:hover {
                 background-color: #fff;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
             }
         }
 
@@ -394,9 +395,7 @@ h2 {
     }
 }
 
-// .col-3:hover {
-//     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-// }
+
 
 .padding-y {
     padding: 100px 0 100px;
