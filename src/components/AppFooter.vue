@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <footer class="container" id="container-footer">
+    <footer class="container-fluid py-5" id="container-footer">
         <div class="row">
             <div class="col-4 p-0">
                 <ul>
@@ -99,7 +99,7 @@ export default {
 
 #container-footer {
     // min-height: 350px;
-    // align-items: center;
+    align-items: center;
     li {
         margin: 15px 0;
     }

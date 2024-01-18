@@ -355,6 +355,20 @@ export default {
                         <button type="submit" class="btn-green">Submit</button>
                     </div>
                 </div>
+                <img
+                    class="lines rotating-image-top-right"
+                    src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/maxcoach-shape-02.png"
+                    alt=""
+                />
+
+                <img
+                    class="animated-bg-bottom-image rotating-image-left"
+                    src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/maxcoach-shape-07.png"
+                    alt=""
+                />
+                <div class="circle rotating-image-right">
+                    <div class="inner-circle"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -522,8 +536,7 @@ h2 {
 }
 
 // SEZIONE CAROSELLO
-#carousel {
-}
+
 .carousel-controls {
     display: flex;
     justify-content: space-between;
@@ -593,14 +606,64 @@ span {
 }
 
 #newletters {
-    input {
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-        background-color: #f5f5f5;
-    }
-    .btn-green {
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
+    .container-fluid {
+        position: relative;
+        .rotating-image-top-right {
+            transition: transform 1s ease;
+        }
+
+        .row:hover .rotating-image-left {
+            transform: translateX(100px) translateY(-30px) rotate(-100deg);
+
+            transition: 1s;
+        }
+
+        .row:hover .rotating-image-right {
+            transform: translateX(-100px) translateY(-80px);
+        }
+        .row:hover .rotating-image-top-right {
+            transform: translateX(200px) translateY(100px);
+        }
+        .animated-bg-bottom-image {
+            width: 150px;
+            position: absolute;
+            right: 24%;
+            bottom: 30%;
+            z-index: -1;
+            transform: rotate(50deg);
+        }
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50%;
+            background-color: #8fd6ca;
+            .inner-circle {
+                width: 55px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: white;
+            }
+        }
+        .lines {
+            position: absolute;
+            width: 150px;
+            bottom: 30%;
+            right: 24%;
+            z-index: 0;
+        }
+        input {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            background-color: #f5f5f5;
+        }
+        .btn-green {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
     }
 }
 </style>
