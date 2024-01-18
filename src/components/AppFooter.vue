@@ -5,9 +5,8 @@ export default {
 </script>
 
 <template>
-    <!-- dome -->
-    <!-- <div class="container-footer"></div> -->
-    <footer class="container-fluid" id="container-footer">
+    
+    <footer class="container-fluid p-5" id="container-footer">
         <div class="row">
             <div class="col-4 p-0">
              <ul>
@@ -18,8 +17,7 @@ export default {
                     <li>
                         <span
                             >+1 (305) 547-9909 (9am - 5pm EST,Monday -
-                            Friday)</span
-                        >
+                            Friday)</span>
                     </li>
                     <li><a href="">support@maxcoach.com</a></li>
                 </ul>

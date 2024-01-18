@@ -578,128 +578,121 @@ export default {
     </section>
 
     <!-- SEZIONI DOME -->
-    <section class="my-3" id="section1-dome">
-        <div class="container-fluid" id="article-tips">
-            <div class="text-center mt-5 mb-5">
-                <!-- La classe "text-center" allinea il testo al centro -->
-                <h2 class="cursive">Article and Tips</h2>
-                <h3>Latest From The Blog</h3>
+    <section class="my-3" id="article-and-tips">
+        <div class="container">
+            <div class="row justify-content-center py-5">
+                <div class="col-5">
+                    <div class="text-center">
+                        <!-- La classe "text-center" allinea il testo al centro -->
+                        <h2 class="cursive">Article and Tips</h2>
+                        <h3>Latest From The Blog</h3>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <img
-                    src="../assets/images/DittoShapeBlue.svg"
-                    class="dittoShape-section-cards"
-                    alt=""
-                />
-            </div>
-
-            <div>
+            <div class="dittoBlue-section-cards rotating-image-left">
                 <img
                     src="../assets/images/maxcoach-shape-12-orange.png"
-                    class="dittoBlue-section-cards"
                     alt=""
                 />
             </div>
+
+            <div class="rotating-image-right dittoShape-section-cards">
+                <img src="../assets/images/DittoShapeBlue.svg" alt="" />
+            </div>
+
             <div>
                 <img src="../" alt="" />
             </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="row justify-content-around">
-                        <div class="col-md-3" id="card-img1">
-                            <div class="card border-0" id="card">
-                                <img
-                                    src="../assets/images/artist-blog-03-480x356.jpeg"
-                                    class="card-img-top"
-                                    alt="Immagine 1"
-                                />
-                                <div class="card-body">
-                                    <p class="card-text">ARTIST</p>
-                                    <h4 class="h4-artist">
-                                        Brush Strokes Energize Trees in
-                                        Paintings
-                                    </h4>
-                                    <p class="text-body-secondary">
-                                        <i
-                                            class="fa-regular fa-calendar"
-                                            style="color: #969696"
-                                        ></i>
-                                        May 15, 2020
-                                    </p>
-                                    <p class="text-body-secondary">
-                                        <i
-                                            class="fa-solid fa-eye"
-                                            style="color: #969696"
-                                        ></i>
-                                        2,157 Views
-                                    </p>
-                                </div>
-                            </div>
+            <div class="row justify-content-around">
+                <div class="col-3 col-img1">
+                    <div class="card border-0" id="card">
+                        <img
+                            src="../assets/images/artist-blog-03-480x356.jpeg"
+                            class="card-img-top"
+                            alt="Immagine 1"
+                        />
+                        <div class="card-body">
+                            <p class="card-text">ARTIST</p>
+                            <h4 class="h4-artist">
+                                Brush Strokes Energize Trees in Paintings
+                            </h4>
+                            <p class="text-body-secondary">
+                                <i
+                                    class="fa-regular fa-calendar"
+                                    style="color: #969696"
+                                ></i>
+                                May 15, 2020
+                            </p>
+                            <p class="text-body-secondary">
+                                <i
+                                    class="fa-solid fa-eye"
+                                    style="color: #969696"
+                                ></i>
+                                2,157 Views
+                            </p>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="col-md-5 pos-relative">
-                            <div class="card border-0" id="card">
-                                <img
-                                    src="../assets/images/artist-blog-02-500x680.jpg"
-                                    class="card-img-top"
-                                    alt="Immagine 2"
-                                />
-                                <div class="card-body-centrale">
-                                    <p class="card-text">Artist</p>
-                                    <h4 class="title-center">
-                                        Connection Between Self-Portraits and
-                                        Idantity
-                                    </h4>
+                <div class="col-5 pos-relative">
+                    <div class="card border-0" id="card">
+                        <img
+                            src="../assets/images/artist-blog-02-500x680.jpg"
+                            class="card-img-top"
+                            alt="Immagine 2"
+                        />
+                        <div class="card-body-centrale">
+                            <p class="card-text">Artist</p>
+                            <h4 class="title-center">
+                                Connection Between Self-Portraits and Idantity
+                            </h4>
 
-                                    <span
-                                        ><i
-                                            class="fa-regular fa-calendar"
-                                            style="color: #ffffff"
-                                        ></i>
-                                        May 15, 2020</span
-                                    >
-                                    <span
-                                        ><i
-                                            class="fa-solid fa-eye"
-                                            style="color: #ffffff"
-                                        ></i>
-                                        2,167 Views</span
-                                    >
-                                </div>
-                            </div>
+                            <span
+                                ><i
+                                    class="fa-regular fa-calendar"
+                                    style="color: #ffffff"
+                                ></i>
+                                May 15, 2020</span
+                            >
+                            <span
+                                ><i
+                                    class="fa-solid fa-eye"
+                                    style="color: #ffffff"
+                                ></i>
+                                2,167 Views</span
+                            >
                         </div>
+                    </div>
+                </div>
 
-                        <div class="col-md-3">
-                            <div class="card border-0" id="card">
-                                <img
-                                    src="../assets/images/artist-blog-01-480x356.jpg"
-                                    class="card-img-top"
-                                    alt="Immagine 3"
-                                />
-                                <div class="card-body">
-                                    <p class="card-text">ARTIST</p>
-                                    <h4 class="h4-artist">
-                                        Pocket-Sized Notebooks Hold Minature
-                                        Paintings
-                                    </h4>
-                                    <p class="text-body-secondary">
-                                        <i
-                                            class="fa-regular fa-calendar"
-                                            style="color: #969696"
-                                        ></i>
-                                        May 15, 2020
-                                    </p>
-                                    <p class="text-body-secondary">
-                                        <i
-                                            class="fa-solid fa-eye"
-                                            style="color: #969696"
-                                        ></i>
-                                        2,020 Views
-                                    </p>
-                                </div>
-                            </div>
+                <div class="col-3">
+                    <div class="card border-0" id="card">
+                        <img
+                            src="../assets/images/artist-blog-01-480x356.jpg"
+                            class="card-img-top"
+                            alt="Immagine 3"
+                        />
+                        <div class="card-body">
+                            <p class="card-text">ARTIST</p>
+                            <h4 class="h4-artist">
+                                Pocket-Sized Notebooks Hold Minature Paintings
+                            </h4>
+                            <p class="text-body-secondary">
+                                <i
+                                    class="fa-regular fa-calendar"
+                                    style="color: #969696"
+                                ></i>
+                                May 15, 2020
+                            </p>
+                            <p class="text-body-secondary">
+                                <i
+                                    class="fa-solid fa-eye"
+                                    style="color: #969696"
+                                ></i>
+                                2,020 Views
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -720,29 +713,33 @@ export default {
         </div>
     </section>
 
-    <section>
-        <div>
+    <section class="pb-5">
+        
+        
+
+        <div class="container">
+
+
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <h2 class="cursive">Upcoming Event</h2>
                 <h3>Let's Work Together</h3>
             </div>
-        </div>
 
-        <div class="container-fluid">
+
             <div class="row mt-5">
                 <!-- Card 1 -->
-                <div class="col-md-6">
+                <div class="col-6">
                     <div class="card border-0">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-4">
                                 <img
                                     src="../assets/images/artist-event-04-250x300.jpg"
                                     class="card-img-top"
                                     alt="..."
                                 />
                             </div>
-                            <div class="col-md-8" id="descrizione-col8">
+                            <div class="col-8" id="descrizione-col8">
                                 <div class="card-body">
                                     <p class="card-text">
                                         <small class="text-body-secondary"
@@ -766,17 +763,17 @@ export default {
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-6">
                     <div class="card border-0">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-4">
                                 <img
                                     src="../assets/images/artist-event-03-250x300.jpg"
                                     class="card-img-top"
                                     alt="..."
                                 />
                             </div>
-                            <div class="col-md-8" id="descrizione-col8">
+                            <div class="col-8" id="descrizione-col8">
                                 <div class="card-body">
                                     <p class="card-text">
                                         <small class="text-body-secondary"
@@ -802,10 +799,10 @@ export default {
             </div>
 
             <div class="row mt-5">
-                <div class="col-md-6">
+                <div class="col-6">
                     <div class="card border-0">
-                        <div class="row no-gutters">
-                            <div class="col-md-8" id="descrizione-col8">
+                        <div class="row">
+                            <div class="col-8" id="descrizione-col8">
                                 <div
                                     class="card-body"
                                     style="text-align: right"
@@ -828,7 +825,7 @@ export default {
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-4">
                                 <img
                                     src="../assets/images/artist-event-02-250x300.jpg"
                                     class="card-img-top"
@@ -839,10 +836,10 @@ export default {
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-6">
                     <div class="card border-0">
-                        <div class="row no-gutters">
-                            <div class="col-md-8" id="descrizione-col8">
+                        <div class="row">
+                            <div class="col-8" id="descrizione-col8">
                                 <div
                                     class="card-body"
                                     style="text-align: right"
@@ -865,7 +862,7 @@ export default {
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-4">
                                 <img
                                     src="../assets/images/artist-event-01-250x300.jpg"
                                     class="card-img-top"
@@ -877,6 +874,8 @@ export default {
                 </div>
             </div>
         </div>
+
+        
     </section>
 
     <section>
@@ -894,7 +893,7 @@ export default {
                         </p>
                     </div>
 
-                    <div class="col-6">
+                    <div class="">
                         <input
                             type="email"
                             class="form-control"
@@ -909,13 +908,66 @@ export default {
                     />
                 </div>
             </div>
+
+
+
+        
+
         </div>
+
     </section>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+
+#article-and-tips {
+    background-color: #f5f7fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    .container {
+        position: relative;
+        overflow: hidden;
+
+        .rotating-image-left,
+        .rotating-image-right,
+        .rotating-image-top-right {
+            transition: transform 1s ease;
+        }
+
+        &:hover .rotating-image-left {
+            transform: translateX(-40px) translateY(-30px);
+        }
+
+        &:hover .rotating-image-right {
+            transform: translateX(40px) translateY(10px);
+        }
+
+        // &:hover .rotating-image-top-right {
+        //     transform: translateX(40px) translateY(-50px);
+        // }
+
+        .dittoBlue-section-cards {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 15%;
+            left: 19%;
+        }
+
+        .dittoShape-section-cards {
+            position: absolute;
+            top: 70%;
+            right: 20%;
+            img {
+                width: 300px;
+            }
+        }
+    }
+}
 
 // STILI ALE
 
@@ -1300,49 +1352,12 @@ export default {
 
 // STILI DOME
 // Sezione 1 CARD
-#section1-dome {
-    background-color: #f5f7fa;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
 
-    .container-fluid {
-        width: 90%;
-        margin-top: 35px;
-        margin-bottom: 35px;
-        position: relative;
-        overflow: hidden;
-
-        .col-md-5:hover .dittoBlue-section-cards {
-            transform: translate(-20%, -20%);
-        }
-        .col-md-5:hover .dittoShape-section-cards {
-            transform: translate(-20%, -20%);
-        }
-
-        .dittoBlue-section-cards {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            top: 15%;
-            left: 19%;
-            transition: transform 0.3s ease-in-out;
-        }
-        .dittoShape-section-cards{
-            position: absolute;
-            width: 20%;
-            transition: transform 0.3s ease-in-out;
-            top: 70%;
-            left: 60%;
-        }
-    }
-
-}
-
-#card-img1 {
+.col-img1 {
     display: flex;
     align-items: center;
 }
+
 #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative;
@@ -1418,8 +1433,8 @@ export default {
 }
 
 #div-newsletter {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     text-align: right;
     position: absolute;
     top: 20%;
