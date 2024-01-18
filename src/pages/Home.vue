@@ -272,7 +272,7 @@ export default {
     <section class="col-12 positioningClass d-flex justify-content-center p-1">
         <div class="wrapperPos">
             <div class="coaching col-12 d-flex p-5 justify-content-center">
-                <div class="col-5 HelloImMartin">
+                <div class="col-5">
                     <h1 class="cursive fs-2 fw-bold text-center">
                         Artist coaching
                     </h1>
@@ -567,7 +567,6 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
-       
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -575,19 +574,21 @@ export default {
                 <h3>Latest From The Blog</h3>
             </div>
         </div>
-            <!-- <div>
+        <!-- <div>
                 <img src="../assets/images/maxcoach-shape-14-1536x343.png" 
                 class="lineaOrange-section-cards" 
                 alt="">
             </div> -->
         <div class="container-fluid" id="article-tips">
             <div>
-                <img src="../assets/images/maxcoach-shape-12-orange.png" 
-                class="dittoBlue-section-cards" 
-                alt="">
+                <img
+                    src="../assets/images/maxcoach-shape-12-orange.png"
+                    class="dittoBlue-section-cards"
+                    alt=""
+                />
             </div>
             <div>
-                <img src="../" alt="">
+                <img src="../" alt="" />
             </div>
 
             <div class="row">
@@ -852,7 +853,7 @@ export default {
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4" >
+                            <div class="col-md-4">
                                 <img
                                     src="../assets/images/artist-event-01-250x300.jpg"
                                     class="card-img-top"
@@ -1300,17 +1301,16 @@ export default {
 #article-tips {
     position: relative;
 }
-.dittoBlue-section-cards{
+.dittoBlue-section-cards {
     position: absolute;
     width: 200px;
     height: 200px;
     top: -7%;
     left: 19%;
 }
-.lineaOrange-section-cards{
+.lineaOrange-section-cards {
     color: red;
     position: absolute;
-    
 }
 #card-img1 {
     display: flex;
