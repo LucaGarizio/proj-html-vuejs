@@ -910,6 +910,7 @@ export default {
 #jumbotron {
     background-color: #fbf9f6;
     .container-fluid {
+        margin-top: 0;
         position: relative;
         height: 700px;
         .rotating-image-left,
