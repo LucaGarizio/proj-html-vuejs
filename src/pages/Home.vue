@@ -423,9 +423,6 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="wave-container">
-            <img class="onde" src="../assets/images/wave.svg" alt="" />
-        </div>
     </section>
     <!-- sezione slider -->
     <section class="slider-bg-color" id="carousel">
@@ -542,6 +539,7 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
+       
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -549,8 +547,21 @@ export default {
                 <h3>Latest From The Blog</h3>
             </div>
         </div>
-
+            <!-- <div>
+                <img src="../assets/images/maxcoach-shape-14-1536x343.png" 
+                class="lineaOrange-section-cards" 
+                alt="">
+            </div> -->
         <div class="container-fluid" id="article-tips">
+            <div>
+                <img src="../assets/images/maxcoach-shape-12-orange.png" 
+                class="dittoBlue-section-cards" 
+                alt="">
+            </div>
+            <div>
+                <img src="../" alt="">
+            </div>
+
             <div class="row">
                 <div class="col-12">
                     <div class="row justify-content-around">
@@ -813,7 +824,7 @@ export default {
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" >
                                 <img
                                     src="../assets/images/artist-event-01-250x300.jpg"
                                     class="card-img-top"
@@ -1046,6 +1057,11 @@ export default {
 // SEZIONE YOUTUBE VIDEO
 
 #youtube-section {
+    background-image: url('../assets/images/wave.svg');
+    background-position-y: -30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 70px;
     .container-fluid {
         .rotating-image-left,
         .rotating-image-right,
@@ -1063,21 +1079,21 @@ export default {
             transform: translateX(40px) translateY(-50px);
         }
     }
+}
 
-    .card {
-        position: relative;
-        overflow: hidden;
-    }
-    .youtube-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
+.card {
+    position: relative;
+    overflow: hidden;
+}
+.youtube-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
 
-    .card:hover .youtube-video {
-        transform: scale(1.1);
-    }
+.card:hover .youtube-video {
+    transform: scale(1.1);
 }
 
 .pos-relative {
@@ -1166,12 +1182,12 @@ export default {
 .carousel-col {
     flex: 0 0 calc(100% / 3);
     height: 27rem;
-    opacity: 0.5; /* Opacità di default per tutte le colonne */
+    opacity: 0.5;
     transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-col.active-slide {
-    opacity: 1; /* Opacità completa solo sulla colonna attiva */
+    opacity: 1;
 }
 
 .bullet {
@@ -1230,24 +1246,35 @@ export default {
     background-color: #f5f7fa;
     padding-top: 20px;
     padding-bottom: 40px;
+    position: relative;
 }
 .container-fluid {
-    width: 95%;
+    width: 90%;
     margin-top: 35px;
 }
 #article-tips {
-    // background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
-    //     url(../assets/images/maxcoach-shape-12.png);
-    // background-repeat: no-repeat;
     position: relative;
 }
-
+.dittoBlue-section-cards{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -7%;
+    left: 19%;
+}
+.lineaOrange-section-cards{
+    color: red;
+    position: absolute;
+    
+}
 #card-img1 {
     display: flex;
     align-items: center;
 }
 #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    overflow: hidden;
 }
 .card-body-centrale {
     position: absolute;

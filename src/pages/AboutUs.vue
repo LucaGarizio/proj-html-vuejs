@@ -81,6 +81,7 @@ export default {
 }
 </script>
 <template>
+    
     <section class="padding-y" id="about">
         <div class="container">
             <div class="row d-flex justify-content-center mb-5">
