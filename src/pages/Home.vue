@@ -557,8 +557,8 @@ export default {
             <div class="row">
                 <div class="col-12">
                     <div class="row justify-content-around">
-                        <div class="col-md-3">
-                            <div class="card border-0">
+                        <div class="col-md-3" id="card-img1">
+                            <div class="card border-0" id="card">
                                 <img
                                     src="../assets/images/artist-blog-03-480x356.jpeg"
                                     class="card-img-top"
@@ -589,7 +589,7 @@ export default {
                         </div>
 
                         <div class="col-md-5">
-                            <div class="card border-0">
+                            <div class="card border-0" id="card">
                                 <img
                                     src="../assets/images/artist-blog-02-500x680.jpg"
                                     class="card-img-top"
@@ -621,7 +621,7 @@ export default {
                         </div>
 
                         <div class="col-md-3">
-                            <div class="card border-0">
+                            <div class="card border-0" id="card">
                                 <img
                                     src="../assets/images/artist-blog-01-480x356.jpg"
                                     class="card-img-top"
@@ -684,7 +684,7 @@ export default {
             <div class="row mt-5">
                 <!-- Card 1 -->
                 <div class="col-md-6">
-                    <div class="card border-0">
+                    <div class="card border-0" >
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img
@@ -1149,7 +1149,8 @@ export default {
     left: -15%;
 }
 
-// STILI DOME
+// STILI DOME 
+// Sezione 1 CARD
 #section1-dome {
     background-color: #f5f7fa;
     padding-top: 20px;
@@ -1165,6 +1166,14 @@ export default {
     background-repeat: no-repeat;
 }
 
+#card-img1 {
+    display: flex;
+    align-items: center;
+    
+}
+#card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .card-body-centrale {
     position: absolute;
     top: 80%;
