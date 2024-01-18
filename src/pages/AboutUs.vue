@@ -4,11 +4,16 @@ export default {
     name: 'AboutUs',
     data() {
         return {
+            // variabile chatbox
+            visibility: false,
+            // VARIABILI PER CONTEGGIO NUMERI
             latestNumber: 0,
             latestNumberCol2: 0,
             latestNumberCol3: 0,
             latestNumberCol4: 0,
+            // VARIABILE PER CAROSELLO
             currentIndex: 0,
+            // VARIABILE MOVE TO THE TOP
             isScrolled: false,
             testimonialCards: [
                 {
@@ -91,7 +96,7 @@ export default {
                     // Assegna il valore corrente a latestNumber
                     this.latestNumber = i
 
-                    console.log(i)
+                    // console.log(i)
                 }, i * 5) // Ritarda il calcolo dei numeri
             }
         },
@@ -101,7 +106,7 @@ export default {
             for (let i = 0; i <= 3092; i++) {
                 setTimeout(() => {
                     this.latestNumberCol2 = i
-                    console.log(i)
+                    // console.log(i)
                 }, i * 3.15)
             }
         },
@@ -111,7 +116,7 @@ export default {
             for (let i = 0; i <= 200; i++) {
                 setTimeout(() => {
                     this.latestNumberCol3 = i
-                    console.log(i)
+                    // console.log(i)
                 }, i * 49)
             }
         },
@@ -121,13 +126,17 @@ export default {
             for (let i = 0; i <= 100; i++) {
                 setTimeout(() => {
                     this.latestNumberCol4 = i
-                    console.log(i)
+                    // console.log(i)
                 }, i * 100)
             }
         },
         handleScroll() {
             // Verifica se l'utente sta scorrendo la pagina
             this.isScrolled = window.scrollY > 0
+        },
+        toggleChatbox() {
+            // Inverti lo stato di visibilità della chatbox
+            this.visibility = !this.visibility
         },
     },
 
@@ -142,14 +151,70 @@ export default {
 }
 </script>
 <template>
+    <!-- CHATBOX -->
+    <div class="container-fluid chatbox text-white" v-show="visibility">
+        <div class="row top">
+            <div class="col-12 bg text-center">
+                <button>
+                    <i class="fa-regular fa-comments"></i
+                    ><span class="ms-2">Chat</span>
+                </button>
+                <div class="logo">
+                    <img
+                        class="m-2"
+                        src="https://image.crisp.chat/process/thumbnail/?url=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Ffdb6b692b0ed5000%2Flogothememoveblack_1cwmqwn.png&width=240&height=240&1629251277523"
+                        alt=""
+                    />
+                    <img
+                        src="https://image.crisp.chat/process/thumbnail/?url=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Ffdb6b692b0ed5000%2Flogothememoveblack_1cwmqwn.png&width=240&height=240&1629251277523"
+                        alt=""
+                    />
+                    <h6>Questions? Chat with us</h6>
+                    <span>Was last active 11/10/2023</span>
+                </div>
+            </div>
+            <div class="row medium">
+                <div class="col-12">
+                    <div class="chat-display"></div>
+                </div>
+            </div>
+            <div class="row bottom">
+                <div class="col-12">
+                    <div class="chatkeyboard d-flex justify-content-center">
+                        <input type="text" placeholder="Compose your text" />
+                    </div>
+                </div>
+            </div>
+            <div class="row under-bottom">
+                <div class="col-12 d-flex">
+                    <div class="icon-left">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </div>
+                    <div class="icon-right">
+                        <a
+                            href="https://crisp.chat/en/livechat/?ref=chatbox&domain=maxcoach.thememove.com&name=MaxCoach"
+                        >
+                            <i class="fa-regular fa-message"
+                                ><span>crisp</span></i
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="costumer-service" @click="toggleChatbox">
+        <i class="fa-solid fa-message"></i>
+    </div>
     <div class="move-to-top" v-show="isScrolled">
         <a href="#about">
             <i class="fa-solid fa-arrow-up-long"></i>
         </a>
     </div>
-    <div class="costumer-service">
-        <i class="fa-solid fa-message"></i>
-    </div>
+
     <section class="padding-y" id="about">
         <div class="container">
             <div class="row d-flex justify-content-center mb-5">
@@ -453,6 +518,91 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+// CHATBOX SECTION
+.chatbox {
+    width: 22rem;
+    height: 32rem;
+    position: fixed;
+
+    z-index: 500;
+    right: 2%;
+    bottom: 13%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .top {
+        height: 3rem;
+    }
+    .medium {
+        height: calc(32rem - 15rem);
+    }
+    .bottom {
+        display: flex;
+        margin: unset;
+
+        height: 2rem;
+        input {
+            width: 100%;
+            padding: 3px;
+            &::placeholder {
+                color: #b1c1d2;
+            }
+        }
+    }
+    .under-bottom {
+        .col-12 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+
+        margin-left: unset;
+    }
+    .icon-left {
+        .fa-face-smile,
+        .fa-paperclip,
+        .fa-bars-staggered {
+            color: #a8bacd;
+            margin: 0 10px;
+        }
+    }
+    .icon-right {
+        .fa-message {
+            color: #a8bacd;
+            margin-right: 5px;
+        }
+        span {
+            margin-left: 10px;
+            font-size: 10px;
+        }
+    }
+    .bg {
+        background-color: #1766dc;
+        padding: 10px 0;
+        button {
+            border: none;
+            border-radius: 30px;
+            background-color: #0051c8;
+            color: white;
+            width: 100px;
+            padding: 5px 0;
+        }
+        .logo {
+            span {
+                font-size: 13px;
+                color: #c5dafa;
+            }
+        }
+
+        img {
+            width: 40px;
+            border-radius: 50%;
+        }
+    }
+}
+// MOVE TO THE TOP SECTION
 .move-to-top {
     display: none;
     background-color: #20ad96;
@@ -491,7 +641,7 @@ export default {
         }
     }
 }
-
+// COSTUMER SERVICE BUTTON
 .costumer-service {
     background-color: #1972f5;
     width: 40px;
@@ -505,12 +655,13 @@ export default {
     z-index: 10;
     right: 2%;
     bottom: 4%;
-}
-.fa-message {
-    color: white;
-    font-size: 25px;
-    padding: 20px;
-    transform: rotate(-17deg);
+
+    .fa-message {
+        color: white;
+        font-size: 25px;
+        padding: 20px;
+        transform: rotate(-17deg);
+    }
 }
 h6 {
     color: #b1afc0;
@@ -523,6 +674,7 @@ h2 {
         color: #20ad96;
     }
 }
+// SECTION ABOUT
 #about {
     padding: 100px 0;
     background-color: #fbf2eb;
@@ -571,7 +723,6 @@ h2 {
     color: #878ba1;
 }
 
-// sezione youtube
 // SEZIONE YOUTUBE VIDEO
 #youtube-section {
     position: relative;
@@ -734,7 +885,7 @@ h2 {
     color: #ffbb00;
 }
 
-// sezione number
+// SEZIONE NUMERI
 #numbers {
     background-color: #f5f7fa;
     h6 {
@@ -745,7 +896,7 @@ h2 {
     }
 }
 
-// sezione newletter
+// SEZIONE NEWLETTERS
 span {
     color: #20ad96;
     font-weight: lighter;
