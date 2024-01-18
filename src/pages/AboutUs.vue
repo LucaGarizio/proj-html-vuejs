@@ -167,46 +167,41 @@ export default {
     </section>
     <!-- sezione video youtube -->
     <section class="margin-top" id="youtube-section">
-        <div class="container-fluid d-flex justify-content-center pos-relative">
+        <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
-                    <div class="circle">
+                    <div class="img-box-overlay">
+                        <img
+                            class="dittoBlue-section-youtube rotating-image-top-right"
+                            src="../assets/images/Orange-Ditto-Shape.svg"
+                            alt=""
+                        />
+                        <img
+                            class="animated-bg-top-image rotating-image-left"
+                            src="../assets/images/maxcoach-shape-12-100x100.png"
+                            alt=""
+                        />
+                        <img
+                            class="animated-bg-bottom-image rotating-image-left"
+                            src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/maxcoach-shape-07.png"
+                            alt=""
+                        />
+                        <div class="overlay">
+                            <img
+                                src="../assets/images/icon-youtube-play.png"
+                                alt="youtube icon play"
+                            />
+                        </div>
+                    </div>
+                    <div class="circle rotating-image-right">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="card">
+                    <div class="card border-0">
                         <img
                             class="youtube-video"
                             src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/about-me-popup-video-poster-2.jpg"
                             alt="anteprima"
                         />
-                        <div class="img-box-overlay">
-                            <img
-                                class="dittoBlue-section-youtube"
-                                src="../assets/images/Orange-Ditto-Shape.svg"
-                                alt=""
-                            />
-                            <img
-                                class="animated-bg-top-image"
-                                src="../assets/images/maxcoach-shape-12-100x100.png"
-                                alt=""
-                            />
-                            <img
-                                class="animated-bg-bottom-image"
-                                src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/maxcoach-shape-07.png"
-                                alt=""
-                            />
-                            <div class="overlay">
-                                <a
-                                    href="https://www.youtube.com/watch?v=ElFJ1qc"
-                                    alt="icon-youtube-play"
-                                >
-                                    <img
-                                        src="../assets/images/icon-youtube-play.png"
-                                        alt="youtube icon play"
-                                    />
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -433,6 +428,40 @@ h2 {
 // sezione youtube
 // SEZIONE YOUTUBE VIDEO
 
+#youtube-section {
+    .container-fluid {
+        .rotating-image-left,
+        .rotating-image-right,
+        .rotating-image-top-right {
+            transition: transform 1s ease;
+        }
+
+        .col:hover .rotating-image-left {
+            transform: translateX(-40px) translateY(-30px);
+        }
+        .col:hover .rotating-image-right {
+            transform: translateX(40px) translateY(10px);
+        }
+        .col:hover .rotating-image-top-right {
+            transform: translateX(40px) translateY(-50px);
+        }
+    }
+
+    .card {
+        position: relative;
+        overflow: hidden;
+    }
+    .youtube-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover .youtube-video {
+        transform: scale(1.1);
+    }
+}
 .pos-relative {
     position: relative;
 }

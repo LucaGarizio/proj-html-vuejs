@@ -387,39 +387,38 @@ export default {
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
-                    <div class="circle">
+                    <div class="img-box-overlay">
+                        <img
+                            class="dittoBlue-section-youtube rotating-image-top-right"
+                            src="../assets/images/DittoShapeBlue.svg"
+                            alt=""
+                        />
+                        <img
+                            class="animated-bg-top-image rotating-image-left"
+                            src="../assets/images/maxcoach-shape-12-100x100.png"
+                            alt=""
+                        />
+                        <img
+                            class="animated-bg-bottom-image rotating-image-left"
+                            src="../assets/images/maxcoach-shape-12-100x100.png"
+                            alt=""
+                        />
+                        <div class="overlay">
+                            <img
+                                src="../assets/images/icon-youtube-play.png"
+                                alt="youtube icon play"
+                            />
+                        </div>
+                    </div>
+                    <div class="circle rotating-image-right">
                         <div class="inner-circle"></div>
                     </div>
-                    <div class="card">
+                    <div class="card border-0">
                         <img
                             class="youtube-video"
                             src="../assets/images/artist-video-poster.jpg"
                             alt="anteprima"
                         />
-
-                        <div class="img-box-overlay">
-                            <img
-                                class="dittoBlue-section-youtube"
-                                src="../assets/images/DittoShapeBlue.svg"
-                                alt=""
-                            />
-                            <img
-                                class="animated-bg-top-image"
-                                src="../assets/images/maxcoach-shape-12-100x100.png"
-                                alt=""
-                            />
-                            <img
-                                class="animated-bg-bottom-image"
-                                src="../assets/images/maxcoach-shape-12-100x100.png"
-                                alt=""
-                            />
-                            <div class="overlay">
-                                <img
-                                    src="../assets/images/icon-youtube-play.png"
-                                    alt="youtube icon play"
-                                />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -485,12 +484,12 @@ export default {
         </div>
     </section>
     <!-- sezione card shop-->
-    <section class="section-margin mb-5">
+    <section class="section-margin mb-5" id="shop">
         <div class="container-fluid pos-relative">
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="cursive">Artist coaching</h2>
-                    <h3>Latest Online Courses</h3>
+                    <h2 class="mb-4">Latest Online Courses</h2>
                 </div>
             </div>
             <div class="row">
@@ -505,14 +504,14 @@ export default {
                 >
                     <div
                         class="card mb-5 border-0"
-                        style="width: 21rem; height: 30rem"
+                        style="width: 21rem; height: 31rem"
                     >
                         <img
                             :src="card.img"
                             class="card-img-top mb-2 rounded-0"
                             alt="..."
                         />
-                        <div class="card-body">
+                        <div class="card-body" style="width: 20rem">
                             <h5 class="card-title mb-3">
                                 {{ card.price }}
                             </h5>
@@ -1030,6 +1029,41 @@ export default {
 
 // SEZIONE YOUTUBE VIDEO
 
+#youtube-section {
+    .container-fluid {
+        .rotating-image-left,
+        .rotating-image-right,
+        .rotating-image-top-right {
+            transition: transform 1s ease;
+        }
+
+        .col:hover .rotating-image-left {
+            transform: translateX(-40px) translateY(-30px);
+        }
+        .col:hover .rotating-image-right {
+            transform: translateX(40px) translateY(10px);
+        }
+        .col:hover .rotating-image-top-right {
+            transform: translateX(40px) translateY(-50px);
+        }
+    }
+
+    .card {
+        position: relative;
+        overflow: hidden;
+    }
+    .youtube-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover .youtube-video {
+        transform: scale(1.1);
+    }
+}
+
 .pos-relative {
     position: relative;
 }
@@ -1138,7 +1172,34 @@ export default {
 }
 
 // SEZIONE STILI SHOP
+#shop {
+    .card {
+        position: relative;
+        overflow: hidden;
+        h5 {
+            color: #f07c44;
+        }
+    }
+    .card-img-top {
+        // width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
 
+    .card:hover .card-img-top {
+        transform: scale(1.1);
+    }
+
+    .card-body {
+        transition: transform 0.5s ease;
+    }
+    .card:hover .card-body {
+        transform: translateY(-40px);
+        border: 1px solid black;
+        background-color: #fff;
+    }
+}
 .tear {
     width: 500px;
     height: 700px;
