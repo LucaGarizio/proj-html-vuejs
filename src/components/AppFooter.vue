@@ -6,7 +6,7 @@ export default {
 
 <template>
     
-    <footer class="container-fluid p-5" id="container-footer">
+    <footer class="container-fluid py-5" id="container-footer">
         <div class="row">
             <div class="col-4 p-0">
              <ul>
