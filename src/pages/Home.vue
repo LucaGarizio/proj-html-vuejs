@@ -714,15 +714,19 @@ export default {
     </section>
 
     <section class="pb-5">
-        <div>
+        
+        
+
+        <div class="container">
+
+
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <h2 class="cursive">Upcoming Event</h2>
                 <h3>Let's Work Together</h3>
             </div>
-        </div>
 
-        <div class="container">
+
             <div class="row mt-5">
                 <!-- Card 1 -->
                 <div class="col-6">
