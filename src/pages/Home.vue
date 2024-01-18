@@ -529,7 +529,7 @@ export default {
                 >
                     <div
                         class="card mb-5 border-0"
-                        style="width: 21rem; height: 31rem"
+                        style="width: 21rem; height: 32rem"
                     >
                         <img
                             :src="card.img"
@@ -1260,8 +1260,6 @@ export default {
         }
     }
     .card-img-top {
-        // width: 100%;
-        // height: 100%;
         object-fit: cover;
         transition: transform 0.5s ease;
     }
@@ -1272,19 +1270,23 @@ export default {
 
     .card-body {
         transition: transform 0.5s ease;
+        position: relative;
+        z-index: 0;
     }
-    .card:hover .card-body {
+    .col-3:hover .card-body {
         transform: translateY(-40px);
-        border: 1px solid black;
+        border: 2px solid #f07c44;
         background-color: #fff;
+        z-index: 2;
     }
 }
 .tear {
     width: 500px;
     height: 700px;
     position: absolute;
-    top: 40%;
+    top: 37%;
     left: -15%;
+    z-index: 1;
 }
 
 // STILI DOME
