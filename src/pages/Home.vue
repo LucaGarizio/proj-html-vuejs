@@ -542,6 +542,7 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
+       
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -549,8 +550,21 @@ export default {
                 <h3>Latest From The Blog</h3>
             </div>
         </div>
-
+            <!-- <div>
+                <img src="../assets/images/maxcoach-shape-14-1536x343.png" 
+                class="lineaOrange-section-cards" 
+                alt="">
+            </div> -->
         <div class="container-fluid" id="article-tips">
+            <div>
+                <img src="../assets/images/maxcoach-shape-12-orange.png" 
+                class="dittoBlue-section-cards" 
+                alt="">
+            </div>
+            <div>
+                <img src="../" alt="">
+            </div>
+
             <div class="row">
                 <div class="col-12">
                     <div class="row justify-content-around">
@@ -813,7 +827,7 @@ export default {
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" >
                                 <img
                                     src="../assets/images/artist-event-01-250x300.jpg"
                                     class="card-img-top"
@@ -1214,24 +1228,35 @@ export default {
     background-color: #f5f7fa;
     padding-top: 20px;
     padding-bottom: 40px;
+    position: relative;
 }
 .container-fluid {
-    width: 95%;
+    width: 90%;
     margin-top: 35px;
 }
 #article-tips {
-    // background-image: url(../assets/images/maxcoach-shape-14-1536x343.png),
-    //     url(../assets/images/maxcoach-shape-12.png);
-    // background-repeat: no-repeat;
     position: relative;
 }
-
+.dittoBlue-section-cards{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -7%;
+    left: 19%;
+}
+.lineaOrange-section-cards{
+    color: red;
+    position: absolute;
+    
+}
 #card-img1 {
     display: flex;
     align-items: center;
 }
 #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    overflow: hidden;
 }
 .card-body-centrale {
     position: absolute;
