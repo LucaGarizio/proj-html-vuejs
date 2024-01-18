@@ -71,8 +71,8 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 #container-footer {
-    // min-height: 350px;
-    align-items: center;
+    
+    
     li {
         margin: 15px 0;
     }
