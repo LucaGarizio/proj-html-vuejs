@@ -715,7 +715,15 @@ export default {
     </section>
 
     <section class="pb-5">
-        <div class="container">
+        
+        
+
+        <div class="container" id="section-upcoming">
+
+            <div>
+                <img src="../assets/images/maxcoach-shape-13.png" class="maxcoach-section-upcoming" alt="">
+                <img src="../assets/images/maxcoach-shape-05-150x150.png" class="maxcoach-shape-section-upcoming" alt="">
+            </div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <h2 class="cursive">Upcoming Event</h2>
@@ -1391,6 +1399,38 @@ export default {
 .span-orange:hover {
     border-bottom: 1px solid;
 }
+// sezione UpComing
+.container{
+    position: relative;
+}
+
+.maxcoach-section-upcoming{
+    position: absolute;
+    top: 35%;
+    left: 87%;
+    z-index:2;
+
+    transition: transform 1s;
+}
+.maxcoach-shape-section-upcoming{
+    position: absolute;
+    top: 0%;
+    right: 92%;
+
+    transition: transform 1s;
+
+}
+.container:hover{
+  .maxcoach-section-upcoming{
+    transform: translateX(40px) translateY(-40px);
+  }
+
+  .maxcoach-shape-section-upcoming{
+    transform: translateX(40px) translateY(-40px);
+  }
+}
+
+
 
 #descrizione-col8 {
     align-items: center;
