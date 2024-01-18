@@ -169,7 +169,7 @@ export default {
 <template>
     <!-- SEZIONI ALE -->
     <section
-        class="presentation col-12 d-flex align-items-center justify-content-center"
+        class="presentation d-flex align-items-center justify-content-center"
     >
         <div class="DittoShape">
             <img
@@ -214,7 +214,7 @@ export default {
             <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
         </div>
 
-        <div class="Martin">
+        <div class="Martin .rotating-image-right">
             <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
         </div>
 
@@ -1001,6 +1001,22 @@ export default {
     position: relative;
     height: 700px;
     background-color: #fbf9f6;
+
+    .rotating-image-left,
+    .rotating-image-right,
+    .rotating-image-top-right {
+        transition: transform 1s ease;
+    }
+
+    .presentation:hover .rotating-image-left {
+        transform: translateX(-40px) translateY(-30px);
+    }
+    .presentation:hover .rotating-image-right {
+        transform: translateX(40px) translateY(10px);
+    }
+    .presentation:hover .rotating-image-top-right {
+        transform: translateX(40px) translateY(-50px);
+    }
 }
 
 .resizeImg {
