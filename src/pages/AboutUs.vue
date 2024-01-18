@@ -11,7 +11,7 @@ export default {
                     name: 'Mina Hollace',
                     role: '/ Freelancer',
                     paragraph:
-                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.',
+                        'I am free to learn at my own pace, follow my own schedule & choose the subject I want to learn from the syllabus. Great study portal for people like me',
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-04.jpg',
@@ -19,7 +19,7 @@ export default {
                     name: ' Madley Pondor',
                     role: '/ IT Specialist',
                     paragraph:
-                        'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
+                        'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students',
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-01.jpg',
@@ -27,7 +27,7 @@ export default {
                     name: 'Florence Themes',
                     role: '/ Multimedia Admin',
                     paragraph:
-                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me",
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-03.jpg',
@@ -35,7 +35,7 @@ export default {
                     name: 'Luvic Dubble',
                     role: '/ Privare Tutor',
                     paragraph:
-                        'I am happy of lessons and subjects. They reflect a scientific investigation into effective methods to be adopted for learners of all levels.',
+                        'I am happy of lessons and subjects. They reflect a scientific investigation into effective methods to be adopted for learners of all levels',
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-02.jpg',
@@ -43,7 +43,7 @@ export default {
                     name: 'Mina Hollace',
                     role: '/ Freelancer',
                     paragraph:
-                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.',
+                        'I am free to learn at my own pace, follow my own schedule & choose the subject I want to learn from the syllabus. Great study portal for people like me',
                 },
                 {
                     img: 'https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/testimonial-avata-04.jpg',
@@ -51,7 +51,7 @@ export default {
                     name: ' Madley Pondor',
                     role: '/ IT Specialist',
                     paragraph:
-                        'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
+                        'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students',
                 },
             ],
         }
@@ -208,9 +208,9 @@ export default {
         </div>
     </section>
     <section class="margin-top pt-5" id="carousel">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row d-flex justify-content-center mb-5">
-                <div class="col-4">
+                <div class="col-5">
                     <h6 class="text-center">
                         equip yourself with the power of education
                     </h6>
@@ -256,9 +256,8 @@ export default {
                 </div>
                 <!-- Bullet navigation -->
                 <div
-                    id="bullets"
                     class="d-flex justify-content-center align-item-center my-5"
-                    style="height: 30px"
+                    style="height: 20px"
                 >
                     <div
                         v-for="(bullet, index) in 4"
@@ -541,42 +540,43 @@ h2 {
 }
 
 // SEZIONE CAROSELLO
+#carousel {
+    .carousel-controls {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 12px 0 rgba(0, 0, 0, 0.19);
+    }
+    .slide-control {
+        font-size: 24px;
+    }
+    .shrink {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .carousel-container {
+        overflow: hidden;
+        width: 100%;
 
-.carousel-controls {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19);
-}
-.slide-control {
-    font-size: 24px;
-}
-.shrink {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-.carousel-container {
-    overflow: hidden;
-    width: 90%; /* Aggiorna la larghezza a 100% */
-    margin: 0 auto;
-    position: relative;
-}
+        position: relative;
+    }
 
-.carousel {
-    display: flex;
-}
+    .carousel {
+        display: flex;
+    }
 
-.carousel-col {
-    flex: 0 0 49%; /* Ora ogni colonna avrà il 50% della larghezza */
-}
+    .carousel-col {
+        flex: 0 0 49%; /* Ora ogni colonna avrà il 50% della larghezza */
+    }
 
-.carousel-card {
-    width: 95%;
+    .carousel-card {
+        width: 95%;
+    }
 }
-
 .bullet {
     width: 10px;
     height: 10px;
@@ -586,13 +586,15 @@ h2 {
     cursor: pointer;
     &:hover {
         transition: 1s;
-        width: 12px;
-        height: 12px;
+        width: 11px;
+        height: 11px;
         background-color: #3f3a64;
     }
 }
 .active {
     background-color: #3f3a64;
+    width: 11px;
+    height: 11px;
 }
 
 .slider-bg-color {
