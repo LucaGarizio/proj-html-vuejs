@@ -34,7 +34,7 @@ export default {
         <div class="col-6 d-flex justify-content-between">
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle"
+                    class="btn dropdown-toggle no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -145,7 +145,7 @@ export default {
             <!-- PAGES  -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle"
+                    class="btn dropdown-toggle no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -181,14 +181,12 @@ export default {
             <!-- Courses -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle"
+                    class="btn dropdown-toggle no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
-                        >Courses</Router-Link
-                    >
+                    Courses
                 </button>
                 <ul class="dropdown-menu large-menu">
                     <div class="col-2">
@@ -206,17 +204,15 @@ export default {
                     </div>
                 </ul>
             </div>
-
+            <!-- features  -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle"
+                    class="btn dropdown-toggle no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
-                        >Features</Router-Link
-                    >
+                    Features
                 </button>
                 <ul class="dropdown-menu">
                     <div class="col-2">
@@ -237,14 +233,12 @@ export default {
 
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle"
+                    class="btn dropdown-toggle no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
-                        >Blog</Router-Link
-                    >
+                    Blog
                 </button>
                 <ul class="dropdown-menu">
                     <div class="col-2">
@@ -265,14 +259,12 @@ export default {
 
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle"
+                    class="btn dropdown-toggle no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    <Router-Link class="dropdown-item" :to="{ name: 'home' }"
-                        >Shop</Router-Link
-                    >
+                    Shop
                 </button>
                 <ul class="dropdown-menu">
                     <div class="col-2">
@@ -323,12 +315,22 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+.dropdown-menu {
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 5px solid orange;
+}
 .large-menu {
     width: 80vw;
 }
 .max-logo {
     height: 25px;
     width: 150px;
+}
+
+.no-border {
+    border: 0 !important;
+    box-shadow: none;
 }
 </style>
 

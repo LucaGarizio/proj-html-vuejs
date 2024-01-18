@@ -168,76 +168,104 @@ export default {
 </script>
 <template>
     <!-- SEZIONI ALE -->
-    <section
-        class="presentation d-flex align-items-center justify-content-center"
-    >
-        <div class="DittoShape">
-            <img
-                class="MaledettoSvg"
-                src="../assets/images/Orange-Ditto-Shape.svg"
-                alt=""
-            />
-        </div>
+    <section id="jumbotron">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div
+                    class="col-12 d-flex justify-content-center align-item-center"
+                >
+                    <div class="DittoShape">
+                        <img
+                            class="MaledettoSvg"
+                            src="../assets/images/Orange-Ditto-Shape.svg"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="DittoShapeBlue">
-            <img
-                class="MaledettoSvgButInBlue"
-                src="../assets/images/DittoShapeBlue.svg"
-                alt=""
-            />
-        </div>
+                    <div class="DittoShapeBlue">
+                        <img
+                            class="MaledettoSvgButInBlue"
+                            src="../assets/images/DittoShapeBlue.svg"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="PuntiniSpasticiLunghi">
-            <img src="../assets/images/artist-shape-03.png" alt="" />
-        </div>
+                    <div class="PuntiniSpasticiLunghi">
+                        <img
+                            src="../assets/images/artist-shape-03.png"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="IHaveADream">
-            <img
-                src="../assets/images/artist-hero-image-03-204x300.png"
-                alt=""
-            />
-        </div>
+                    <div class="IHaveADream">
+                        <img
+                            src="../assets/images/artist-hero-image-03-204x300.png"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="ComeLeFoglie">
-            <img src="../assets/images/artist-shape-04-127x300.png" alt="" />
-        </div>
+                    <div class="ComeLeFoglie">
+                        <img
+                            src="../assets/images/artist-shape-04-127x300.png"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="ArtAttack">
-            <img src="../assets/images/artist-shape-05-300x198.png" alt="" />
-        </div>
+                    <div class="ArtAttack">
+                        <img
+                            src="../assets/images/artist-shape-05-300x198.png"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="PuntiniSpastici">
-            <img src="../assets/images/maxcoach-shape-12-150x150.png" alt="" />
-        </div>
+                    <div class="PuntiniSpastici">
+                        <img
+                            src="../assets/images/maxcoach-shape-12-150x150.png"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="YouStupidMonkey">
-            <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
-        </div>
+                    <div class="YouStupidMonkey rotating-image-left">
+                        <img
+                            src="../assets/images/artist-hero-image-01.jpg"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="Martin .rotating-image-right">
-            <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
-        </div>
+                    <div class="Martin rotating-image-right">
+                        <img
+                            src="../assets/images/artist-hero-image-04.jpg"
+                            alt=""
+                        />
+                    </div>
 
-        <div class="colorsImg">
-            <img
-                src="../assets/images/artist-hero-image-02-232x300.jpg"
-                alt=""
-            />
-        </div>
-        <img
-            class="ArtistShape1"
-            src="../assets/images/artist-shape-01-600x577.png"
-            alt=""
-        />
+                    <div class="colorsImg rotating-image-top-right">
+                        <img
+                            src="../assets/images/artist-hero-image-02.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <img
+                        class="ArtistShape1"
+                        src="../assets/images/artist-shape-01-600x577.png"
+                        alt=""
+                    />
 
-        <div class="col-5 HelloImMartin">
-            <h1 class="cursive fw-bold fs-1 text-center">Hello, I'm Martin</h1>
-            <p class="fw-bolder text-center fw-bold fs-1">
-                Artist Coaching And Mentoring <br />
-                Might Be for You
-            </p>
-            <div class="d-flex justify-content-center">
-                <button class="btn-orange fs-6">Get Started Today</button>
+                    <div class="HelloImMartin">
+                        <h1 class="cursive fw-bold fs-1 text-center">
+                            Hello, I'm Martin
+                        </h1>
+                        <h2 class="fw-bolder text-center fw-bold fs-1">
+                            Artist Coaching And Mentoring <br />
+                            Might Be for You
+                        </h2>
+                        <div class="d-flex justify-content-center pt-3">
+                            <button class="btn-orange fs-6">
+                                Get Started Today
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -539,7 +567,6 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
-       
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -547,19 +574,21 @@ export default {
                 <h3>Latest From The Blog</h3>
             </div>
         </div>
-           
+        <!-- <div>
+                <img src="../assets/images/maxcoach-shape-14-1536x343.png" 
+                class="lineaOrange-section-cards" 
+                alt="">
+            </div> -->
         <div class="container-fluid" id="article-tips">
             <div>
-                <img src="../assets/images/maxcoach-shape-12-orange.png" 
-                class="dittoBlue-section-cards" 
-                alt="">
+                <img
+                    src="../assets/images/maxcoach-shape-12-orange.png"
+                    class="dittoBlue-section-cards"
+                    alt=""
+                />
             </div>
             <div>
-                <img src="../assets/images/DittoShapeBlue.svg" 
-                class="dittoShapeBlue-section-cards" alt="">
-            </div>
-            <div>
-                <img src="../" alt="">
+                <img src="../" alt="" />
             </div>
 
             <div class="row">
@@ -824,7 +853,7 @@ export default {
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4" >
+                            <div class="col-md-4">
                                 <img
                                     src="../assets/images/artist-event-01-250x300.jpg"
                                     class="card-img-top"
@@ -878,6 +907,29 @@ export default {
 
 // STILI ALE
 
+#jumbotron {
+    background-color: #fbf9f6;
+    .container-fluid {
+        margin-top: 0;
+        position: relative;
+        height: 700px;
+        .rotating-image-left,
+        .rotating-image-right,
+        .rotating-image-top-right {
+            transition: transform 1s ease;
+        }
+
+        .col-12:hover .rotating-image-left {
+            transform: translateX(-40px) translateY(-30px);
+        }
+        .col-12:hover .rotating-image-right {
+            transform: translateX(40px) translateY(10px);
+        }
+        .col-12:hover .rotating-image-top-right {
+            transform: translateX(40px) translateY(-50px);
+        }
+    }
+}
 .ArtistShape1 {
     position: absolute;
     height: 600px;
@@ -939,8 +991,8 @@ export default {
 .DittoShapeBlue {
     position: absolute;
     z-index: 12;
-    top: 30%;
-    left: 0;
+    top: 29%;
+    left: -10%;
     transform: scaley(-1);
 }
 
@@ -986,7 +1038,7 @@ export default {
     position: absolute;
     z-index: 12;
     top: 30%;
-    left: 20%;
+    left: 9%;
 }
 
 .YouStupidMonkey {
@@ -997,6 +1049,7 @@ export default {
 }
 .HelloImMartin {
     position: absolute;
+    top: 30%;
     z-index: 15;
 }
 .Martin {
@@ -1008,30 +1061,24 @@ export default {
 .coaching {
     height: 250px;
 }
-.presentation {
-    position: relative;
-    height: 700px;
-    background-color: #fbf9f6;
 
-    .rotating-image-left,
-    .rotating-image-right,
-    .rotating-image-top-right {
-        transition: transform 1s ease;
-    }
+.rotating-image-left,
+.rotating-image-right,
+.rotating-image-top-right {
+    transition: transform 1s ease;
+}
 
-    .presentation:hover .rotating-image-left {
-        transform: translateX(-40px) translateY(-30px);
-    }
-    .presentation:hover .rotating-image-right {
-        transform: translateX(40px) translateY(10px);
-    }
-    .presentation:hover .rotating-image-top-right {
-        transform: translateX(40px) translateY(-50px);
-    }
+.presentation:hover .rotating-image-left {
+    transform: translateX(-40px) translateY(-30px);
+}
+.presentation:hover .rotating-image-right {
+    transform: translateX(40px) translateY(10px);
+}
+.presentation:hover .rotating-image-top-right {
+    transform: translateX(40px) translateY(-50px);
 }
 
 .resizeImg {
-    height: 115px;
     padding: 10px;
 }
 
@@ -1255,23 +1302,16 @@ export default {
 #article-tips {
     position: relative;
 }
-.dittoBlue-section-cards{
+.dittoBlue-section-cards {
     position: absolute;
     width: 200px;
     height: 200px;
     top: -7%;
     left: 19%;
 }
-.dittoShapeBlue-section-cards {
-    position: absolute;
-    width: 20%;
-    left: 60%;
-    top: 70%;
-}
-.lineaOrange-section-cards{
+.lineaOrange-section-cards {
     color: red;
     position: absolute;
-    
 }
 #card-img1 {
     display: flex;
