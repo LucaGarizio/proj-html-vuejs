@@ -513,6 +513,7 @@ export default {
                     <div
                         v-for="(bullet, index) in 4"
                         :key="index"
+                        :class="{ active: index === currentIndex }"
                         class="bullet"
                         @click="goToSlide(index)"
                     ></div>
@@ -714,18 +715,12 @@ export default {
     </section>
 
     <section class="pb-5">
-        
-        
-
         <div class="container">
-
-
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <h2 class="cursive">Upcoming Event</h2>
                 <h3>Let's Work Together</h3>
             </div>
-
 
             <div class="row mt-5">
                 <!-- Card 1 -->
@@ -874,8 +869,6 @@ export default {
                 </div>
             </div>
         </div>
-
-        
     </section>
 
     <section>
@@ -908,13 +901,7 @@ export default {
                     />
                 </div>
             </div>
-
-
-
-        
-
         </div>
-
     </section>
 </template>
 
@@ -1297,14 +1284,22 @@ export default {
 .carousel-col.active-slide {
     opacity: 1;
 }
-
 .bullet {
     width: 10px;
     height: 10px;
-    background-color: #333;
+    background-color: #dcdbe3;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 10px;
     cursor: pointer;
+    &:hover {
+        transition: 1s;
+        width: 12px;
+        height: 12px;
+        background-color: #3f3a64;
+    }
+}
+.active {
+    background-color: #3f3a64;
 }
 
 .slider-bg-color {

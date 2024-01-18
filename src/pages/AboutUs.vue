@@ -255,10 +255,15 @@ export default {
                     </div>
                 </div>
                 <!-- Bullet navigation -->
-                <div id="bullets" class="d-flex justify-content-center my-5">
+                <div
+                    id="bullets"
+                    class="d-flex justify-content-center align-item-center my-5"
+                    style="height: 30px"
+                >
                     <div
                         v-for="(bullet, index) in 4"
                         :key="index"
+                        :class="{ active: index === currentIndex }"
                         class="bullet"
                         @click="goToSlide(index)"
                     ></div>
@@ -560,7 +565,6 @@ h2 {
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-col {
@@ -574,10 +578,19 @@ h2 {
 .bullet {
     width: 10px;
     height: 10px;
-    background-color: #333;
+    background-color: #dcdbe3;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 10px;
     cursor: pointer;
+    &:hover {
+        transition: 1s;
+        width: 12px;
+        height: 12px;
+        background-color: #3f3a64;
+    }
+}
+.active {
+    background-color: #3f3a64;
 }
 
 .slider-bg-color {
