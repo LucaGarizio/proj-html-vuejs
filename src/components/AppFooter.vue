@@ -5,9 +5,8 @@ export default {
 </script>
 
 <template>
-    <!-- dome -->
-    <!-- <div class="container-footer"></div> -->
-    <footer class="container-fluid" id="container-footer">
+    
+    <footer class="container-fluid p-4" id="container-footer">
         <div class="row">
             <div class="col-4 p-0">
              <ul>

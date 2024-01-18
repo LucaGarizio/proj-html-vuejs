@@ -727,7 +727,7 @@ export default {
                 <!-- Card 1 -->
                 <div class="col-6">
                     <div class="card border-0">
-                        <div class="row no-gutters">
+                        <div class="row">
                             <div class="col-4">
                                 <img
                                     src="../assets/images/artist-event-04-250x300.jpg"
@@ -761,7 +761,7 @@ export default {
 
                 <div class="col-6">
                     <div class="card border-0">
-                        <div class="row no-gutters">
+                        <div class="row">
                             <div class="col-4">
                                 <img
                                     src="../assets/images/artist-event-03-250x300.jpg"
@@ -797,7 +797,7 @@ export default {
             <div class="row mt-5">
                 <div class="col-6">
                     <div class="card border-0">
-                        <div class="row no-gutters">
+                        <div class="row">
                             <div class="col-8" id="descrizione-col8">
                                 <div
                                     class="card-body"
@@ -834,7 +834,7 @@ export default {
 
                 <div class="col-6">
                     <div class="card border-0">
-                        <div class="row no-gutters">
+                        <div class="row">
                             <div class="col-8" id="descrizione-col8">
                                 <div
                                     class="card-body"
@@ -870,6 +870,8 @@ export default {
                 </div>
             </div>
         </div>
+
+        
     </section>
 
     <section>
@@ -902,7 +904,13 @@ export default {
                     />
                 </div>
             </div>
+
+
+
+        
+
         </div>
+
     </section>
 </template>
 
