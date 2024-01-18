@@ -269,108 +269,120 @@ export default {
             </div>
         </div>
     </section>
-    <section class="col-12 positioningClass d-flex justify-content-center p-1">
-        <div class="wrapperPos">
-            <div class="col-12 d-flex p-5 justify-content-center">
-                <div class="col-5 m-3">
-                    <h1 class="cursive fs-2 fw-bold text-center">
-                        Artist coaching
-                    </h1>
-                    <p class="fw-bolder text-center fw-bold fs-2">
-                        I understand what it takes to create. <br />
-                        I can help you with
-                    </p>
-                </div>
-            </div>
-            <div class="d-flex col-12 justify-content-between">
-                <div class="col-3 p-3">
-                    <div class="container">
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 positioningClass d-flex p-2">
+                    <div class="wrapperPos">
+                        <div
+                            class="coaching col-12 d-flex p-5 justify-content-center"
+                        >
+                            <div class="col-6">
+                                <h1 class="cursive fs-2 fw-bold text-center">
+                                    Artist coaching
+                                </h1>
+                                <p class="fw-bolder text-center fw-bold fs-2">
+                                    I understand what it takes to create. <br />
+                                    I can help you with
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex col-12 justify-content-between">
+                            <div class="col-3 p-3">
+                                <div class="container">
+                                    <img
+                                        class="resizeImg"
+                                        src="../assets/images/artist-box-image-01.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h5>On time</h5>
+                                    <p class="fs-6">
+                                        Punctuality is our top priority because
+                                        it's an essential criteria to assess a
+                                        program quality.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-5">
+                                <div class="container">
+                                    <img
+                                        class="resizeImg"
+                                        src="../assets/images/artist-box-image-02.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h5>On time</h5>
+                                    <p class="fs-6">
+                                        Punctuality is our top priority because
+                                        it's an essential criteria to assess a
+                                        program quality.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-3">
+                                <div class="container">
+                                    <img
+                                        class="resizeImg"
+                                        src="../assets/images/artist-box-image-03.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h5>On time</h5>
+                                    <p class="fs-6">
+                                        Punctuality is our top priority because
+                                        it's an essential criteria to assess a
+                                        program quality.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 p-5">
+                                <div class="container">
+                                    <img
+                                        class="resizeImg"
+                                        src="../assets/images/artist-box-image-04.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h5>On time</h5>
+                                    <p class="fs-6">
+                                        Punctuality is our top priority because
+                                        it's an essential criteria to assess a
+                                        program quality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="DittoShapeOG">
                         <img
-                            class="resizeImg"
-                            src="../assets/images/artist-box-image-01.png"
+                            class="MaledettoSvgParte3"
+                            src="../assets/images/DittoShapeOG.svg"
                             alt=""
                         />
                     </div>
-                    <div>
-                        <h5>On time</h5>
-                        <p class="fs-6">
-                            Punctuality is our top priority because it's an
-                            essential criteria to assess a program quality.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-3 p-5">
-                    <div class="container">
-                        <img
-                            class="resizeImg"
-                            src="../assets/images/artist-box-image-02.png"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <h5>On time</h5>
-                        <p class="fs-6">
-                            Punctuality is our top priority because it's an
-                            essential criteria to assess a program quality.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-3 p-3">
-                    <div class="container">
-                        <img
-                            class="resizeImg"
-                            src="../assets/images/artist-box-image-03.png"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <h5>On time</h5>
-                        <p class="fs-6">
-                            Punctuality is our top priority because it's an
-                            essential criteria to assess a program quality.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-3 p-5">
-                    <div class="container">
-                        <img
-                            class="resizeImg"
-                            src="../assets/images/artist-box-image-04.png"
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <h5>On time</h5>
-                        <p class="fs-6">
-                            Punctuality is our top priority because it's an
-                            essential criteria to assess a program quality.
-                        </p>
-                    </div>
+                    <img
+                        class="ArtistShape"
+                        src="../assets/images/artist-shape-01-600x577.png"
+                        alt=""
+                    />
+                    <img
+                        class="cerchioRigato"
+                        src="../assets/images/maxcoach-shape-13.png"
+                        alt=""
+                    />
+                    <img
+                        class="LineRider"
+                        src="../assets/images/maxcoach-shape-14.png"
+                        alt=""
+                    />
                 </div>
             </div>
         </div>
-        <div class="DittoShapeOG">
-            <img
-                class="MaledettoSvgParte3"
-                src="../assets/images/DittoShapeOG.svg"
-                alt=""
-            />
-        </div>
-        <img
-            class="ArtistShape"
-            src="../assets/images/artist-shape-01-600x577.png"
-            alt=""
-        />
-        <img
-            class="CerchioRigato"
-            src="../assets/images/maxcoach-shape-13.png"
-            alt=""
-        />
-        <img
-            class="LineRider"
-            src="../assets/images/maxcoach-shape-14.png"
-            alt=""
-        />
     </section>
 
     <!-- SEZIONI LUCA -->
@@ -529,7 +541,7 @@ export default {
                 >
                     <div
                         class="card mb-5 border-0"
-                        style="width: 21rem; height: 31rem"
+                        style="width: 21rem; height: 32rem"
                     >
                         <img
                             :src="card.img"
@@ -567,19 +579,21 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
-        <div>
-            <div class="text-center mt-5">
+        <div class="container-fluid" id="article-tips">
+            <div class="text-center mt-5 mb-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <h2 class="cursive">Article and Tips</h2>
                 <h3>Latest From The Blog</h3>
             </div>
-        </div>
-        <!-- <div>
-                <img src="../assets/images/maxcoach-shape-14-1536x343.png" 
-                class="lineaOrange-section-cards" 
-                alt="">
-            </div> -->
-        <div class="container-fluid" id="article-tips">
+
+            <div>
+                <img
+                    src="../assets/images/DittoShapeBlue.svg"
+                    class="dittoShape-section-cards"
+                    alt=""
+                />
+            </div>
+
             <div>
                 <img
                     src="../assets/images/maxcoach-shape-12-orange.png"
@@ -625,7 +639,7 @@ export default {
                             </div>
                         </div>
 
-                        <div class="col-md-5">
+                        <div class="col-md-5 pos-relative">
                             <div class="card border-0" id="card">
                                 <img
                                     src="../assets/images/artist-blog-02-500x680.jpg"
@@ -690,10 +704,8 @@ export default {
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div>
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 mb-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <span>Get into details now? </span>
                 <a href=""
@@ -945,19 +957,19 @@ export default {
     top: 15%;
     z-index: 4;
 }
-.CerchioRigato {
+.cerchioRigato {
     position: absolute;
     height: 200px;
-    left: 80%;
-    top: 25%;
+    right: -10%;
+    top: 35%;
     z-index: 3;
     transform: scaley(-1);
 }
 .ArtistShape {
     position: absolute;
-    height: 400px;
-    left: 0;
-    top: 25%;
+    height: 550px;
+    left: -12%;
+    top: 17%;
     z-index: 2;
     transform: scaley(-1);
 }
@@ -1257,8 +1269,6 @@ export default {
         }
     }
     .card-img-top {
-        // width: 100%;
-        // height: 100%;
         object-fit: cover;
         transition: transform 0.5s ease;
     }
@@ -1269,19 +1279,23 @@ export default {
 
     .card-body {
         transition: transform 0.5s ease;
+        position: relative;
+        z-index: 0;
     }
-    .card:hover .card-body {
+    .col-3:hover .card-body {
         transform: translateY(-40px);
-        border: 1px solid black;
+        border: 2px solid #f07c44;
         background-color: #fff;
+        z-index: 2;
     }
 }
 .tear {
     width: 500px;
     height: 700px;
     position: absolute;
-    top: 40%;
+    top: 37%;
     left: -15%;
+    z-index: 1;
 }
 
 // STILI DOME
@@ -1289,27 +1303,41 @@ export default {
 #section1-dome {
     background-color: #f5f7fa;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     position: relative;
+
+    .container-fluid {
+        width: 90%;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        position: relative;
+        overflow: hidden;
+
+        .col-md-5:hover .dittoBlue-section-cards {
+            transform: translate(-20%, -20%);
+        }
+        .col-md-5:hover .dittoShape-section-cards {
+            transform: translate(-20%, -20%);
+        }
+
+        .dittoBlue-section-cards {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 15%;
+            left: 19%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .dittoShape-section-cards {
+            position: absolute;
+            width: 20%;
+            transition: transform 0.3s ease-in-out;
+            top: 70%;
+            left: 60%;
+        }
+    }
 }
-.container-fluid {
-    width: 90%;
-    margin-top: 35px;
-}
-#article-tips {
-    position: relative;
-}
-.dittoBlue-section-cards {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: -7%;
-    left: 19%;
-}
-.lineaOrange-section-cards {
-    color: red;
-    position: absolute;
-}
+
 #card-img1 {
     display: flex;
     align-items: center;
