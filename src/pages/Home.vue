@@ -862,7 +862,7 @@ export default {
 .CerchioRigato {
     position: absolute;
     height: 200px;
-    left: 80%;
+    left: 80 %;
     top: 25%;
     z-index: 3;
     transform: scaley(-1);
