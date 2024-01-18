@@ -323,6 +323,7 @@ export default {
 .large-menu {
     width: 80vw;
 }
+
 .max-logo {
     height: 25px;
     width: 150px;

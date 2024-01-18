@@ -81,7 +81,6 @@ export default {
 }
 </script>
 <template>
-    
     <section class="padding-y" id="about">
         <div class="container">
             <div class="row d-flex justify-content-center mb-5">
@@ -167,7 +166,7 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="margin-top" id="youtube-section">
+    <section class="py-5" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
@@ -377,16 +376,17 @@ h2 {
     }
 }
 #about {
-    background-color: #f6f6f6;
-
+    padding: 100px 0;
+    background-color: #fbf2eb;
     .col-3 {
         .card {
             padding: 30px 0;
             border: none;
-            background-color: #f6f6f6;
+            background-color: #fbf2eb;
             &:hover {
                 background-color: #fff;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.1);
             }
         }
 
@@ -395,8 +395,6 @@ h2 {
         }
     }
 }
-
-
 
 .padding-y {
     padding: 100px 0 100px;
@@ -427,50 +425,53 @@ h2 {
 
 // sezione youtube
 // SEZIONE YOUTUBE VIDEO
-
 #youtube-section {
-    .container-fluid {
-        .rotating-image-left,
-        .rotating-image-right,
-        .rotating-image-top-right {
-            transition: transform 1s ease;
-        }
-
-        .col:hover .rotating-image-left {
-            transform: translateX(-40px) translateY(-30px);
-        }
-        .col:hover .rotating-image-right {
-            transform: translateX(40px) translateY(10px);
-        }
-        .col:hover .rotating-image-top-right {
-            transform: translateX(40px) translateY(-50px);
-        }
+    position: relative;
+    background-image: url('../assets/images/waveabout.svg');
+    background-position-y: 0;
+    background-repeat: no-repeat;
+}
+.container-fluid {
+    .rotating-image-left,
+    .rotating-image-right,
+    .rotating-image-top-right {
+        transition: transform 1s ease;
     }
 
-    .card {
-        position: relative;
-        overflow: hidden;
+    .col:hover .rotating-image-left {
+        transform: translateX(-40px) translateY(-30px);
     }
-    .youtube-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
+    .col:hover .rotating-image-right {
+        transform: translateX(-60px) translateY(-50px);
     }
-
-    .card:hover .youtube-video {
-        transform: scale(1.1);
+    .col:hover .rotating-image-top-right {
+        transform: translateX(40px) translateY(-50px);
     }
 }
+
+.card {
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+.youtube-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .youtube-video {
+    transform: scale(1.1);
+}
+
 .pos-relative {
     position: relative;
 }
-.youtube-video {
-    z-index: 1;
-}
+
 .circle {
     position: absolute;
-    top: 10%;
+    top: 4%;
     left: 105%;
     width: 100px;
     height: 100px;
@@ -478,6 +479,7 @@ h2 {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    z-index: 20;
     background-color: #ecc5ab;
     .inner-circle {
         width: 75px;
@@ -492,7 +494,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 5;
+    z-index: 11;
 }
 
 .animated-bg-top-image {
@@ -500,7 +502,7 @@ h2 {
     position: absolute;
     top: -5%;
     left: -6%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .animated-bg-bottom-image {
@@ -516,7 +518,7 @@ h2 {
     height: 250px;
     top: -13%;
     left: -10%;
-    z-index: -2;
+    z-index: 0;
 }
 
 // SEZIONE CAROSELLO
