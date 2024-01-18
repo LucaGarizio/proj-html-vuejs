@@ -515,6 +515,8 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
+
+     
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -1170,4 +1172,8 @@ export default {
     font-size: 40px;
     font-family: 'Playfair Display', serif;
 }
+
+
+
+
 </style>
