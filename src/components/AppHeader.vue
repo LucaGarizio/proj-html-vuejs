@@ -34,7 +34,7 @@ export default {
         <div class="col-6 d-flex justify-content-between">
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle fw-bold no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -145,7 +145,7 @@ export default {
             <!-- PAGES  -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle no-border fw-bold"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -181,7 +181,7 @@ export default {
             <!-- Courses -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle no-border fw-bold"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -207,7 +207,7 @@ export default {
             <!-- features  -->
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle no-border fw-bold"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -233,7 +233,7 @@ export default {
 
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle fw-bold no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -259,7 +259,7 @@ export default {
 
             <div class="dropdown">
                 <button
-                    class="btn dropdown-toggle no-border"
+                    class="btn dropdown-toggle fw-bold no-border"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -323,6 +323,7 @@ export default {
 .large-menu {
     width: 80vw;
 }
+
 .max-logo {
     height: 25px;
     width: 150px;
