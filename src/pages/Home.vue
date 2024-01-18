@@ -169,7 +169,7 @@ export default {
 <template>
     <!-- SEZIONI ALE -->
     <section
-        class="presentation col-12 d-flex align-items-center justify-content-center"
+        class="presentation d-flex align-items-center justify-content-center"
     >
         <div class="DittoShape">
             <img
@@ -214,7 +214,7 @@ export default {
             <img src="../assets/images/artist-hero-image-01.jpg" alt="" />
         </div>
 
-        <div class="Martin">
+        <div class="Martin .rotating-image-right">
             <img src="../assets/images/artist-hero-image-04.jpg" alt="" />
         </div>
 
@@ -422,9 +422,6 @@ export default {
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="wave-container">
-            <img class="onde" src="../assets/images/wave.svg" alt="" />
         </div>
     </section>
     <!-- sezione slider -->
@@ -1015,6 +1012,22 @@ export default {
     position: relative;
     height: 700px;
     background-color: #fbf9f6;
+
+    .rotating-image-left,
+    .rotating-image-right,
+    .rotating-image-top-right {
+        transition: transform 1s ease;
+    }
+
+    .presentation:hover .rotating-image-left {
+        transform: translateX(-40px) translateY(-30px);
+    }
+    .presentation:hover .rotating-image-right {
+        transform: translateX(40px) translateY(10px);
+    }
+    .presentation:hover .rotating-image-top-right {
+        transform: translateX(40px) translateY(-50px);
+    }
 }
 
 .resizeImg {
@@ -1044,6 +1057,11 @@ export default {
 // SEZIONE YOUTUBE VIDEO
 
 #youtube-section {
+    background-image: url('../assets/images/wave.svg');
+    background-position-y: -30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 70px;
     .container-fluid {
         .rotating-image-left,
         .rotating-image-right,
@@ -1061,21 +1079,21 @@ export default {
             transform: translateX(40px) translateY(-50px);
         }
     }
+}
 
-    .card {
-        position: relative;
-        overflow: hidden;
-    }
-    .youtube-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
+.card {
+    position: relative;
+    overflow: hidden;
+}
+.youtube-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
 
-    .card:hover .youtube-video {
-        transform: scale(1.1);
-    }
+.card:hover .youtube-video {
+    transform: scale(1.1);
 }
 
 .pos-relative {
@@ -1164,12 +1182,12 @@ export default {
 .carousel-col {
     flex: 0 0 calc(100% / 3);
     height: 27rem;
-    opacity: 0.5; /* Opacità di default per tutte le colonne */
+    opacity: 0.5;
     transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-col.active-slide {
-    opacity: 1; /* Opacità completa solo sulla colonna attiva */
+    opacity: 1;
 }
 
 .bullet {
