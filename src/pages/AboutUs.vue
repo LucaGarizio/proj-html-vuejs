@@ -1,8 +1,13 @@
 <script>
 export default {
+    // DATA LUCA
     name: 'AboutUs',
     data() {
         return {
+            latestNumber: 0,
+            latestNumberCol2: 0,
+            latestNumberCol3: 0,
+            latestNumberCol4: 0,
             currentIndex: 0,
             testimonialCards: [
                 {
@@ -57,7 +62,6 @@ export default {
         }
     },
     computed: {
-        // Metodo calcolato per definire lo stile del carosello in base all'indice corrente
         carouselStyle() {
             // Calcola la percentuale della dimensione di cui si deve spostare lo slide al cambio di card
             // Moltiplicalo per -1, per invertire la direzione della traslazione
@@ -74,13 +78,69 @@ export default {
     methods: {
         // Metodo per passare a una determinata slide
         goToSlide(index) {
-            // Imposta l'indice corrente al valore specificato
+            // Imposta l'indice corrente al valore indicato
             this.currentIndex = index
         },
+
+        // Funzione per caricare numeri nella prima colonna
+        loadNumberCol1() {
+            for (let i = 0; i <= 1926; i++) {
+                // Utilizza setTimeout per ritardare l'assegnazione del valore
+                setTimeout(() => {
+                    // Assegna il valore corrente a latestNumber
+                    this.latestNumber = i
+
+                    console.log(i)
+                }, i * 5) // Ritarda il calcolo dei numeri
+            }
+        },
+
+        // carica numeri nella seconda colonna
+        loadNumberCol2() {
+            for (let i = 0; i <= 3092; i++) {
+                setTimeout(() => {
+                    this.latestNumberCol2 = i
+                    console.log(i)
+                }, i * 3.15)
+            }
+        },
+
+        // carica numeri nella terza colonna
+        loadNumberCol3() {
+            for (let i = 0; i <= 200; i++) {
+                setTimeout(() => {
+                    this.latestNumberCol3 = i
+                    console.log(i)
+                }, i * 49)
+            }
+        },
+
+        // carica i numeri nella quarta colonna
+        loadNumberCol4() {
+            for (let i = 0; i <= 100; i++) {
+                setTimeout(() => {
+                    this.latestNumberCol4 = i
+                    console.log(i)
+                }, i * 100)
+            }
+        },
+    },
+
+    mounted() {
+        // richiama la funzione per far partire il conteggio
+        this.loadNumberCol1()
+        this.loadNumberCol2()
+        this.loadNumberCol3()
+        this.loadNumberCol4()
     },
 }
 </script>
 <template>
+    <div class="move-to-top">
+        <a href="#about">
+            <i class="fa-solid fa-arrow-up-long"></i>
+        </a>
+    </div>
     <section class="padding-y" id="about">
         <div class="container">
             <div class="row d-flex justify-content-center mb-5">
@@ -317,19 +377,21 @@ export default {
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-3">
-                    <h2>1.926</h2>
+                    <h2>
+                        {{ latestNumber }}
+                    </h2>
                     <h6>finished sessions</h6>
                 </div>
                 <div class="col-3">
-                    <h2>3.092 +</h2>
+                    <h2>{{ latestNumberCol2 }} +</h2>
                     <h6>Online Enrollment</h6>
                 </div>
                 <div class="col-3">
-                    <h2>200</h2>
+                    <h2>{{ latestNumberCol3 }}</h2>
                     <h6>Subjects Taught</h6>
                 </div>
                 <div class="col-3">
-                    <h2>100%</h2>
+                    <h2>{{ latestNumberCol4 }} %</h2>
                     <h6>Satisfaction Rate</h6>
                 </div>
             </div>
@@ -382,6 +444,41 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+.move-to-top {
+    background-color: #20ad96;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 30px;
+    position: fixed;
+    z-index: 10;
+    right: 2%;
+    bottom: 10%;
+    a {
+        scroll-behavior: smooth;
+    }
+}
+.fa-arrow-up-long {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    &:hover {
+        animation: reset 1.5s linear;
+    }
+
+    @keyframes reset {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
 h6 {
     color: #b1afc0;
     text-transform: uppercase;

@@ -5,6 +5,11 @@ export default {
 </script>
 <template>
     <!-- LUCA -->
+    <div class="move-to-top">
+        <a href="#info">
+            <i class="fa-solid fa-arrow-up-long"></i>
+        </a>
+    </div>
     <section id="info">
         <div class="container my-5">
             <div class="row d-flex justify-content-center">
@@ -128,7 +133,41 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+.move-to-top {
+    background-color: #20ad96;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 30px;
+    position: fixed;
+    z-index: 10;
+    right: 2%;
+    bottom: 10%;
+    a {
+        scroll-behavior: smooth;
+    }
+}
+.fa-arrow-up-long {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    &:hover {
+        animation: reset 1.5s linear;
+    }
 
+    @keyframes reset {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
 section {
     margin: 100px;
 }

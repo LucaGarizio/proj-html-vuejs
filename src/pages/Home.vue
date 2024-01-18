@@ -5,6 +5,7 @@ export default {
         return {
             // DATA LUCA
             // DATA CAROSELLO
+            isScrolled: false,
             currentIndex: 0,
             testimonialCards: [
                 {
@@ -141,7 +142,9 @@ export default {
             ],
         }
     },
-
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll)
+    },
     computed: {
         // Metodo calcolato per definire lo stile del carosello in base all'indice corrente
         carouselStyle() {
@@ -162,6 +165,10 @@ export default {
         goToSlide(index) {
             // Imposta l'indice corrente al valore specificato
             this.currentIndex = index
+        },
+        handleScroll() {
+            // Verifica se l'utente sta scorrendo la pagina
+            this.isScrolled = window.scrollY > 0
         },
     },
 }
@@ -387,6 +394,14 @@ export default {
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
+    <div class="move-to-top" v-show="isScrolled">
+        <a href="#jumbotron">
+            <i class="fa-solid fa-arrow-up-long"></i>
+        </a>
+    </div>
+    <div class="costumer-service">
+        <i class="fa-solid fa-message"></i>
+    </div>
     <section class="margin-top margin-bottom">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
@@ -921,53 +936,6 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-#article-and-tips {
-    background-color: #f5f7fa;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-
-    .container {
-        position: relative;
-        overflow: hidden;
-
-        .rotating-image-left,
-        .rotating-image-right,
-        .rotating-image-top-right {
-            transition: transform 1s ease;
-        }
-
-        &:hover .rotating-image-left {
-            transform: translateX(-40px) translateY(-30px);
-        }
-
-        &:hover .rotating-image-right {
-            transform: translateX(40px) translateY(10px);
-        }
-
-        // &:hover .rotating-image-top-right {
-        //     transform: translateX(40px) translateY(-50px);
-        // }
-
-        .dittoBlue-section-cards {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            top: 15%;
-            left: 19%;
-        }
-
-        .dittoShape-section-cards {
-            position: absolute;
-            top: 70%;
-            right: 20%;
-            img {
-                width: 300px;
-            }
-        }
-    }
-}
-
 // STILI ALE
 
 #jumbotron {
@@ -1143,6 +1111,63 @@ export default {
 }
 
 // STILI LUCA
+.move-to-top {
+    display: none;
+    background-color: #ef6f31;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 30px;
+    position: fixed;
+    z-index: 10;
+    right: 2%;
+    bottom: 14%;
+    a {
+        scroll-behavior: smooth;
+    }
+}
+.fa-arrow-up-long {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    &:hover {
+        animation: reset 1.5s linear;
+    }
+
+    @keyframes reset {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.costumer-service {
+    background-color: #1972f5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 30px;
+    position: fixed;
+    z-index: 10;
+    right: 2%;
+    bottom: 4%;
+}
+.fa-message {
+    color: white;
+    font-size: 25px;
+    padding: 20px;
+    transform: rotate(-17deg);
+}
 
 .cursive {
     font-family: $secondary-font;
@@ -1360,6 +1385,52 @@ export default {
 // STILI DOME
 // Sezione 1 CARD
 
+#article-and-tips {
+    background-color: #f5f7fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    .container {
+        position: relative;
+        overflow: hidden;
+
+        .rotating-image-left,
+        .rotating-image-right,
+        .rotating-image-top-right {
+            transition: transform 1s ease;
+        }
+
+        &:hover .rotating-image-left {
+            transform: translateX(-40px) translateY(-30px);
+        }
+
+        &:hover .rotating-image-right {
+            transform: translateX(40px) translateY(10px);
+        }
+
+        // &:hover .rotating-image-top-right {
+        //     transform: translateX(40px) translateY(-50px);
+        // }
+
+        .dittoBlue-section-cards {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 15%;
+            left: 19%;
+        }
+
+        .dittoShape-section-cards {
+            position: absolute;
+            top: 70%;
+            right: 20%;
+            img {
+                width: 300px;
+            }
+        }
+    }
+}
 .col-img1 {
     display: flex;
     align-items: center;
