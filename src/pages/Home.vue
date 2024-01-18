@@ -423,9 +423,6 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="wave-container">
-            <img class="onde" src="../assets/images/wave.svg" alt="" />
-        </div>
     </section>
     <!-- sezione slider -->
     <section class="slider-bg-color" id="carousel">
@@ -542,8 +539,6 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
-
-     
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -683,7 +678,7 @@ export default {
             <div class="row mt-5">
                 <!-- Card 1 -->
                 <div class="col-md-6">
-                    <div class="card border-0" >
+                    <div class="card border-0">
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img
@@ -887,7 +882,7 @@ export default {
 .CerchioRigato {
     position: absolute;
     height: 200px;
-    left: 80 %;
+    left: 80%;
     top: 25%;
     z-index: 3;
     transform: scaley(-1);
@@ -1032,6 +1027,11 @@ export default {
 // SEZIONE YOUTUBE VIDEO
 
 #youtube-section {
+    background-image: url('../assets/images/wave.svg');
+    background-position-y: -30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 70px;
     .container-fluid {
         .rotating-image-left,
         .rotating-image-right,
@@ -1049,21 +1049,21 @@ export default {
             transform: translateX(40px) translateY(-50px);
         }
     }
+}
 
-    .card {
-        position: relative;
-        overflow: hidden;
-    }
-    .youtube-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
+.card {
+    position: relative;
+    overflow: hidden;
+}
+.youtube-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
 
-    .card:hover .youtube-video {
-        transform: scale(1.1);
-    }
+.card:hover .youtube-video {
+    transform: scale(1.1);
 }
 
 .pos-relative {
@@ -1152,12 +1152,12 @@ export default {
 .carousel-col {
     flex: 0 0 calc(100% / 3);
     height: 27rem;
-    opacity: 0.5; /* Opacità di default per tutte le colonne */
+    opacity: 0.5;
     transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-col.active-slide {
-    opacity: 1; /* Opacità completa solo sulla colonna attiva */
+    opacity: 1;
 }
 
 .bullet {
@@ -1210,7 +1210,7 @@ export default {
     left: -15%;
 }
 
-// STILI DOME 
+// STILI DOME
 // Sezione 1 CARD
 #section1-dome {
     background-color: #f5f7fa;
@@ -1230,7 +1230,6 @@ export default {
 #card-img1 {
     display: flex;
     align-items: center;
-    
 }
 #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1314,8 +1313,4 @@ export default {
     font-size: 40px;
     font-family: 'Playfair Display', serif;
 }
-
-
-
-
 </style>
