@@ -55,6 +55,30 @@ export default {
                         },
                     ],
                 },
+                {
+                    title: "It's a choice of quality for people with special needs",
+                    paragraph:
+                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                    info: [
+                        {
+                            img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
+                            name: 'Florence Themes',
+                            role: '/ Multimedia Admin',
+                        },
+                    ],
+                },
+                {
+                    title: 'High level of efficiency and scientific teaching methods',
+                    paragraph:
+                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from syllabus. Great study portal for people like me.',
+                    info: [
+                        {
+                            img: '../src/assets/images/artist-testimonial-avatar-04.jpg',
+                            name: 'Mina Hollace',
+                            role: '/ Freelancer',
+                        },
+                    ],
+                },
             ],
             // DATA SEZIONE SHOP
             cardShop: [
@@ -125,8 +149,7 @@ export default {
             // Moltiplicalo per -1, per invertire la direzione della traslazione
             const percentualeTraslazione =
                 -1 *
-                (this.currentIndex *
-                    (33.333 / (this.testimonialCards.length - 1)))
+                (this.currentIndex * (170 / (this.testimonialCards.length - 1)))
             // Restituzione di un oggetto con le proprietà di stile
             return {
                 transition: 'transform 0.5s ease-in-out',
@@ -324,12 +347,12 @@ export default {
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
-    <section class="section-margin-bottom margin-top">
+    <section class="margin-top margin-bottom">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
                     <img
-                        class="pb-2"
+                        class="mb-2"
                         src="../assets/images/artist-quote-icon.png"
                         alt=""
                     />
@@ -360,7 +383,7 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="section-margin" id="youtube-section">
+    <section id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
@@ -411,7 +434,7 @@ export default {
             <div class="row">
                 <div class="text-center">
                     <h2 class="cursive">Testimonials</h2>
-                    <h3>Why do people love me?</h3>
+                    <h3 class="mb-4">Why do people love me?</h3>
                 </div>
             </div>
 
@@ -420,6 +443,7 @@ export default {
                     <div
                         v-for="(card, index) in testimonialCards"
                         :key="index"
+                        :class="{ 'active-slide': index === currentIndex }"
                         class="carousel-col d-flex justify-content-between p-4 mx-1"
                     >
                         <!-- Tuo contenuto del carousel qui -->
@@ -451,7 +475,7 @@ export default {
                 <!-- Bullet navigation -->
                 <div id="bullets" class="d-flex justify-content-center my-5">
                     <div
-                        v-for="(card, index) in testimonialCards"
+                        v-for="(bullet, index) in 4"
                         :key="index"
                         class="bullet"
                         @click="goToSlide(index)"
@@ -519,6 +543,8 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
+
+     
         <div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
@@ -531,8 +557,8 @@ export default {
             <div class="row">
                 <div class="col-12">
                     <div class="row justify-content-around">
-                        <div class="col-md-3">
-                            <div class="card border-0">
+                        <div class="col-md-3" id="card-img1">
+                            <div class="card border-0" id="card">
                                 <img
                                     src="../assets/images/artist-blog-03-480x356.jpeg"
                                     class="card-img-top"
@@ -563,7 +589,7 @@ export default {
                         </div>
 
                         <div class="col-md-5">
-                            <div class="card border-0">
+                            <div class="card border-0" id="card">
                                 <img
                                     src="../assets/images/artist-blog-02-500x680.jpg"
                                     class="card-img-top"
@@ -595,7 +621,7 @@ export default {
                         </div>
 
                         <div class="col-md-3">
-                            <div class="card border-0">
+                            <div class="card border-0" id="card">
                                 <img
                                     src="../assets/images/artist-blog-01-480x356.jpg"
                                     class="card-img-top"
@@ -658,7 +684,7 @@ export default {
             <div class="row mt-5">
                 <!-- Card 1 -->
                 <div class="col-md-6">
-                    <div class="card border-0">
+                    <div class="card border-0" >
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img
@@ -1000,8 +1026,8 @@ export default {
 .margin-top {
     margin-top: 150px;
 }
-.section-margin-bottom {
-    margin-bottom: 200px;
+.margin-bottom {
+    margin-bottom: 150px;
 }
 
 // SEZIONE YOUTUBE VIDEO
@@ -1009,9 +1035,7 @@ export default {
 .pos-relative {
     position: relative;
 }
-.youtube-video {
-    z-index: 1;
-}
+
 .circle {
     position: absolute;
     top: 10%;
@@ -1094,6 +1118,12 @@ export default {
 .carousel-col {
     flex: 0 0 calc(100% / 3);
     height: 27rem;
+    opacity: 0.5; /* Opacità di default per tutte le colonne */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-col.active-slide {
+    opacity: 1; /* Opacità completa solo sulla colonna attiva */
 }
 
 .bullet {
@@ -1119,7 +1149,8 @@ export default {
     left: -15%;
 }
 
-// STILI DOME
+// STILI DOME 
+// Sezione 1 CARD
 #section1-dome {
     background-color: #f5f7fa;
     padding-top: 20px;
@@ -1135,6 +1166,14 @@ export default {
     background-repeat: no-repeat;
 }
 
+#card-img1 {
+    display: flex;
+    align-items: center;
+    
+}
+#card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .card-body-centrale {
     position: absolute;
     top: 80%;
@@ -1214,4 +1253,8 @@ export default {
     font-size: 40px;
     font-family: 'Playfair Display', serif;
 }
+
+
+
+
 </style>
