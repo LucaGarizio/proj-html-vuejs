@@ -567,18 +567,7 @@ export default {
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="section1-dome">
-        <!-- <div>
-            <div class="text-center mt-5">
-                
-                <h2 class="cursive">Article and Tips</h2>
-                <h3>Latest From The Blog</h3>
-            </div>
-        </div>
-            <div>
-                <img src="../assets/images/maxcoach-shape-14-1536x343.png" 
-                class="lineaOrange-section-cards" 
-                alt="">
-            </div> -->
+       
         <div class="container-fluid" id="article-tips">
 
             
@@ -639,7 +628,7 @@ export default {
                             </div>
                         </div>
 
-                        <div class="col-md-5">
+                        <div class="col-md-5 pos-relative">
                             <div class="card border-0" id="card">
                                 <img
                                     src="../assets/images/artist-blog-02-500x680.jpg"
@@ -1311,36 +1300,41 @@ export default {
     padding-top: 20px;
     padding-bottom: 20px;
     position: relative;
-}
-.container-fluid {
-    width: 90%;
-    margin-top: 35px;
-    margin-bottom:35px;
-    position: relative;
-    overflow: hidden;
-}
-.container-fluid:hover .dittoBlue-section-cards{
-    transform: translate(-20%, -20%);
-}
-.container-fluid:hover .dittoShape-section-cards{
-    transform: translate(-20%, -20%);
+
+    .container-fluid {
+        width: 90%;
+        margin-top: 35px;
+        margin-bottom:35px;
+        position: relative;
+        overflow: hidden;
+    
+    
+        .col-md-5:hover .dittoBlue-section-cards{
+            transform: translate(-20%, -20%);
+        }
+        .col-md-5:hover .dittoShape-section-cards{
+            transform: translate(-20%, -20%);
+        }
+
+        .dittoBlue-section-cards {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 15%;
+            left: 19%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .dittoShape-section-cards{
+            position: absolute;
+            width: 20%;
+            transition: transform 0.3s ease-in-out;
+            top: 70%;
+            left: 60%;
+        }
+    }
+
 }
 
-.dittoBlue-section-cards {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 15%;
-    left: 19%;
-    transition: transform 0.3s ease-in-out;
-}
-.dittoShape-section-cards{
-    position: absolute;
-    width: 20%;
-    transition: transform 0.3s ease-in-out;
-    top: 70%;
-    left: 60%;
-}
 #card-img1 {
     display: flex;
     align-items: center;
