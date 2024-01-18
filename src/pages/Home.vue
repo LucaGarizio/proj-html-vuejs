@@ -898,7 +898,7 @@ export default {
                         </p>
                     </div>
 
-                    <div class="col-6">
+                    <div class="">
                         <input
                             type="email"
                             class="form-control"
@@ -1423,8 +1423,8 @@ export default {
 }
 
 #div-newsletter {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     text-align: right;
     position: absolute;
     top: 20%;
