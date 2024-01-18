@@ -550,9 +550,7 @@ h2 {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 12px 0 rgba(0, 0, 0, 0.19);
     }
-    .slide-control {
-        font-size: 24px;
-    }
+
     .shrink {
         width: 100px;
         height: 100px;
@@ -574,7 +572,8 @@ h2 {
     }
 
     .carousel-card {
-        width: 95%;
+        width: 96%;
+        margin: 0 auto;
     }
 }
 .bullet {
