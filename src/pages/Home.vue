@@ -62,7 +62,7 @@ export default {
                 {
                     title: "It's a choice of quality for people with special needs",
                     paragraph:
-                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
+                        "I'm a very strict person so i require everything to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
                     info: [
                         {
                             img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
@@ -521,16 +521,19 @@ export default {
                             alt=""
                         />
                         <div class="overlay">
-                            <img
-                                src="../assets/images/icon-youtube-play.png"
-                                alt="youtube icon play"
-                            />
+                            <a
+                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                                ><img
+                                    src="../assets/images/icon-youtube-play.png"
+                                    alt="youtube icon play"
+                            /></a>
                         </div>
                     </div>
                     <div class="circle rotating-image-right">
                         <div class="inner-circle"></div>
                     </div>
                     <div class="card border-0">
+                        <a href=""></a>
                         <img
                             class="youtube-video"
                             src="../assets/images/artist-video-poster.jpg"
@@ -1022,6 +1025,7 @@ export default {
 
 #jumbotron {
     background-color: #fbf9f6;
+    padding-top: 40px;
     .container-fluid {
         margin-top: 0;
         position: relative;
