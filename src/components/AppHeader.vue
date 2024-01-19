@@ -162,25 +162,19 @@ export default {
                     Pages
                 </button>
                 <ul class="dropdown-menu">
-                    <div class="col-2">
+                    <div class="col-5 p-2">
                         <li>
-                            <Router-Link
-                                class="dropdown-item"
-                                :to="{ name: 'home' }"
+                            <Router-Link :to="{ name: 'home' }"
                                 >Home</Router-Link
                             >
                         </li>
                         <li>
-                            <Router-Link
-                                class="dropdown-item"
-                                :to="{ name: 'about-us' }"
-                                >About Us</Router-Link
+                            <Router-Link :to="{ name: 'about-us' }"
+                                >About</Router-Link
                             >
                         </li>
                         <li>
-                            <Router-Link
-                                class="dropdown-item"
-                                :to="{ name: 'contact' }"
+                            <Router-Link :to="{ name: 'contact' }"
                                 >Contact</Router-Link
                             >
                         </li>
@@ -325,6 +319,7 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 header {
+    font-family: $tertiary-font;
     position: fixed;
     z-index: 500;
     top: 0;
