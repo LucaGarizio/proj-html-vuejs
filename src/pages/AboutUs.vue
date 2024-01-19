@@ -151,6 +151,7 @@ export default {
 }
 </script>
 <template>
+    <!-- SEZIONE LUCA -->
     <!-- CHATBOX -->
     <div class="container-fluid chatbox text-white" v-show="visibility">
         <div class="row top">
@@ -214,7 +215,7 @@ export default {
             <i class="fa-solid fa-arrow-up-long"></i>
         </a>
     </div>
-
+    <!-- SEZIONE ABOUT -->
     <section class="padding-y" id="about">
         <div class="container">
             <div class="row d-flex justify-content-center mb-5">
@@ -446,7 +447,7 @@ export default {
             </div>
         </div>
     </section>
-
+    <!-- SEZIONE NUMERI -->
     <section id="numbers" class="padding-y">
         <div class="container">
             <div class="row justify-content-center text-center">
@@ -471,6 +472,7 @@ export default {
             </div>
         </div>
     </section>
+    <!-- SEZIONE NEWSLETTERS -->
     <section id="newletters">
         <div class="container-fluid">
             <div class="row padding-y justify-content-center">
@@ -618,6 +620,9 @@ export default {
     right: 2%;
     bottom: 14%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+        cursor: pointer;
+    }
 
     a {
         scroll-behavior: smooth;
@@ -655,6 +660,9 @@ export default {
     z-index: 10;
     right: 2%;
     bottom: 4%;
+    &:hover {
+        cursor: pointer;
+    }
 
     .fa-message {
         color: white;

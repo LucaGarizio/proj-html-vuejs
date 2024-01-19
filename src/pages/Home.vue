@@ -998,89 +998,6 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-.chatbox {
-    width: 22rem;
-    height: 32rem;
-    position: fixed;
-
-    z-index: 500;
-    right: 2%;
-    bottom: 13%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-    .top {
-        height: 3rem;
-    }
-    .medium {
-        height: calc(32rem - 15rem);
-    }
-    .bottom {
-        display: flex;
-        margin: unset;
-
-        height: 2rem;
-        input {
-            width: 100%;
-            padding: 3px;
-            &::placeholder {
-                color: #b1c1d2;
-            }
-        }
-    }
-    .under-bottom {
-        .col-12 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 10px;
-            font-size: 14px;
-        }
-
-        margin-left: unset;
-    }
-    .icon-left {
-        .fa-face-smile,
-        .fa-paperclip,
-        .fa-bars-staggered {
-            color: #a8bacd;
-            margin: 0 10px;
-        }
-    }
-    .icon-right {
-        .fa-message {
-            color: #a8bacd;
-            margin-right: 5px;
-        }
-        span {
-            margin-left: 10px;
-            font-size: 10px;
-        }
-    }
-    .bg {
-        background-color: #1766dc;
-        padding: 10px 0;
-        button {
-            border: none;
-            border-radius: 30px;
-            background-color: #0051c8;
-            color: white;
-            width: 100px;
-            padding: 5px 0;
-        }
-        .logo {
-            span {
-                font-size: 13px;
-                color: #c5dafa;
-            }
-        }
-
-        img {
-            width: 40px;
-            border-radius: 50%;
-        }
-    }
-}
 // STILI ALE
 
 #jumbotron {
@@ -1257,6 +1174,88 @@ export default {
 
 // STILI LUCA
 
+.chatbox {
+    width: 22rem;
+    height: 32rem;
+    position: fixed;
+    z-index: 500;
+    right: 2%;
+    bottom: 13%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .top {
+        height: 3rem;
+    }
+    .medium {
+        height: calc(32rem - 15rem);
+    }
+    .bottom {
+        display: flex;
+        margin: unset;
+
+        height: 2rem;
+        input {
+            width: 100%;
+            padding: 3px;
+            &::placeholder {
+                color: #b1c1d2;
+            }
+        }
+    }
+    .under-bottom {
+        .col-12 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+
+        margin-left: unset;
+    }
+    .icon-left {
+        .fa-face-smile,
+        .fa-paperclip,
+        .fa-bars-staggered {
+            color: #a8bacd;
+            margin: 0 10px;
+        }
+    }
+    .icon-right {
+        .fa-message {
+            color: #a8bacd;
+            margin-right: 5px;
+        }
+        span {
+            margin-left: 10px;
+            font-size: 10px;
+        }
+    }
+    .bg {
+        background-color: #1766dc;
+        padding: 10px 0;
+        button {
+            border: none;
+            border-radius: 30px;
+            background-color: #0051c8;
+            color: white;
+            width: 100px;
+            padding: 5px 0;
+        }
+        .logo {
+            span {
+                font-size: 13px;
+                color: #c5dafa;
+            }
+        }
+
+        img {
+            width: 40px;
+            border-radius: 50%;
+        }
+    }
+}
 .move-to-top {
     display: none;
     background-color: #ef6f31;
@@ -1272,6 +1271,9 @@ export default {
     right: 2%;
     bottom: 14%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+        cursor: pointer;
+    }
     a {
         scroll-behavior: smooth;
     }
@@ -1308,6 +1310,9 @@ export default {
     z-index: 10;
     right: 2%;
     bottom: 4%;
+    &:hover {
+        cursor: pointer;
+    }
     .fa-message {
         color: white;
         font-size: 25px;

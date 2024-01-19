@@ -215,12 +215,14 @@ export default {
     width: 22rem;
     height: 32rem;
     position: fixed;
-
     z-index: 500;
     right: 2%;
     bottom: 13%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+        cursor: pointer;
+    }
 
     .top {
         height: 3rem;
@@ -345,6 +347,9 @@ export default {
     z-index: 10;
     right: 2%;
     bottom: 4%;
+    &:hover {
+        cursor: pointer;
+    }
     .fa-message {
         color: white;
         font-size: 25px;
