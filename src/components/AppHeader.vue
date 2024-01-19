@@ -163,17 +163,17 @@ export default {
                 </button>
                 <ul class="dropdown-menu p-3">
                     <div class="col-5 p-2">
-                        <li>
+                        <li class="py-1">
                             <Router-Link :to="{ name: 'home' }"
                                 >Home</Router-Link
                             >
                         </li>
-                        <li>
+                        <li class="py-1">
                             <Router-Link :to="{ name: 'about-us' }"
                                 >About</Router-Link
                             >
                         </li>
-                        <li>
+                        <li class="py-1">
                             <Router-Link :to="{ name: 'contact' }"
                                 >Contact</Router-Link
                             >
