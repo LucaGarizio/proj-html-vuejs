@@ -4,6 +4,10 @@ export default {
     data() {
         return {
             // DATA LUCA
+            // variabile chatbox
+            visibility: false,
+            // variabile per ritorno a inizio pagina
+            isScrolled: false,
             // DATA CAROSELLO
             currentIndex: 0,
             testimonialCards: [
@@ -141,7 +145,21 @@ export default {
             ],
         }
     },
-
+    methods: {
+        // Metodo per passare a una determinata slide
+        goToSlide(index) {
+            // Imposta l'indice corrente al valore specificato
+            this.currentIndex = index
+        },
+        handleScroll() {
+            // Verifica se l'utente sta scorrendo la pagina
+            this.isScrolled = window.scrollY > 0
+        },
+        toggleChatbox() {
+            // Inverti lo stato di visibilità della chatbox
+            this.visibility = !this.visibility
+        },
+    },
     computed: {
         // Metodo calcolato per definire lo stile del carosello in base all'indice corrente
         carouselStyle() {
@@ -152,17 +170,13 @@ export default {
                 (this.currentIndex * (170 / (this.testimonialCards.length - 1)))
             // Restituzione di un oggetto con le proprietà di stile
             return {
-                transition: 'transform 0.5s ease-in-out',
+                transition: 'transform 0.8s ease-in-out',
                 transform: `translateX(${percentualeTraslazione}%)`,
             }
         },
     },
-    methods: {
-        // Metodo per passare a una determinata slide
-        goToSlide(index) {
-            // Imposta l'indice corrente al valore specificato
-            this.currentIndex = index
-        },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll)
     },
 }
 </script>
@@ -387,6 +401,69 @@ export default {
 
     <!-- SEZIONI LUCA -->
     <!-- sezione get started -->
+
+    <div class="container-fluid chatbox text-white" v-show="visibility">
+        <div class="row top">
+            <div class="col-12 bg text-center">
+                <button>
+                    <i class="fa-regular fa-comments"></i
+                    ><span class="ms-2">Chat</span>
+                </button>
+                <div class="logo">
+                    <img
+                        class="m-2"
+                        src="https://image.crisp.chat/process/thumbnail/?url=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Ffdb6b692b0ed5000%2Flogothememoveblack_1cwmqwn.png&width=240&height=240&1629251277523"
+                        alt=""
+                    />
+                    <img
+                        src="https://image.crisp.chat/process/thumbnail/?url=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Ffdb6b692b0ed5000%2Flogothememoveblack_1cwmqwn.png&width=240&height=240&1629251277523"
+                        alt=""
+                    />
+                    <h6>Questions? Chat with us</h6>
+                    <span>Was last active 11/10/2023</span>
+                </div>
+            </div>
+            <div class="row medium">
+                <div class="col-12">
+                    <div class="chat-display"></div>
+                </div>
+            </div>
+            <div class="row bottom">
+                <div class="col-12">
+                    <div class="chatkeyboard d-flex justify-content-center">
+                        <input type="text" placeholder="Compose your text" />
+                    </div>
+                </div>
+            </div>
+            <div class="row under-bottom">
+                <div class="col-12 d-flex">
+                    <div class="icon-left">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </div>
+                    <div class="icon-right">
+                        <a
+                            href="https://crisp.chat/en/livechat/?ref=chatbox&domain=maxcoach.thememove.com&name=MaxCoach"
+                        >
+                            <i class="fa-regular fa-message"
+                                ><span>crisp</span></i
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="move-to-top" v-show="isScrolled">
+        <a href="#jumbotron">
+            <i class="fa-solid fa-arrow-up-long"></i>
+        </a>
+    </div>
+    <div class="costumer-service" @click="toggleChatbox">
+        <i class="fa-solid fa-message"></i>
+    </div>
     <section class="margin-top margin-bottom">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
@@ -513,6 +590,7 @@ export default {
                     <div
                         v-for="(bullet, index) in 4"
                         :key="index"
+                        :class="{ active: index === currentIndex }"
                         class="bullet"
                         @click="goToSlide(index)"
                     ></div>
@@ -714,18 +792,24 @@ export default {
     </section>
 
     <section class="pb-5">
-        
-        
-
-        <div class="container">
-
-
+        <div class="container" id="section-upcoming">
+            <div>
+                <img
+                    src="../assets/images/maxcoach-shape-13.png"
+                    class="maxcoach-section-upcoming"
+                    alt=""
+                />
+                <img
+                    src="../assets/images/maxcoach-shape-05-150x150.png"
+                    class="maxcoach-shape-section-upcoming"
+                    alt=""
+                />
+            </div>
             <div class="text-center mt-5">
                 <!-- La classe "text-center" allinea il testo al centro -->
                 <h2 class="cursive">Upcoming Event</h2>
                 <h3>Let's Work Together</h3>
             </div>
-
 
             <div class="row mt-5">
                 <!-- Card 1 -->
@@ -874,8 +958,6 @@ export default {
                 </div>
             </div>
         </div>
-
-        
     </section>
 
     <section>
@@ -908,66 +990,13 @@ export default {
                     />
                 </div>
             </div>
-
-
-
-        
-
         </div>
-
     </section>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
-
-#article-and-tips {
-    background-color: #f5f7fa;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-
-    .container {
-        position: relative;
-        overflow: hidden;
-
-        .rotating-image-left,
-        .rotating-image-right,
-        .rotating-image-top-right {
-            transition: transform 1s ease;
-        }
-
-        &:hover .rotating-image-left {
-            transform: translateX(-40px) translateY(-30px);
-        }
-
-        &:hover .rotating-image-right {
-            transform: translateX(40px) translateY(10px);
-        }
-
-        // &:hover .rotating-image-top-right {
-        //     transform: translateX(40px) translateY(-50px);
-        // }
-
-        .dittoBlue-section-cards {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            top: 15%;
-            left: 19%;
-        }
-
-        .dittoShape-section-cards {
-            position: absolute;
-            top: 70%;
-            right: 20%;
-            img {
-                width: 300px;
-            }
-        }
-    }
-}
 
 // STILI ALE
 
@@ -1145,6 +1174,153 @@ export default {
 
 // STILI LUCA
 
+.chatbox {
+    width: 22rem;
+    height: 32rem;
+    position: fixed;
+    z-index: 500;
+    right: 2%;
+    bottom: 13%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .top {
+        height: 3rem;
+    }
+    .medium {
+        height: calc(32rem - 15rem);
+    }
+    .bottom {
+        display: flex;
+        margin: unset;
+
+        height: 2rem;
+        input {
+            width: 100%;
+            padding: 3px;
+            &::placeholder {
+                color: #b1c1d2;
+            }
+        }
+    }
+    .under-bottom {
+        .col-12 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+
+        margin-left: unset;
+    }
+    .icon-left {
+        .fa-face-smile,
+        .fa-paperclip,
+        .fa-bars-staggered {
+            color: #a8bacd;
+            margin: 0 10px;
+        }
+    }
+    .icon-right {
+        .fa-message {
+            color: #a8bacd;
+            margin-right: 5px;
+        }
+        span {
+            margin-left: 10px;
+            font-size: 10px;
+        }
+    }
+    .bg {
+        background-color: #1766dc;
+        padding: 10px 0;
+        button {
+            border: none;
+            border-radius: 30px;
+            background-color: #0051c8;
+            color: white;
+            width: 100px;
+            padding: 5px 0;
+        }
+        .logo {
+            span {
+                font-size: 13px;
+                color: #c5dafa;
+            }
+        }
+
+        img {
+            width: 40px;
+            border-radius: 50%;
+        }
+    }
+}
+.move-to-top {
+    display: none;
+    background-color: #ef6f31;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 30px;
+    position: fixed;
+    z-index: 10;
+    right: 2%;
+    bottom: 14%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+        cursor: pointer;
+    }
+    a {
+        scroll-behavior: smooth;
+    }
+}
+.fa-arrow-up-long {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    &:hover {
+        animation: reset 1.5s linear;
+    }
+
+    @keyframes reset {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.costumer-service {
+    background-color: #1972f5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 30px;
+    position: fixed;
+    z-index: 10;
+    right: 2%;
+    bottom: 4%;
+    &:hover {
+        cursor: pointer;
+    }
+    .fa-message {
+        color: white;
+        font-size: 25px;
+        padding: 20px;
+        transform: rotate(-17deg);
+    }
+}
+
 .cursive {
     font-family: $secondary-font;
     color: $secondary-text-color;
@@ -1297,14 +1473,22 @@ export default {
 .carousel-col.active-slide {
     opacity: 1;
 }
-
 .bullet {
     width: 10px;
     height: 10px;
-    background-color: #333;
+    background-color: #dcdbe3;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 10px;
     cursor: pointer;
+    &:hover {
+        transition: 1s;
+        width: 12px;
+        height: 12px;
+        background-color: #3f3a64;
+    }
+}
+.active {
+    background-color: #3f3a64;
 }
 
 .slider-bg-color {
@@ -1353,6 +1537,52 @@ export default {
 // STILI DOME
 // Sezione 1 CARD
 
+#article-and-tips {
+    background-color: #f5f7fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    .container {
+        position: relative;
+        overflow: hidden;
+
+        .rotating-image-left,
+        .rotating-image-right,
+        .rotating-image-top-right {
+            transition: transform 1s ease;
+        }
+
+        &:hover .rotating-image-left {
+            transform: translateX(-40px) translateY(-30px);
+        }
+
+        &:hover .rotating-image-right {
+            transform: translateX(40px) translateY(10px);
+        }
+
+        // &:hover .rotating-image-top-right {
+        //     transform: translateX(40px) translateY(-50px);
+        // }
+
+        .dittoBlue-section-cards {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 15%;
+            left: 19%;
+        }
+
+        .dittoShape-section-cards {
+            position: absolute;
+            top: 70%;
+            right: 20%;
+            img {
+                width: 300px;
+            }
+        }
+    }
+}
 .col-img1 {
     display: flex;
     align-items: center;
@@ -1395,6 +1625,35 @@ export default {
 
 .span-orange:hover {
     border-bottom: 1px solid;
+}
+// sezione UpComing
+.container {
+    position: relative;
+}
+
+.maxcoach-section-upcoming {
+    position: absolute;
+    top: 35%;
+    left: 87%;
+    z-index: 2;
+
+    transition: transform 1s;
+}
+.maxcoach-shape-section-upcoming {
+    position: absolute;
+    top: 0%;
+    right: 92%;
+
+    transition: transform 1s;
+}
+.container:hover {
+    .maxcoach-section-upcoming {
+        transform: translateX(40px) translateY(-40px);
+    }
+
+    .maxcoach-shape-section-upcoming {
+        transform: translateX(40px) translateY(-40px);
+    }
 }
 
 #descrizione-col8 {
