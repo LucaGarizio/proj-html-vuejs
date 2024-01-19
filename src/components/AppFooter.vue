@@ -1,10 +1,11 @@
 <script>
 export default {
-    name: 'AppFooter ',
+    name: 'AppFooter ', // Nome del componente vue 
 }
 </script>
 
 <template>
+    <!-- Sezione del footer -->
     <footer class="container-fluid py-5" id="container-footer">
         <div class="row">
             <div class="col-4 p-0">

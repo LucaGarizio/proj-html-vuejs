@@ -992,6 +992,26 @@ export default {
             </div>
         </div>
     </section>
+
+
+
+    <div class="row">
+        <div class="col" id="colSidebar">
+
+            <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" >
+                <a href="#" class="w3-bar-item w3-button"></a> 
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search" style="color: #424242;"></i></a> 
+                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-life-ring" style="color: #424242;"></i></a> 
+                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-book" style="color: #424242;"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-cart-shopping" style="color: #424242;"></i></a> 
+            </div>
+
+        </div>
+        
+    </div>
+    
+
+
 </template>
 
 <style lang="scss" scoped>
@@ -1701,4 +1721,30 @@ export default {
     font-size: 40px;
     font-family: 'Playfair Display', serif;
 }
+
+.w3-sidebar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index:100;
+    top: 30%;
+    right: 0;
+    background-color: white;
+    border-radius: 4px;
+    padding:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+#colSidebar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.w3-bar-item {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+}
+
 </style>
