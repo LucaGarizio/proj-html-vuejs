@@ -322,10 +322,14 @@ export default {
                             alt=""
                         />
                         <div class="overlay">
-                            <img
-                                src="../assets/images/icon-youtube-play.png"
-                                alt="youtube icon play"
-                            />
+                            <a
+                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                            >
+                                <img
+                                    src="../assets/images/icon-youtube-play.png"
+                                    alt="youtube icon play"
+                                />
+                            </a>
                         </div>
                     </div>
                     <div class="circle rotating-image-right">
