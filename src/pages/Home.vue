@@ -1,6 +1,16 @@
 <script>
+import GetStarted from '../components/GetStarted.vue'
+import YouTube from '../components/YouTube.vue'
+import Carousel from '../components/Carousel.vue'
+import Shop from '../components/Shop.vue'
 export default {
     name: 'AppHome',
+    components: {
+        GetStarted,
+        YouTube,
+        Carousel,
+        Shop,
+    },
     data() {
         return {
             // DATA LUCA
@@ -8,82 +18,7 @@ export default {
             visibility: false,
             // variabile per ritorno a inizio pagina
             isScrolled: false,
-            // DATA CAROSELLO
-            currentIndex: 0,
-            testimonialCards: [
-                {
-                    title: "It's a choice of quality for people with special needs",
-                    paragraph:
-                        "I'm a very strict person so i require everithing to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
-                    info: [
-                        {
-                            img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
-                            name: 'Florence Themes',
-                            role: '/ Multimedia Admin',
-                        },
-                    ],
-                },
-                {
-                    title: 'High level of efficiency and scientific teaching methods',
-                    paragraph:
-                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from syllabus. Great study portal for people like me.',
-                    info: [
-                        {
-                            img: '../src/assets/images/artist-testimonial-avatar-04.jpg',
-                            name: 'Mina Hollace',
-                            role: '/ Freelancer',
-                        },
-                    ],
-                },
-                {
-                    title: 'Professional team of specialists and passionate mentors at reach',
-                    paragraph:
-                        'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
-                    info: [
-                        {
-                            img: '../src/assets/images/artist-testimonial-avatar-01.jpg',
-                            name: 'Madley Pondor',
-                            role: '/ IT Specialist',
-                        },
-                    ],
-                },
-                {
-                    title: 'The MaxCoach team works really hard to ensure high quality',
-                    paragraph:
-                        'I am happy of lessons and subjects. They reflect a scientific investigation into effective methods to be adopted for learners of all levels.',
-                    info: [
-                        {
-                            img: '../src/assets/images/artist-testimonial-avatar-03.jpg',
-                            name: 'Luvic Dubble',
-                            role: '/ Private Tutor',
-                        },
-                    ],
-                },
-                {
-                    title: "It's a choice of quality for people with special needs",
-                    paragraph:
-                        "I'm a very strict person so i require everything to be organized and neat. Then, I.ll be able to make things right and shine. MaxCoach guys just got me.",
-                    info: [
-                        {
-                            img: '../src/assets/images/artist-testimonial-avatar-02.jpg',
-                            name: 'Florence Themes',
-                            role: '/ Multimedia Admin',
-                        },
-                    ],
-                },
-                {
-                    title: 'High level of efficiency and scientific teaching methods',
-                    paragraph:
-                        'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from syllabus. Great study portal for people like me.',
-                    info: [
-                        {
-                            img: '../src/assets/images/artist-testimonial-avatar-04.jpg',
-                            name: 'Mina Hollace',
-                            role: '/ Freelancer',
-                        },
-                    ],
-                },
-            ],
+
             // DATA SEZIONE SHOP
             cardShop: [
                 {
@@ -146,11 +81,6 @@ export default {
         }
     },
     methods: {
-        // Metodo per passare a una determinata slide
-        goToSlide(index) {
-            // Imposta l'indice corrente al valore specificato
-            this.currentIndex = index
-        },
         handleScroll() {
             // Verifica se l'utente sta scorrendo la pagina
             this.isScrolled = window.scrollY > 0
@@ -464,199 +394,16 @@ export default {
     <div class="costumer-service" @click="toggleChatbox">
         <i class="fa-solid fa-message"></i>
     </div>
-    <section class="margin-top margin-bottom">
-        <div class="my container-fluid">
-            <div class="row d-flex justify-content-center">
-                <div class="l col-4 text-center">
-                    <img
-                        class="mb-2"
-                        src="../assets/images/artist-quote-icon.png"
-                        alt=""
-                    />
-                    <h2 class="fs-1 line-height pb-3">
-                        I coach and mentor <br />
-                        visual artists,like <br />
-                        you, to Create Like <br />
-                        you Mean It
-                        <h4 class="cursive">Martin Garrix</h4>
-                    </h2>
-                </div>
-                <div class="l col-4 offset-2 pt-5">
-                    <p class="">
-                        As a coach and mentor, my ultimate goal is to motivate
-                        visual artists toward inspired action. I help you get
-                        you back on track to being the productive, creative,
-                        meaningful and authentic artist you truly want to be.I
-                        support artists in crafting and living a creative life
-                        as well as feeling good about themselves and their art.
-                        <br />
-                        <br />
-                        As an artist and an educator for nearly 30 years, I
-                        understand what it takes to create.
-                    </p>
-                    <button class="btn-light-orange">Get started today</button>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    <GetStarted />
     <!-- sezione video youtube -->
-    <section id="youtube-section">
-        <div class="container-fluid d-flex justify-content-center">
-            <div class="row">
-                <div class="col pos-relative">
-                    <div class="img-box-overlay">
-                        <img
-                            class="dittoBlue-section-youtube rotating-image-top-right"
-                            src="../assets/images/DittoShapeBlue.svg"
-                            alt=""
-                        />
-                        <img
-                            class="animated-bg-top-image rotating-image-left"
-                            src="../assets/images/maxcoach-shape-12-100x100.png"
-                            alt=""
-                        />
-                        <img
-                            class="animated-bg-bottom-image rotating-image-left"
-                            src="../assets/images/maxcoach-shape-12-100x100.png"
-                            alt=""
-                        />
-                        <div class="overlay">
-                            <a
-                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
-                                ><img
-                                    src="../assets/images/icon-youtube-play.png"
-                                    alt="youtube icon play"
-                            /></a>
-                        </div>
-                    </div>
-                    <div class="circle rotating-image-right">
-                        <div class="inner-circle"></div>
-                    </div>
-                    <div class="card border-0">
-                        <a href=""></a>
-                        <img
-                            class="youtube-video"
-                            src="../assets/images/artist-video-poster.jpg"
-                            alt="anteprima"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- sezione slider -->
-    <section class="slider-bg-color" id="carousel">
-        <div class="container-fluid my-0">
-            <div class="row">
-                <div class="text-center">
-                    <h2 class="cursive">Testimonials</h2>
-                    <h3 class="mb-4">Why do people love me?</h3>
-                </div>
-            </div>
+    <YouTube />
 
-            <div class="carousel-container">
-                <div class="carousel" :style="carouselStyle">
-                    <div
-                        v-for="(card, index) in testimonialCards"
-                        :key="index"
-                        :class="{ 'active-slide': index === currentIndex }"
-                        class="carousel-col d-flex justify-content-between p-4 mx-1"
-                    >
-                        <!-- Tuo contenuto del carousel qui -->
-                        <div class="card carousel-card border-0 p-5">
-                            <div class="text">
-                                <h5 class="mb-4">{{ card.title }}</h5>
-                                <p class="mt-3">{{ card.paragraph }}</p>
-                                <div class="d-flex my-5">
-                                    <div class="container-img">
-                                        <img
-                                            class="shrink"
-                                            :src="card.info[0].img"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="info">
-                                        <h6 class="ms-4">
-                                            {{ card.info[0].name }}
-                                        </h6>
-                                        <span class="ms-4">{{
-                                            card.info[0].role
-                                        }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Bullet navigation -->
-                <div id="bullets" class="d-flex justify-content-center my-5">
-                    <div
-                        v-for="(bullet, index) in 4"
-                        :key="index"
-                        :class="{ active: index === currentIndex }"
-                        class="bullet"
-                        @click="goToSlide(index)"
-                    ></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- sezione Carousel -->
+    <Carousel />
     <!-- sezione card shop-->
-    <section class="section-margin mb-5" id="shop">
-        <div class="container-fluid pos-relative">
-            <div class="row mb-4">
-                <div class="col-12 text-center">
-                    <h2 class="cursive">Artist coaching</h2>
-                    <h2 class="mb-4">Latest Online Courses</h2>
-                </div>
-            </div>
-            <div class="row">
-                <img
-                    class="tear"
-                    src="../assets/images/artist-shape-01.png"
-                    alt=""
-                />
-                <div
-                    class="col-3 my-3 d-flex justify-content-center"
-                    v-for="card in cardShop"
-                >
-                    <div
-                        class="card mb-5 border-0"
-                        style="width: 21rem; height: 32rem"
-                    >
-                        <img
-                            :src="card.img"
-                            class="card-img-top mb-2 rounded-0"
-                            alt="..."
-                        />
-                        <div class="card-body" style="width: 20rem">
-                            <h5 class="card-title mb-3">
-                                {{ card.price }}
-                            </h5>
-
-                            <h4 class="card-text mb-3">{{ card.title }}</h4>
-                            <span class="card-link"
-                                ><i class="fa-regular fa-file-lines"></i>
-                                {{ card.lessons }}</span
-                            >
-                            <span class="card-link"
-                                ><i class="fa-regular fa-user"></i>
-                                {{ card.student }}</span
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col text-center">
-                    <button class="btn-light-orange mt-5">
-                        View all Courses
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Shop />
+    
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="article-and-tips">
@@ -996,25 +743,28 @@ export default {
         </div>
     </section>
 
-
-
-    <div class="row">
-        <div class="col" id="colSidebar">
-
-            <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" >
-                <a href="#" class="w3-bar-item w3-button"></a> 
-                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search" style="color: #424242;"></i></a> 
-                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-life-ring" style="color: #424242;"></i></a> 
-                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-book" style="color: #424242;"></i></a>
-                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-cart-shopping" style="color: #424242;"></i></a> 
+    <div class="row justify-content-center">
+        <div class="col-3" id="colSidebar">
+            <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge">
+                <a href="#" class="w3-bar-item w3-button"></a>
+                <a href="#" class="w3-bar-item w3-button"
+                    ><i class="fa fa-search" style="color: #424242"></i
+                ></a>
+                <a href="#" class="w3-bar-item w3-button"
+                    ><i class="fa-solid fa-life-ring" style="color: #424242"></i
+                ></a>
+                <a href="#" class="w3-bar-item w3-button"
+                    ><i class="fa-solid fa-book" style="color: #424242"></i
+                ></a>
+                <a href="#" class="w3-bar-item w3-button"
+                    ><i
+                        class="fa-solid fa-cart-shopping"
+                        style="color: #424242"
+                    ></i
+                ></a>
             </div>
-
         </div>
-        
     </div>
-    
-
-
 </template>
 
 <style lang="scss" scoped>
@@ -1197,7 +947,6 @@ export default {
 }
 
 // STILI LUCA
-
 .chatbox {
     width: 22rem;
     height: 32rem;
@@ -1364,199 +1113,10 @@ export default {
 
 // SEZIONE YOUTUBE VIDEO
 
-#youtube-section {
-    background-image: url('../assets/images/wave.svg');
-    background-position-y: -30%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 70px;
-    .container-fluid {
-        .rotating-image-left,
-        .rotating-image-right,
-        .rotating-image-top-right {
-            transition: transform 1s ease;
-        }
-
-        .col:hover .rotating-image-left {
-            transform: translateX(-40px) translateY(-30px);
-        }
-        .col:hover .rotating-image-right {
-            transform: translateX(40px) translateY(10px);
-        }
-        .col:hover .rotating-image-top-right {
-            transform: translateX(40px) translateY(-50px);
-        }
-    }
-}
-
-.card {
-    position: relative;
-    overflow: hidden;
-}
-.youtube-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.card:hover .youtube-video {
-    transform: scale(1.1);
-}
-
-.pos-relative {
-    position: relative;
-}
-
-.circle {
-    position: absolute;
-    top: 10%;
-    left: 105%;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #ecc5ab;
-    .inner-circle {
-        width: 75px;
-        height: 75px;
-        border-radius: 50%;
-        background-color: white;
-    }
-}
-
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-}
-
-.animated-bg-top-image {
-    width: 180px;
-    position: absolute;
-    top: -5%;
-    left: -6%;
-    z-index: -1;
-}
-
-.animated-bg-bottom-image {
-    width: 180px;
-    position: absolute;
-    bottom: -10%;
-    right: -7%;
-    z-index: -1;
-}
-.dittoBlue-section-youtube {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    top: -13%;
-    left: -10%;
-    z-index: -2;
-}
-
 // SEZIONE CAROSELLO
 
-.carousel-controls {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.slide-control {
-    font-size: 24px;
-}
-.shrink {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-.carousel-container {
-    overflow: hidden;
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-col {
-    flex: 0 0 calc(100% / 3);
-    height: 27rem;
-    opacity: 0.5;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.carousel-col.active-slide {
-    opacity: 1;
-}
-.bullet {
-    width: 10px;
-    height: 10px;
-    background-color: #dcdbe3;
-    border-radius: 50%;
-    margin: 0 10px;
-    cursor: pointer;
-    &:hover {
-        transition: 1s;
-        width: 12px;
-        height: 12px;
-        background-color: #3f3a64;
-    }
-}
-.active {
-    background-color: #3f3a64;
-}
-
-.slider-bg-color {
-    background-color: #faf8f6;
-}
-
 // SEZIONE STILI SHOP
-#shop {
-    .card {
-        position: relative;
-        overflow: hidden;
-        h5 {
-            color: #f07c44;
-        }
-    }
-    .card-img-top {
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
 
-    .card:hover .card-img-top {
-        transform: scale(1.1);
-    }
-
-    .card-body {
-        transition: transform 0.5s ease;
-        position: relative;
-        z-index: 0;
-    }
-    .col-3:hover .card-body {
-        transform: translateY(-40px);
-        border: 2px solid #f07c44;
-        background-color: #fff;
-        z-index: 2;
-    }
-}
-.tear {
-    width: 500px;
-    height: 700px;
-    position: absolute;
-    top: 37%;
-    left: -15%;
-    z-index: 1;
-}
 
 // STILI DOME
 // Sezione 1 CARD
@@ -1726,21 +1286,20 @@ export default {
     font-family: 'Playfair Display', serif;
 }
 
-.w3-sidebar{
+.w3-sidebar {
     display: flex;
     flex-direction: column;
     position: fixed;
-    z-index:100;
+    z-index: 100;
     top: 30%;
     right: 0;
     background-color: white;
     border-radius: 4px;
-    padding:5px;
+    padding: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
 }
 
-#colSidebar{
+#colSidebar {
     display: flex;
     justify-content: flex-end;
 }
@@ -1750,5 +1309,4 @@ export default {
     padding-right: 10px;
     padding-bottom: 2px;
 }
-
 </style>

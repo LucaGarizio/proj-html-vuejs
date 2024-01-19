@@ -1,0 +1,172 @@
+<script>
+export default {
+    name: 'Shop',
+    data() {
+        return {
+            // DATA LUCA
+            // variabile chatbox
+            visibility: false,
+            // variabile per ritorno a inizio pagina
+            isScrolled: false,
+
+            // DATA SEZIONE SHOP
+            cardShop: [
+                {
+                    img: 'src/assets/images/artist-course-08-480x480.jpg',
+                    price: '$18.00',
+                    title: 'The Acrylic Painting Accademy',
+                    lessons: '4 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-07-480x480.jpg',
+                    price: '$21.00',
+                    title: 'Drawing and Shading: Complete Course',
+                    lessons: '14 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-06-480x480.jpg',
+                    price: '$19.00',
+                    title: 'The Color Theory for Digital Artist',
+                    lessons: '7 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-05-480x480.jpg',
+                    price: '$35.00',
+                    title: 'Ultimate Guide to Digital Sketching for Beginner',
+                    lessons: '14 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-04-480x480.jpg',
+                    price: '$19.00',
+                    title: 'Portrait Drawing The Smart Way',
+                    lessons: '2 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-03-480x480.jpg',
+                    price: '$19.00',
+                    title: 'Mastering Watercolor Painting from Beginner',
+                    lessons: '9 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-02-480x480.jpg',
+                    price: '$25.00',
+                    title: 'The Art & Science of Drawing',
+                    lessons: '4 Lessons',
+                    student: '50 Students',
+                },
+                {
+                    img: 'src/assets/images/artist-course-01-480x480.jpg',
+                    price: '$22.00',
+                    title: 'The Colored Pencil Drawing Course',
+                    lessons: '6 Lessons',
+                    student: '50 Students',
+                },
+            ],
+        }
+    },
+}
+</script>
+<template>
+    <section class="section-margin mb-5" id="shop">
+        <div class="container-fluid pos-relative">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="cursive">Artist coaching</h2>
+                    <h2 class="mb-4">Latest Online Courses</h2>
+                </div>
+            </div>
+            <div class="row">
+                <img
+                    class="tear"
+                    src="../assets/images/artist-shape-01.png"
+                    alt=""
+                />
+                <div
+                    class="col-3 my-3 d-flex justify-content-center"
+                    v-for="card in cardShop"
+                >
+                    <div
+                        class="card mb-5 border-0"
+                        style="width: 21rem; height: 32rem"
+                    >
+                        <img
+                            :src="card.img"
+                            class="card-img-top mb-2 rounded-0"
+                            alt="..."
+                        />
+                        <div class="card-body" style="width: 20rem">
+                            <h5 class="card-title mb-3">
+                                {{ card.price }}
+                            </h5>
+
+                            <h4 class="card-text mb-3">{{ card.title }}</h4>
+                            <span class="card-link"
+                                ><i class="fa-regular fa-file-lines"></i>
+                                {{ card.lessons }}</span
+                            >
+                            <span class="card-link"
+                                ><i class="fa-regular fa-user"></i>
+                                {{ card.student }}</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn-light-orange mt-5">
+                        View all Courses
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+<style lang="scss">
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+#shop {
+    .card {
+        position: relative;
+        overflow: hidden;
+        h5 {
+            color: #f07c44;
+        }
+    }
+    .card-img-top {
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover .card-img-top {
+        transform: scale(1.1);
+    }
+
+    .card-body {
+        transition: transform 0.5s ease;
+        position: relative;
+        z-index: 0;
+    }
+    .col-3:hover .card-body {
+        transform: translateY(-40px);
+        border: 2px solid #f07c44;
+        background-color: #fff;
+        z-index: 2;
+    }
+}
+.tear {
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 37%;
+    left: -15%;
+    z-index: 1;
+}
+</style>
