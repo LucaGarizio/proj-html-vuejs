@@ -301,7 +301,7 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="py-5" id="youtube-section">
+    <section class="pt-5 pb-1" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
@@ -367,7 +367,7 @@ export default {
                         :key="card.name"
                         class="carousel-col mx-2"
                     >
-                        <div class="card carousel-card border p-4">
+                        <div class="card carousel-card px-4 py-3">
                             <div class="info d-flex align-items-center">
                                 <img
                                     class="shrink me-3"
@@ -388,7 +388,7 @@ export default {
                                 <span>{{ card.role }}</span>
                             </div>
                             <div class="text">
-                                <p class="mt-3">{{ card.paragraph }}</p>
+                                <p class="mt-4">{{ card.paragraph }}</p>
                             </div>
                         </div>
                     </div>
@@ -856,7 +856,6 @@ h2 {
     .carousel-container {
         overflow: hidden;
         width: 100%;
-
         position: relative;
     }
 
@@ -865,11 +864,13 @@ h2 {
     }
 
     .carousel-col {
-        flex: 0 0 49%; /* Ora ogni colonna avrà il 50% della larghezza */
+        flex: 0 0 49%;
+
+        padding: 10px;
     }
 
     .carousel-card {
-        width: 96%;
+        width: 95%;
         margin: 0 auto;
     }
 }

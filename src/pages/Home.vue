@@ -5,114 +5,30 @@ import GetStarted from '../components/GetStarted.vue'
 import YouTube from '../components/YouTube.vue'
 import Carousel from '../components/Carousel.vue'
 import Shop from '../components/Shop.vue'
+import MoveToTop from '../components/MoveToTop.vue'
+import ChatBox from '../components/ChatBox.vue'
+import SideBar from '../components/SideBar.vue'
 export default {
     name: 'AppHome',
     components: {
+        ArtistCoaching,
+        Hello,
         GetStarted,
         YouTube,
         Carousel,
         Shop,
+        MoveToTop,
+        ChatBox,
+        SideBar,
     },
     data() {
         return {
             // DATA LUCA
             // variabile chatbox
             visibility: false,
-            // variabile per ritorno a inizio pagina
-            isScrolled: false,
 
             // DATA SEZIONE SHOP
-            cardShop: [
-                {
-                    img: 'src/assets/images/artist-course-08-480x480.jpg',
-                    price: '$18.00',
-                    title: 'The Acrylic Painting Accademy',
-                    lessons: '4 Lessons',
-                    student: '50 Students',
-                },
-                {
-                    img: 'src/assets/images/artist-course-07-480x480.jpg',
-                    price: '$21.00',
-                    title: 'Drawing and Shading: Complete Course',
-                    lessons: '14 Lessons',
-                    student: '50 Students',
-                },
-                {
-                    img: 'src/assets/images/artist-course-06-480x480.jpg',
-                    price: '$19.00',
-                    title: 'The Color Theory for Digital Artist',
-                    lessons: '7 Lessons',
-                    student: '50 Students',
-                },
-                {
-                    img: 'src/assets/images/artist-course-05-480x480.jpg',
-                    price: '$35.00',
-                    title: 'Ultimate Guide to Digital Sketching for Beginner',
-                    lessons: '14 Lessons',
-                    student: '50 Students',
-                },
-                {
-                    img: 'src/assets/images/artist-course-04-480x480.jpg',
-                    price: '$19.00',
-                    title: 'Portrait Drawing The Smart Way',
-                    lessons: '2 Lessons',
-                    student: '50 Students',
-                },
-                {
-                    img: 'src/assets/images/artist-course-03-480x480.jpg',
-                    price: '$19.00',
-                    title: 'Mastering Watercolor Painting from Beginner',
-                    lessons: '9 Lessons',
-                    student: '50 Students',
-                },
-                {
-                    img: 'src/assets/images/artist-course-02-480x480.jpg',
-                    price: '$25.00',
-                    title: 'The Art & Science of Drawing',
-                    lessons: '4 Lessons',
-                    student: '50 Students',
-                },
-                {
-                    img: 'src/assets/images/artist-course-01-480x480.jpg',
-                    price: '$22.00',
-                    title: 'The Colored Pencil Drawing Course',
-                    lessons: '6 Lessons',
-                    student: '50 Students',
-                },
-            ],
         }
-    },
-    methods: {
-        handleScroll() {
-            // Verifica se l'utente sta scorrendo la pagina
-            this.isScrolled = window.scrollY > 0
-        },
-        toggleChatbox() {
-            // Inverti lo stato di visibilità della chatbox
-            this.visibility = !this.visibility
-        },
-    },
-    computed: {
-        // Metodo calcolato per definire lo stile del carosello in base all'indice corrente
-        carouselStyle() {
-            // Calcola la percentuale della dimensione di cui si deve spostare lo slide al cambio di card
-            // Moltiplicalo per -1, per invertire la direzione della traslazione
-            const percentualeTraslazione =
-                -1 *
-                (this.currentIndex * (170 / (this.testimonialCards.length - 1)))
-            // Restituzione di un oggetto con le proprietà di stile
-            return {
-                transition: 'transform 0.8s ease-in-out',
-                transform: `translateX(${percentualeTraslazione}%)`,
-            }
-        },
-    },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll)
-    },
-    components: {
-        ArtistCoaching,
-        Hello,
     },
 }
 </script>
@@ -120,76 +36,11 @@ export default {
     <!-- SEZIONI ALE -->
     <Hello />
     <ArtistCoaching />
+
     <!-- SEZIONI LUCA -->
-    <!-- sezione get started -->
-
-    <div class="container-fluid chatbox text-white" v-show="visibility">
-        <div class="row top">
-            <div class="col-12 bg text-center">
-                <button>
-                    <i class="fa-regular fa-comments"></i
-                    ><span class="ms-2">Chat</span>
-                </button>
-                <div class="logo">
-                    <img
-                        class="m-2"
-                        src="https://image.crisp.chat/process/thumbnail/?url=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Ffdb6b692b0ed5000%2Flogothememoveblack_1cwmqwn.png&width=240&height=240&1629251277523"
-                        alt=""
-                    />
-                    <img
-                        src="https://image.crisp.chat/process/thumbnail/?url=https%3A%2F%2Fstorage.crisp.chat%2Fusers%2Favatar%2Foperator%2Ffdb6b692b0ed5000%2Flogothememoveblack_1cwmqwn.png&width=240&height=240&1629251277523"
-                        alt=""
-                    />
-                    <h6>Questions? Chat with us</h6>
-                    <span>Was last active 11/10/2023</span>
-                </div>
-            </div>
-            <div class="row medium">
-                <div class="col-12">
-                    <div class="chat-display"></div>
-                </div>
-            </div>
-            <div class="row bottom">
-                <div class="col-12">
-                    <div class="chatkeyboard d-flex justify-content-center">
-                        <input type="text" placeholder="Compose your text" />
-                    </div>
-                </div>
-            </div>
-            <div class="row under-bottom">
-                <div class="col-12 d-flex">
-                    <div class="icon-left">
-                        <i class="fa-regular fa-face-smile"></i>
-                        <i class="fa-solid fa-paperclip"></i>
-                        <i class="fa-solid fa-bars-staggered"></i>
-                    </div>
-                    <div class="icon-right">
-                        <a
-                            href="https://crisp.chat/en/livechat/?ref=chatbox&domain=maxcoach.thememove.com&name=MaxCoach"
-                        >
-                            <i class="fa-regular fa-message"
-                                ><span>crisp</span></i
-                            >
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="move-to-top" v-show="isScrolled">
-        <a href="#jumbotron">
-            <i class="fa-solid fa-arrow-up-long"></i>
-        </a>
-    </div>
-    <div class="costumer-service" @click="toggleChatbox">
-        <i class="fa-solid fa-message"></i>
-    </div>
-
     <GetStarted />
     <!-- sezione video youtube -->
     <YouTube />
-
     <!-- sezione Carousel -->
     <Carousel />
     <!-- sezione card shop-->
@@ -555,6 +406,7 @@ export default {
             </div>
         </div>
     </div>
+    -->
 </template>
 
 <style lang="scss" scoped>
@@ -563,163 +415,15 @@ export default {
 
 // STILI ALE
 
-// STILI LUCA
-.chatbox {
-    width: 22rem;
-    height: 32rem;
-    position: fixed;
-    z-index: 500;
-    right: 2%;
-    bottom: 13%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-    .top {
-        height: 3rem;
-    }
-    .medium {
-        height: calc(32rem - 15rem);
-    }
-    .bottom {
-        display: flex;
-        margin: unset;
-
-        height: 2rem;
-        input {
-            width: 100%;
-            padding: 3px;
-            &::placeholder {
-                color: #b1c1d2;
-            }
-        }
-    }
-    .under-bottom {
-        .col-12 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 10px;
-            font-size: 14px;
-        }
-
-        margin-left: unset;
-    }
-    .icon-left {
-        .fa-face-smile,
-        .fa-paperclip,
-        .fa-bars-staggered {
-            color: #a8bacd;
-            margin: 0 10px;
-        }
-    }
-    .icon-right {
-        .fa-message {
-            color: #a8bacd;
-            margin-right: 5px;
-        }
-        span {
-            margin-left: 10px;
-            font-size: 10px;
-        }
-    }
-    .bg {
-        background-color: #1766dc;
-        padding: 10px 0;
-        button {
-            border: none;
-            border-radius: 30px;
-            background-color: #0051c8;
-            color: white;
-            width: 100px;
-            padding: 5px 0;
-        }
-        .logo {
-            span {
-                font-size: 13px;
-                color: #c5dafa;
-            }
-        }
-
-        img {
-            width: 40px;
-            border-radius: 50%;
-        }
-    }
-}
-.move-to-top {
-    display: none;
-    background-color: #ef6f31;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    padding: 30px;
-    position: fixed;
-    z-index: 10;
-    right: 2%;
-    bottom: 14%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    &:hover {
-        cursor: pointer;
-    }
-    a {
-        scroll-behavior: smooth;
-    }
-}
-.fa-arrow-up-long {
-    padding: 20px;
-    font-size: 25px;
-    color: white;
-    &:hover {
-        animation: reset 1.5s linear;
-    }
-
-    @keyframes reset {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-}
-
-.costumer-service {
-    background-color: #1972f5;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    padding: 30px;
-    position: fixed;
-    z-index: 10;
-    right: 2%;
-    bottom: 4%;
-    &:hover {
-        cursor: pointer;
-    }
-    .fa-message {
-        color: white;
-        font-size: 25px;
-        padding: 20px;
-        transform: rotate(-17deg);
-    }
-}
-
 .cursive {
     font-family: $secondary-font;
     color: $secondary-text-color;
     font-size: 40px;
 }
 
-.section-margin {
-    margin: 100px 0 0;
-}
+// .section-margin {
+//     margin: 100px 0 0;
+// }
 
 .margin-top {
     margin-top: 150px;

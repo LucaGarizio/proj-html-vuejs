@@ -87,7 +87,7 @@ export default {
             // Moltiplicalo per -1, per invertire la direzione della traslazione
             const translationPercentage =
                 -1 *
-                (this.currentIndex * (250 / (this.testimonialCards.length - 1)))
+                (this.currentIndex * (170 / (this.testimonialCards.length - 1)))
             // Restituzione di un oggetto con le proprietà di stile
             return {
                 transition: 'transform 1s ease-in-out',
@@ -105,7 +105,7 @@ export default {
 }
 </script>
 <template>
-    <section class="slider-bg-color" id="carousel">
+    <section class="slider-bg-color margin-b" id="carousel">
         <div class="container-fluid my-0">
             <div class="row">
                 <div class="text-center">
@@ -170,7 +170,7 @@ export default {
     </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 .carousel-controls {
@@ -231,5 +231,9 @@ export default {
 
 .slider-bg-color {
     background-color: #faf8f6;
+}
+
+.margin-b {
+    margin-bottom: 100px;
 }
 </style>

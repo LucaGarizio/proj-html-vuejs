@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <section id="youtube-section">
+    <section class="paddingY" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">
@@ -49,7 +49,7 @@ export default {
         </div>
     </section>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
@@ -58,7 +58,6 @@ export default {
     background-position-y: -30%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 70px;
     .container-fluid {
         .rotating-image-left,
         .rotating-image-right,
@@ -76,6 +75,15 @@ export default {
             transform: translateX(40px) translateY(-50px);
         }
     }
+}
+
+.cursive {
+    font-family: $secondary-font;
+    color: $secondary-text-color;
+    font-size: 40px;
+}
+.paddingY {
+    padding-bottom: 100px;
 }
 
 .card {
