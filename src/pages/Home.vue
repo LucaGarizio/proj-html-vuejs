@@ -7,6 +7,7 @@ import Carousel from '../components/Carousel.vue'
 import Shop from '../components/Shop.vue'
 import MoveToTop from '../components/MoveToTop.vue'
 import ChatBox from '../components/ChatBox.vue'
+import SideBar from '../components/SideBar.vue'
 export default {
     name: 'AppHome',
     components: {
@@ -18,6 +19,7 @@ export default {
         Shop,
         MoveToTop,
         ChatBox,
+        SideBar,
     },
     data() {
         return {
@@ -47,7 +49,7 @@ export default {
     <MoveToTop />
     <!-- componente costumer service -->
     <ChatBox />
-
+    <SideBar />
     <!-- SEZIONI DOME -->
     <section class="my-3" id="article-and-tips">
         <div class="container">
@@ -386,7 +388,7 @@ export default {
         </div>
     </section>
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="col" id="colSidebar">
             <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge">
                 <a href="#" class="w3-bar-item w3-button"></a>
@@ -407,7 +409,7 @@ export default {
                 ></a>
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <style lang="scss" scoped>

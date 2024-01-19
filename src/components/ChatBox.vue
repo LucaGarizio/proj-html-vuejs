@@ -17,8 +17,8 @@ export default {
 </script>
 <template>
     <div class="container chatbox text-white" v-show="visibility">
-        <div class="row border top">
-            <div class="col-4 bg text-center">
+        <div class="row top">
+            <div class="col-12 bg text-center">
                 <button>
                     <i class="fa-regular fa-comments"></i
                     ><span class="ms-2">Chat</span>
@@ -74,15 +74,16 @@ export default {
         <i class="fa-solid fa-message"></i>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 .chatbox {
-    height: 40rem;
-    width: 300px !important;
+    height: 30rem;
+    width: 20rem !important;
     position: fixed;
     z-index: 500;
     right: 2%;
+    border-radius: 15px;
     bottom: 13%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -90,16 +91,14 @@ export default {
     .top {
         height: 3rem;
     }
-    .medium {
-        height: calc(32rem - 15rem);
-    }
+
     .bottom {
         display: flex;
         margin: unset;
 
         height: 2rem;
         input {
-            width: 100%;
+            width: 18rem;
             padding: 3px;
             &::placeholder {
                 color: #b1c1d2;

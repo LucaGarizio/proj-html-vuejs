@@ -1,6 +1,10 @@
 <script>
+import ChatBox from './ChatBox.vue'
 export default {
     name: 'MoveToTop',
+    components: {
+        ChatBox,
+    },
     data() {
         return {
             // variabile per ritorno a inizio pagina
@@ -26,12 +30,11 @@ export default {
         </a>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
 .move-to-top {
-    display: none;
     background-color: #ef6f31;
     width: 40px;
     height: 40px;

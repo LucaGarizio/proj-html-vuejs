@@ -865,8 +865,7 @@ h2 {
 
     .carousel-col {
         flex: 0 0 49%;
-        opacity: 1;
-        height: 17rem;
+
         padding: 10px;
     }
 
