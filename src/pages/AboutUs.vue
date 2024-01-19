@@ -216,8 +216,8 @@ export default {
         </a>
     </div>
     <!-- SEZIONE ABOUT -->
-    <section class="padding-y" id="about">
-        <div class="container">
+    <section class="" id="about">
+        <div class="container padding">
             <div class="row d-flex justify-content-center mb-5">
                 <div class="col-7">
                     <h6 class="text-center">education for everyone</h6>
@@ -521,6 +521,10 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 // CHATBOX SECTION
+
+.padding {
+    padding-top: 90px;
+}
 .chatbox {
     width: 22rem;
     height: 32rem;
