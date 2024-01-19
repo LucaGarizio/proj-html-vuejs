@@ -87,7 +87,7 @@ export default {
             // Moltiplicalo per -1, per invertire la direzione della traslazione
             const translationPercentage =
                 -1 *
-                (this.currentIndex * (250 / (this.testimonialCards.length - 1)))
+                (this.currentIndex * (170 / (this.testimonialCards.length - 1)))
             // Restituzione di un oggetto con le proprietà di stile
             return {
                 transition: 'transform 1s ease-in-out',

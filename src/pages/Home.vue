@@ -9,6 +9,8 @@ import Shop from '../components/Shop.vue'
 export default {
     name: 'AppHome',
     components: {
+        ArtistCoaching,
+        Hello,
         GetStarted,
         YouTube,
         Carousel,
@@ -111,10 +113,6 @@ export default {
     mounted() {
         window.addEventListener('scroll', this.handleScroll)
     },
-    components: {
-        ArtistCoaching,
-        Hello,
-    },
 }
 </script>
 <template>
@@ -195,7 +193,6 @@ export default {
     <Carousel />
     <!-- sezione card shop-->
     <Shop />
-    
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="article-and-tips">
@@ -535,17 +532,25 @@ export default {
         </div>
     </section>
 
-
-
     <div class="row">
         <div class="col" id="colSidebar">
-
-            <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" >
-                <a href="#" class="w3-bar-item w3-button"></a> 
-                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search" style="color: #424242;"></i></a> 
-                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-life-ring" style="color: #424242;"></i></a> 
-                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-book" style="color: #424242;"></i></a>
-                <a href="#" class="w3-bar-item w3-button"><i class="fa-solid fa-cart-shopping" style="color: #424242;"></i></a> 
+            <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge">
+                <a href="#" class="w3-bar-item w3-button"></a>
+                <a href="#" class="w3-bar-item w3-button"
+                    ><i class="fa fa-search" style="color: #424242"></i
+                ></a>
+                <a href="#" class="w3-bar-item w3-button"
+                    ><i class="fa-solid fa-life-ring" style="color: #424242"></i
+                ></a>
+                <a href="#" class="w3-bar-item w3-button"
+                    ><i class="fa-solid fa-book" style="color: #424242"></i
+                ></a>
+                <a href="#" class="w3-bar-item w3-button"
+                    ><i
+                        class="fa-solid fa-cart-shopping"
+                        style="color: #424242"
+                    ></i
+                ></a>
             </div>
         </div>
     </div>
@@ -727,7 +732,6 @@ export default {
 // SEZIONE CAROSELLO
 
 // SEZIONE STILI SHOP
-
 
 // STILI DOME
 // Sezione 1 CARD
