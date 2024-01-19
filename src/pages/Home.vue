@@ -1002,6 +1002,7 @@ export default {
 
 #jumbotron {
     background-color: #fbf9f6;
+    padding-top: 40px;
     .container-fluid {
         margin-top: 0;
         position: relative;
