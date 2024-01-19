@@ -301,7 +301,7 @@ export default {
         </div>
     </section>
     <!-- sezione video youtube -->
-    <section class="pt-5 pb-3" id="youtube-section">
+    <section class="pt-5 pb-1" id="youtube-section">
         <div class="container-fluid d-flex justify-content-center">
             <div class="row">
                 <div class="col pos-relative">

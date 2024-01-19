@@ -73,7 +73,7 @@ export default {
 }
 </script>
 <template>
-    <section class="section-margin mb-5" id="shop">
+    <section class="margin-b" id="shop">
         <div class="container-fluid pos-relative">
             <div class="row mb-4">
                 <div class="col-12 text-center">
@@ -88,11 +88,11 @@ export default {
                     alt=""
                 />
                 <div
-                    class="col-3 my-3 d-flex justify-content-center"
+                    class="col-3 my-4 d-flex justify-content-center"
                     v-for="card in cardShop"
                 >
                     <div
-                        class="card mb-5 border-0"
+                        class="card border-0"
                         style="width: 21rem; height: 32rem"
                     >
                         <img
@@ -120,7 +120,7 @@ export default {
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <button class="btn-light-orange mt-5">
+                    <button class="btn-light-orange mt-3">
                         View all Courses
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
@@ -133,40 +133,51 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 #shop {
-    .card {
-        position: relative;
-        overflow: hidden;
-        h5 {
-            color: #f07c44;
+    .container-fluid {
+        width: 90%;
+        .card {
+            position: relative;
+            overflow: hidden;
+
+            h5 {
+                color: #f07c44;
+            }
+        }
+        .card-img-top {
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            z-index: 5;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+        .col-3:hover .card-body {
+            transform: translateY(-40px);
+            border: 2px solid #f07c44;
+            background-color: #fff;
+            z-index: 6;
+        }
+
+        .tear {
+            width: 500px;
+            height: 600px;
+            position: absolute;
+            top: 38%;
+            left: -15%;
+            z-index: 5;
         }
     }
-    .card-img-top {
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-
-    .card:hover .card-img-top {
-        transform: scale(1.1);
-    }
-
-    .card-body {
-        transition: transform 0.5s ease;
-        position: relative;
-        z-index: 0;
-    }
-    .col-3:hover .card-body {
-        transform: translateY(-40px);
-        border: 2px solid #f07c44;
-        background-color: #fff;
-        z-index: 2;
-    }
 }
-.tear {
-    width: 500px;
-    height: 700px;
-    position: absolute;
-    top: 37%;
-    left: -15%;
-    z-index: 1;
+
+.cursive {
+    font-family: $secondary-font;
+    color: $secondary-text-color;
+    font-size: 40px;
 }
 </style>

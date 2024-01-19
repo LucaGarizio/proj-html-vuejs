@@ -105,7 +105,7 @@ export default {
 }
 </script>
 <template>
-    <section class="slider-bg-color" id="carousel">
+    <section class="slider-bg-color margin-b" id="carousel">
         <div class="container-fluid my-0">
             <div class="row">
                 <div class="text-center">
@@ -231,5 +231,9 @@ export default {
 
 .slider-bg-color {
     background-color: #faf8f6;
+}
+
+.margin-b {
+    margin-bottom: 100px;
 }
 </style>

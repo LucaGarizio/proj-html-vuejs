@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <section class="margin-top margin-bottom">
+    <section class="marginy-150">
         <div class="my container-fluid">
             <div class="row d-flex justify-content-center">
                 <div class="l col-4 text-center">
@@ -43,4 +43,14 @@ export default {
 <style lang="scss">
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+
+.marginy-150 {
+    margin: 150px 0;
+}
+
+.cursive {
+    font-family: $secondary-font;
+    color: $secondary-text-color;
+    font-size: 40px;
+}
 </style>
