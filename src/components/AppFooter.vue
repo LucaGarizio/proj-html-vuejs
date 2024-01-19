@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'AppFooter ', // Nome del componente vue 
+    name: 'AppFooter ', // Nome del componente vue
 }
 </script>
 

@@ -23,11 +23,8 @@ export default {
     },
     data() {
         return {
-            // DATA LUCA
             // variabile chatbox
             visibility: false,
-
-            // DATA SEZIONE SHOP
         }
     },
 }
