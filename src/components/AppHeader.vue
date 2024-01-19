@@ -10,11 +10,29 @@ export default {
         Contact,
     },
 }
+// const nav = document.querySelector('header')
+
+// const onScroll = (event) => {
+//     const scrollPosition = event.target.scrollingElement.scrollTop
+//     if (scrollPosition > 10) {
+//         if (!header.classList.contains('scrolled-down')) {
+//             header.classList.add('scrolled-down')
+//         }
+//     } else {
+//         if (header.classList.contains('scrolled-down')) {
+//             header.classList.remove('scrolled-down')
+//         }
+//     }
+// }
+
+// document.addEventListener('scroll', onScroll)
 </script>
 
 <template>
     <!-- ale -->
-    <header class="container-fluid d-flex justify-content-evenly px-5 py-3">
+    <header
+        class="container-fluid .nav d-flex justify-content-evenly px-5 py-3"
+    >
         <div class="col-3 px-5">
             <img
                 class="img-fluid max-logo"
@@ -305,6 +323,31 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+
+header {
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transition: 0.3;
+}
+
+// header.scrolled-down {
+//     height: 80px;
+//     box-shadow: 0 10px rgba(0, 0, 0, 0.14);
+// }
+
+// header.scrolled-down img {
+//     scale: 1.25;
+// }
+
+// header img {
+//     width: 24px;
+//     height: 24px;
+//     transform-origin: 0% 50%;
+//     transition: 0.3s;
+// }
 
 .dropdown-menu {
     border: 0px;
