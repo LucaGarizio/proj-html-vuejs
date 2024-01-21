@@ -9,7 +9,7 @@ import MoveToTop from '../components/MoveToTop.vue'
 import ChatBox from '../components/ChatBox.vue'
 import SideBar from '../components/SideBar.vue'
 export default {
-    name: 'AppHome',
+    name: 'Artist',
     components: {
         ArtistCoaching,
         Hello,

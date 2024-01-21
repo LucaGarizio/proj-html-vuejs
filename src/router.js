@@ -1,7 +1,7 @@
 // importa router e cronologia
 import { createRouter, createWebHistory } from 'vue-router'
 // importa componenti pagine single page application
-import Home from './pages/Home.vue'
+import Artist from './pages/Artist.vue'
 
 import AboutUs from './pages/AboutUs.vue'
 
@@ -13,9 +13,9 @@ const router = createRouter({
     // defizione path pages
     routes: [
         {
-            path: '/',
-            name: 'home',
-            component: Home,
+            path: '/artist',
+            name: 'artist',
+            component: Artist,
         },
         {
             path: '/about-us',
