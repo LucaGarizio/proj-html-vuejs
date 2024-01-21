@@ -122,7 +122,7 @@ export default {
         .rotating-image-left,
         .rotating-image-right,
         .rotating-image-top-right {
-            transition: transform 1s ease;
+            transition: transform 2s linear;
         }
 
         .col-12:hover .rotating-image-left {

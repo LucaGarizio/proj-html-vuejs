@@ -52,82 +52,77 @@ export default {
                 <div class="col-6">
                     <ul class="d-flex">
                         <li @click="toggleDropdown('home')">
-                            Home
+                            <span class="animated-border">Home</span>
                             <i class="fa-solid fa-chevron-down"></i>
                             <ul
-                                class="dropdown-content-home dropdown-content py-3"
+                                class="dropdown-content-home dropdown-content"
                                 v-show="dropdowns.home"
                             >
                                 <div class="row">
-                                    <div class="col-3 mb-3">
-                                        <li class="py-1">
+                                    <div class="col-2 m-4">
+                                        <li>
                                             <a href="#">MaxCoach Education</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <a href="#">Course Portal</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <a href="#">Distant Learning</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <a href="#">Multimedia Pedagogy</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <a href="#">Modern Schooling</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <a href="#">Remote Training</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <a href="#">Health Coaching</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <a href="#">Gym Coaching</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <a href="#">Business</a>
                                         </li>
-                                        <li class="py-1">
+                                        <li>
                                             <router-link to="/artist"
                                                 >Artist</router-link
                                             >
                                         </li>
                                     </div>
-                                    <div class="col-2 mb-3">
-                                        <li class="py-1">
-                                            <a href="#">MaxCoach Education</a>
+                                    <div class="col-3 my-4">
+                                        <li>
+                                            <a href="#">Kitchen Coach</a>
                                         </li>
-                                        <li class="py-1">
-                                            <a href="#">Course Portal</a>
+                                        <li>
+                                            <a href="#">Motivation</a>
                                         </li>
-                                        <li class="py-1">
-                                            <a href="#">Distant Learning</a>
+                                        <li>
+                                            <a href="#">Dancing</a>
                                         </li>
-                                        <li class="py-1">
-                                            <a href="#">Multimedia Pedagogy</a>
+                                        <li>
+                                            <a href="#">Guitar</a>
                                         </li>
-                                        <li class="py-1">
-                                            <a href="#">Modern Schooling</a>
+                                        <li>
+                                            <a href="#">Yoga</a>
                                         </li>
-                                        <li class="py-1">
-                                            <a href="#">Remote Training</a>
+                                        <li>
+                                            <a href="#">Photography</a>
                                         </li>
-                                        <li class="py-1">
-                                            <a href="#">Health Coaching</a>
+                                        <li>
+                                            <a href="#">Personal Finance</a>
                                         </li>
-                                        <li class="py-1">
-                                            <a href="#">Gym Coaching</a>
+                                        <li>
+                                            <a href="#">Sales Coaching</a>
                                         </li>
-                                        <li class="py-1">
-                                            <a href="#">Business</a>
-                                        </li>
-                                        <li class="py-1">
-                                            <router-link to="/artist"
-                                                >Artist</router-link
-                                            >
+                                        <li>
+                                            <a href="#">Mental Therapy</a>
                                         </li>
                                     </div>
-                                    <div class="col-6 mb-3">
+                                    <div class="col-6">
                                         <li class="img-drop">
                                             <a href="#"
                                                 ><img
@@ -147,32 +142,32 @@ export default {
                                 class="dropdown-content-pages dropdown-content py-3"
                                 v-show="dropdowns.pages"
                             >
-                                <li class="py-1">
+                                <li>
                                     <a href="">Start Here</a>
                                 </li>
-                                <li class="py-1">
+                                <li>
                                     <a href="">Success Story</a>
                                 </li>
-                                <li class="py-1">
+                                <li>
                                     <router-link to="/about-us"
                                         >About Me</router-link
                                     >
                                 </li>
-                                <li class="py-1">
+                                <li>
                                     <a href="">Contact Me</a>
                                 </li>
-                                <li class="py-1">
+                                <li>
                                     <router-link to="/contact"
                                         >Contact Us</router-link
                                     >
                                 </li>
-                                <li class="py-1">
+                                <li>
                                     <a href="">Purchase Guide</a>
                                 </li>
-                                <li class="py-1">
+                                <li>
                                     <a href="">Privacy Policy</a>
                                 </li>
-                                <li class="py-1">
+                                <li>
                                     <a href="">Term Of Service</a>
                                 </li>
                             </ul>
@@ -181,31 +176,48 @@ export default {
                             Courses
                             <i class="fa-solid fa-chevron-down"></i>
                             <ul
-                                class="dropdown-content dropdown-content-courses"
+                                class="dropdown-content dropdown-content-courses py-3"
                                 v-show="dropdowns.courses"
                             >
-                                <li><a href="#">Submenu Item 1</a></li>
-                                <li><a href="#">Submenu Item 2</a></li>
-                                <li><a href="#">Submenu Item 3</a></li>
+                                <li><a href="#">Courses Grid 01</a></li>
+                                <li><a href="#">Courses Grid 02</a></li>
+                                <li><a href="#">Courses Grid 03</a></li>
+                                <li><a href="#">Membership Level</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li @click="showContainer">
+                                    <a href="#"
+                                        >Single Layout
+                                        <i class="fa-solid fa-chevron-right"></i
+                                    ></a>
+                                </li>
+                                <div
+                                    class="drop-down-below"
+                                    v-show="visibility"
+                                >
+                                    <ul>
+                                        <li class="pt-4">Free Courses</li>
+                                        <li>Sticky Features Bar</li>
+                                        <li>Standard Sidebar</li>
+                                        <li>No Sidebar</li>
+                                    </ul>
+                                </div>
                             </ul>
                         </li>
                         <li @click="toggleDropdown('features')">
                             Features
                             <i class="fa-solid fa-chevron-down"></i>
                             <ul
-                                class="dropdown-content dropdown-content-features"
+                                class="dropdown-content dropdown-content-features py-3"
                                 v-show="dropdowns.features"
                             >
-                                <div class="row">
-                                    <div class="col-3">
-                                        <li>
-                                            <a href="#">Submenu Item 1</a>
-                                        </li>
-                                    </div>
+                                <li>
+                                    <a href="#">Events</a>
+                                </li>
 
-                                    <li><a href="#">Submenu Item 2</a></li>
-                                    <li><a href="#">Submenu Item 3</a></li>
-                                </div>
+                                <li>
+                                    <a href="#">Zoom Meeting</a>
+                                </li>
                             </ul>
                         </li>
 
@@ -213,24 +225,27 @@ export default {
                             Blog
                             <i class="fa-solid fa-chevron-down"></i>
                             <ul
-                                class="dropdown-content dropdown-content-blog"
+                                class="dropdown-content dropdown-content-blog py-3"
                                 v-show="dropdowns.blog"
                             >
-                                <li><a href="#">Submenu Item 1</a></li>
-                                <li><a href="#">Submenu Item 2</a></li>
-                                <li><a href="#">Submenu Item 3</a></li>
+                                <li><a href="#">Blog Grid</a></li>
+                                <li><a href="#">Blog Masorny</a></li>
+                                <li><a href="#">Blog Classic</a></li>
+                                <li><a href="#">Blog List</a></li>
                             </ul>
                         </li>
                         <li @click="toggleDropdown('shop')">
                             Shop
                             <i class="fa-solid fa-chevron-down"></i>
                             <ul
-                                class="dropdown-content dropdown-content-shop"
+                                class="dropdown-content dropdown-content-shop py-3"
                                 v-show="dropdowns.shop"
                             >
-                                <li><a href="#">Submenu Item 1</a></li>
-                                <li><a href="#">Submenu Item 2</a></li>
-                                <li><a href="#">Submenu Item 3</a></li>
+                                <li><a href="#">Shop Left Sidebar</a></li>
+                                <li><a href="#">Shop Right Sidebar</a></li>
+                                <li><a href="#">Cart</a></li>
+                                <li><a href="#">Wish List</a></li>
+                                <li><a href="#">Single Product </a></li>
                             </ul>
                         </li>
                     </ul>
@@ -297,6 +312,12 @@ header {
 
     li {
         padding: 0 25px;
+        cursor: pointer;
+    }
+
+    .fa-solid {
+        margin-left: 10px;
+        font-size: 10px;
     }
 }
 
@@ -312,57 +333,71 @@ header {
 .dropdown-content {
     position: absolute;
     top: 100%;
-    background-color: #f9f9f9;
+    background-color: #f1f1f1;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 500;
     transition: 1s;
     border-bottom: 5px solid black;
-    a {
-        padding: 5px;
+    font-size: 15px;
+
+    li {
         border-radius: 6px;
         color: #333;
+        padding: 10px 30px;
     }
     a:hover {
-        color: #black;
+        color: black;
         transition: 0.3s;
+        cursor: pointer;
     }
 }
 .dropdown-content-home {
     width: 95%;
     left: 0;
     right: 0;
-    .col-6 {
-        margin: 0 auto;
+}
+
+.dropdown-content-pages {
+    width: 15%;
+    right: 50%;
+}
+
+.dropdown-content-courses {
+    width: 15%;
+    right: 43%;
+    .fa-solid,
+    .fa-chevron-right {
+        margin-left: 70px;
+    }
+    .drop-down-below {
+        width: 200px;
+        display: block;
+        border: 1px solid black;
+        position: absolute;
+        left: 100%;
+        top: 80%;
+        background-color: white;
+        z-index: 300;
+        border-bottom: 5px solid black;
     }
 }
 
-.dropdown-content-home {
-    width: 95%;
-    left: 0;
-    right: 0;
-    .col-6 {
-        margin: 0 auto;
-    }
+.dropdown-content-features {
+    width: 15%;
+    right: 34%;
 }
 
-.dropdown-content-home {
-    width: 95%;
-    left: 0;
-    right: 0;
+.dropdown-content-blog {
+    width: 15%;
+    right: 25%;
 }
 
-.dropdown-content-home {
-    width: 95%;
-    left: 0;
-    right: 0;
+.dropdown-content-shop {
+    width: 15%;
+    right: 18%;
 }
 
-.dropdown-content-home {
-    width: 95%;
-    left: 0;
-    right: 0;
-}
-
+// COLONNA ICONE
 .icon {
     display: flex;
     align-items: center;
@@ -381,7 +416,7 @@ header {
         color: #696969;
     }
     .hidden {
-        // display: none;
+        display: none;
     }
     @media all and (max-width: 968px) {
         .hidden {
