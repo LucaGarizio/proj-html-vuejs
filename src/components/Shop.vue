@@ -133,6 +133,7 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 #shop {
+    margin-bottom: 100px;
     .container-fluid {
         width: 90%;
         .card {

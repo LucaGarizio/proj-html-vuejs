@@ -3,7 +3,7 @@ export default {
     name: 'ArtistCoaching', // Nome del componente vue
 }
 </script>
-<!-- 
+
 <template>
     <section>
         <div class="container">
@@ -120,7 +120,7 @@ export default {
             </div>
         </div>
     </section>
-</template> -->
+</template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;

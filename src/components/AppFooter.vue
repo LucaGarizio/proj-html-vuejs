@@ -8,7 +8,7 @@ export default {
     <!-- Sezione del footer -->
     <footer class="container-fluid py-5" id="container-footer">
         <div class="row">
-            <div class="col-4 p-0">
+            <div class="col-4">
                 <ul>
                     <li><h5>Address</h5></li>
                     <li>

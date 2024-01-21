@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'Hello', // Nome del componente vue
+    name: 'Hello',
 }
 </script>
 

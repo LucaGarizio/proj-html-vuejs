@@ -5,6 +5,7 @@ import GetStarted from '../components/GetStarted.vue'
 import YouTube from '../components/YouTube.vue'
 import Carousel from '../components/Carousel.vue'
 import Shop from '../components/Shop.vue'
+import ArticleAndTips from '../components/ArticleAndTips.vue'
 import MoveToTop from '../components/MoveToTop.vue'
 import ChatBox from '../components/ChatBox.vue'
 import SideBar from '../components/SideBar.vue'
@@ -17,6 +18,7 @@ export default {
         YouTube,
         Carousel,
         Shop,
+        ArticleAndTips,
         MoveToTop,
         ChatBox,
         SideBar,
@@ -36,17 +38,22 @@ export default {
     <Carousel />
     <!-- sezione card shop-->
     <Shop />
+
+    <ArticleAndTips />
+
     <SideBar />
+
     <MoveToTop />
+
     <ChatBox />
 
     <!-- SEZIONI DOME -->
-    <section class="my-3" id="article-and-tips">
+    <!-- <section class="my-3" id="article-and-tips">
         <div class="container">
             <div class="row justify-content-center py-5">
                 <div class="col-5">
                     <div class="text-center">
-                        <!-- La classe "text-center" allinea il testo al centro -->
+                        
                         <h2 class="cursive">Article and Tips</h2>
                         <h3>Latest From The Blog</h3>
                     </div>
@@ -162,7 +169,7 @@ export default {
             </div>
 
             <div class="text-center mt-5 mb-5">
-                <!-- La classe "text-center" allinea il testo al centro -->
+         
                 <span>Get into details now? </span>
                 <a href=""
                     ><span class="span-orange" style="font-weight: 700"
@@ -191,13 +198,13 @@ export default {
                 />
             </div>
             <div class="text-center mt-5">
-                <!-- La classe "text-center" allinea il testo al centro -->
+               
                 <h2 class="cursive">Upcoming Event</h2>
                 <h3>Let's Work Together</h3>
             </div>
 
             <div class="row mt-5">
-                <!-- Card 1 -->
+             
                 <div class="col-6">
                     <div class="card border-0">
                         <div class="row">
@@ -343,9 +350,9 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section>
+    <!-- <section>
         <div class="container-fluid" id="container-newsletter">
             <div class="row" id="row-newsletter">
                 <div class="col d-flex justify-content-between">
@@ -376,7 +383,7 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </template>
 
 <style lang="scss" scoped>
@@ -387,197 +394,5 @@ export default {
     font-family: $secondary-font;
     color: $secondary-text-color;
     font-size: 40px;
-}
-
-// STILI DOME
-// Sezione 1 CARD
-
-#article-and-tips {
-    background-color: #f5f7fa;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-
-    .container {
-        position: relative;
-        overflow: hidden;
-
-        .rotating-image-left,
-        .rotating-image-right,
-        .rotating-image-top-right {
-            transition: transform 1s ease;
-        }
-
-        &:hover .rotating-image-left {
-            transform: translateX(-40px) translateY(-30px);
-        }
-
-        &:hover .rotating-image-right {
-            transform: translateX(40px) translateY(10px);
-        }
-
-        // &:hover .rotating-image-top-right {
-        //     transform: translateX(40px) translateY(-50px);
-        // }
-
-        .dittoBlue-section-cards {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            top: 15%;
-            left: 19%;
-        }
-
-        .dittoShape-section-cards {
-            position: absolute;
-            top: 70%;
-            right: 20%;
-            img {
-                width: 300px;
-            }
-        }
-    }
-}
-.col-img1 {
-    display: flex;
-    align-items: center;
-}
-
-#card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    position: relative;
-    overflow: hidden;
-}
-.card-body-centrale {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: white;
-}
-.title-center {
-    font-size: 40px;
-}
-
-.h4-artist {
-    cursor: pointer;
-}
-
-.h4-artist:hover {
-    color: #ff6600;
-    transition: 1s;
-}
-.card-img-top:hover {
-    transform: scale(1.1);
-    transition: 1.7s;
-}
-
-.span-orange {
-    color: $tertiary-color;
-    position: relative;
-}
-
-.span-orange:hover {
-    border-bottom: 1px solid;
-}
-// sezione UpComing
-.container {
-    position: relative;
-}
-
-.maxcoach-section-upcoming {
-    position: absolute;
-    top: 35%;
-    left: 87%;
-    z-index: 2;
-
-    transition: transform 1s;
-}
-.maxcoach-shape-section-upcoming {
-    position: absolute;
-    top: 0%;
-    right: 92%;
-
-    transition: transform 1s;
-}
-.container:hover {
-    .maxcoach-section-upcoming {
-        transform: translateX(40px) translateY(-40px);
-    }
-
-    .maxcoach-shape-section-upcoming {
-        transform: translateX(40px) translateY(-40px);
-    }
-}
-
-#descrizione-col8 {
-    align-items: center;
-    display: flex;
-    padding-left: 50px;
-}
-
-.card-title {
-    cursor: pointer;
-}
-
-#container-newsletter {
-    background-color: #244186;
-    width: 100%;
-    position: relative;
-}
-
-#exampleFormControlInput1 {
-    background-color: rgba(36, 65, 134, 0);
-    border: none; /* Rimuovi i bordi */
-    border-radius: 0;
-    outline: none; /* Rimuovi l'outline al focus */
-    box-shadow: none; /* Rimuovi l'ombra al focus */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.733);
-    width: 45%;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    color: white;
-}
-.form-control::placeholder {
-    color: white; /* Colore del testo del placeholder */
-    font-size: 24px;
-    font-weight: 300;
-}
-
-#div-newsletter {
-    // display: flex;
-    // align-items: center;
-    text-align: right;
-    position: absolute;
-    top: 20%;
-    left: 7%;
-    font-size: 40px;
-    font-family: 'Playfair Display', serif;
-}
-
-.w3-sidebar {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    z-index: 100;
-    top: 30%;
-    right: 0;
-    background-color: white;
-    border-radius: 4px;
-    padding: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#colSidebar {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.w3-bar-item {
-    font-size: 20px;
-    padding-right: 10px;
-    padding-bottom: 2px;
 }
 </style>
