@@ -23,11 +23,8 @@ export default {
     },
     data() {
         return {
-            // DATA LUCA
             // variabile chatbox
             visibility: false,
-
-            // DATA SEZIONE SHOP
         }
     },
 }
@@ -45,6 +42,9 @@ export default {
     <Carousel />
     <!-- sezione card shop-->
     <Shop />
+    <SideBar />
+    <MoveToTop />
+    <ChatBox />
 
     <!-- SEZIONI DOME -->
     <section class="my-3" id="article-and-tips">
@@ -383,60 +383,17 @@ export default {
             </div>
         </div>
     </section>
-
-    <div class="row">
-        <div class="col" id="colSidebar">
-            <div class="w3-sidebar w3-bar-block w3-black w3-xxlarge">
-                <a href="#" class="w3-bar-item w3-button"></a>
-                <a href="#" class="w3-bar-item w3-button"
-                    ><i class="fa fa-search" style="color: #424242"></i
-                ></a>
-                <a href="#" class="w3-bar-item w3-button"
-                    ><i class="fa-solid fa-life-ring" style="color: #424242"></i
-                ></a>
-                <a href="#" class="w3-bar-item w3-button"
-                    ><i class="fa-solid fa-book" style="color: #424242"></i
-                ></a>
-                <a href="#" class="w3-bar-item w3-button"
-                    ><i
-                        class="fa-solid fa-cart-shopping"
-                        style="color: #424242"
-                    ></i
-                ></a>
-            </div>
-        </div>
-    </div>
-    -->
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-// STILI ALE
-
 .cursive {
     font-family: $secondary-font;
     color: $secondary-text-color;
     font-size: 40px;
 }
-
-// .section-margin {
-//     margin: 100px 0 0;
-// }
-
-.margin-top {
-    margin-top: 150px;
-}
-.margin-bottom {
-    margin-bottom: 150px;
-}
-
-// SEZIONE YOUTUBE VIDEO
-
-// SEZIONE CAROSELLO
-
-// SEZIONE STILI SHOP
 
 // STILI DOME
 // Sezione 1 CARD

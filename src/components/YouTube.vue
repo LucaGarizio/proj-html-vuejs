@@ -5,9 +5,11 @@ export default {
 </script>
 <template>
     <section class="paddingY" id="youtube-section">
-        <div class="container-fluid d-flex justify-content-center">
-            <div class="row">
-                <div class="col pos-relative">
+        <div
+            class="container container-sm d-flex justify-content-lg-center justify-content-sm-center"
+        >
+            <div class="row justify-content-sm-center">
+                <div class="col-lg-12 col-sm-10 pos-relative">
                     <div class="img-box-overlay">
                         <img
                             class="dittoBlue-section-youtube rotating-image-top-right"
@@ -58,20 +60,20 @@ export default {
     background-position-y: -30%;
     background-repeat: no-repeat;
     background-size: cover;
-    .container-fluid {
+    .container {
         .rotating-image-left,
         .rotating-image-right,
         .rotating-image-top-right {
             transition: transform 1s ease;
         }
 
-        .col:hover .rotating-image-left {
+        .col-lg-12:hover .rotating-image-left {
             transform: translateX(-40px) translateY(-30px);
         }
-        .col:hover .rotating-image-right {
+        .col-lg-12:hover .rotating-image-right {
             transform: translateX(40px) translateY(10px);
         }
-        .col:hover .rotating-image-top-right {
+        .col-lg-12:hover .rotating-image-top-right {
             transform: translateX(40px) translateY(-50px);
         }
     }

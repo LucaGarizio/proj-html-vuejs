@@ -5,9 +5,9 @@ export default {
 </script>
 <template>
     <section class="marginy-150">
-        <div class="my container-fluid">
-            <div class="row d-flex justify-content-center">
-                <div class="l col-4 text-center">
+        <div class="my container-fluid pt-4">
+            <div class="row d-flex justify-content-evenly">
+                <div class="col-lg-4 col-md-11 text-center">
                     <img
                         class="mb-2"
                         src="../assets/images/artist-quote-icon.png"
@@ -21,7 +21,9 @@ export default {
                         <h4 class="cursive">Martin Garrix</h4>
                     </h2>
                 </div>
-                <div class="l col-4 offset-2 pt-5">
+                <div
+                    class="l col-lg-4 col-sm-9 pt-5 text-lg-start text-sm-center"
+                >
                     <p class="">
                         As a coach and mentor, my ultimate goal is to motivate
                         visual artists toward inspired action. I help you get

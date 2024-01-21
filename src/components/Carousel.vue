@@ -114,8 +114,8 @@ export default {
                 </div>
             </div>
 
-            <div class="carousel-container">
-                <div class="carousel" :style="carouselStyle">
+            <div class="carousel-container row">
+                <div class="carousel col-lg" :style="carouselStyle">
                     <div
                         v-for="(card, index) in testimonialCards"
                         :key="index"

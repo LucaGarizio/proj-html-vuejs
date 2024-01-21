@@ -12,13 +12,16 @@ export default {
         <a href="#">
             <i class="fa-solid fa-magnifying-glass"></i>
         </a>
-        <a href="#">
+        <a target="_blank" href="https://thememove.ticksy.com/">
             <i class="fa-solid fa-life-ring"></i>
         </a>
-        <a href="#">
+        <a target="_blank" href="https://document.thememove.com/maxcoach/">
             <i class="fa-solid fa-book"></i>
         </a>
-        <a href="#">
+        <a
+            target="_blank"
+            href="https://themeforest.net/item/maxcoach-online-courses-education-wp-theme/26051639"
+        >
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
     </div>
