@@ -6,6 +6,7 @@ import YouTube from '../components/YouTube.vue'
 import Carousel from '../components/Carousel.vue'
 import Shop from '../components/Shop.vue'
 import ArticleAndTips from '../components/ArticleAndTips.vue'
+import Events from '../components/Events.vue'
 import MoveToTop from '../components/MoveToTop.vue'
 import ChatBox from '../components/ChatBox.vue'
 import SideBar from '../components/SideBar.vue'
@@ -19,6 +20,7 @@ export default {
         Carousel,
         Shop,
         ArticleAndTips,
+        Events,
         MoveToTop,
         ChatBox,
         SideBar,
@@ -40,6 +42,7 @@ export default {
     <Shop />
 
     <ArticleAndTips />
+    <Events />
 
     <SideBar />
 

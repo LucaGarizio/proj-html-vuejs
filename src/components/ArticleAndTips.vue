@@ -94,8 +94,8 @@ export default {
 @use '../styles/partials/mixins' as *;
 section {
     background-color: #f5f7fa;
-    padding: 100px 0;
-    margin-bottom: 100px;
+    padding: 100px 0 70px;
+    // margin-bottom: 80px;
 }
 .cursive {
     font-family: $secondary-font;
