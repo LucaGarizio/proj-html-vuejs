@@ -1,5 +1,5 @@
 <script>
-import Artist from '../pages/artist.vue'
+import Artist from '../pages/Artist.vue'
 import AboutUs from '../pages/AboutUs.vue'
 import Contact from '../pages/Contact.vue'
 import BurgerMenu from '../components/BurgerMenu.vue'
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header id="Jumbotron About info">
         <nav>
             <div class="row row-nav">
                 <div class="col-3 logo">

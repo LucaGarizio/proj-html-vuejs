@@ -1,10 +1,7 @@
 <script>
-import ChatBox from './ChatBox.vue'
 export default {
     name: 'MoveToTop',
-    components: {
-        ChatBox,
-    },
+
     data() {
         return {
             // variabile per ritorno a inizio pagina
@@ -25,12 +22,12 @@ export default {
 </script>
 <template>
     <div class="move-to-top" v-show="isScrolled">
-        <a href="#jumbotron">
+        <a href="#top">
             <i class="fa-solid fa-arrow-up-long"></i>
         </a>
     </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
@@ -46,7 +43,8 @@ export default {
     position: fixed;
     z-index: 10;
     right: 2%;
-    bottom: 14%;
+    bottom: 10%;
+    margin-bottom: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     &:hover {
         cursor: pointer;

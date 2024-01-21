@@ -21,12 +21,6 @@ export default {
         ChatBox,
         SideBar,
     },
-    data() {
-        return {
-            // variabile chatbox
-            visibility: false,
-        }
-    },
 }
 </script>
 <template>
