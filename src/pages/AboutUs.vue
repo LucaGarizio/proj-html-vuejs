@@ -597,6 +597,17 @@ h2 {
     border-radius: 50%;
     z-index: 20;
     background-color: #ecc5ab;
+    animation: circle 3s infinite ease-in-out;
+    @keyframes circle {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(50px) translateX(30px);
+        }
+    }
     .inner-circle {
         width: 75px;
         height: 75px;
@@ -614,27 +625,60 @@ h2 {
 }
 
 .animated-bg-top-image {
+    animation: points 3s infinite ease-in-out;
     width: 180px;
     position: absolute;
-    top: -5%;
-    left: -6%;
+    top: -8%;
+    left: -5%;
     z-index: 0;
+    @keyframes points {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-50px) translateX(-30px);
+        }
+    }
 }
 
 .animated-bg-bottom-image {
     width: 180px;
     position: absolute;
     bottom: -10%;
-    right: -7%;
+    right: -10%;
     z-index: -1;
+    animation: square 4s infinite ease-in-out;
+    @keyframes square {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(73px) translateX(-70px);
+        }
+    }
 }
 .dittoBlue-section-youtube {
     position: absolute;
     width: 250px;
     height: 250px;
     top: -13%;
-    left: -10%;
+    left: -17%;
     z-index: 0;
+    animation: ditto 3s infinite ease-in-out;
+    @keyframes ditto {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-73px) translateX(70px);
+        }
+    }
 }
 
 // SEZIONE CAROSELLO
@@ -723,29 +767,13 @@ span {
 #newletters {
     .container-fluid {
         position: relative;
-        .rotating-image-top-right {
-            transition: transform 1s ease;
-        }
 
-        .row:hover .rotating-image-left {
-            transform: translateX(100px) translateY(-30px) rotate(-100deg);
-
-            transition: 1s;
-        }
-
-        .row:hover .rotating-image-right {
-            transform: translateX(-100px) translateY(-80px);
-        }
-        .row:hover .rotating-image-top-right {
-            transform: translateX(200px) translateY(100px);
-        }
         .animated-bg-bottom-image {
             width: 150px;
             position: absolute;
             right: 24%;
             bottom: 30%;
             z-index: -1;
-            transform: rotate(50deg);
         }
         .circle {
             position: absolute;
@@ -766,9 +794,20 @@ span {
         .lines {
             position: absolute;
             width: 150px;
-            bottom: 30%;
-            right: 24%;
-            z-index: 0;
+            bottom: 25%;
+            right: 25%;
+            z-index: -1;
+            animation: lines 5s infinite ease-in-out;
+            @keyframes lines {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(0) translateX(0) rotate(180deg);
+                }
+            }
         }
         input {
             border-bottom-right-radius: 0;
