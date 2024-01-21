@@ -119,21 +119,6 @@ export default {
         margin-top: 0;
         position: relative;
         height: 700px;
-        .rotating-image-left,
-        .rotating-image-right,
-        .rotating-image-top-right {
-            transition: transform 2s linear;
-        }
-
-        .col-12:hover .rotating-image-left {
-            transform: translateX(-40px) translateY(-30px);
-        }
-        .col-12:hover .rotating-image-right {
-            transform: translateX(40px) translateY(10px);
-        }
-        .col-12:hover .rotating-image-top-right {
-            transform: translateX(40px) translateY(-50px);
-        }
     }
 }
 .ArtistShape1 {
@@ -245,13 +230,34 @@ export default {
     z-index: 12;
     top: 30%;
     left: 9%;
+    animation: colors 3s infinite ease-in-out;
+    @keyframes colors {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-73px) translateX(-50px);
+        }
+    }
 }
 
 .YouStupidMonkey {
     position: absolute;
     z-index: 13;
-    top: 50%;
-    left: 10%;
+    top: 39%;
+    left: 9%;
+    animation: monkey 4s infinite ease-in-out;
+    @keyframes monkey {
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-62px) translateX(40px);
+        }
+    }
 }
 .HelloImMartin {
     position: absolute;
@@ -263,22 +269,17 @@ export default {
     z-index: 14;
     top: 25%;
     left: 65%;
-}
+    animation: ditto 4s infinite ease-in-out;
+    @keyframes ditto {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
 
-.rotating-image-left,
-.rotating-image-right,
-.rotating-image-top-right {
-    transition: transform 1s ease;
-}
-
-.presentation:hover .rotating-image-left {
-    transform: translateX(-40px) translateY(-30px);
-}
-.presentation:hover .rotating-image-right {
-    transform: translateX(40px) translateY(10px);
-}
-.presentation:hover .rotating-image-top-right {
-    transform: translateX(40px) translateY(-50px);
+        50% {
+            transform: translateY(10px) translateX(70px);
+        }
+    }
 }
 
 .resizeImg {

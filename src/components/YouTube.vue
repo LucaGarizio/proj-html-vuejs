@@ -60,23 +60,6 @@ export default {
     background-position-y: -30%;
     background-repeat: no-repeat;
     background-size: cover;
-    .container {
-        .rotating-image-left,
-        .rotating-image-right,
-        .rotating-image-top-right {
-            transition: transform 1s ease;
-        }
-
-        .col-lg-12:hover .rotating-image-left {
-            transform: translateX(-40px) translateY(-30px);
-        }
-        .col-lg-12:hover .rotating-image-right {
-            transform: translateX(40px) translateY(10px);
-        }
-        .col-lg-12:hover .rotating-image-top-right {
-            transform: translateX(40px) translateY(-50px);
-        }
-    }
 }
 
 .cursive {
@@ -118,6 +101,16 @@ export default {
     align-items: center;
     border-radius: 50%;
     background-color: #ecc5ab;
+    animation: circle 3s infinite ease-in-out;
+    @keyframes circle {
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(50px) translateX(30px);
+        }
+    }
     .inner-circle {
         width: 75px;
         height: 75px;
@@ -140,6 +133,17 @@ export default {
     top: -5%;
     left: -6%;
     z-index: -1;
+    animation: points 3s infinite ease-in-out;
+    @keyframes points {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-50px) translateX(-30px);
+        }
+    }
 }
 
 .animated-bg-bottom-image {
@@ -156,5 +160,16 @@ export default {
     top: -13%;
     left: -10%;
     z-index: -2;
+    animation: ditto 3s infinite ease-in-out;
+    @keyframes ditto {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-70px) translateX(70px);
+        }
+    }
 }
 </style>

@@ -133,7 +133,7 @@ export default {
                 setTimeout(() => {
                     this.latestNumberCol4 = i
                     // console.log(i)
-                }, i * 100)
+                }, i * 98)
             }
         },
         handleScroll() {
@@ -625,12 +625,12 @@ h2 {
 }
 
 .animated-bg-top-image {
-    animation: points 3s infinite ease-in-out;
     width: 180px;
     position: absolute;
     top: -8%;
     left: -5%;
     z-index: 0;
+    animation: points 3s infinite ease-in-out;
     @keyframes points {
         0%,
         100% {
