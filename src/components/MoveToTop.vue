@@ -40,7 +40,7 @@ export default {
     border-radius: 50%;
     padding: 30px;
     position: fixed;
-    z-index: 10;
+    z-index: 400;
     right: 2%;
     bottom: 10%;
     margin-bottom: 50px;

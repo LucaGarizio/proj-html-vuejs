@@ -92,30 +92,32 @@ export default {
 
 .circle {
     position: absolute;
-    top: 10%;
-    left: 105%;
+    top: 0;
+    right: 0;
     width: 100px;
     height: 100px;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #ecc5ab;
-    animation: circle 3s infinite ease-in-out;
+    border: 15px solid #ecc5ab;
+    animation: circle 4s infinite ease-in-out;
     @keyframes circle {
         100% {
             transform: translateY(0);
         }
 
         50% {
-            transform: translateY(50px) translateX(30px);
+            transform: translateY(100px) translateX(120px);
         }
     }
     .inner-circle {
         width: 75px;
         height: 75px;
         border-radius: 50%;
-        background-color: white;
+        border: 10px solid transparent;
+        clip-path: circle(50% at 50% 50%);
     }
 }
 

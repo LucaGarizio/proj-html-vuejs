@@ -251,7 +251,7 @@ export default {
                 <div class="col pos-relative">
                     <div class="img-box-overlay">
                         <img
-                            class="dittoBlue-section-youtube rotating-image-top-right"
+                            class="dittoBlue-section-youtube"
                             src="../assets/images/Orange-Ditto-Shape.svg"
                             alt=""
                         />
@@ -446,17 +446,17 @@ export default {
                     </div>
                 </div>
                 <img
-                    class="lines rotating-image-top-right"
+                    class="lines"
                     src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/maxcoach-shape-02.png"
                     alt=""
                 />
 
                 <img
-                    class="animated-bg-bottom-image rotating-image-left"
+                    class="animated-bg-bottom-image"
                     src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/12/maxcoach-shape-07.png"
                     alt=""
                 />
-                <div class="circle rotating-image-right">
+                <div class="circle">
                     <div class="inner-circle"></div>
                 </div>
             </div>
@@ -547,23 +547,6 @@ h2 {
     background-position-y: 0;
     background-repeat: no-repeat;
 }
-.container-fluid {
-    .rotating-image-left,
-    .rotating-image-right,
-    .rotating-image-top-right {
-        transition: transform 1s ease;
-    }
-
-    .col:hover .rotating-image-left {
-        transform: translateX(-40px) translateY(-30px);
-    }
-    .col:hover .rotating-image-right {
-        transform: translateX(100px) translateY(70px);
-    }
-    .col:hover .rotating-image-top-right {
-        transform: translateX(40px) translateY(-50px);
-    }
-}
 
 .card {
     position: relative;
@@ -596,7 +579,7 @@ h2 {
     align-items: center;
     border-radius: 50%;
     z-index: 20;
-    background-color: #ecc5ab;
+    border: 15px solid #ecc5ab;
     animation: circle 3s infinite ease-in-out;
     @keyframes circle {
         0%,
@@ -605,14 +588,14 @@ h2 {
         }
 
         50% {
-            transform: translateY(50px) translateX(30px);
+            transform: translateY(50px) translateX(-40px);
         }
     }
     .inner-circle {
         width: 75px;
         height: 75px;
         border-radius: 50%;
-        background-color: white;
+        border: 20px solid transparent;
     }
 }
 
@@ -781,7 +764,6 @@ span {
             left: 25%;
             width: 60px;
             height: 60px;
-
             border-radius: 50%;
             background-color: #8fd6ca;
             .inner-circle {
