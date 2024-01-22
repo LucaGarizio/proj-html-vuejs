@@ -12,17 +12,17 @@ export default {
                 <div class="col-lg-12 col-sm-10 pos-relative">
                     <div class="img-box-overlay">
                         <img
-                            class="dittoBlue-section-youtube rotating-image-top-right"
+                            class="dittoblue"
                             src="../assets/images/DittoShapeBlue.svg"
                             alt=""
                         />
                         <img
-                            class="animated-bg-top-image rotating-image-left"
+                            class="points-img"
                             src="../assets/images/maxcoach-shape-12-100x100.png"
                             alt=""
                         />
                         <img
-                            class="animated-bg-bottom-image rotating-image-left"
+                            class="lower-point-img"
                             src="../assets/images/maxcoach-shape-12-100x100.png"
                             alt=""
                         />
@@ -35,7 +35,7 @@ export default {
                             /></a>
                         </div>
                     </div>
-                    <div class="circle rotating-image-right">
+                    <div class="circle">
                         <div class="inner-circle"></div>
                     </div>
                     <div class="card border-0">
@@ -127,7 +127,7 @@ export default {
     z-index: 5;
 }
 
-.animated-bg-top-image {
+.points-img {
     width: 180px;
     position: absolute;
     top: -5%;
@@ -146,14 +146,14 @@ export default {
     }
 }
 
-.animated-bg-bottom-image {
+.lower-point-img {
     width: 180px;
     position: absolute;
     bottom: -10%;
     right: -7%;
     z-index: -1;
 }
-.dittoBlue-section-youtube {
+.dittoblue {
     position: absolute;
     width: 250px;
     height: 250px;

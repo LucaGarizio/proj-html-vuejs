@@ -102,9 +102,6 @@ export default {
     color: $secondary-text-color;
     font-size: 40px;
 }
-.container {
-    overflow: hidden;
-}
 
 .card-padding-top {
     padding-top: 100px;
@@ -121,6 +118,7 @@ export default {
 
 .col-6 {
     position: relative;
+    overflow: hidden;
 }
 
 #getintouch {

@@ -108,7 +108,7 @@ export default {
     </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
@@ -120,173 +120,173 @@ export default {
         position: relative;
         height: 700px;
     }
-}
-.cursive {
-    font-family: $secondary-font;
-    color: $secondary-text-color;
-    font-size: 40px;
-}
-.ArtistShape1 {
-    position: absolute;
-    height: 600px;
-    left: 55%;
-    top: 5%;
-    z-index: 13;
-}
-.LineRider {
-    position: absolute;
-    height: 400px;
-    width: 95%;
-    left: 0;
-    top: 15%;
-    z-index: 4;
-}
-.cerchioRigato {
-    position: absolute;
-    height: 200px;
-    right: -10%;
-    top: 35%;
-    z-index: 3;
-    transform: scaley(-1);
-}
-.ArtistShape {
-    position: absolute;
-    height: 550px;
-    left: -12%;
-    top: 17%;
-    z-index: 2;
-    transform: scaley(-1);
-}
-.wrapperPos {
-    position: absolute;
-    z-index: 400;
-}
-.positioningClass {
-    position: relative;
-    height: 500px;
-}
-.MaledettoSvgParte3 {
-    height: 350px;
-}
-.DittoShapeOG {
-    position: absolute;
-    z-index: 3;
-    top: 35%;
-    left: 65%;
-}
 
-.MaledettoSvg {
-    height: 150px;
-}
+    .cursive {
+        font-family: $secondary-font;
+        color: $secondary-text-color;
+        font-size: 40px;
+    }
+    .ArtistShape1 {
+        position: absolute;
+        height: 600px;
+        left: 55%;
+        top: 5%;
+        z-index: 13;
+    }
+    .LineRider {
+        position: absolute;
+        height: 400px;
+        width: 95%;
+        left: 0;
+        top: 15%;
+        z-index: 4;
+    }
+    .cerchioRigato {
+        position: absolute;
+        height: 200px;
+        right: -10%;
+        top: 35%;
+        z-index: 3;
+        transform: scaley(-1);
+    }
+    .ArtistShape {
+        position: absolute;
+        height: 550px;
+        left: -12%;
+        top: 17%;
+        z-index: 2;
+        transform: scaley(-1);
+    }
+    .wrapperPos {
+        position: absolute;
+        z-index: 400;
+    }
+    .positioningClass {
+        position: relative;
+        height: 500px;
+    }
+    .MaledettoSvgParte3 {
+        height: 350px;
+    }
+    .DittoShapeOG {
+        position: absolute;
+        z-index: 3;
+        top: 35%;
+        left: 65%;
+    }
 
-.MaledettoSvgButInBlue {
-    height: 500px;
-    width: 400px;
-}
+    .MaledettoSvg {
+        height: 150px;
+    }
 
-.DittoShapeBlue {
-    position: absolute;
-    z-index: 12;
-    top: 29%;
-    left: -10%;
-    transform: scaley(-1);
-}
+    .MaledettoSvgButInBlue {
+        height: 500px;
+        width: 400px;
+    }
 
-.PuntiniSpasticiLunghi {
-    position: absolute;
-    z-index: 12;
-    top: 20%;
-    left: 1%;
-}
-.IHaveADream {
-    position: absolute;
-    z-index: 12;
-    top: 50%;
-    left: 25%;
-}
+    .DittoShapeBlue {
+        position: absolute;
+        z-index: 12;
+        top: 29%;
+        left: -10%;
+        transform: scaley(-1);
+    }
 
-.ComeLeFoglie {
-    position: absolute;
-    z-index: 11;
-    top: 10%;
-    left: 80%;
-}
-.ArtAttack {
-    position: absolute;
-    z-index: 11;
-    top: 71%;
-    left: 70%;
-}
+    .PuntiniSpasticiLunghi {
+        position: absolute;
+        z-index: 12;
+        top: 20%;
+        left: 1%;
+    }
+    .IHaveADream {
+        position: absolute;
+        z-index: 12;
+        top: 50%;
+        left: 25%;
+    }
 
-.DittoShape {
-    position: absolute;
-    z-index: 12;
-    top: 65%;
-    left: 60%;
-}
-.PuntiniSpastici {
-    position: absolute;
-    z-index: 12;
-    top: 75%;
-    left: 65%;
-}
-.colorsImg {
-    position: absolute;
-    z-index: 12;
-    top: 30%;
-    left: 9%;
-    animation: colors 3s infinite ease-in-out;
-    @keyframes colors {
-        0%,
-        100% {
-            transform: translateY(0);
+    .ComeLeFoglie {
+        position: absolute;
+        z-index: 11;
+        top: 10%;
+        left: 80%;
+    }
+    .ArtAttack {
+        position: absolute;
+        z-index: 11;
+        top: 71%;
+        left: 70%;
+    }
+
+    .DittoShape {
+        position: absolute;
+        z-index: 12;
+        top: 65%;
+        left: 60%;
+    }
+    .PuntiniSpastici {
+        position: absolute;
+        z-index: 12;
+        top: 75%;
+        left: 65%;
+    }
+    .colorsImg {
+        position: absolute;
+        z-index: 12;
+        top: 30%;
+        left: 9%;
+        animation: colors 3s infinite ease-in-out;
+        @keyframes colors {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-73px) translateX(-50px);
+            }
         }
+    }
 
-        50% {
-            transform: translateY(-73px) translateX(-50px);
+    .YouStupidMonkey {
+        position: absolute;
+        z-index: 13;
+        top: 39%;
+        left: 9%;
+        animation: monkey 4s infinite ease-in-out;
+        @keyframes monkey {
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-62px) translateX(40px);
+            }
+        }
+    }
+    .HelloImMartin {
+        position: absolute;
+        top: 30%;
+        z-index: 15;
+    }
+    .Martin {
+        position: absolute;
+        z-index: 14;
+        top: 25%;
+        left: 65%;
+        animation: ditto 4s infinite ease-in-out;
+        @keyframes ditto {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px) translateX(70px);
+            }
         }
     }
 }
-
-.YouStupidMonkey {
-    position: absolute;
-    z-index: 13;
-    top: 39%;
-    left: 9%;
-    animation: monkey 4s infinite ease-in-out;
-    @keyframes monkey {
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-62px) translateX(40px);
-        }
-    }
-}
-.HelloImMartin {
-    position: absolute;
-    top: 30%;
-    z-index: 15;
-}
-.Martin {
-    position: absolute;
-    z-index: 14;
-    top: 25%;
-    left: 65%;
-    animation: ditto 4s infinite ease-in-out;
-    @keyframes ditto {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(10px) translateX(70px);
-        }
-    }
-}
-
 .resizeImg {
     padding: 10px;
 }

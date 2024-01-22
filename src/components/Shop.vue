@@ -92,7 +92,7 @@ export default {
                     v-for="card in cardShop"
                 >
                     <div
-                        class="card border-0"
+                        class="card border-0 rounded-0"
                         style="width: 21rem; height: 32rem"
                     >
                         <img
@@ -160,6 +160,7 @@ export default {
         }
         .col-3:hover .card-body {
             transform: translateY(-40px);
+            transition: 0.8s;
             border: 2px solid #f07c44;
             background-color: #fff;
             z-index: 6;
@@ -169,7 +170,7 @@ export default {
             width: 500px;
             height: 600px;
             position: absolute;
-            top: 38%;
+            bottom: 0;
             left: -15%;
             z-index: 5;
         }

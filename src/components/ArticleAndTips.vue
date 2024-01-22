@@ -5,7 +5,21 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section id="articleandtips">
+        <div class="circles">
+            <div class="inner-circles"></div>
+        </div>
+
+        <img
+            class="ditto-blue-img"
+            src="../assets/images/DittoShapeBlue.svg"
+            alt=""
+        />
+        <img
+            class="points-img"
+            src="../assets/images/maxcoach-shape-12-100x100.png"
+            alt=""
+        />
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-8 text-center">
@@ -38,7 +52,6 @@ export default {
                     <div class="col-5 d-flex justify-content-center">
                         <div class="card pos-rel">
                             <img
-                                style="width: 500px"
                                 src="../assets/images/artist-blog-02-500x680.jpg"
                                 class="card-img-top"
                                 alt="..."
@@ -92,15 +105,101 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
-section {
+#articleandtips {
     background-color: #f5f7fa;
     padding: 100px 0 70px;
-    // margin-bottom: 80px;
+    position: relative;
+    background-image: url('../assets/images/maxcoach-shape-14.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .cursive {
+        font-family: $secondary-font;
+        color: $secondary-text-color;
+        font-size: 40px;
+    }
+    .col-8 {
+        margin: 70px 0 0;
+        p {
+            color: #8c89a2;
+        }
+        span {
+            color: #ef6f31;
+        }
+    }
+
+    .ditto-blue-img {
+        position: absolute;
+        width: 500px;
+        height: 250px;
+        bottom: 5%;
+        left: 50%;
+        z-index: 0;
+        animation: ditto 3s infinite ease-in-out;
+        @keyframes ditto {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-70px) translateX(70px);
+            }
+        }
+    }
+    .circles {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #ecc5ab;
+        animation: circles 3s infinite ease-in-out;
+        @keyframes circles {
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(50px) translateX(-100px);
+            }
+        }
+        .inner-circles {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: white;
+        }
+    }
+    .points-img {
+        width: 180px;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        z-index: 0;
+        animation: points 3s infinite ease-in-out;
+        @keyframes points {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-50px) translateX(-30px);
+            }
+        }
+    }
 }
-.cursive {
-    font-family: $secondary-font;
-    color: $secondary-text-color;
-    font-size: 40px;
+
+.left-col,
+.right-col {
+    .card {
+        border: 1px solid #ddd;
+    }
 }
 
 .left-col {
@@ -109,6 +208,14 @@ section {
 
 .right-col {
     padding-top: 60px;
+}
+
+.card-img-top {
+    margin-bottom: 15px;
+}
+
+.card {
+    border: none;
 }
 
 .pos-rel {
@@ -150,11 +257,35 @@ section {
         font-weight: normal;
     }
 }
+.card {
+    img {
+        object-fit: cover;
+        transition: transform 1s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    li {
+        color: #b9b9b9;
+        padding-bottom: 10px;
+    }
+    span {
+        color: #b9b9b9;
+        text-transform: uppercase;
+    }
 
-.end {
-    margin-top: 100px;
-}
-.color {
-    color: #ef6f31;
+    .col-3,
+    .col-5 {
+        overflow: hidden;
+    }
+
+    .end {
+        margin-top: 100px;
+    }
+    .color {
+        color: #ef6f31;
+    }
+
+    // ANIMATION IMG
 }
 </style>
