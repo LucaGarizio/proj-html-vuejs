@@ -149,9 +149,6 @@ export default {
         border-bottom: 1px solid #909ec2;
         padding: 10px 0;
         font-size: 20px;
-        input:active {
-            outline: none;
-        }
     }
     .fa-arrow-right-long {
         margin-top: 16px;
@@ -170,6 +167,7 @@ export default {
 
     input:focus {
         border-bottom: 2px solid white;
+        color: white;
     }
 }
 </style>

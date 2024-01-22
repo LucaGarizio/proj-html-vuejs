@@ -39,9 +39,9 @@ export default {
 
 <template>
     <header id="Jumbotron About info">
-        <nav>
+        <div class="container">
             <div class="row row-nav">
-                <div class="col-3 logo">
+                <div class="col-2 logo">
                     <a href="#">
                         <img
                             src="https://maxcoach.thememove.com/main/wp-content/themes/maxcoach/assets/images/logo/dark-logo.png"
@@ -49,7 +49,7 @@ export default {
                         />
                     </a>
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <ul class="d-flex">
                         <li @click="toggleDropdown('home')">
                             <span class="animated-border">Home</span>
@@ -251,7 +251,7 @@ export default {
                     </ul>
                 </div>
                 <!-- colonna icone -->
-                <div class="col-3 icon">
+                <div class="col-2 icon">
                     <ul>
                         <li>
                             <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -271,7 +271,7 @@ export default {
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 </template>
 
@@ -298,7 +298,7 @@ header {
     margin: 0 auto;
 }
 
-.col-6 {
+.col-8 {
     display: flex;
     align-items: center;
 

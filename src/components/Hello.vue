@@ -89,7 +89,7 @@ export default {
                     />
 
                     <div class="HelloImMartin">
-                        <h1 class="cursive fw-bold fs-1 text-center">
+                        <h1 class="cursive fw-bold fs-1 text-center cursive">
                             Hello, I'm Martin
                         </h1>
                         <h2 class="fw-bolder text-center fw-bold fs-1">
@@ -120,6 +120,11 @@ export default {
         position: relative;
         height: 700px;
     }
+}
+.cursive {
+    font-family: $secondary-font;
+    color: $secondary-text-color;
+    font-size: 40px;
 }
 .ArtistShape1 {
     position: absolute;
