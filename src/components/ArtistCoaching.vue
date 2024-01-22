@@ -4,11 +4,11 @@ export default {
 }
 </script>
 
-<template>
+<!-- <template>
     <section>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 positioningClass d-flex p-2">
+                <div class="col-12 positioningClass d-flex">
                     <div class="wrapperPos">
                         <div
                             class="coaching col-12 d-flex p-5 justify-content-center"
@@ -120,7 +120,7 @@ export default {
             </div>
         </div>
     </section>
-</template>
+</template> -->
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
@@ -179,7 +179,7 @@ export default {
     left: -12%;
     top: 17%;
     z-index: 2;
-    transform: scaley(-1);
+    // transform: scaley(-1);
 }
 .wrapperPos {
     position: absolute;

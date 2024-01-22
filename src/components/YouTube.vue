@@ -6,7 +6,7 @@ export default {
 <template>
     <section class="paddingY" id="youtube-section">
         <div
-            class="container container-sm d-flex justify-content-lg-center justify-content-sm-center"
+            class="container-fluid d-flex justify-content-lg-center justify-content-sm-center"
         >
             <div class="row justify-content-sm-center">
                 <div class="col-lg-12 col-sm-10 pos-relative">

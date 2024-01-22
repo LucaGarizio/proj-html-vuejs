@@ -57,7 +57,7 @@ export default {
                 <div class="col">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d974768.5695959488!2d9.42675443174256!3d45.19422154018226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sit!4v1705498385319!5m2!1sen!2sit"
-                        width="1200"
+                        width="90%"
                         height="500"
                         style="border: 0"
                         allowfullscreen=""

@@ -40,7 +40,7 @@ export default {
 <template>
     <header id="Jumbotron About info">
         <div class="container">
-            <div class="row row-nav">
+            <div class="row row-nav justify-content-between">
                 <div class="col-2 logo">
                     <a href="#">
                         <img
