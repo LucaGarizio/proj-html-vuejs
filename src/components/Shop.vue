@@ -75,6 +75,11 @@ export default {
 <template>
     <section class="margin-b" id="shop">
         <div class="container-fluid pos-relative">
+            <img
+                class="tears"
+                src="../assets/images/artist-shape-01.png"
+                alt=""
+            />
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="cursive">Artist coaching</h2>
@@ -82,11 +87,6 @@ export default {
                 </div>
             </div>
             <div class="row">
-                <img
-                    class="tear"
-                    src="../assets/images/artist-shape-01.png"
-                    alt=""
-                />
                 <div
                     class="col-3 my-4 d-flex justify-content-center"
                     v-for="card in cardShop"
@@ -132,6 +132,7 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+
 #shop {
     margin-bottom: 100px;
     .container-fluid {
@@ -139,12 +140,16 @@ export default {
         .card {
             position: relative;
             overflow: hidden;
+            width: 21rem;
+            height: 32rem;
 
             h5 {
                 color: #f07c44;
             }
         }
         .card-img-top {
+            max-width: 100%;
+            max-height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
             z-index: 5;
@@ -166,7 +171,7 @@ export default {
             z-index: 6;
         }
 
-        .tear {
+        .tears {
             width: 500px;
             height: 600px;
             position: absolute;

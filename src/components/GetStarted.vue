@@ -47,7 +47,7 @@ export default {
 @use '../styles/partials/mixins' as *;
 
 .marginy-150 {
-    margin: 150px 0;
+    padding: 150px 0 200px;
 }
 
 .cursive {

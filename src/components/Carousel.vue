@@ -173,6 +173,12 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+
+.cursive {
+    font-family: $secondary-font;
+    color: $secondary-text-color;
+    font-size: 40px;
+}
 .carousel-controls {
     display: flex;
     justify-content: space-between;

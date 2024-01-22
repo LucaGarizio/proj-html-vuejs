@@ -210,10 +210,6 @@ export default {
     padding-top: 60px;
 }
 
-.card-img-top {
-    margin-bottom: 15px;
-}
-
 .card {
     border: none;
 }
@@ -258,7 +254,10 @@ export default {
     }
 }
 .card {
+    overflow: hidden;
     img {
+        max-width: 100%;
+        height: auto;
         object-fit: cover;
         transition: transform 1s;
         &:hover {
@@ -276,6 +275,7 @@ export default {
 
     .col-3,
     .col-5 {
+        position: relative;
         overflow: hidden;
     }
 
@@ -285,7 +285,5 @@ export default {
     .color {
         color: #ef6f31;
     }
-
-    // ANIMATION IMG
 }
 </style>
