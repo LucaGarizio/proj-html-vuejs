@@ -74,12 +74,8 @@ export default {
 </script>
 <template>
     <section class="margin-b" id="shop">
+        <img class="tears" src="../assets/images/artist-shape-01.png" alt="" />
         <div class="container-fluid pos-relative">
-            <img
-                class="tears"
-                src="../assets/images/artist-shape-01.png"
-                alt=""
-            />
             <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="cursive">Artist coaching</h2>
@@ -135,6 +131,7 @@ export default {
 
 #shop {
     margin-bottom: 100px;
+    position: relative;
     .container-fluid {
         width: 90%;
         .card {
@@ -171,14 +168,18 @@ export default {
             z-index: 6;
         }
 
-        .tears {
-            width: 500px;
-            height: 600px;
-            position: absolute;
-            bottom: 0;
-            left: -15%;
-            z-index: 5;
+        span {
+            color: #8e8e8e;
+            font-size: 14px;
         }
+    }
+    .tears {
+        width: 600px;
+
+        position: absolute;
+        bottom: 18%;
+        left: -15%;
+        z-index: 5;
     }
 }
 

@@ -7,6 +7,7 @@ export default {
 <template>
     <section id="jumbotron">
         <div class="container-fluid">
+            <img src="../assets/images/artist-shape-02-600x324.png" alt="" />
             <div class="row justify-content-center">
                 <div
                     class="col-12 d-flex justify-content-center align-item-center"
@@ -41,7 +42,7 @@ export default {
                         />
                     </div>
 
-                    <div class="ComeLeFoglie">
+                    <div class="leaves-img">
                         <img
                             src="../assets/images/artist-shape-04-127x300.png"
                             alt=""
@@ -62,28 +63,28 @@ export default {
                         />
                     </div>
 
-                    <div class="YouStupidMonkey rotating-image-left">
+                    <div class="YouStupidMonkey">
                         <img
                             src="../assets/images/artist-hero-image-01.jpg"
                             alt=""
                         />
                     </div>
 
-                    <div class="Martin rotating-image-right">
+                    <div class="Martin">
                         <img
                             src="../assets/images/artist-hero-image-04.jpg"
                             alt=""
                         />
                     </div>
 
-                    <div class="colorsImg rotating-image-top-right">
+                    <div class="colorsImg">
                         <img
                             src="../assets/images/artist-hero-image-02.jpg"
                             alt=""
                         />
                     </div>
                     <img
-                        class="ArtistShape1"
+                        class="artist-shape1"
                         src="../assets/images/artist-shape-01-600x577.png"
                         alt=""
                     />
@@ -115,27 +116,23 @@ export default {
 #jumbotron {
     background-color: #fbf9f6;
     padding-top: 40px;
-    .container-fluid {
-        margin-top: 0;
-        position: relative;
-        height: 700px;
-    }
+    position: relative;
+    height: 710px;
 
     .cursive {
         font-family: $secondary-font;
         color: $secondary-text-color;
         font-size: 40px;
     }
-    .ArtistShape1 {
+    .artist-shape1 {
         position: absolute;
-        height: 600px;
-        left: 55%;
-        top: 5%;
+        left: 50%;
+        top: 10%;
+
         z-index: 13;
     }
-    .LineRider {
+    .line-rider {
         position: absolute;
-        height: 400px;
         width: 95%;
         left: 0;
         top: 15%;
@@ -151,7 +148,7 @@ export default {
     }
     .ArtistShape {
         position: absolute;
-        height: 550px;
+        // height: 550px;
         left: -12%;
         top: 17%;
         z-index: 2;
@@ -205,11 +202,14 @@ export default {
         left: 25%;
     }
 
-    .ComeLeFoglie {
+    .leaves-img {
+        padding-top: 10px;
         position: absolute;
         z-index: 11;
         top: 10%;
         left: 80%;
+        width: 200px;
+        transform: rotate(10deg);
     }
     .ArtAttack {
         position: absolute;

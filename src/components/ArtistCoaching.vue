@@ -14,13 +14,13 @@ export default {
                             class="coaching col-12 d-flex p-5 justify-content-center"
                         >
                             <div class="col-6">
-                                <h1 class="cursive fs-2 fw-bold text-center">
+                                <h2 class="cursive fw-bold text-center cursive">
                                     Artist coaching
-                                </h1>
-                                <p class="fw-bolder text-center fw-bold fs-2">
+                                </h2>
+                                <h3 class="fw-bolder text-center fw-bold">
                                     I understand what it takes to create. <br />
                                     I can help you with
-                                </p>
+                                </h3>
                             </div>
                         </div>
                         <div class="d-flex col-12 justify-content-between">
@@ -297,5 +297,10 @@ export default {
 
 .resizeImg {
     padding: 10px;
+}
+.cursive {
+    font-family: $secondary-font;
+    color: $secondary-text-color;
+    font-size: 40px;
 }
 </style>

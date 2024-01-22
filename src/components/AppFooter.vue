@@ -7,7 +7,7 @@ export default {
 <template>
     <footer class="pad-y">
         <div class="container ms-5">
-            <div class="row ms-5 px-4 justify-content-center gx-2">
+            <div class="row ms-5 px-3 justify-content-center gx-0">
                 <div class="col-5">
                     <ul>
                         <li class="pb-3"><h5>Address</h5></li>

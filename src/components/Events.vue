@@ -4,7 +4,17 @@ export default {
 }
 </script>
 <template>
-    <section class="py-5">
+    <section class="py-5" id="events">
+        <img
+            class="grey-ditto"
+            src="../assets/images/DittoShapeOG.svg"
+            alt=""
+        />
+        <img
+            class="circle-lines"
+            src="../assets/images/maxcoach-shape-13.png"
+            alt=""
+        />
         <div class="container">
             <div class="row justify-content-center pb-3 mb-5">
                 <div class="col-8 text-center">
@@ -23,7 +33,9 @@ export default {
                     <div class="text">
                         <span>APR 22, 2021</span>
                         <h5 class="my-3">Storytelling Workshop</h5>
-                        <span>Texas, US </span>
+                        <span
+                            ><i class="fa-solid fa-location-dot"></i> Texas, US
+                        </span>
                     </div>
                 </div>
                 <div class="col-6 d-flex align-items-center">
@@ -36,7 +48,10 @@ export default {
                     <div class="text">
                         <span>Oct 10, 2020</span>
                         <h5 class="my-3">Painting Art Contest 2020</h5>
-                        <span>New York, US</span>
+                        <span
+                            ><i class="fa-solid fa-location-dot"></i> New York,
+                            US</span
+                        >
                     </div>
                 </div>
                 <div
@@ -45,7 +60,10 @@ export default {
                     <div class="text text-end">
                         <span>Nov 23, 2020</span>
                         <h5 class="my-3">International Art Fair 2020</h5>
-                        <span>Hamburg, Germany</span>
+                        <span
+                            ><i class="fa-solid fa-location-dot"></i> Hamburg,
+                            Germany</span
+                        >
                     </div>
                     <div class="card-image ms-5">
                         <img
@@ -62,7 +80,10 @@ export default {
                         <h5 class="my-3">
                             Street Performance: Call for Artist
                         </h5>
-                        <span> Illinois, US</span>
+                        <span
+                            ><i class="fa-solid fa-location-dot"></i> Illinois,
+                            US</span
+                        >
                     </div>
                     <div class="card-image ms-5">
                         <img
@@ -97,28 +118,73 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
-.cursive {
-    font-family: $secondary-font;
-    color: $secondary-text-color;
-    font-size: 40px;
-}
 
-.card-padding-top {
-    padding-top: 100px;
-}
-.card-image {
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
-    transition: transform 1s;
-    &:hover {
-        transform: scale(1.1);
-    }
-}
-
-.col-6 {
+#events {
     position: relative;
-    overflow: hidden;
+    .cursive {
+        font-family: $secondary-font;
+        color: $secondary-text-color;
+        font-size: 40px;
+    }
+    .card-padding-top {
+        padding-top: 100px;
+    }
+    .card-image {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+        transition: transform 1s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .col-6 {
+        position: relative;
+        overflow: hidden;
+    }
+
+    span {
+        color: #9a9a9a;
+        &:last-child {
+            font-size: 15px;
+        }
+    }
+    // ANIMATION
+    .circle-lines {
+        position: absolute;
+        right: 12%;
+        top: 25%;
+        z-index: 0;
+        animation: movement 3s infinite ease-in-out;
+        @keyframes movement {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(50px) translateX(-100px);
+            }
+        }
+    }
+    .grey-ditto {
+        width: 400px;
+        position: absolute;
+        right: 5%;
+        top: 15%;
+        animation: dittomovement 3s infinite ease-in-out;
+        @keyframes dittomovement {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(50px) translateX(-90px);
+            }
+        }
+    }
 }
 
 #getintouch {
