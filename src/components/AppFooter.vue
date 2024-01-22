@@ -1,125 +1,108 @@
 <script>
 export default {
-    name: 'AppFooter ', // Nome del componente vue
+    name: 'AppFooter ',
 }
 </script>
 
 <template>
-    <!-- Sezione del footer -->
-    <footer class="container-fluid py-5" id="container-footer">
-        <div class="row">
-            <div class="col-4">
-                <ul>
-                    <li><h5>Address</h5></li>
-                    <li>
-                        <span>392 NE 191st St #87934 Miami, FL 33179-3899</span>
-                    </li>
-                    <li>
-                        <span
-                            >+1 (305) 547-9909 (9am - 5pm EST,Monday -
-                            Friday)</span
-                        >
-                    </li>
-                    <li><a href="">support@maxcoach.com</a></li>
-                </ul>
-                <ul>
-                    <li class="social">
-                        <a href=""
-                            ><i
-                                class="fa-brands fa-square-facebook"
-                                style="font-size: 25px"
-                            ></i
-                        ></a>
-                    </li>
-                    <li class="social">
-                        <a href=""
-                            ><i
-                                class="fa-brands fa-twitter"
-                                style="font-size: 25px"
-                            ></i
-                        ></a>
-                    </li>
-                    <li class="social">
-                        <a href=""
-                            ><i
-                                class="fa-brands fa-instagram"
-                                style="font-size: 25px"
-                            ></i
-                        ></a>
-                    </li>
-                    <li class="social">
-                        <a href=""
-                            ><i
-                                class="fa-brands fa-linkedin"
-                                style="font-size: 25px"
-                            ></i
-                        ></a>
-                    </li>
-                </ul>
+    <footer class="pad-y">
+        <div class="container ms-5">
+            <div class="row ms-5 px-4 justify-content-center gx-2">
+                <div class="col-5">
+                    <ul>
+                        <li class="pb-3"><h5>Address</h5></li>
+                        <li>
+                            <span
+                                >382 NE 191st St # 87394 Miami, FL
+                                33179-3899</span
+                            >
+                        </li>
+                        <li class="py-3">
+                            <span
+                                >+1 (305) 547-9909 (9am - 5pm EST, Monday -
+                                Friday)</span
+                            >
+                        </li>
+                        <li>
+                            <a href="">support@maxcoach.com</a>
+                        </li>
+                    </ul>
+                    <div class="icons"></div>
+                </div>
+                <div class="col-2">
+                    <ul>
+                        <li class="pb-3"><h5>Explore</h5></li>
+                        <li><a href="#"></a>Start here</li>
+                        <li class="py-3"><a href="#"></a>Success story</li>
+                        <li><a href="#"></a>Blog</li>
+                        <li class="py-3"><a href="#"></a>Courses</li>
+                        <li><a href="#"></a>Contact us</li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul>
+                        <li class="pb-3"><h5>Information</h5></li>
+                        <li><a href="#"></a>Membership</li>
+                        <li class="py-3"><a href="#"></a>Purchase guide</li>
+                        <li><a href="#"></a>Privacy policy</li>
+                        <li class="pt-3"><a href="#"></a>Terms of services</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul>
+                        <li class="d-flex justify-content-center">
+                            <h5>Instagram<span> @maxcoach</span></h5>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-2">
-                <ul>
-                    <li><h5>Explore</h5></li>
-
-                    <li><a href="">Start here</a></li>
-                    <li><a href="">Success story</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Contact us</a></li>
-                </ul>
-            </div>
-            <div class="col-2">
-                <ul>
-                    <li><h5>Information</h5></li>
-                    <li><a href="">Success story</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Contact us</a></li>
-                </ul>
-            </div>
-            <div class="col-3 p-0">
-                <ul>
-                    <li>
-                        <h5>
-                            Instragram
-                            <span class="span-orange">@maxcoach</span>
-                        </h5>
-                    </li>
-                </ul>
+        </div>
+        <div class="container mt-5 pt-5">
+            <div class="row justify-content-center">
+                <div class="col-8 text-center">
+                    <span>© 2020 Maxcoach. All Rights Reserved </span>
+                </div>
             </div>
         </div>
     </footer>
-    <div class="text-center mt-5 mb-5">
-        <span>© 2020 Maxcoach. All Rights Reserved</span>
-    </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-#container-footer {
-    // min-height: 350px;
-    align-items: center;
-    li {
-        margin: 15px 0;
+.pad-y {
+    padding: 100px 0 50px;
+}
+li {
+    font-size: 15px;
+    color: #9f9f9f;
+    &:hover {
+        color: #f1844f;
+        transition: 1s;
+        cursor: pointer;
+    }
+    a {
+        color: #9f9f9f;
+        &:hover {
+            color: #f1844f;
+            transition: 1s;
+            cursor: pointer;
+        }
     }
 }
-.span-orange {
-    color: #ff6600;
+
+h5 {
+    font-size: 18px;
+    color: black;
+    span {
+        color: #f1844f;
+        font-size: 15px;
+    }
 }
 
-a,
 span {
-    color: #6f6f6f;
-    font-size: 14px;
-}
-a:hover {
-    color: #ff6600;
-    transition: 0.5s;
-}
-.social {
-    display: inline-block;
-    padding-left: 25px;
+    color: #9f9f9f;
+    font-size: 15px;
 }
 </style>

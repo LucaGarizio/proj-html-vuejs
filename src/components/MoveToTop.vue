@@ -14,7 +14,6 @@ export default {
             this.isScrolled = window.scrollY > 0
         },
     },
-
     mounted() {
         window.addEventListener('scroll', this.handleScroll)
     },

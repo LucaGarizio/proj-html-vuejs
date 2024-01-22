@@ -75,7 +75,7 @@ export default {
         </div>
     </section>
 
-    <section class="getintouch">
+    <section id="getintouch">
         <div class="container-fluid">
             <div class="row justify-content-between">
                 <div
@@ -123,7 +123,7 @@ export default {
     position: relative;
 }
 
-.getintouch {
+#getintouch {
     .row {
         height: 180px;
     }

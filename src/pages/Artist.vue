@@ -28,26 +28,26 @@ export default {
 }
 </script>
 <template>
-    <!-- SEZIONI ALE -->
+    <!-- JUMBOTRON -->
     <Hello />
     <ArtistCoaching />
 
-    <!-- SEZIONI LUCA -->
     <GetStarted />
-    <!-- sezione video youtube -->
+    <!-- YOUTUBE -->
     <YouTube />
-    <!-- sezione Carousel -->
+    <!-- CAROOUSEL -->
     <Carousel />
-    <!-- sezione card shop-->
+    <!-- CARD SHOP-->
     <Shop />
-
+    <!-- ARTICLE & TIPS -->
     <ArticleAndTips />
+    <!-- EVENT -->
     <Events />
-
+    <!-- SIDEBAR COMPONENT-->
     <SideBar />
-
+    <!-- MOVE TO TOP COMPONENT -->
     <MoveToTop />
-
+    <!-- CHATBOX -->
     <ChatBox />
 
     <!-- SEZIONI DOME -->
