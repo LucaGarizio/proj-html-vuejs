@@ -4,7 +4,7 @@ export default {
 }
 </script>
 
-<!-- <template>
+<template>
     <section id="jumbotron">
         <div class="container-fluid">
             <img src="../assets/images/artist-shape-02-600x324.png" alt="" />
@@ -107,7 +107,7 @@ export default {
             </div>
         </div>
     </section>
-</template> -->
+</template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;

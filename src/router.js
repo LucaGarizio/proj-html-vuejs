@@ -13,7 +13,7 @@ const router = createRouter({
     // defizione path pages
     routes: [
         {
-            path: '/artist',
+            path: '/',
             name: 'artist',
             component: Artist,
         },

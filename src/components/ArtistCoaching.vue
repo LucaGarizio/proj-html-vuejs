@@ -4,7 +4,7 @@ export default {
 }
 </script>
 
-<!-- <template>
+<template>
     <section>
         <div class="container">
             <div class="row justify-content-center">
@@ -120,7 +120,7 @@ export default {
             </div>
         </div>
     </section>
-</template> -->
+</template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;

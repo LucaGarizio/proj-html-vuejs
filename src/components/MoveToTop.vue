@@ -6,12 +6,17 @@ export default {
         return {
             // variabile per ritorno a inizio pagina
             isScrolled: false,
+            test: false,
         }
     },
     methods: {
         handleScroll() {
+            clearTimeout(this.test)
             // Verifica se l'utente sta scorrendo la pagina
-            this.isScrolled = window.scrollY > 0
+            this.isScrolled = false
+            this.test = setTimeout(() => {
+                this.isScrolled = true
+            }, 800)
         },
     },
     mounted() {
@@ -45,6 +50,7 @@ export default {
     bottom: 10%;
     margin-bottom: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     &:hover {
         cursor: pointer;
     }
